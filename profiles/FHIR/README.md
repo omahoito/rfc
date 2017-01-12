@@ -23,3 +23,6 @@ Subfolders contain the following FHIR profiles in json or xml format
 
 [Questionnaire](https://www.simplifier.net/core-base-resources/Questionnaire/)
 * A structured set of questions
+
+[QuestionnaireResponse](https://www.simplifier.net/core-base-resources/QuestionnaireResponse/)
+* A structured set of questions and their answers
