@@ -15,6 +15,9 @@ Subfolders contain the following FHIR profiles in json or xml format
 [FinnishPatient](https://www.simplifier.net/FinnishPHR/FinnishPatient/)
 * Information about an individual or animal receiving health care services
 
+[Goal](https://www.simplifier.net/core-base-resources/Goal/)
+* Describes the intended objective(s) for a patient, group or organization
+
 [Patient](https://www.simplifier.net/core-base-resources/Patient/)
 * Information about an individual or animal receiving health care services
 
