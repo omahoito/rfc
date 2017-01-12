@@ -1,32 +1,41 @@
 Subfolders contain the following FHIR profiles in json or xml format
 
-Appointment ([json](/json/Appointment.json), [xml](/xml/Appointment.xml))
+Appointment ([json](/profiles/FHIR/json/Appointment.json), [xml](/profiles/FHIR/xml/Appointment.xml))
 * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more [Encounter(s)](http://hl7.org/fhir/encounter.html).
 * [hl7](http://hl7.org/fhir/appointment.html), [simplifier](https://www.simplifier.net/core-base-resources/Appointment/)
 
-[CarePlan](https://www.simplifier.net/core-base-resources/CarePlan/)
+CarePlan ([json](/profiles/FHIR/json/CarePlan.json), [xml](/profiles/FHIR/xml/CarePlan.xml)) 
 * Healthcare plan for patient or group
+* [hl7](http://hl7.org/fhir/careplan.html), [simplifier](https://www.simplifier.net/core-base-resources/CarePlan/)
 
-[Condition](https://www.simplifier.net/core-base-resources/Condition/)
+Condition ([json](/profiles/FHIR/json/Condition.json), [xml](/profiles/FHIR/xml/Condition.xml))
 * Detailed information about conditions, problems or diagnoses
+* [hl7](http://hl7.org/fhir/condition.html), [simplifier](https://www.simplifier.net/core-base-resources/Condition/)
 
-[Device](https://www.simplifier.net/core-base-resources/Device/)
+Device ([json](/profiles/FHIR/json/Device.json), [xml](/profiles/FHIR/xml/Device.xml))
 * An instance of a manufactured item that is used in the provision of healthcare
+* [hl7](http://hl7.org/fhir/device.html), [simplifier](https://www.simplifier.net/core-base-resources/Device/)
 
-[FinnishPatient](https://www.simplifier.net/FinnishPHR/FinnishPatient/)
+FinnishPatient ([json](/profiles/FHIR/json/FinnishPatient.json), [xml](/profiles/FHIR/xml/FinnishPatient.xml))
 * Information about an individual or animal receiving health care services
+* [simplifier](https://www.simplifier.net/FinnishPHR/FinnishPatient/)
 
-[Goal](https://www.simplifier.net/core-base-resources/Goal/)
+Goal ([json](/profiles/FHIR/json/Goal.json), [xml](/profiles/FHIR/xml/Goal.xml))
 * Describes the intended objective(s) for a patient, group or organization
+* [hl7](http://hl7.org/fhir/goal.html), [simplifier](https://www.simplifier.net/core-base-resources/Goal/)
 
-[Patient](https://www.simplifier.net/core-base-resources/Patient/)
+Patient ([json](/profiles/FHIR/json/Patient.json), [xml](/profiles/FHIR/xml/Patient.xml))
 * Information about an individual or animal receiving health care services
+* [hl7](http://hl7.org/fhir/patient.html), [simplifier](https://www.simplifier.net/core-base-resources/Patient/)
 
-[Person](https://www.simplifier.net/core-base-resources/Person/)
+Person ([json](/profiles/FHIR/json/Person.json), [xml](/profiles/FHIR/xml/Person.xml))
 * A generic person record
+* [hl7](http://hl7.org/fhir/person.html), [simplifier](https://www.simplifier.net/core-base-resources/Person/)
 
-[Questionnaire](https://www.simplifier.net/core-base-resources/Questionnaire/)
+Questionnaire ([json](/profiles/FHIR/json/Questionnaire.json), [xml](/profiles/FHIR/xml/Questionnaire.xml))
 * A structured set of questions
+* [hl7](http://hl7.org/fhir/questionnaire.html), [simplifier](https://www.simplifier.net/core-base-resources/Questionnaire/)
 
-[QuestionnaireResponse](https://www.simplifier.net/core-base-resources/QuestionnaireResponse/)
+QuestionnaireResponse ([json](/profiles/FHIR/json/QuestionnaireResponse.json), [xml](/profiles/FHIR/xml/QuestionnaireResponse.xml))
 * A structured set of questions and their answers
+* [hl7](http://hl7.org/fhir/questionnaireresponse.html), [simplifier](https://www.simplifier.net/core-base-resources/QuestionnaireResponse/)
