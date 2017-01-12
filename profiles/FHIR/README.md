@@ -20,3 +20,6 @@ Subfolders contain the following FHIR profiles in json or xml format
 
 [Person](https://www.simplifier.net/core-base-resources/Person/)
 * A generic person record
+
+[Questionnaire](https://www.simplifier.net/core-base-resources/Questionnaire/)
+* A structured set of questions
