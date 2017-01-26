@@ -1,0 +1,32 @@
+
+{
+  resourceType: 'Device',
+  type: {                                        # kind of device
+    text: 'pulsemeter',
+    code: [{
+      system: 'http://carefusion.com/',
+      code: 'alaris-pulse-ox',                   # product code
+	  display: 'pulsemeter'                      # product name
+    }]
+  },
+  model: 'string',                               # device model
+  identifier: {                                  # product id, imei
+      system: 'http://www.imei.info/',
+      value: '123 456 789 101 112'
+  },
+  note: [
+    {
+      "authorReference": {
+        "reference": "person who made note"
+      },
+      "time": "time when note done in utc format",
+	  "text": "the OS of this device is ...."
+	}
+  ],  
+}
+
+
+
+
+
+
