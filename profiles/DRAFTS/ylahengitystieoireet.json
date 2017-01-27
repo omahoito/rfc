@@ -19,11 +19,11 @@
 			{
 				"linkId": "1",
 				"title": "Perustiedot",
-				"question": [
+				"question": [{
 					"linkId": "1.1",
 					"text": "Ikä(vuosia)",
 					"type": "integer"
-				]
+				}]
 			},
 			{
 				"linkId": "2",
@@ -49,7 +49,7 @@
 							{
 								"code": "C",
 								"display": "Yli 7 vuorokautta"								
-							},
+							}
 						]
 					}
 				]
@@ -86,7 +86,7 @@
 					},
 					{
 						"linkId": "4.2",
-						"Onko jompikumpi nielun seinämistä turvonnut toista enemmän?",
+						"text": "Onko jompikumpi nielun seinämistä turvonnut toista enemmän?",
 						"type": "boolean"
 					}
 				]
@@ -148,5 +148,6 @@
 					}
 				]
 			}
-		}
+		]
 	}
+}
