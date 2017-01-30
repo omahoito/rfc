@@ -39,3 +39,11 @@ Questionnaire ([json](/profiles/FHIR/json/Questionnaire.json), [xml](/profiles/F
 QuestionnaireResponse ([json](/profiles/FHIR/json/QuestionnaireResponse.json), [xml](/profiles/FHIR/xml/QuestionnaireResponse.xml))
 * A structured set of questions and their answers
 * [hl7](http://hl7.org/fhir/questionnaireresponse.html), [simplifier](https://www.simplifier.net/core-base-resources/QuestionnaireResponse/)
+
+## Some datamodels
+
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/profiles/FHIR/PersonPatientFinnishpatientDatamodel.md?2)
+
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/datamodel.md?2) <!--- This generates a picture based on datamodel.md. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
+
+
