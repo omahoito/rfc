@@ -1,4 +1,3 @@
-
 {
   resourceType: 'Device',
   type: {                                        # kind of device
@@ -20,13 +19,13 @@
         "reference": "person who made note"
       },
       "time": "time when note done in utc format",
-	  "text": "the OS of this device is ...."
 	}
-  ],  
+  ],
+  extension: [                                   # extension for device os
+	{                                            # should be codeable concept?
+		"definition": "The operating system used by the device",
+		"url": "https://en.wikipedia.org/wiki/Operating_system",
+		"valueString": "linux"
+	}  
+  ]  
 }
-
-
-
-
-
-
