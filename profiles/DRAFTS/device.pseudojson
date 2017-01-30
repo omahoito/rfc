@@ -6,6 +6,12 @@
       system: 'http://carefusion.com/',
       code: 'alaris-pulse-ox',                   # product code
 	  display: 'pulsemeter'                      # product name
+    }],
+    extension: [{                                 # extension for device os
+	                                          # should be codeable concept?
+      "definition": "The operating system used by the device",
+      "url": "https://en.wikipedia.org/wiki/Operating_system",
+      "valueString": "linux"
     }]
   },
   model: 'string',                               # device model
@@ -20,12 +26,5 @@
       },
       "time": "time when note done in utc format",
 	}
-  ],
-  extension: [                                   # extension for device os
-	{                                            # should be codeable concept?
-		"definition": "The operating system used by the device",
-		"url": "https://en.wikipedia.org/wiki/Operating_system",
-		"valueString": "linux"
-	}  
   ]  
 }
