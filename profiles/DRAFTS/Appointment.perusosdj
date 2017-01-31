@@ -9,7 +9,7 @@ object Practitioner
 object RelatedPerson
 object Device
 object HealthcareService
-object Locationq
+object Location
 
 
 Appointment -- Identifier
