@@ -3,24 +3,27 @@ object Communication
 
 object Identifier
 object CodeableConcept
-object 
-
-
 object Reference
+object Device
+object Organization
 object Patient
-object Group
-object Period
 object Practitioner
 object RelatedPerson
-object Organization
+object Group
+object Attachment
+object Encounter
+object CommunicationRequest
 
-CareTeam -- Identifier
-CareTeam -- CodeableConcept
-CareTeam -- Reference
-CareTeam -- Patient
-CareTeam -- Group
-CareTeam -- Period
-CareTeam -- Practitioner
-CareTeam -- RelatedPerson
-CareTeam -- Organization
+Communication -- Identifier
+Communication -- CodeableConcept
+Communication -- Reference
+Communication -- Device
+Communication -- Organization
+Communication -- Patient
+Communication -- Practitioner
+Communication -- RelatedPerson
+Communication -- Group
+Communication -- Attachment
+Communication -- Encounter
+Communication -- CommunicationRequest
 @enduml
