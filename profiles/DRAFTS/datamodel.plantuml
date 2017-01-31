@@ -1,5 +1,4 @@
 @startuml
-
 object Appointment
 
 Appointment : resourceType
@@ -80,6 +79,15 @@ CarePlan : activity
 
 
 object CareTeam
+CareTeam : identifier
+CareTeam : status
+CareTeam : category
+CareTeam : name
+CareTeam : subject
+CareTeam : period
+CareTeam : participant
+CareTeam : managingOrganization
+
 
 object Goal
 Goal : identifier
@@ -97,6 +105,7 @@ Goal : addresses
 Goal : note
 Goal : outcome
 
+
 Person -- FinnishPatient
 Person -- Device
 Person -- Appointment
@@ -106,5 +115,4 @@ CarePlan -- Appointment
 CarePlan -- Communication
 CarePlan -- CareTeam
 CarePlan -- Goal
-
 @enduml
