@@ -1,0 +1,26 @@
+@startuml
+object Communication
+
+object Identifier
+object CodeableConcept
+object 
+
+
+object Reference
+object Patient
+object Group
+object Period
+object Practitioner
+object RelatedPerson
+object Organization
+
+CareTeam -- Identifier
+CareTeam -- CodeableConcept
+CareTeam -- Reference
+CareTeam -- Patient
+CareTeam -- Group
+CareTeam -- Period
+CareTeam -- Practitioner
+CareTeam -- RelatedPerson
+CareTeam -- Organization
+@enduml
