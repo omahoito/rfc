@@ -1,0 +1,24 @@
+@startuml
+object Appointment
+
+object Identifier
+object CodeableConcept
+object Reference
+object Patient
+object Practitioner
+object RelatedPerson
+object Device
+object HealthcareService
+object Locationq
+
+
+Appointment -- Identifier
+Appointment -- CodeableConcept
+Appointment -- Reference
+Appointment -- Patient
+Appointment -- Practitioner
+Appointment -- RelatedPerson
+Appointment -- Device
+Appointment -- HealthcareService
+Appointment -- Location
+@enduml
