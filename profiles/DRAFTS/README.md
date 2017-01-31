@@ -16,3 +16,5 @@ Drafts on what the FHIR resources could be like. Remove the comments from the .p
 
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/profiles/DRAFTS/Goal.plantuml)
 
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/profiles/DRAFTS/Communication.plantuml)
+
