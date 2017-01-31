@@ -5,21 +5,22 @@ object Identifier
 object HumanName
 object ContactPoint
 object Address
-object CodeableConcept
 object Attachment
 object Reference
 object Organization
-object Period
+object Patient
 object Practitioner
+object RelatedPerson
 
 Person -- Identifier
 Person -- HumanName
 Person -- ContactPoint
 Person -- Address
-Person -- CodeableConcept
 Person -- Attachment
 Person -- Reference
 Person -- Organization
-Person -- Period
+Person -- Patient
 Person -- Practitioner
+Person -- RelatedPerson
+Person -- Person
 @enduml
