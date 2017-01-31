@@ -1,0 +1,7 @@
+@startuml
+object FinnishPatient
+
+object Identifier
+
+FinnishPatient -- Identifier
+@enduml
