@@ -12,14 +12,14 @@ object Organization
 object Period
 object Practitioner
 
-Identifier -- Person
-HumanName -- Person
-ContactPoint -- Person
-Address -- Person
-CodeableConcept -- Person
-Attachment -- Person
-Reference -- Person
-Organization -- Person
-Period -- Person
-Practitioner -- Person
+Person -- Identifier
+Person -- HumanName
+Person -- ContactPoint
+Person -- Address
+Person -- CodeableConcept
+Person -- Attachment
+Person -- Reference
+Person -- Organization
+Person -- Period
+Person -- Practitioner
 @enduml
