@@ -1,0 +1,32 @@
+@startuml
+object  Resource
+Resource : id
+Resource : meta
+Resource : implicitRules
+Resource : language
+
+object  DomainResource
+DomainResource : text
+DomainResource : contained
+DomainResource : extension
+DomainResource : modifierExtension
+
+object  Person
+object  CarePlan
+object  FinnishPatient
+object  Communication
+object  Device
+object  CareTeam
+object  Appointment
+object  Goal
+
+DomainResource <|-- Person
+DomainResource <|-- CarePlan
+DomainResource <|-- FinnishPatient
+DomainResource <|-- Communication
+DomainResource <|-- Device
+DomainResource <|-- CareTeam
+DomainResource <|-- Appointment
+DomainResource <|-- Goal
+Resource <|-- DomainResource
+@enduml
