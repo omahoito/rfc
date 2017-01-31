@@ -18,3 +18,4 @@ Drafts on what the FHIR resources could be like. Remove the comments from the .p
 
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/profiles/DRAFTS/Communication.plantuml?2)
 
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/profiles/DRAFTS/CarePlan.plantuml?2)
