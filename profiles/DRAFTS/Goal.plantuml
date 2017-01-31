@@ -1,0 +1,37 @@
+@startuml
+object  Goal
+
+object Identifier
+object Reference
+object Patient
+object Group
+object Organization
+object CodeableConcept
+object Quantity
+object Practitioner
+object RelatedPerson
+object Condition
+object Observation
+object MedicationStatement
+object NutritionOrder
+object ProcedureRequest
+object RiskAssessment
+object Annotation
+
+Goal -- Identifier
+Goal -- Reference
+Goal -- Patient
+Goal -- Group
+Goal -- Organization
+Goal -- CodeableConcept
+Goal -- Quantity
+Goal -- Practitioner
+Goal -- RelatedPerson
+Goal -- Condition
+Goal -- Observation
+Goal -- MedicationStatement
+Goal -- NutritionOrder
+Goal -- ProcedureRequest
+Goal -- RiskAssessment
+Goal -- Annotation
+@enduml
