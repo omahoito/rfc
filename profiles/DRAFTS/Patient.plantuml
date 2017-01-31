@@ -1,0 +1,25 @@
+@startuml
+object  Patient
+
+object Identifier
+object HumanName
+object ContactPoint
+object Address
+object CodeableConcept
+object Attachment
+object Reference
+object Organization
+object Period
+object Practitioner
+
+Person -- Identifier
+Person -- HumanName
+Person -- ContactPoint
+Person -- Address
+Person -- CodeableConcept
+Person -- Attachment
+Person -- Reference
+Person -- Organization
+Person -- Period
+Person -- Practitioner
+@enduml
