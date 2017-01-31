@@ -10,6 +10,7 @@ Drafts on what the FHIR resources could be like. Remove the comments from the .p
 
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/profiles/DRAFTS/Patient.plantuml)
 
-
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/profiles/DRAFTS/Person.plantuml)
+
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/profiles/DRAFTS/Device.plantuml)
 
