@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-01-24T17:48:13.174+02:00" />
+  </meta>
+  <url value="http://www.hl7.org/FHIR/questionnaire.html" />
+  <version value="0.01" />
+  <name value="ylatiehengitys_draft" />
+  <status value="draft" />
+  <date value="2017-01-23T08:51:20.1475498+02:00" />
+  <kind value="resource" />
+  <constrainedType value="Questionnaire" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Questionnaire" />
+  <differential>
+    <element>
+      <path value="Questionnaire" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Group" />
+      </extension>
+      <path value="Questionnaire.group" />
+      <name value="group" />
+      <label value="terveyslomake" />
+      <slicing>
+        <discriminator value="@type" />
+        <rules value="openAtEnd" />
+      </slicing>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Group" />
+      </extension>
+      <path value="Questionnaire.group" />
+      <name value="Perustiedot" />
+      <short value="Perustietoja käyttäjästä" />
+      <definition value="Kysymyksiä joilla kerätään perustietoja käyttäjästä." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <slicing>
+        <discriminator value="@type" />
+        <rules value="openAtEnd" />
+      </slicing>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="Ikä" />
+      <short value="Käyttäjän ikä" />
+      <definition value="Kysymys käyttäjän iästä" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Ikä" />
+      <definition value="Ikä (vuosia)" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="integer" />
+      <definition value="Ikä odotetaan olevan kokonaisia vuosia." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Group" />
+      </extension>
+      <path value="Questionnaire.group" />
+      <name value="Oireiden kesto" />
+      <short value="Kysymyksiä oireiden kestosta" />
+      <definition value="Kysymyksiä oireiden kestosta." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <slicing>
+        <discriminator value="@type" />
+        <rules value="openAtEnd" />
+      </slicing>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="kuume" />
+      <short value="kuumeen ajankohta" />
+      <definition value="Aikaa potilaan viimeisemmästä kuumeesta" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Onko sinulla ollut kuumetta kuluneen vuorokauden aikana?" />
+      <definition value="Onko sinulla ollut kuumetta kuluneen vuorokauden aikana?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Jos kuumetta niin tosi, muuten väärä." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="kurkkukipu" />
+      <short value="kurkkukivun kesto" />
+      <definition value="Kauanko potilaan kurkkukipu on kestänyt." />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Kurkkukipuni on kestänyt" />
+      <definition value="Kurkkukipuni on kestänyt" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <code>
+        <code value="1" />
+        <display value="Alle 1/2 vuorokautta" />
+      </code>
+      <code>
+        <code value="2" />
+        <display value="1/2 - 7 vuorokautta" />
+      </code>
+      <code>
+        <code value="3" />
+        <display value="Yli 7 vuorokautta" />
+      </code>
+      <short value="choice" />
+      <definition value="Monivalintakysymys kurkkukivun kestosta." />
+      <min value="1" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Group" />
+      </extension>
+      <path value="Questionnaire.group" />
+      <name value="Hengitystieoireet 1" />
+      <short value="Vastaajan hengitystieoireet" />
+      <definition value="Kysymyksiä vastaajan hengitystieoireista." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <slicing>
+        <discriminator value="@type" />
+        <rules value="openAtEnd" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="nuha" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Onko sinulla ollut nuha (tukkoinen ja vuotava nenä)?" />
+      <definition value="Onko sinulla ollut nuha (tukkoinen ja vuotava nenä)?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Tosi jos on ollut nuha, muuten epätosi" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="yskä" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Onko sinulla ollut yskää?" />
+      <definition value="Onko sinulla ollut yskää?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Tosi jos kyllä, muuten epätosi" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="käheä" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Onko äänesi käheä?" />
+      <definition value="Onko äänesi käheä?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Tosi jos kyllä, muuten epätosi." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Group" />
+      </extension>
+      <path value="Questionnaire.group" />
+      <name value="Nielun oireet" />
+      <short value="Oireita nielussa" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <slicing>
+        <discriminator value="@type" />
+        <rules value="openAtEnd" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="peitteet" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Onko nielurisoissa havaittavaissa selviä peitteitä tai pilkkuja?" />
+      <definition value="Onko nielurisoissa havaittavaissa selviä peitteitä tai pilkkuja?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Tosi jos kyllä, muuten epätosi." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="turvotus" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Onko jompikumpi nielun seinämistä turvonnut toista enemmän?" />
+      <definition value="Onko jompikumpi nielun seinämistä turvonnut toista enemmän?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Tosi jos kyllä, muuten epätosi." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Group" />
+      </extension>
+      <path value="Questionnaire.group" />
+      <name value="Hengitystieoireet 2" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <slicing>
+        <discriminator value="@type" />
+        <rules value="openAtEnd" />
+      </slicing>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="yleistila" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Onko yleistilasi huonontunut?" />
+      <definition value="Onko yleistilasi huonontunut?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Tosi jos kyllä, muuten epätosi." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="nielemisvaikeudet" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Onko sinulla nielemis- ja/tai hengitysvaikeuksia?" />
+      <definition value="Onko sinulla nielemis- ja/tai hengitysvaikeuksia?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Tosi jos kyllä, muuten epätosi." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="puhe" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Onko puheesi tavallisesta poiketen puuromaista?" />
+      <definition value="Onko puheesi tavallisesta poiketen puuromaista?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Tosi jos kyllä, muuten epätosi." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="leukalukko" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Onko sinulla leukalukko (suusi ei aukea)?" />
+      <definition value="Onko sinulla leukalukko (suusi ei aukea)?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Tos jos kyllä, muuten epätosi." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="selällämakuu" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Paheneeko kurkkukipu selällään maatessa?" />
+      <definition value="Paheneeko kurkkukipu selällään maatessa?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Tosi jos kyllä, muuten epätosi." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="turvotus" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Onko kasvoilla tai kaulalla näkyvää turvotusta?" />
+      <definition value="Onko kasvoilla tai kaulalla näkyvää turvotusta?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Tosi jos kyllä, muuten epätosi." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="vierasesine" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Onko mahdollista, että nieluusi on juuttunut vierasesine?" />
+      <definition value="Onko mahdollista, että nieluusi on juuttunut vierasesine?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="boolean" />
+      <definition value="Tosi jos kyllä, muuten epätosi." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="ärsyttäväaine" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Oletko nauttinut ärsyttävää tai syövyttävää ainetta?" />
+      <definition value="Oletko nauttinut ärsyttävää tai syövyttävää ainetta?" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <code>
+        <system value="http://hl7.org/fhir/v2/0136" />
+        <code value="Y" />
+        <display value="Kyllä" />
+      </code>
+      <code>
+        <system value="http://hl7.org/fhir/v2/0136" />
+        <code value="N" />
+        <display value="Ei" />
+      </code>
+      <code>
+        <code value="asked" />
+        <display value="En tiedä" />
+      </code>
+      <short value="yesnodontknow" />
+      <definition value="Monivalintakysymys, vaihtoehdot kyllä/ei/ehkä." />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Group" />
+      </extension>
+      <path value="Questionnaire.group" />
+      <name value="Lisätiedot" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <slicing>
+        <discriminator value="@type" />
+        <rules value="openAtEnd" />
+      </slicing>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Question" />
+      </extension>
+      <path value="Questionnaire.group.question" />
+      <name value="lisätietoja" />
+      <slicing>
+        <discriminator value="@type" />
+        <rules value="openAtEnd" />
+      </slicing>
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.text" />
+      <short value="Lisätietoja" />
+      <definition value="Lisätietoja" />
+    </element>
+    <element>
+      <path value="Questionnaire.group.question.type" />
+      <short value="string" />
+      <definition value="Vastaajan antama vapaamuotoinen vastaus kysymykseen." />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,307 @@
+@startuml
+object Appointment
+
+Appointment : resourceType
+Appointment : id
+Appointment : text
+Appointment : identifier
+Appointment : status
+Appointment : type
+Appointment : reason
+Appointment : start
+Appointment : end
+Appointment : prioritay
+Appointment : description
+Appointment : minutesDuration
+Appointment : slot
+Appointment : comment
+Appointment : participant
+
+object Communication
+
+Communication : resourceType
+Communication : id
+Communication : text
+Communication : identifier
+Communication : medium
+Communication : category
+Communication : sender
+Communication : recipient
+Communication : payload
+Communication : status
+Communication : contentReference
+Communication : sent
+Communication : subject
+
+object Device
+
+Device : resourceType
+Device : type
+Device : model
+Device : identifier
+Device : note
+
+object FinnishPatient
+
+FinnishPatient : identifier
+FinnishPatient : active
+FinnishPatient : communication
+
+object Person
+
+Person : identifier
+Person : active
+Person : name
+Person : telecom
+Person : gender
+Person : birthDate
+Person : address
+Person : photo
+Person : managingOrganization
+
+object CarePlan
+CarePlan : identifier
+CarePlan : subject
+CarePlan : status
+CarePlan : context
+CarePlan : period
+CarePlan : author
+CarePlan : modified
+CarePlan : category
+CarePlan : description
+CarePlan : addresses
+CarePlan : support
+CarePlan : goal
+CarePlan : note
+CarePlan : relatedPlan
+CarePlan : participant
+CarePlan : activity
+
+
+object CareTeam
+CareTeam : identifier
+CareTeam : status
+CareTeam : category
+CareTeam : name
+CareTeam : subject
+CareTeam : period
+CareTeam : participant
+CareTeam : managingOrganization
+
+
+object Goal
+Goal : identifier
+Goal : subject
+Goal : start[x]
+Goal : target[x]
+Goal : category
+Goal : description
+Goal : status
+Goal : statusDate
+Goal : statusReason
+Goal : author
+Goal : priority
+Goal : addresses
+Goal : note
+Goal : outcome
+
+
+Person -- FinnishPatient
+Person -- Device
+Person -- Appointment
+
+CarePlan -- FinnishPatient
+CarePlan -- Appointment
+CarePlan -- Communication
+CarePlan -- CareTeam
+CarePlan -- Goal
+
+
+object Identifier
+object CodeableConcept
+object Reference
+object Patient
+object Practitioner
+object RelatedPerson
+object HealthcareService
+object Location
+
+Appointment -- Identifier
+Appointment -- CodeableConcept
+Appointment -- Reference
+Appointment -- Patient
+Appointment -- Practitioner
+Appointment -- RelatedPerson
+Appointment -- Device
+Appointment -- HealthcareService
+Appointment -- Location
+
+object Group
+object Encounter
+object EpisodeOfCare
+object Period
+object Organization
+object Condition
+object CommunicationRequest
+object DeviceUseRequest
+object DiagnosticOrder
+object MedicationOrder
+object NutritionOrder
+object Order
+object ProcedureRequest
+object ProcessRequest
+object ReferralRequest
+object ProceduresRequest
+object SupplyRequest
+object VisionPrescription
+object Medication
+object Substance
+object Quantity
+
+CarePlan -- Identifier
+CarePlan -- Reference
+CarePlan -- Patient
+CarePlan -- Group
+CarePlan -- Encounter
+CarePlan -- EpisodeOfCare
+CarePlan -- Period
+CarePlan -- Practitioner
+CarePlan -- RelatedPerson
+CarePlan -- Organization
+CarePlan -- CodeableConcept
+CarePlan -- Condition
+CarePlan -- Goal
+CarePlan -- Appointment
+CarePlan -- CommunicationRequest
+CarePlan -- DeviceUseRequest
+
+DiagnosticOrder -- CarePlan
+MedicationOrder -- CarePlan
+NutritionOrder -- CarePlan
+Order -- CarePlan
+ProcedureRequest -- CarePlan
+ReferralRequest -- CarePlan
+SupplyRequest -- CarePlan
+ProceduresRequest -- CarePlan
+ProcessRequest -- CarePlan
+VisionPrescription -- CarePlan
+Location -- CarePlan
+Medication -- CarePlan
+Substance -- CarePlan
+Quantity -- CarePlan
+CarePlan -- CarePlan
+
+
+CareTeam -- Identifier
+CareTeam -- CodeableConcept
+CareTeam -- Reference
+CareTeam -- Patient
+CareTeam -- Group
+CareTeam -- Period
+CareTeam -- Practitioner
+CareTeam -- RelatedPerson
+CareTeam -- Organization
+
+object Attachment
+
+Communication -- Identifier
+Communication -- CodeableConcept
+Communication -- Reference
+Communication -- Device
+Communication -- Organization
+Communication -- Patient
+Communication -- Practitioner
+Communication -- RelatedPerson
+Communication -- Group
+Communication -- Attachment
+Communication -- Encounter
+Communication -- CommunicationRequest
+
+object DeviceKind
+object Annotation
+
+Device -- Identifier
+Device -- CodeableConcept
+Device -- DeviceKind
+Device -- Annotation
+Device -- DeviceStatus
+Device -- Reference
+Device -- Organization
+Device -- Location
+Device -- Patient
+
+
+FinnishPatient -- Identifier
+
+object Observation
+object MedicationStatement
+object RiskAssessment
+
+Goal -- Identifier
+Goal -- Reference
+Goal -- Patient
+Goal -- Group
+Goal -- Organization
+Goal -- CodeableConcept
+Goal -- Quantity
+Goal -- Practitioner
+Goal -- RelatedPerson
+Goal -- Condition
+Goal -- Observation
+Goal -- MedicationStatement
+Goal -- NutritionOrder
+Goal -- ProcedureRequest
+Goal -- RiskAssessment
+Goal -- Annotation
+
+object  Resource
+Resource : id
+Resource : meta
+Resource : implicitRules
+Resource : language
+
+object  DomainResource
+DomainResource : text
+DomainResource : contained
+DomainResource : extension
+DomainResource : modifierExtension
+
+
+DomainResource <|-- Person
+DomainResource <|-- CarePlan
+DomainResource <|-- FinnishPatient
+DomainResource <|-- Communication
+DomainResource <|-- Device
+DomainResource <|-- CareTeam
+DomainResource <|-- Appointment
+DomainResource <|-- Goal
+Resource <|-- DomainResource
+
+object HumanName
+object ContactPoint
+object Address
+
+Patient -- Identifier
+Patient -- HumanName
+Patient -- ContactPoint
+Patient -- Address
+Patient -- CodeableConcept
+Patient -- Attachment
+Patient -- Reference
+Patient -- Organization
+Patient -- Period
+Patient -- Practitioner
+
+
+Person -- Identifier
+Person -- HumanName
+Person -- ContactPoint
+Person -- Address
+Person -- Attachment
+Person -- Reference
+Person -- Organization
+Person -- Patient
+Person -- Practitioner
+Person -- RelatedPerson
+Person -- Person
+@enduml
