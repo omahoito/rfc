@@ -6,7 +6,11 @@ Drafts on what the FHIR resources could be like. Remove the comments from the .p
 
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/profiles/DRAFTS/datamodel.plantuml)
 
+Inheritances among the FHIR profiles.
+
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/profiles/DRAFTS/inheritances.plantuml)
+
+FHIR profiles that are connected to a specific profile.
 
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/profiles/DRAFTS/Patient.plantuml?2)
 
