@@ -17,5 +17,8 @@ Current schemas are in https://simplifier.net/FinnishPHR
 
 *Initial version from an old architecture document, to be updated*
 
-![Data model](http://g.gravizo.com/source?https%3A%2F%2Fraw.githubusercontent.com%2Fomahoito%2Frfc%2Fmaster%2Fmodel.dot%3F2)
+<!---
+
+![Data model](http://g.gravizo.com/source?https%3A%2F%2Fraw.githubusercontent.com%2Fomahoito%2Frfc%2FPLANTUML_Diagrams%2Fmaster%2Fmodel.dot%3F2)
+--->
 <!-- Increment the last number (after %3F) to invalidate gravizo and browser cache -->
