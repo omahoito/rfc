@@ -1,7 +1,8 @@
 @startuml
-object Communication
+object Communication{
+    identifier
+}
 
-Communication : identifier
 
 object Identifier
 object CodeableConcept
