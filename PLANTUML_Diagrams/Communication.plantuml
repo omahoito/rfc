@@ -1,6 +1,19 @@
 @startuml
 object Communication{
     identifier
+    basedOn
+    parent
+    status
+    category
+    medium
+    subject
+    topic
+    context
+    sent
+    received
+    sender
+    recipient
+    reason    
 }
 
 
