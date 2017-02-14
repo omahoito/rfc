@@ -1,0 +1,39 @@
+
+@startuml
+object Person{
+    identifier
+    name
+    telecom
+    gender
+    birthDate
+    address
+    photo
+    managingOrganization
+    active
+    link
+}
+
+object Patient{
+   identifier
+   active
+   name
+   telecom
+   gender
+   birthDate
+   deceased
+   address
+   maritalStatus
+   multipleBirth
+   photo
+   contact
+   animal
+   communication
+   generalPractitioner
+   managingOrganization
+   link
+}
+
+object FinnishPatient{
+   identifier
+}
+@enduml
