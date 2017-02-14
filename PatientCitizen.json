@@ -1,0 +1,44 @@
+{
+	"_person_comment": "This part from Person, http://hl7.org/fhir/2017Jan/person.html",
+	"_name_comment": "Henkilön nimi.",
+	"name": [{
+		"use": "official",
+		"family": "Mallikas",
+		"given": [
+			"Matti",
+			"Muodollisesti"
+		]
+	}, {
+		"use": "usual",
+		"given": [
+			"Mate"
+		]
+	}],
+	"_telecom_comment": "Lista yhteystietoja henkilölle, esimerkiksi puhelinnumero tai sähköpostiosoite.",
+	"telecom": [{
+		"use": "home"
+	}, {
+		"system": "phone",
+		"value": "(09) 5555 6473",
+		"use": "work"
+	}, {
+		"system": "email",
+		"value": "mate@example.org",
+		"use": "home"
+	}],
+	"_gender_comment": "Sukupuoli. Pakollinen kenttä",
+	"gender": "male",
+	"_birthDate_comment": "Syntymäaika",
+	"birthDate": "1947-12-25",
+	"_address_comment": "Henkilön osoite",
+	"_photo_comment": "Henkilön valokuva",
+	"_managingOrganization_comment": "Organisaatio joka vastaa henkilörekisteristä josta tiedot on saatu.",
+	"_link_comment": "Viite resurssiin joka koskee henkilöä",
+	"_finnishPatient_comment": "this part from the Finnish Patient, https://simplifier.net/FinnishPHR/FinnishPatient",
+	"_patient_identifier_comment": "Potilaan yksilöivä henkilötunnus. Pakollinen kenttä",
+	"identifier": "",
+	"_active_comment": "Merkintä siitä onko potilaan rekisteritiedot aktiivisia.",
+	"active": "",
+	"_communication_comment": "Lista kielistä joista voi olla hyötyä potilaan kanssa keskustellessa.",
+	"communication": []
+}
