@@ -1,0 +1,175 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "2ff407a9-bd4f-40f8-8f36-27081ee8c721",
+  "meta": {
+    "versionId": "3",
+    "lastUpdated": "2017-02-13T14:06:56.77+00:00"
+  },
+  "url": "StructureDefinition/ODA_Appointment",
+  "name": "ODA_Appointment",
+  "status": "draft",
+  "date": "2017-02-07T10:47:42.5103218+02:00",
+  "kind": "resource",
+  "constrainedType": "Appointment",
+  "abstract": false,
+  "base": "http://hl7.org/fhir/StructureDefinition/Appointment",
+  "differential": {
+    "element": [
+      {
+        "path": "Appointment"
+      },
+      {
+        "path": "Appointment.identifier",
+        "comments": "ODA luo tunnisteen sessiod-id:lle, ajatuksena että saman potilaan ajanvaraukseen liittyen tämä tunniste siirtyy ja pysyy samana asynkronisissakin sanomissa.  Ajan allokoiva järjestelmä luo vastaussanomalla myös oman id:n appointmentille eli identifier on toistuva.",
+        "min": 1
+      },
+      {
+        "path": "Appointment.identifier.use",
+        "max": "0",
+        "fixedCode": "official "
+      },
+      {
+        "path": "Appointment.identifier.type",
+        "requirements": "Allows users to make use of identifiers when the identifier system is not known.\r\n\r\nPLAC (Placer) ODA allokoima identifier\r\nFILL (Filler) PTJ allokoima identifier appointmentille",
+        "max": "0"
+      },
+      {
+        "path": "Appointment.identifier.system",
+        "min": 1
+      },
+      {
+        "path": "Appointment.identifier.value",
+        "requirements": "Yksilöivä tunnus string",
+        "min": 1
+      },
+      {
+        "path": "Appointment.identifier.period",
+        "max": "0"
+      },
+      {
+        "path": "Appointment.identifier.assigner",
+        "requirements": "Tekstinä id:n luoneen organisaation nimi",
+        "min": 1
+      },
+      {
+        "path": "Appointment.status",
+        "short": "proposed | pending | booked | cancelled",
+        "requirements": "proposed ODA käyttää kun kysyy PTJ:ltä aikaa\r\nproposed PTJ käyttää kun vastaa aikaehdotuksella,\r\npending kun ODA vahvistaa ajan - jos ehdotetut ajat ei sovi potilaalle, palataan ensimmäiseen transaktioon ja ODA allokoima identifier pysyy samana -> PTJ pitää huolen ettei tarjoa uudestaan samoja aikoja\r\nbooked kun PTJ vahvistaa varatun ajan tai cancelled jos vahvistus ei onnistu"
+      },
+      {
+        "path": "Appointment.type",
+        "requirements": "Palveluluokitus tähän vaiko participant_actor_healthCareService alle ",
+        "min": 1
+      },
+      {
+        "path": "Appointment.reason",
+        "max": "0"
+      },
+      {
+        "path": "Appointment.priority",
+        "requirements": "Tarvitaanko priorisointia?"
+      },
+      {
+        "path": "Appointment.description",
+        "min": 1
+      },
+      {
+        "path": "Appointment.start",
+        "requirements": "Ensimmäisessä ODA:n luomassa kyselytransaktiossa ei anneta, PTJ tarjoaa aikoja\r\nTarjotulla ajalla start ja end pakollinen"
+      },
+      {
+        "path": "Appointment.end",
+        "requirements": "Tarjotulla ajalla start ja end pakollinen"
+      },
+      {
+        "path": "Appointment.minutesDuration",
+        "requirements": "Vapaaehtoinen lisätieto"
+      },
+      {
+        "path": "Appointment.slot",
+        "max": "0"
+      },
+      {
+        "path": "Appointment.comment",
+        "requirements": "Esimerkiksi ohjetta potilaalle, miten valmistautua käyntiin",
+        "maxLength": 140
+      },
+      {
+        "path": "Appointment.participant.type",
+        "requirements": "\r\n",
+        "max": "0"
+      },
+      {
+        "path": "Appointment.participant.actor",
+        "comments": "Patient, Practitioner, HealthcareService, Location tärkeimmät",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "https://simplifier.net/FinnishPHR/FinnishPatient"
+            ],
+            "aggregation": [
+              "contained",
+              "bundled"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "https://simplifier.net/ODAajanvaraus/ODAPractitioner"
+            ],
+            "aggregation": [
+              "bundled",
+              "contained"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "https://simplifier.net/ODAajanvaraus/ODARelatedPerson"
+            ],
+            "aggregation": [
+              "contained",
+              "bundled"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "https://simplifier.net/ODAajanvaraus/ODADevice"
+            ],
+            "aggregation": [
+              "bundled",
+              "contained"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "https://simplifier.net/ODAajanvaraus/ODAHealthcareService"
+            ],
+            "aggregation": [
+              "contained",
+              "bundled"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/Location"
+            ],
+            "aggregation": [
+              "bundled",
+              "contained"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "Appointment.participant.status",
+        "requirements": "needs-action ensimmäinen transaktio\r\ntentative toinen transaktio\r\naccepted kolmas\r\naccepted neljäs "
+      }
+    ]
+  }
+}
