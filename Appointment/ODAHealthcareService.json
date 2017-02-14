@@ -1,0 +1,151 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "918c482b-9981-41fe-b787-19e46bd087ab",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2017-02-13T14:07:45.728+00:00"
+  },
+  "url": "StructureDefinition/ODA_HealthcareService",
+  "name": "ODA_HealthcareService",
+  "status": "draft",
+  "date": "2017-02-09T16:10:29.8294311+02:00",
+  "description": "Organisaation tarjoama palvelu\r\n\r\nBase StructureDefinition for HealthcareService Resource",
+  "kind": "resource",
+  "constrainedType": "HealthcareService",
+  "abstract": false,
+  "base": "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+  "differential": {
+    "element": [
+      {
+        "path": "HealthcareService"
+      },
+      {
+        "path": "HealthcareService.identifier",
+        "comments": "Tekninen tunniste kokonaisuudelle"
+      },
+      {
+        "path": "HealthcareService.identifier.use",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.identifier.type",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.identifier.period",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.providedBy",
+        "comments": "Organisaation tiedot\r\n\r\nThis property is recommended to be the same as the Location's managingOrganization, and if not provided should be interpreted as such. If the Location does not have a managing Organization, then this property should be populated."
+      },
+      {
+        "path": "HealthcareService.serviceCategory",
+        "comments": "Palveluluokat\r\n\r\nSelecting a Service Category then determines the list of relevant service types that can be selected in the primary service type.",
+        "min": 1
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
+            "valueString": "ServiceType"
+          }
+        ],
+        "path": "HealthcareService.serviceType",
+        "comments": "Palvelun tyypit",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "path": "HealthcareService.serviceType.type",
+        "comments": "Change to serviceType?\r\n\r\nPalveluluokitus tänne"
+      },
+      {
+        "path": "HealthcareService.location",
+        "comments": "Sijainti"
+      },
+      {
+        "path": "HealthcareService.serviceName",
+        "comments": "Note that FHIR strings may not exceed 1MB in size\r\n\r\nPotilaalle näytettävä nimi palvelusta",
+        "min": 1
+      },
+      {
+        "path": "HealthcareService.comment",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.extraDetails",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.photo",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.telecom.use",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.telecom.rank",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.telecom.period",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.coverageArea",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.serviceProvisionCode",
+        "requirements": "Kela tuki??!",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.eligibility",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.eligibilityNote",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.programName",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.characteristic",
+        "comments": "These could be such things as is wheelchair accessible.\r\n\r\nPääseekö pyörätuolilla vastaanotolle"
+      },
+      {
+        "path": "HealthcareService.referralMethod",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.publicKey",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.appointmentRequired",
+        "comments": "Palveluun vain erillisellä ajanvaraukselle, ei liene merkitystä tässä. poistetaanko?!"
+      },
+      {
+        "path": "HealthcareService.availableTime",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.notAvailable",
+        "max": "0"
+      },
+      {
+        "path": "HealthcareService.availabilityExceptions",
+        "max": "0"
+      }
+    ]
+  }
+}

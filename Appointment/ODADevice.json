@@ -1,0 +1,140 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "71e0a01b-12d8-4957-bb14-593c3ff9c66b",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2017-02-13T14:07:28.977+00:00"
+  },
+  "url": "StructureDefinition/ODA_Device",
+  "name": "ODA_Device",
+  "status": "draft",
+  "date": "2017-02-10T09:02:43.6111346+02:00",
+  "description": "Laite jolla otetaan yhteyttä ajanvarausjärjestelmään.",
+  "kind": "resource",
+  "constrainedType": "Device",
+  "abstract": false,
+  "base": "http://hl7.org/fhir/StructureDefinition/Device",
+  "differential": {
+    "element": [
+      {
+        "path": "Device"
+      },
+      {
+        "path": "Device.identifier",
+        "comments": "Often fixed to the device as a barcode and may include names given to the device in local usage.  Note that some of the barcodes affixed to the device identify its type, not its instance.  For the FDA mandated Unique Device Identifier (UDI) use  the Device.udi element.\r\n\r\nLaite jolla ODA-palveluun kirjaudutaan. Voi esimerkiksi olla \r\n"
+      },
+      {
+        "path": "Device.identifier.use",
+        "comments": "Kuvaus siitä millainen tunniste on kyseessä.\r\n\r\n\r\nThis is labeled as \"Is Modifier\" because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary."
+      },
+      {
+        "path": "Device.identifier.type",
+        "comments": "Tunnisteen kooditus.\r\n\r\n\r\nThis element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type."
+      },
+      {
+        "path": "Device.identifier.system",
+        "comments": "Järjestelmä jota käytetää kooditusta varten. Esimerkiksi älypuhelimia varten voidaan käyttää IMEI ja IMSI-tunnisteita, joista edellistä voi katsoa täältä: http://www.imei.info/\r\n\r\nsee http://en.wikipedia.org/wiki/Uniform_resource_identifier"
+      },
+      {
+        "path": "Device.identifier.value",
+        "comments": "Arvo jonka tunniste ottaa.\r\n\r\n\r\nIf the value is a full URI, then the system SHALL be urn:ietf:rfc:3986."
+      },
+      {
+        "path": "Device.identifier.period",
+        "max": "0"
+      },
+      {
+        "path": "Device.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "path": "Device.type.coding.system",
+        "comments": "Osoite jossa on määritelmä järjestelmästä.\r\n\r\n\r\nThe URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously."
+      },
+      {
+        "path": "Device.type.coding.version",
+        "max": "0"
+      },
+      {
+        "path": "Device.type.coding.code",
+        "comments": "Laitteen tuotekoodi.\r\n\r\nNote that FHIR strings may not exceed 1MB in size"
+      },
+      {
+        "path": "Device.type.coding.display",
+        "comments": "Selitys koodin merkityksestä järjestelmässä.\r\n\r\nNote that FHIR strings may not exceed 1MB in size"
+      },
+      {
+        "path": "Device.type.text",
+        "comments": "Ihmiselle ymmärrettävässä muodossa oleva kuvaus laitteesta.\r\n\r\n\r\nVery often the text is the same as a displayName of one of the codings."
+      },
+      {
+        "path": "Device.note",
+        "comments": "Tekijän selittävä merkintä laitteesta.\r\n\r\nFor systems that do not have structured annotations, they can simply communicate a single annotation with no author or time.  This element may need to be included in narrative because of the potential for modifying information.  *Annotations SHOULD NOT* be used to communicate \"modifying\" information that could be computable. (This is a SHOULD because enforcing user behavior is nearly impossible)."
+      },
+      {
+        "path": "Device.note.author[x]",
+        "definition": "Merkinnän tekijä. Voi olla potilas, ammatinharjoittaja tai potilaan puolesta asioija.\r\n\r\nThe individual responsible for making the annotation."
+      },
+      {
+        "path": "Device.note.time",
+        "comments": "Aika jolloin merkintä tehtiin."
+      },
+      {
+        "path": "Device.note.text",
+        "comments": "Merkinnän teksti.\r\n\r\nNote that FHIR strings may not exceed 1MB in size"
+      },
+      {
+        "path": "Device.status",
+        "max": "0"
+      },
+      {
+        "path": "Device.manufacturer",
+        "max": "0"
+      },
+      {
+        "path": "Device.model",
+        "max": "0"
+      },
+      {
+        "path": "Device.version",
+        "max": "0"
+      },
+      {
+        "path": "Device.manufactureDate",
+        "max": "0"
+      },
+      {
+        "path": "Device.expiry",
+        "max": "0"
+      },
+      {
+        "path": "Device.udi",
+        "max": "0"
+      },
+      {
+        "path": "Device.lotNumber",
+        "max": "0"
+      },
+      {
+        "path": "Device.owner",
+        "max": "0"
+      },
+      {
+        "path": "Device.location",
+        "comments": "Ajanvarausta varten käytettävän laitteen sijainti."
+      },
+      {
+        "path": "Device.patient",
+        "max": "0"
+      },
+      {
+        "path": "Device.contact",
+        "max": "0"
+      },
+      {
+        "path": "Device.url",
+        "max": "0"
+      }
+    ]
+  }
+}
