@@ -51,7 +51,7 @@
 	"recipient": [{
 		"reference": "Patient/21"
 	}],
-	"_comment_reason": "Viestin syy. Voi olla viestin otsikko.",
+	"_reason_comment": "Viestin syy. Voi olla viestin otsikko.",
 	"reason": "Tohtorin ehdotus",
 	"_payload_comment": "Viestin sisältö",
 	"payload": [{
