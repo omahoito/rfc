@@ -1,0 +1,94 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2017-02-12T20:48:45.835+00:00" />
+  </meta>
+  <url value="StructureDefinition/ODARelatedPerson" />
+  <name value="ODARelatedPerson" />
+  <status value="draft" />
+  <date value="2017-02-09T16:02:43.6613918+02:00" />
+  <kind value="resource" />
+  <constrainedType value="RelatedPerson" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+  <differential>
+    <element>
+      <path value="RelatedPerson" />
+    </element>
+    <element>
+      <path value="RelatedPerson.identifier" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="RelatedPerson.identifier.use" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="RelatedPerson.identifier.type" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="RelatedPerson.identifier.system" />
+      <definition value="Establishes the namespace in which set of possible id values is unique.&#xD;&#xA;&#xD;&#xA;The namespace for the identifier  Fixed Value: urn:ietf:rfc:3986" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="RelatedPerson.identifier.value" />
+      <definition value="The portion of the identifier typically displayed to the user and which is unique within the context of the system.&#xD;&#xA;&#xD;&#xA;UUID&#xD;&#xA;Example: 121212-987T" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="RelatedPerson.identifier.period" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="RelatedPerson.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="RelatedPerson.patient" />
+      <comments value="Potilas, jonka puolesta henkilö asioi" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://simplifier.net/FinnishPHR/FinnishPatient/" />
+        <aggregation value="contained" />
+        <aggregation value="referenced" />
+        <aggregation value="bundled" />
+      </type>
+    </element>
+    <element>
+      <path value="RelatedPerson.relationship" />
+      <comments value="Asioijan suhde potilaaseen&#xD;&#xA;&#xD;&#xA;Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="RelatedPerson.relationship.coding" />
+      <comments value="Tarkista luokitus tähän&#xD;&#xA;&#xD;&#xA;Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true." />
+    </element>
+    <element>
+      <path value="RelatedPerson.name" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="RelatedPerson.telecom" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="RelatedPerson.birthDate" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="RelatedPerson.address" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="RelatedPerson.photo" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="RelatedPerson.period" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

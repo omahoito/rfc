@@ -1,0 +1,146 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="2ff407a9-bd4f-40f8-8f36-27081ee8c721" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2017-02-12T20:45:54.968+00:00" />
+  </meta>
+  <url value="StructureDefinition/ODA_Appointment" />
+  <name value="ODA_Appointment" />
+  <status value="draft" />
+  <date value="2017-02-07T10:47:42.5103218+02:00" />
+  <kind value="resource" />
+  <constrainedType value="Appointment" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Appointment" />
+  <differential>
+    <element>
+      <path value="Appointment" />
+    </element>
+    <element>
+      <path value="Appointment.identifier" />
+      <comments value="ODA luo tunnisteen sessiod-id:lle, ajatuksena että saman potilaan ajanvaraukseen liittyen tämä tunniste siirtyy ja pysyy samana asynkronisissakin sanomissa.  Ajan allokoiva järjestelmä luo vastaussanomalla myös oman id:n appointmentille eli identifier on toistuva." />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Appointment.identifier.use" />
+      <max value="0" />
+      <fixedCode value="official " />
+    </element>
+    <element>
+      <path value="Appointment.identifier.type" />
+      <requirements value="Allows users to make use of identifiers when the identifier system is not known.&#xD;&#xA;&#xD;&#xA;PLAC (Placer) ODA allokoima identifier&#xD;&#xA;FILL (Filler) PTJ allokoima identifier appointmentille" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Appointment.identifier.system" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Appointment.identifier.value" />
+      <requirements value="Yksilöivä tunnus string" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Appointment.identifier.period" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Appointment.identifier.assigner" />
+      <requirements value="Tekstinä id:n luoneen organisaation nimi" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Appointment.status" />
+      <short value="proposed | pending | booked | cancelled" />
+      <requirements value="proposed ODA käyttää kun kysyy PTJ:ltä aikaa&#xD;&#xA;proposed PTJ käyttää kun vastaa aikaehdotuksella,&#xD;&#xA;pending kun ODA vahvistaa ajan - jos ehdotetut ajat ei sovi potilaalle, palataan ensimmäiseen transaktioon ja ODA allokoima identifier pysyy samana -&gt; PTJ pitää huolen ettei tarjoa uudestaan samoja aikoja&#xD;&#xA;booked kun PTJ vahvistaa varatun ajan tai cancelled jos vahvistus ei onnistu" />
+    </element>
+    <element>
+      <path value="Appointment.type" />
+      <requirements value="Palveluluokitus tähän vaiko participant_actor_healthCareService alle " />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Appointment.reason" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Appointment.priority" />
+      <requirements value="Tarvitaanko priorisointia?" />
+    </element>
+    <element>
+      <path value="Appointment.description" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Appointment.start" />
+      <requirements value="Ensimmäisessä ODA:n luomassa kyselytransaktiossa ei anneta, PTJ tarjoaa aikoja&#xD;&#xA;Tarjotulla ajalla start ja end pakollinen" />
+    </element>
+    <element>
+      <path value="Appointment.end" />
+      <requirements value="Tarjotulla ajalla start ja end pakollinen" />
+    </element>
+    <element>
+      <path value="Appointment.minutesDuration" />
+      <requirements value="Vapaaehtoinen lisätieto" />
+    </element>
+    <element>
+      <path value="Appointment.slot" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Appointment.comment" />
+      <requirements value="Esimerkiksi ohjetta potilaalle, miten valmistautua käyntiin" />
+      <maxLength value="140" />
+    </element>
+    <element>
+      <path value="Appointment.participant.type" />
+      <requirements value="&#xD;&#xA;" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Appointment.participant.actor" />
+      <comments value="Patient, Practitioner, HealthcareService, Location tärkeimmät" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://simplifier.net/FinnishPHR/FinnishPatient" />
+        <aggregation value="contained" />
+        <aggregation value="bundled" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <aggregation value="bundled" />
+        <aggregation value="contained" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <aggregation value="contained" />
+        <aggregation value="bundled" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <aggregation value="bundled" />
+        <aggregation value="contained" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+        <aggregation value="contained" />
+        <aggregation value="bundled" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <aggregation value="bundled" />
+        <aggregation value="contained" />
+      </type>
+    </element>
+    <element>
+      <path value="Appointment.participant.status" />
+      <requirements value="needs-action ensimmäinen transaktio&#xD;&#xA;tentative toinen transaktio&#xD;&#xA;accepted kolmas&#xD;&#xA;accepted neljäs " />
+    </element>
+  </differential>
+</StructureDefinition>
