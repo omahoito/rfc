@@ -1,0 +1,70 @@
+@startuml
+object PatientCitizen{
+    identifier
+    name
+    telecom
+    gender
+    birthDate
+    address
+    photo
+    managingOrganization
+    active
+    link
+}
+
+object CareTeam{
+}
+
+object CarePlan{
+    id
+    subject
+    status
+    context
+    period
+    author
+    careteam
+    addresses
+    support
+    modified
+    relatedPlan
+    goal
+    category
+    description
+    Activity.detail.category
+    Activity.detail.code.coding.system
+    Activity.detail.code.coding.code
+    Activity.detail.status
+    Activity.detail.statusReason
+    Activity.detail.prohibited
+    Activity.detail.scheduled
+    Activity.detail.description
+    Note
+}
+
+
+object Communication_Message{
+    identifier
+    status
+    category
+    medium
+    subject
+    topic
+    context
+    sent
+    received
+    sender
+    recipient
+    reason
+    payload    
+}
+
+object Device{
+    type
+    model
+    identifier
+    note
+}
+
+object Appointment{
+}
+@enduml
