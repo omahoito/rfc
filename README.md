@@ -20,6 +20,10 @@ Current schemas are in https://simplifier.net/FinnishPHR
   * Kelan FinnishPatient-resurssi: https://simplifier.net/FinnishPHR/FinnishPatient/
   * Resurssi [json-muodossa](https://github.com/omahoito/rfc/blob/master/PatientCitizen.json)
   * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/6)
+* Appointment
+  * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/3)
+* CarePlan
+  * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/10)
 
 
 
