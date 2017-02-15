@@ -67,4 +67,12 @@ object Device{
 
 object Appointment{
 }
+
+PatientCitizen -- Device
+PatientCitizen -- Appointment
+
+PatientCitizen -- CarePlan
+
+CarePlan -- CareTeam
+CarePlan -- Communication_Message
 @enduml
