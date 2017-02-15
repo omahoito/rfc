@@ -13,7 +13,11 @@ Current schemas are in https://simplifier.net/FinnishPHR
 (Finnish) Tietomalleja on seuraavista resursseista:
 * Communication / Viesti, käytetään potilaan ja ammatinharjoittajan välisessä viestinnässä. Json-muodossa [tässä](https://github.com/omahoito/rfc/blob/master/Communication.json)
 * Device / Laite, laite jota käytetään oirearviokyselyn täyttämiseen. Json-muodossa [tässä](https://github.com/omahoito/rfc/blob/master/Device.json)
-* Person - FinnishPatient / Henkilö - Potilas, henkilö- ja potilastiedot, potilastiedot Kelan määrittelemästä resurssista. Resurssi [json-muodossa](https://github.com/omahoito/rfc/blob/master/PatientCitizen.json)
+* Person - FinnishPatient / Henkilö - Potilas. Henkilö- ja potilastiedot. Person-malli perustuu FHIR-standardin STFU3-versioon, Potilas Kelan mallin
+  * Person: http://hl7.org/fhir/2017Jan/person.html
+  * Kelan FinnishPatient-resurssi: https://simplifier.net/FinnishPHR/FinnishPatient/
+  * Resurssi [json-muodossa](https://github.com/omahoito/rfc/blob/master/PatientCitizen.json)
+
 
 
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/PLANTUML_Diagrams/Resources.plantuml?2) <!--- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
