@@ -12,11 +12,14 @@ Current schemas are in https://simplifier.net/FinnishPHR
 
 (Finnish) Tietomalleja on seuraavista resursseista:
 * Communication / Viesti, käytetään potilaan ja ammatinharjoittajan välisessä viestinnässä. Json-muodossa [tässä](https://github.com/omahoito/rfc/blob/master/Communication.json)
+  * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/7)
 * Device / Laite, laite jota käytetään oirearviokyselyn täyttämiseen. Json-muodossa [tässä](https://github.com/omahoito/rfc/blob/master/Device.json)
+  * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/1)
 * Person - FinnishPatient / Henkilö - Potilas. Henkilö- ja potilastiedot. Person-malli perustuu FHIR-standardin STFU3-versioon, Potilas Kelan mallin
   * Person: http://hl7.org/fhir/2017Jan/person.html
   * Kelan FinnishPatient-resurssi: https://simplifier.net/FinnishPHR/FinnishPatient/
   * Resurssi [json-muodossa](https://github.com/omahoito/rfc/blob/master/PatientCitizen.json)
+  * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/6)
 
 
 
