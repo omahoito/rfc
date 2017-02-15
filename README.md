@@ -16,6 +16,9 @@ Current schemas are in https://simplifier.net/FinnishPHR
 * [Person - Patient - FinnishPatient / Henkilö - Potilas - SuomalainenPotilas](https://github.com/omahoito/rfc/wiki/Person---Patient---FinnishPatient), henkilö- ja potilastiedot. Person [json-muodossa](https://github.com/omahoito/rfc/blob/master/Person.pseudojson)
 
 
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/PLANTUML_Diagrams/Resources.plantuml?2) <!--- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
+
+
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/datamodel.md?2) <!--- This generates a picture based on datamodel.md. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
 
 
