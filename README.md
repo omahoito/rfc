@@ -11,7 +11,7 @@ Current schemas are in https://simplifier.net/FinnishPHR
 
 
 (Finnish) Tietomalleja on seuraavista resursseista:
-* [Communication / Viesti](https://github.com/omahoito/rfc/wiki/Communication), käytetään potilaan ja ammatinharjoittajan välisessä viestinnässä. Json-muodossa [tässä](https://github.com/omahoito/rfc/blob/master/Communication.pseudojson)
+* Communication / Viesti, käytetään potilaan ja ammatinharjoittajan välisessä viestinnässä. Json-muodossa [tässä](https://github.com/omahoito/rfc/blob/master/Communication.json)
 * [Device / Laite](https://github.com/omahoito/rfc/wiki/Device), laite jota käytetään oirearviokyselyn täyttämiseen. Json-muodossa [tässä](https://github.com/omahoito/rfc/blob/master/device.pseudojson)
 * [Person - Patient - FinnishPatient / Henkilö - Potilas - SuomalainenPotilas](https://github.com/omahoito/rfc/wiki/Person---Patient---FinnishPatient), henkilö- ja potilastiedot. Person [json-muodossa](https://github.com/omahoito/rfc/blob/master/Person.pseudojson)
 
