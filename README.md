@@ -11,19 +11,10 @@ Current schemas are in https://simplifier.net/FinnishPHR
 
 
 (Finnish) Tietomalleja on seuraavista resursseista:
-* Communication / Viesti, käytetään potilaan ja ammatinharjoittajan välisessä viestinnässä.
-  * Json-muodossa [tässä](https://github.com/omahoito/rfc/blob/master/Communication.json)
-  * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/7)
-* Device / Laite, laite jota käytetään oirearviokyselyn täyttämiseen.
-  * Json-muodossa [tässä](https://github.com/omahoito/rfc/blob/master/Device.json)
-  * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/1)
-* Person - FinnishPatient / Henkilö - Potilas. Henkilö- ja potilastiedot. Person-malli perustuu FHIR-standardin STU3-versioon, Potilas Kelan mallin
-  * Person: http://hl7.org/fhir/2017Jan/person.html
-  * Kelan FinnishPatient-resurssi: https://simplifier.net/FinnishPHR/FinnishPatient/
-  * Resurssi [json-muodossa](https://github.com/omahoito/rfc/blob/master/PatientCitizen.json)
-  * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/6)
+
 * Appointment
   * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/3)
+
 * CarePlan
   * Tiedosto [json-muodossa](https://github.com/omahoito/rfc/blob/master/CarePlan.json)
   * Perustuu tähän resurssiin : http://hl7.org/fhir/2017Jan/careplan.html
@@ -34,6 +25,19 @@ Current schemas are in https://simplifier.net/FinnishPHR
   * Perustuu tähän resurssiin : http://hl7.org/fhir/2017Jan/careteam.html
   * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/11)
 
+* Communication / Viesti, käytetään potilaan ja ammatinharjoittajan välisessä viestinnässä.
+  * Json-muodossa [tässä](https://github.com/omahoito/rfc/blob/master/Communication.json)
+  * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/7)
+
+* Device / Laite, laite jota käytetään oirearviokyselyn täyttämiseen.
+  * Json-muodossa [tässä](https://github.com/omahoito/rfc/blob/master/Device.json)
+  * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/1)
+
+* Person - FinnishPatient / Henkilö - Potilas. Henkilö- ja potilastiedot. Person-malli perustuu FHIR-standardin STU3-versioon, Potilas Kelan mallin
+  * Person: http://hl7.org/fhir/2017Jan/person.html
+  * Kelan FinnishPatient-resurssi: https://simplifier.net/FinnishPHR/FinnishPatient/
+  * Resurssi [json-muodossa](https://github.com/omahoito/rfc/blob/master/PatientCitizen.json)
+  * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/6)
 
 
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/PLANTUML_Diagrams/Resources.plantuml?3) <!--- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
