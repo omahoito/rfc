@@ -1,0 +1,85 @@
+{
+	"resourceType": "CareTeam",
+	"_identifier_comment": "Tunnisteet luodaan tiimin luonnin yhteydessä.",
+	"identifier": [{
+		"_use_comment": "(usual | official | temp | secondary). Pakollinen kenttä.",
+		"use": "usual",
+		"_value_comment": "Tunnisteen arvo.",
+		"value": "3141592",
+		"_system_comment": "Lähde josta saadaan enemmän tietoa tunnisteesta.",
+		"system": "http://www.source.com"
+	}],
+	"_status_comment": "active | suspended | inactive | entered in error",
+	"status": {
+		"_coding_comment": "Referenssi koodiin jota terminologiajärjestelmä määrittelee",
+		"coding": {
+			"_code_comment": "Symboli järjestelmän määrittelemässä syntaksissa",
+			"code": "",
+			"_system_comment": "Lähde josta saadaan enemmän tietoa tunnisteesta",
+			"system": "123"
+		},
+		"_text_comment": "Ihmisymmärrettävä kuvaus hoitosuunnitelmakategoriasta.",
+		"text": "itsehoitosuunnitelma"
+
+	},
+	"_category_comment": "Minkätyyppinen tiimi.",
+	"category": [{
+		"_coding_comment": "Referenssi koodiin jota terminologiajärjestelmä määrittelee",
+		"coding": {
+			"_code_comment": "Symboli järjestelmän määrittelemässä syntaksissa",
+			"code": "",
+			"_system_comment": "Lähde josta saadaan enemmän tietoa tunnisteesta",
+			"system": "123"
+		},
+		"_text_comment": "Ihmisymmärrettävä kuvaus hoitosuunnitelmakategoriasta.",
+		"text": "itsehoitosuunnitelma"
+	}],
+	"_name_comment": "Tiimin nimi, kuten yleislääkärit",
+	"name": "YLE-lääk",
+	"_subject_comment": "Ketä varten hoitoryhmä on. (Patient|Group)",
+	"subject": {
+		"_subject_reference_comment": "Tekstimuotoinen viite tahoon",
+		"reference": "Group22"
+	},
+	"_period_comment": "Ajanjakso jolloin ryhmä toiminnassa.",
+	"period": {
+		"period": {
+			"start": "01022011",
+			"end": "01012011"
+		}
+	},
+	"_participant_comment": "Tiimin jäsenet.",
+	"participant": [{
+		"_participant_role_comment": "Tiimijäsenen osallisuuden laatu tiimissä.",
+		"_participant_role": {
+			"_coding_comment": "Referenssi koodiin jota terminologiajärjestelmä määrittelee",
+			"coding": {
+				"_code_comment": "Symboli järjestelmän määrittelemässä syntaksissa",
+				"code": "",
+				"_system_comment": "Lähde josta saadaan enemmän tietoa tunnisteesta",
+				"system": "123"
+			},
+			"_text_comment": "Ihmisymmärrettävä kuvaus hoitosuunnitelmakategoriasta.",
+			"text": "itsehoitosuunnitelma"
+		},
+
+		"_participant_member_comment": "Viite niihin ketkä ovat osallisia.(Practitioner|RelatedPerson|Patient|Organization)",
+		"_participant_member": {
+			"_reference_comment": "",
+			"reference": "Practitioner/02"
+		},
+
+		"_participant_period_comment": "Osallistujan ajanjakso.",
+		"_participant_period": {
+			"period": {
+				"start": "01022011",
+				"end": "01012011"
+			}
+		}
+	}],
+	"_managingOrganization_comment": "Viite yhteen tai useampaan organisaatioon joka on vastuussa hoitoryhmästä.",
+	"managingOrganization": [{
+		"_managingOrganization_reference_comment": "",
+		"_managinOrganization_reference": "Organization/02"
+	}]
+}
