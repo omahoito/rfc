@@ -40,6 +40,8 @@ Current schemas are in https://simplifier.net/FinnishPHR
   * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/6)
 
 
+.json-tiedostot sisältävät kommenttikenttiä joiden nimi alkaa alaviivalla "_" ja päättyy  "_comment".
+
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/PLANTUML_Diagrams/Resources.plantuml?3) <!--- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
 
 
