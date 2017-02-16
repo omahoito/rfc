@@ -25,6 +25,8 @@ Current schemas are in https://simplifier.net/FinnishPHR
 * Appointment
   * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/3)
 * CarePlan
+  * Tiedosto [json-muodossa](https://github.com/omahoito/rfc/blob/master/CarePlan.json)
+  * Perustuu tähän resurssiin : http://hl7.org/fhir/2017Jan/careplan.html
   * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/10)
 
 
