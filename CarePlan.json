@@ -45,6 +45,8 @@
 
 	"_description_comment": "Hoitosuunnitelman kuvaus",
 	"description": "Nieluvaivasi on todennäköisesti lievä virustauti, jonka yhteydessä oloa voi helpottaa levolla ja tulehduskipulääkkeillä (ks. Nuhakuume),         eikä tarvita lääkärin tai hoitajan antamaa hoitoa. Töistä poissaolon tarve riippuu voinnista ja työn vaatimuksista. Tarpeellisen poissaolon järjestämiseksi menettele työnantajasi antamien ohjeiden mukaan.\n",
+	
+	"_activity_comment" : "Toimintoja jotka tapahtuvat osana hoitosuunnitelmaa",
 	"activity": [{
 		"detail": {
 			"_detail_prohibited_comment": "Onko kyseinen action kielletty",
