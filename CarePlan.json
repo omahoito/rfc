@@ -3,7 +3,6 @@
 
 	"_identifier_comment": "Arvo saadaan tallennettaessa KELA PHR:ään. Pakollinen kenttä.",
 	"identifier": [{
-		"uu": "ll",
 		"_use_comment": "(usual | official | temp | secondary). Pakollinen kenttä.",
 		"use": "usual",
 		"_value_comment": "Tunnisteen arvo.",
