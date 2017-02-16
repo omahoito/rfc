@@ -13,6 +13,17 @@ object PatientCitizen{
 }
 
 object CareTeam{
+    identifier
+    status
+    category
+    name
+    subject
+    period
+    participant
+    participant.role
+    participant.member
+    participant.period
+    managingOrganization
 }
 
 object CarePlan{
