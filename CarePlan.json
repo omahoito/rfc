@@ -1,165 +1,115 @@
 {
 	"resourceType": "CarePlan",
-
 	"_identifier_comment": "Arvo saadaan tallennettaessa KELA PHR:ään. Pakollinen kenttä.",
 	"identifier": [{
 		"_use_comment": "(usual | official | temp | secondary). Pakollinen kenttä.",
-		"use": "usual",
+		"use": "temp",
 		"_value_comment": "Tunnisteen arvo.",
 		"value": "3141592",
 		"_system_comment": "Lähde josta saadaan enemmän tietoa tunnisteesta.",
 		"system": "http://www.source.com"
 	}],
-
-	"_status_comment": " (proposed | draft | active | completed | cancelled ). Pakollinen kenttä.",
-	"status": "proposed",
-
-	"_category_comment": "Määriteltävä PHR:ään FHIR Value Set, jossa listattu hoitosuunnitelmakategoriat. Esim. Itsehoitosuunnitelma. MVP:ssä voi olla esim. tekstinä 'Hengitystieoireiden itsehoitosuunnitelma' tjsp.",
-	"category": [{
-		"_coding_comment": "Referenssi koodiin jota terminologiajärjestelmä määrittelee",
-		"coding": {
-			"_code_comment": "Symboli järjestelmän määrittelemässä syntaksissa",
-			"code": "",
-			"_system_comment": "Lähde josta saadaan enemmän tietoa tunnisteesta",
-			"system": "123"
-		},
-		"_text_comment": "Ihmisymmärrettävä kuvaus hoitosuunnitelmakategoriasta.",
-		"text": "itsehoitosuunnitelma"
-	}],
-
-	"_description_comment": "Hoitosuunnitelman kuvaus",
-	"description": "Hoidetaan itse.",
-	"activity": [{
-		"detail": {
-			"_detail_category_comment": "diet | drug | encounter | observation | procedure | supply | other",
-			"category": {
-				"coding": {
-					"_value_comment": "Tunnisteen arvo.",
-					"value": "3141592",
-					"_system_comment": "Lähde josta saadaan enemmän tietoa tunnisteesta.",
-					"system": "http://www.source.com"
-				},
-				"text": "encounter"
-			},
-			"code": {
-				"coding": {
-					"_system_comment": "Toimintasuosituksen tai muun activityn koodisto",
-					"system": "",
-					"_version_comment": "Toimintasuosituksen tai muun activityn koodiston versio",
-					"version": "",
-					"_code_comment": "Toimintasuosituksen tai muun activityn koodi",
-					"code": ""
-				}
-			},
-
-			"_detail_status_comment": "(not-started | scheduled | in-progress | on-hold | completed | cancelled) Ehdotuksessa tila on “not-started”. Hoitosuunnitelmaan valittu toiminta on “scheduled” tai “in-progress”. Hoitosuunnitelmasta pois jätetty toimintosuunnitelma on “cancelled”.",
-			"status": "not-started",
-
-			"_detail_statusReason_comment": "Syy aktiviteetin tilaan. Esim. jos kansalainen päättää jättää jonkun toimintasuosituksen pois, syynä on 'patient-request'",
-			"statusReason": {
-				"coding": {
-					"_system_comment": "Toimintasuosituksen tai muun activityn koodisto",
-					"system": "",
-					"_version_comment": "Toimintasuosituksen tai muun activityn koodiston versio",
-					"version": "",
-					"_code_comment": "Toimintasuosituksen tai muun activityn koodi",
-					"code": ""
-				}
-			},
-
-			"_detail_prohibited_comment": "Onko kyseinen action kielletty",
-			"prohibited": "< boolean >",
-
-			"_detail_scheduled_comment": "Toiminnan aikataulu. Voi olla joko yksittäinen ajanhetki (ScheduledTiming) tai ajanjakso (ScheduledPeriod).",
-			"scheduled": "",
-
-			"_detail_description_comment": "Toiminnan kuvaus selkokielellä",
-			"description": "<string>"
-		}
-
-
-
-	}],
-
-
 	"_subject_comment": "Viittaus hoitosuunnitelman kohteena olevaan potilaaseen (Patient-resurssi)",
 	"subject": {
 		"_reference_comment": "Tunniste viitteenä olevaan kohteeseen.",
-		"reference": "Patient/02"
+		"reference": "Patient/749"
 	},
+	"_status_comment": " (proposed | draft | active | completed | cancelled ). Pakollinen kenttä.",
+	"status": "proposed",
 
 	"_context_comment": "Standardin mukaan tässä on viittaus palvelutapahtumaan. Palvelutapahtumia ei tallenneta PHR:ään, mutta voisiko olla viittaus palvelutapahtuman OID-koodiin silloin kun se on tiedossa?",
 	"context": {
-		"_reference_comment": "Tunniste viitteenä olevaan kohteeseen.",
-		"reference": "Encounter/04"
+		"_context_reference_comment": "Tunniste viitteenä olevaan kohteeseen.",
+		"reference": "https://oda.medidemo.fi/oirearvioresponse/1"
 	},
 
 	"_period_comment": "Hoitosuunnitelman voimassaoloajanjakso",
 	"period": {
-		"start": "01022011",
-		"end": "01012011"
+		"start": "2016-10-19T00:00:00.000Z",
+		"end": "2016-10-26T23:59:59.999Z"
 	},
-
-	"_modified_comment": "Viimeisin muokkausaika",
-	"modified": "01012011",
 
 	"_author_comment": "Viittaus hoitosuunnitelman laatijaan. Oirearvion perusteella tehdyssä itsehoitosuunnitelmassa viittaus potilaaseen itseensä. Author-viittauksia voi olla useita ja tässä listataan viittaus kaikkiin hoitosuunnitelman tekoon osallistuneisiin. Kuinka viitataan ammattilaiseen, jos niitä ei ole PHR:ssä? Tallennetaanko kaikki ammattilaiset omaan tietokantaan? Entä organisaatiot? MVP-vaiheessa vain Patient itse.",
 	"author": [{
 		"_reference_comment": "Tunniste viitteenä olevaan kohteeseen. (Patient | Practitioner | RelatedPerson | Organization)",
-		"reference": "Practitioner/04"
+		"reference": "Patient/749"
 	}],
 
-	"_support_comment": "Oirearvion perusteella muodostuneessa hoitosuunnitelmassa tässä on viittaus oirearviovastauksiin (QuestionnaireResponse resurssi).",
-	"support": [{
-		"_reference_comment": "Tunniste viitteenä olevaan kohteeseen. (Patient | Practitioner | RelatedPerson | Organization)",
-		"reference": "QuestionnaireResponse/04"
+	"_modified_comment": "Viimeisin muokkausaika",
+	"modified": "2016-10-11T10:00:00.000Z",
+	"_category_comment": "Määriteltävä PHR:ään FHIR Value Set, jossa listattu hoitosuunnitelmakategoriat. Esim. Itsehoitosuunnitelma. MVP:ssä voi olla esim. tekstinä 'Hengitystieoireiden itsehoitosuunnitelma' tjsp.",
+	"category": [{
+		"_text_comment": "Ihmisymmärrettävä kuvaus hoitosuunnitelmakategoriasta.",
+		"text": "self care"
 	}],
 
-	"_definition_comment": "",
-	"definition": {
-		"_reference_comment": "Tunniste viitteenä olevaan kohteeseen. (Patient | Practitioner | RelatedPerson | Organization)",
-		"reference": "Questionnaire/04"
-	},
-
-	"_relatedPlan_comment": "Viittaus toiseen hoitosuunnitelmaan. Esimerkkejä: Toimintasuosituksen mukaisesti myöhemmin uudestaan tehty oirearvio ja sen perusteella tehty uusi hoitosuunnitelma (replaces). Tai tietämyskannan toimintasuosituksen mukaisesti täytetty toinen oirearviokysely ja sen perusteella tehty hoitosuunnitelma (fulfills)",
-	"relatedPlan": [{
-		"code": "123",
-		"plan": {
-			"_reference_comment": "Tunniste viitteenä olevaan kohteeseen. (Patient | Practitioner | RelatedPerson | Organization)",
-			"reference": "CarePlan/04"
+	"_description_comment": "Hoitosuunnitelman kuvaus",
+	"description": "Nieluvaivasi on todennäköisesti lievä virustauti, jonka yhteydessä oloa voi helpottaa levolla ja tulehduskipulääkkeillä (ks. Nuhakuume),         eikä tarvita lääkärin tai hoitajan antamaa hoitoa. Töistä poissaolon tarve riippuu voinnista ja työn vaatimuksista. Tarpeellisen poissaolon järjestämiseksi menettele työnantajasi antamien ohjeiden mukaan.\n",
+	"activity": [{
+		"detail": {
+			"_detail_prohibited_comment": "Onko kyseinen action kielletty",
+			"prohibited": false,
+			"_activity_detail_category_comment": "diet | drug | encounter | observation | procedure | supply | other",
+			"category": {
+				"_activity_detail_category_text_comment": "Selväsanainen kuvaus kategoriasta",
+				"text": "observation"
+			},
+			"code": {
+				"coding": [{
+					"_system_comment": "Toimintasuosituksen tai muun activityn koodisto",
+					"system": "urn:oid:1.2.246.537.6.96.2008",
+					"_version_comment": "Toimintasuosituksen tai muun activityn koodiston versio",
+					"version": "1.2.246.537.6.96.2008",
+					"_code_comment": "Toimintasuosituksen tai muun activityn koodi",
+					"code": "8310-5"
+				}]
+			},
+			"_detail_status_comment": "(not-started | scheduled | in-progress | on-hold | completed | cancelled) Ehdotuksessa tila on “not-started”. Hoitosuunnitelmaan valittu toiminta on “scheduled” tai “in-progress”. Hoitosuunnitelmasta pois jätetty toimintosuunnitelma on “cancelled”.",
+			"status": "not-started",
+			"scheduledTiming": {
+				"event": ["2016-10-20T12:00:00.000Z"]
+			},
+			"_detail_description_comment": "Toiminnan kuvaus selkokielellä",
+			"description": "Mittaa lämpö uudelleen"
 		}
-	}],
-
-	"_goal_comment": "Hoitosuunnitelmaan liittyvät tavoitteet.",
-	"goal": [{
-		"_reference_comment": "Tunniste viitteenä olevaan kohteeseen. (Patient | Practitioner | RelatedPerson | Organization)",
-		"reference": "Goal/04"
-	}],
-
-	"code": {
-		"coding": {
-			"_system_comment": "Toimintasuosituksen tai muun activityn koodisto",
-			"system": "",
-			"_version_comment": "Toimintasuosituksen tai muun activityn koodiston versio",
-			"version": "",
-			"_code_comment": "Toimintasuosituksen tai muun activityn koodi",
-			"code": ""
+	}, {
+		"detail": {
+			"prohibited": false,
+			"category": {
+				"text": "other"
+			},
+			"code": {
+				"coding": [{
+					"system": "urn:oid:1.2.246.537.999.123456",
+					"version": "1.00",
+					"code": "1"
+				}]
+			},
+			"status": "not-started",
+			"scheduledPeriod": {
+				"start": "2016-10-19T00:00:00.000Z",
+				"end": "2016-10-26T23:59:59.999Z"
+			},
+			"description": "Tee arvio uudelleen, mikäli olosi pahenee"
 		}
-	},
-
-
-	"_note_comment": "Kommentit liittyen suunnitelmaan. HUOM! Standardi määrittelee, että tässä voi olla vain yksi kommentti. Tätä pitäisi muuttaa siten, että voi olla useita kommentteja, jolloin voisimme mallintaa tässä kansalaisen ja ammattilaisen kommentoinnin. Joko ehdotus standardin muutokseen, profiilin muokkaus tai oma laajennos (extension).",
-	"note": {
-		"_authorReference_comment": "merkinnän tekijän rooli",
-		"authorReference": {
-			"_reference_comment": "Tunniste viitteenä olevaan kohteeseen. (Practitioner|Patient|RelatedPerson)",
-			"reference": "Practitioner/04"
-		},
-		"_authorString_comment": "Merkinnän tekijän nimi.",
-		"authorString": "Antti Ammattilainen",
-		"_time_comment": "Ajankohta kun merkintä tehtiin.",
-		"time": "01012011",
-		"_text_comment": "Merkinnän teksti.",
-		"text": "Tämä on merkintä"
-	}
+	}, {
+		"detail": {
+			"prohibited": false,
+			"category": {
+				"text": "other"
+			},
+			"code": {
+				"coding": [{
+					"system": "urn:oid:1.2.246.537.999.123456",
+					"version": "1.00",
+					"code": "2"
+				}]
+			},
+			"status": "not-started",
+			"scheduledTiming": {
+				"event": ["2016-10-26T16:30:00.000Z"]
+			},
+			"description": "Tee arvio uudelleen viimeistään 7 päivän kuluttua"
+		}
+	}]
 }
