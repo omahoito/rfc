@@ -29,6 +29,11 @@ Current schemas are in https://simplifier.net/FinnishPHR
   * Perustuu tähän resurssiin : http://hl7.org/fhir/2017Jan/careplan.html
   * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/10)
 
+* CareTeam
+  * Tiedosto [json-muodossa](https://github.com/omahoito/rfc/blob/master/CareTeam.json)
+  * Perustuu tähän resurssiin : http://hl7.org/fhir/2017Jan/careteam.html
+  * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/11)
+
 
 
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/PLANTUML_Diagrams/Resources.plantuml?2) <!--- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
