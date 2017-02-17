@@ -1,0 +1,2452 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing"/>
+	<soapenv:Body>
+		<v3:RCMR_IN000029FI01_Response xmlns:hl="urn:hl7finland" xmlns:v3="urn:hl7-org:v3" intermediateLayer="true">
+			<v3:RCMR_IN000030FI01 ITSVersion="XML_1.0">
+				<v3:id extension="2017.02.14.14.37.14.351.5946937514" root="1.2.246.556.18005.1"/>
+				<v3:creationTime value="20170214143714"/>
+				<v3:versionCode code="V3-2006"/>
+				<v3:interactionId extension="RCMR_IN000030FI01" root="2.16.840.1.113883.1.6"/>
+				<v3:profileId root="1.2.246.777.11.2008.10"/>
+				<v3:profileId root="1.2.246.777.11.2008.30"/>
+				<v3:profileId root="1.2.246.777.11.2009.6"/>
+				<v3:profileId root="1.2.246.777.11.2008.19"/>
+				<v3:profileId root="1.2.246.777.11.2010.19"/>
+				<v3:processingCode code="D"/>
+				<v3:processingModeCode code="T"/>
+				<v3:acceptAckCode code="NE"/>
+				<v3:receiver typeCode="RCV">
+					<v3:device>
+						<v3:id root="1.2.246.10.1008258"/>
+					</v3:device>
+				</v3:receiver>
+				<v3:sender typeCode="SND">
+					<v3:device>
+						<v3:id root="1.2.246.556.18005.1"/>
+					</v3:device>
+				</v3:sender>
+				<v3:acknowledgement>
+					<v3:typeCode code="AA"/>
+					<v3:targetMessage>
+						<v3:id root="1.2.246.10.1008258.18.93010.2017.7367"/>
+					</v3:targetMessage>
+				</v3:acknowledgement>
+				<v3:controlActProcess moodCode="EVN">
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2017.10603"/>
+							<v3:code code="3" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2017.10601"/>
+							<v3:versionNumber value="2"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="031922" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>AKU</v3:given>
+											<v3:given>VILHELM</v3:given>
+											<v3:family>OJALA TES</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.1008258.10.10"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20170206143449"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>AQUALAN</hl:drug>
+								<hl:drugForm>emulsiovoide</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20190206143449"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue code="1" codeSystem="1.2.246.537.6.605.2014" codeSystemName="THL - Reseptin laji"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="2"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode nullFlavor="NI"/>
+								<hl:atcName nullFlavor="NI"/>
+								<hl:substanceAdministration>wessssw</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>2</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2017.5"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2017.5"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="100073" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>INKERI</v3:given>
+											<v3:given>ELISABET</v3:given>
+											<v3:family>BACKMAN TES</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1008258.10.51"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20170203105855"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>AQUALAN</hl:drug>
+								<hl:drugForm>emulsiovoide</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20190203105855"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue code="1" codeSystem="1.2.246.537.6.605.2014" codeSystemName="THL - Reseptin laji"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="1"/>
+								<hl:validityTimeUnit code="wk"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode nullFlavor="NI"/>
+								<hl:atcName nullFlavor="NI"/>
+								<hl:substanceAdministration>1 - 2 lorausta</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>Naamaan ku on vähä ruvella</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2016.54446"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2016.54446"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="100073" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>INKERI</v3:given>
+											<v3:given>ELISABET</v3:given>
+											<v3:family>BACKMAN TES</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1008258.10.50"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20160927141513"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>AQUALAN</hl:drug>
+								<hl:drugForm>emulsiovoide</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20180927141513"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue code="1" codeSystem="1.2.246.537.6.605.2014" codeSystemName="THL - Reseptin laji"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="1"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode nullFlavor="NI"/>
+								<hl:atcName nullFlavor="NI"/>
+								<hl:substanceAdministration>1 loraus</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>Ihon hoito</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93015.2016.420"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93015.2016.420"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="032862" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>JAAKKO</v3:given>
+											<v3:family>DAHLBOM TES</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.1008258.10.10"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20160908153501"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>FRESUBIN ENERGY</hl:drug>
+								<hl:drugForm>neste, letkuravintovalmiste</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20180908153501"/>
+								<hl:drugPrescribedQuantityST>1X15 x 500 ml</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="1"/>
+								<hl:prescriptionValue code="1" codeSystem="1.2.246.537.6.605.2014" codeSystemName="THL - Reseptin laji"/>
+								<hl:neRep value="false"/>
+								<hl:packageAmount value="1"/>
+								<hl:packageFactor value="15"/>
+								<hl:packageSizeText>15 x 500 ml</hl:packageSizeText>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode nullFlavor="NI"/>
+								<hl:atcName nullFlavor="NI"/>
+								<hl:substanceAdministration>Yksi tippa uuden lakipaketin testaukseen. Ehkä.</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>Testaukseen</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.537.25.1.100073.93010.2016.24704"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.537.25.1.100073.93010.2016.24704"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="100073" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>INKERI</v3:given>
+											<v3:given>ELISABET</v3:given>
+											<v3:family>BACKMAN TES</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.537.28.398703108"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20160525113341"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>LARIAM</hl:drug>
+								<hl:drugVNR code="005884" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>250 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20180525113341"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue code="1" codeSystem="1.2.246.537.6.605.2014" codeSystemName="THL - Reseptin laji"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="1"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="P01BC02"/>
+								<hl:atcName>Meflokiini</hl:atcName>
+								<hl:substanceAdministration>1 tabletti</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>Malariaprofylaksia</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2016.24703"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2016.24703"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="100073" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>INKERI</v3:given>
+											<v3:given>ELISABET</v3:given>
+											<v3:family>BACKMAN TES</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.537.28.398703108"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20160525112922"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>IMOCUR</hl:drug>
+								<hl:drugVNR code="445429" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>2 mg</hl:doseQuantityText>
+								<hl:drugForm>kapseli, kova</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20180525112922"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue code="1" codeSystem="1.2.246.537.6.605.2014" codeSystemName="THL - Reseptin laji"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="1"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="A07DA03"/>
+								<hl:atcName>Loperamidi</hl:atcName>
+								<hl:substanceAdministration>1 kapseli</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>Ileostomia</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.537.25.1.100073.93.2016.1"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.537.25.1.100073.93.2016.1"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="100073" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>INKERI</v3:given>
+											<v3:given>ELISABET</v3:given>
+											<v3:family>BACKMAN TES</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.537.28.398703108"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20160525092222"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>IMOCUR</hl:drug>
+								<hl:drugVNR code="445429" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>2 mg</hl:doseQuantityText>
+								<hl:drugForm>kapseli, kova</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20180525092222"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue code="1" codeSystem="1.2.246.537.6.605.2014" codeSystemName="THL - Reseptin laji"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="1"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="A07DA03"/>
+								<hl:atcName>Loperamidi</hl:atcName>
+								<hl:substanceAdministration>1 kapseli</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>Ileostomia</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.537.25.1.100073.93010.2016.24702"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.537.25.1.100073.93010.2016.24702"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="100073" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>INKERI</v3:given>
+											<v3:given>ELISABET</v3:given>
+											<v3:family>BACKMAN TES</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.537.28.398703108"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20160525091717"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>LANSOPRAZOL KRKA</hl:drug>
+								<hl:drugVNR code="023949" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>15 mg</hl:doseQuantityText>
+								<hl:drugForm>enterokapseli, kova</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20180525091717"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue code="1" codeSystem="1.2.246.537.6.605.2014" codeSystemName="THL - Reseptin laji"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="1"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="A02BC03"/>
+								<hl:atcName>Lansopratsoli</hl:atcName>
+								<hl:substanceAdministration>1 kapseli kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>Dyspepsia</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.81308"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.81308"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="030403" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>LIISA</v3:given>
+											<v3:given>MARIA</v3:given>
+											<v3:family>HINTIKKA TES</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.1008258.10.1.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151218135448"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>AQUALAN</hl:drug>
+								<hl:drugForm>emulsiovoide</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171218135448"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue code="1" codeSystem="1.2.246.537.6.605.2014" codeSystemName="THL - Reseptin laji"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="1"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode nullFlavor="NI"/>
+								<hl:atcName nullFlavor="NI"/>
+								<hl:substanceAdministration>123wasasdasd</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>iho</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.81305"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.81305"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="030403" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>LIISA</v3:given>
+											<v3:given>MARIA</v3:given>
+											<v3:family>HINTIKKA TES</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151218134658"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>IBUMAX</hl:drug>
+								<hl:drugVNR code="020121" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>200 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti, kalvopäällysteinen</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171218134658"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue code="1" codeSystem="1.2.246.537.6.605.2014" codeSystemName="THL - Reseptin laji"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="1"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="M01AE01"/>
+								<hl:atcName>Ibuprofeeni</hl:atcName>
+								<hl:substanceAdministration>1 tabletti kolmesti päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>1</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.80949"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.80949"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151214144605"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171214144605"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.80948"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.80948"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151214144605"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171214144605"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>1 tabl kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.80947"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.80947"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151214144605"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171214144605"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.80941"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.80941"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151214144557"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171214144557"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.80942"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.80942"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151214144557"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171214144557"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>1 tabl kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.80943"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.80943"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151214144556"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171214144556"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.80933"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.80933"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151214144543"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171214144543"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.80935"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.80935"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151214144543"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171214144543"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.80934"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.80934"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151214144542"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171214144542"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>1 tabl kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.80920"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.80920"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="100073" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>INKERI</v3:given>
+											<v3:given>ELISABET</v3:given>
+											<v3:family>BACKMAN TES</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.1008258.10.1.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151214135941"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>NOVOSEVEN</hl:drug>
+								<hl:drugVNR code="407218" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>1 mg (50 KIU)</hl:doseQuantityText>
+								<hl:drugForm>injektiokuiva-aine ja liuotin, liuosta varten</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171214135941"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue code="1" codeSystem="1.2.246.537.6.605.2014" codeSystemName="THL - Reseptin laji"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="1"/>
+								<hl:validityTimeUnit code="h"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B02BD08"/>
+								<hl:atcName>Eptakogialfa, aktivoitu</hl:atcName>
+								<hl:substanceAdministration>annnos annos</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>aihe aihe</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.80919"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.80919"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="100073" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>INKERI</v3:given>
+											<v3:given>ELISABET</v3:given>
+											<v3:family>BACKMAN TES</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.1008258.10.1.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151214134449"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DOXAL</hl:drug>
+								<hl:drugVNR code="470138" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>10 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti, päällystetty</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171214134449"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue code="1" codeSystem="1.2.246.537.6.605.2014" codeSystemName="THL - Reseptin laji"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="1"/>
+								<hl:validityTimeUnit code="mo"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="N06AA12"/>
+								<hl:atcName>Doksepiini</hl:atcName>
+								<hl:substanceAdministration>1 tabletti kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>Unettomuus</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.70543"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.70543"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="100701" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151126095220"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171126095220"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>1 tabl kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.70538"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.70538"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="100701" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151126095214"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171126095214"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>1 tabl kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.51696"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.51696"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151026115142"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171026115142"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>1 tabl kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.51695"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.51695"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151026115142"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171026115142"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.51697"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.51697"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.10.1602257.12.1"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151026115142"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171026115142"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.51441"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.51441"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.1008258.10.10"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151022104121"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171022104121"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="false"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.51442"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.51442"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.1008258.10.10"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151022104121"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171022104121"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>1 tabl kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:subject>
+						<v3:clinicalDocument classCode="DOCCLIN" moodCode="EVN">
+							<v3:realmCode code="FI"/>
+							<v3:typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+							<v3:templateId root="1.2.246.777.11.2008.19"/>
+							<v3:id root="1.2.246.10.1008258.93010.2015.51443"/>
+							<v3:code code="1" codeSystem="1.2.246.537.5.40105.2006"/>
+							<v3:setId root="1.2.246.10.1008258.93010.2015.51443"/>
+							<v3:versionNumber value="1"/>
+							<v3:recordTarget typeCode="RCT">
+								<v3:patient>
+									<v3:id extension="011050-991K" root="1.2.246.21"/>
+									<v3:statusCode code="active"/>
+									<v3:patientPerson>
+										<v3:name>
+											<v3:given>KANI</v3:given>
+											<v3:given qualifier="CL">KANI</v3:given>
+											<v3:family>KOE</v3:family>
+										</v3:name>
+										<v3:birthTime value="19501001"/>
+									</v3:patientPerson>
+								</v3:patient>
+							</v3:recordTarget>
+							<v3:author typeCode="AUT">
+								<v3:assignedAuthor classCode="ASSIGNED">
+									<v3:id extension="777771" root="1.2.246.537.25"/>
+									<v3:assignedPerson>
+										<v3:name>
+											<v3:given>MAUNO</v3:given>
+											<v3:family>MANAGER</v3:family>
+										</v3:name>
+									</v3:assignedPerson>
+									<v3:representedOrganization>
+										<v3:id root="1.2.246.1008258.10.10"/>
+									</v3:representedOrganization>
+								</v3:assignedAuthor>
+							</v3:author>
+							<v3:componentOf>
+								<v3:encompassingEncounter>
+									<v3:effectiveTime value="20151022104121"/>
+								</v3:encompassingEncounter>
+							</v3:componentOf>
+							<hl:localHeader>
+								<hl:drug>DISPERIN</hl:drug>
+								<hl:drugVNR code="501940" codeSystem="1.2.246.537.6.55.2004" codeSystemName="VNR"/>
+								<hl:doseQuantityText>100 mg</hl:doseQuantityText>
+								<hl:drugForm>tabletti</hl:drugForm>
+								<hl:pharmacyPreparegDrug value="false"/>
+								<hl:prescriptionExpiryDate value="20171022104121"/>
+								<hl:drugPrescribedQuantityST>Ajalle/För viss tid</hl:drugPrescribedQuantityST>
+								<hl:dispenseStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								</hl:dispenseStatus>
+								<hl:reservationStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40122.2006"/>
+								</hl:reservationStatus>
+								<hl:heldStatus>
+									<hl:stateStatusCode code="1" codeSystem="1.2.246.537.5.40124.2006"/>
+								</hl:heldStatus>
+								<hl:renewalStatus>
+									<hl:stateStatusCode code="0" codeSystem="1.2.246.537.5.40106.2006"/>
+								</hl:renewalStatus>
+								<hl:prescriptionType code="3"/>
+								<hl:prescriptionValue nullFlavor="NI"/>
+								<hl:neRep value="false"/>
+								<hl:validityTime value="365"/>
+								<hl:validityTimeUnit code="d"/>
+								<hl:realDispenseStatus code="1" codeSystem="1.2.246.537.5.40123.2006"/>
+								<hl:activeStatus code="1" codeSystem="1.2.246.537.5.40300.2015"/>
+								<hl:archiveStatus code="0" codeSystem="1.2.246.537.5.40301.2015"/>
+								<hl:iteration nullFlavor="NI"/>
+								<hl:iterationWidth nullFlavor="NI"/>
+								<hl:iterationUnit nullFlavor="NI"/>
+								<hl:atcCode code="B01AC06"/>
+								<hl:atcName>Asetyylisalisyylihappo</hl:atcName>
+								<hl:substanceAdministration>kerran päivässä</hl:substanceAdministration>
+								<hl:sic value="false"/>
+								<hl:usage>valtimotukosten estoon</hl:usage>
+								<hl:permanentMedication value="true"/>
+								<hl:doseDistribution value="false"/>
+							</hl:localHeader>
+						</v3:clinicalDocument>
+					</v3:subject>
+					<v3:queryAck>
+						<v3:queryResponseCode code="OK"/>
+					</v3:queryAck>
+				</v3:controlActProcess>
+			</v3:RCMR_IN000030FI01>
+		</v3:RCMR_IN000029FI01_Response>
+	</soapenv:Body>
+
+</soapenv:Envelope>

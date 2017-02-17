@@ -1,0 +1,82 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/>
+	<soap:Body>
+		<RCMR_IN000029FI01 xmlns="urn:hl7-org:v3" xmlns:ns2="urn:hl7finland" ITSVersion="XML_1.0">
+			<id root="1.2.246.10.1008258.18.93010.2017.7367"/>
+			<creationTime value="20170214143713"/>
+			<versionCode code="V3-2006"/>
+			<interactionId extension="RCMR_IN000029FI01" root="2.16.840.1.113883.1.6"/>
+			<profileId root="1.2.246.777.11.2008.10"/>
+			<profileId root="1.2.246.777.11.2016.11"/>
+			<processingCode code="D"/>
+			<processingModeCode code="T"/>
+			<acceptAckCode code="ER"/>
+			<receiver typeCode="RCV">
+				<device>
+					<id root="1.2.246.556.18005.1"/>
+				</device>
+			</receiver>
+			<sender typeCode="SND">
+				<device>
+					<id root="1.2.246.10.1008258"/>
+				</device>
+			</sender>
+			<controlActProcess classCode="CACT" moodCode="RQO">
+				<code code="RCMR_IN000029FI01" codeSystem="2.16.840.1.113883.1.18"/>
+				<priorityCode code="R"/>
+				<reasonCode code="99" codeSystem="1.2.246.537.5.40110.2006" displayName="Muu"/>
+				<reasonCode code="1" codeSystem="1.2.246.537.5.40160.2008" displayName="Palautetaan ajantasaiset versiot kuvailutiedoista"/>
+				<authorOrPerformer typeCode="PRF">
+					<assignedPerson>
+						<id extension="00098706120" root="1.2.246.537.26"/>
+						<assignedPerson>
+							<name>
+								<given>Tes Kaijsu KuvailutietojenHakuKKK</given>
+								<family>Mustonen</family>
+							</name>
+							<asLicensedEntity>
+								<code code="1" codeSystem="1.2.246.537.5.40128.2006" displayName="Terveydenhuollon ammattihenkilön varmenne"/>
+							</asLicensedEntity>
+						</assignedPerson>
+						<representedOrganization>
+							<id root="1.2.246.10.1008258"/>
+							<organizationContains>
+								<id root="1.2.246.1008258.10.10"/>
+							</organizationContains>
+						</representedOrganization>
+					</assignedPerson>
+				</authorOrPerformer>
+				<reasonOf>
+					<detectedIssueEvent>
+						<code code="1" codeSystem="1.2.246.537.5.40120.2006" codeSystemName="KanTa-palvelut - Kontrollikehyksen prosessinhallintakoodisto" displayName="Sähköisen lääkemääräyksen suostumushallinta"/>
+						<mitigatedBy>
+							<detectedIssueManagement moodCode="EVN">
+								<code code="2" codeSystem="1.2.246.537.5.40119.2006" codeSystemName="Sähköinen lääkemääräys - Suostumustyypit" displayName="Allekirjoitettu suostumus"/>
+								<text/>
+							</detectedIssueManagement>
+						</mitigatedBy>
+					</detectedIssueEvent>
+				</reasonOf>
+				<queryByParameter>
+					<clinicalDocument.code>
+						<value code="1" codeSystem="1.2.246.537.5.40105.2006" codeSystemName="Reseptisanoman tyyppi" displayName="Lääkemääräys"/>
+						<value code="3" codeSystem="1.2.246.537.5.40105.2006" codeSystemName="Reseptisanoman tyyppi" displayName="Lääkemääräyksen korjaus"/>
+						<value code="2" codeSystem="1.2.246.537.5.40105.2006" codeSystemName="Reseptisanoman tyyppi" displayName="Lääkemääräyksen mitätöinti"/>
+					</clinicalDocument.code>
+					<encompassingEncounter.effectiveTime>
+						<value>
+							<low value="20151014"/>
+							<high value="20170214"/>
+						</value>
+					</encompassingEncounter.effectiveTime>
+					<patient.id>
+						<value extension="011050-991K" root="1.2.246.21"/>
+					</patient.id>
+					<recentMedicationinformation>
+						<value value="true"/>
+					</recentMedicationinformation>
+				</queryByParameter>
+			</controlActProcess>
+		</RCMR_IN000029FI01>
+	</soap:Body>
+</soap:Envelope>
