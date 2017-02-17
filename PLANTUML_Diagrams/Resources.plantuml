@@ -77,6 +77,20 @@ object Device{
 }
 
 object Appointment{
+    identifier
+    status
+    type
+    reason
+    start
+    end
+    priority
+    description
+    minutesDuration
+    slot
+    comment
+    participant
+    participant.required
+    participant.status
 }
 
 PatientCitizen -- Device
