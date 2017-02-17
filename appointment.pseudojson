@@ -1,6 +1,3 @@
-## ei löydy: serviceCategory, serviceType, speciality, schedule, overbooked, 
-## löytyy: identifier, actor, aikaikkuna (= start, end) , appointment type, status, comment, viittaus slotiin, participant
-
 {
   "resourceType": "Appointment",
   "id": "examplereq",
@@ -9,6 +6,10 @@
     "status": "generated",
     "div": "<div>Ajanvarauslomake</div>"
   },
+
+  "_missing_fields_comment": "ei löydy: serviceCategory, serviceType, speciality, schedule, overbooked",
+  "_existing_fields_comment" : "löytyy: identifier, actor, aikaikkuna (= start, end) , appointment type, status, comment, viittaus slotiin, participant",
+
   "_identifier_comment" : "Tunniste joka luodaan tapahtuman luonnin yhteydessä",
   "identifier": [
     {
