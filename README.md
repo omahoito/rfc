@@ -13,6 +13,8 @@ Current schemas are in https://simplifier.net/FinnishPHR
 (Finnish) Tietomalleja on seuraavista resursseista:
 
 * Appointment
+  * Tiedosto [json-muodossa](https://github.com/omahoito/rfc/blob/master/Appointment.json)
+  * Perustuu tähän resurssiin : http://hl7.org/fhir/2017Jan/appointment.html
   * [Keskustelu resurssista](https://github.com/omahoito/rfc/issues/3)
 
 * CarePlan
