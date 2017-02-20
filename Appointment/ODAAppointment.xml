@@ -1,13 +1,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="2ff407a9-bd4f-40f8-8f36-27081ee8c721" />
   <meta>
-    <versionId value="2" />
-    <lastUpdated value="2017-02-12T20:45:54.968+00:00" />
+    <versionId value="5" />
+    <lastUpdated value="2017-02-19T20:13:45.847+00:00" />
   </meta>
   <url value="StructureDefinition/ODA_Appointment" />
   <name value="ODA_Appointment" />
   <status value="draft" />
   <date value="2017-02-07T10:47:42.5103218+02:00" />
+  <description value="Ajanvarauksen tiedot / ODA,, Base StructureDefinition for Appointment Resource" />
   <kind value="resource" />
   <constrainedType value="Appointment" />
   <abstract value="false" />
@@ -56,20 +57,29 @@
     </element>
     <element>
       <path value="Appointment.type" />
-      <requirements value="Palveluluokitus tähän vaiko participant_actor_healthCareService alle " />
+      <comments value="Palveluluokitus tähän&#xD;&#xA;&#xD;&#xA;Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
       <min value="1" />
     </element>
     <element>
-      <path value="Appointment.reason" />
+      <path value="Appointment.type.coding.system" />
+      <comments value="Palveluluokitus tähän (THL - Sosiaali- ja terveysalan palvelunimikkeistö&quot; versiosta &quot;1.2.246.537.6.49.201501&quot;)&#xD;&#xA;&#xD;&#xA;The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously." />
+    </element>
+    <element>
+      <path value="Appointment.type.coding.userSelected" />
       <max value="0" />
+    </element>
+    <element>
+      <path value="Appointment.reason" />
+      <comments value="Kliininen syy käynnille, ICD-10 vai joku muu?&#xD;&#xA;&#xD;&#xA;Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
     </element>
     <element>
       <path value="Appointment.priority" />
       <requirements value="Tarvitaanko priorisointia?" />
+      <max value="0" />
     </element>
     <element>
       <path value="Appointment.description" />
-      <min value="1" />
+      <max value="0" />
     </element>
     <element>
       <path value="Appointment.start" />
@@ -89,7 +99,7 @@
     </element>
     <element>
       <path value="Appointment.comment" />
-      <requirements value="Esimerkiksi ohjetta potilaalle, miten valmistautua käyntiin" />
+      <comments value="Esimerkiksi ohjetta potilaalle, miten valmistautua käyntiin&#xD;&#xA;&#xD;&#xA;Additional text to aid in facilitating the appointment. For instance, a comment might be, &quot;patient should proceed immediately to infusion room upon arrival&quot;  Where this is a planned appointment and the start/end dates are not set then this field can be used to provide additional guidance on the details of the appointment request, including any restrictions on when to book it." />
       <maxLength value="140" />
     </element>
     <element>
@@ -99,48 +109,33 @@
     </element>
     <element>
       <path value="Appointment.participant.actor" />
-      <comments value="Patient, Practitioner, HealthcareService, Location tärkeimmät" />
+      <comments value="Patient, Practitioner, HealthcareService" />
       <min value="1" />
       <type>
         <code value="Reference" />
-        <profile value="https://simplifier.net/FinnishPHR/FinnishPatient" />
+        <profile value="https://simplifier.net/ODAajanvaraus/HealthcareService" />
         <aggregation value="contained" />
         <aggregation value="bundled" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <aggregation value="bundled" />
-        <aggregation value="contained" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <profile value="https://simplifier.net/ODAajanvaraus/ODAPatient" />
         <aggregation value="contained" />
         <aggregation value="bundled" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Device" />
-        <aggregation value="bundled" />
-        <aggregation value="contained" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
-        <aggregation value="contained" />
-        <aggregation value="bundled" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <profile value="https://simplifier.net/ODAajanvaraus/ODAPractitioner" />
         <aggregation value="bundled" />
         <aggregation value="contained" />
       </type>
     </element>
     <element>
       <path value="Appointment.participant.status" />
+      <short value="accepted" />
+      <comments value="Hyödynnetään vain Appointment tason statusta&#xD;&#xA;&#xD;&#xA;Note that FHIR strings may not exceed 1MB in size" />
       <requirements value="needs-action ensimmäinen transaktio&#xD;&#xA;tentative toinen transaktio&#xD;&#xA;accepted kolmas&#xD;&#xA;accepted neljäs " />
+      <fixedCode value="accepted" />
     </element>
   </differential>
 </StructureDefinition>

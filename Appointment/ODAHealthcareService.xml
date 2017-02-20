@@ -1,7 +1,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="918c482b-9981-41fe-b787-19e46bd087ab" />
   <meta>
-    <versionId value="1" />
-    <lastUpdated value="2017-02-12T20:47:16.429+00:00" />
+    <versionId value="3" />
+    <lastUpdated value="2017-02-19T20:04:52.393+00:00" />
   </meta>
   <url value="StructureDefinition/ODA_HealthcareService" />
   <name value="ODA_HealthcareService" />
@@ -19,6 +20,7 @@
     <element>
       <path value="HealthcareService.identifier" />
       <comments value="Tekninen tunniste kokonaisuudelle" />
+      <max value="1" />
     </element>
     <element>
       <path value="HealthcareService.identifier.use" />
@@ -39,20 +41,26 @@
     <element>
       <path value="HealthcareService.providedBy" />
       <comments value="Organisaation tiedot&#xD;&#xA;&#xD;&#xA;This property is recommended to be the same as the Location's managingOrganization, and if not provided should be interpreted as such. If the Location does not have a managing Organization, then this property should be populated." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://simplifier.net/ODAajanvaraus/ODAOrganization" />
+        <aggregation value="contained" />
+        <aggregation value="bundled" />
+      </type>
     </element>
     <element>
       <path value="HealthcareService.serviceCategory" />
-      <comments value="Palveluluokat&#xD;&#xA;&#xD;&#xA;Selecting a Service Category then determines the list of relevant service types that can be selected in the primary service type." />
-      <min value="1" />
+      <comments value="Palveluluokat, kerrotaan appointmentin alla jo&#xD;&#xA;&#xD;&#xA;Selecting a Service Category then determines the list of relevant service types that can be selected in the primary service type." />
+      <max value="0" />
     </element>
     <element>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="ServiceType" />
       </extension>
       <path value="HealthcareService.serviceType" />
-      <comments value="Palvelun tyypit" />
-      <min value="1" />
-      <max value="1" />
+      <comments value="Palvelun tyypit, appointmentin alla annetaan jo" />
+      <max value="0" />
     </element>
     <element>
       <path value="HealthcareService.serviceType.type" />
