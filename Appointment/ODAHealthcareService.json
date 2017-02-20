@@ -2,8 +2,8 @@
   "resourceType": "StructureDefinition",
   "id": "918c482b-9981-41fe-b787-19e46bd087ab",
   "meta": {
-    "versionId": "2",
-    "lastUpdated": "2017-02-13T14:07:45.728+00:00"
+    "versionId": "3",
+    "lastUpdated": "2017-02-19T20:04:52.393+00:00"
   },
   "url": "StructureDefinition/ODA_HealthcareService",
   "name": "ODA_HealthcareService",
@@ -21,7 +21,8 @@
       },
       {
         "path": "HealthcareService.identifier",
-        "comments": "Tekninen tunniste kokonaisuudelle"
+        "comments": "Tekninen tunniste kokonaisuudelle",
+        "max": "1"
       },
       {
         "path": "HealthcareService.identifier.use",
@@ -41,12 +42,25 @@
       },
       {
         "path": "HealthcareService.providedBy",
-        "comments": "Organisaation tiedot\r\n\r\nThis property is recommended to be the same as the Location's managingOrganization, and if not provided should be interpreted as such. If the Location does not have a managing Organization, then this property should be populated."
+        "comments": "Organisaation tiedot\r\n\r\nThis property is recommended to be the same as the Location's managingOrganization, and if not provided should be interpreted as such. If the Location does not have a managing Organization, then this property should be populated.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "https://simplifier.net/ODAajanvaraus/ODAOrganization"
+            ],
+            "aggregation": [
+              "contained",
+              "bundled"
+            ]
+          }
+        ]
       },
       {
         "path": "HealthcareService.serviceCategory",
-        "comments": "Palveluluokat\r\n\r\nSelecting a Service Category then determines the list of relevant service types that can be selected in the primary service type.",
-        "min": 1
+        "comments": "Palveluluokat, kerrotaan appointmentin alla jo\r\n\r\nSelecting a Service Category then determines the list of relevant service types that can be selected in the primary service type.",
+        "max": "0"
       },
       {
         "extension": [
@@ -56,9 +70,8 @@
           }
         ],
         "path": "HealthcareService.serviceType",
-        "comments": "Palvelun tyypit",
-        "min": 1,
-        "max": "1"
+        "comments": "Palvelun tyypit, appointmentin alla annetaan jo",
+        "max": "0"
       },
       {
         "path": "HealthcareService.serviceType.type",

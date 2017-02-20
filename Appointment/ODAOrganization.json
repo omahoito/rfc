@@ -1,0 +1,109 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "8d380577-9cb1-4475-bb54-c93a595941c9",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2017-02-19T20:11:16.999+00:00"
+  },
+  "url": "StructureDefinition/ODA_Organization",
+  "name": "ODA_Organization",
+  "status": "draft",
+  "date": "2017-02-19T21:44:43.5692981+02:00",
+  "description": "Base StructureDefinition for Organization Resource, palvelun tarjoavan organisaation tiedot",
+  "kind": "resource",
+  "constrainedType": "Organization",
+  "abstract": false,
+  "base": "http://hl7.org/fhir/StructureDefinition/Organization",
+  "differential": {
+    "element": [
+      {
+        "path": "Organization"
+      },
+      {
+        "path": "Organization.identifier",
+        "max": "1"
+      },
+      {
+        "path": "Organization.identifier.use",
+        "max": "0"
+      },
+      {
+        "path": "Organization.identifier.type",
+        "max": "0"
+      },
+      {
+        "path": "Organization.identifier.period",
+        "max": "0"
+      },
+      {
+        "path": "Organization.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "path": "Organization.active",
+        "max": "0"
+      },
+      {
+        "path": "Organization.type",
+        "comments": "Organisaation tyyppi\r\n\r\nOrganizations can be corporations, wards, sections, clinical teams, government departments, etc. Note that code is generally a classifier of the type of organization; in many applications, codes are used to identity a particular organization (say, ward) as opposed to another of the same type - these are identifiers, not codes."
+      },
+      {
+        "path": "Organization.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "path": "Organization.name",
+        "min": 1
+      },
+      {
+        "path": "Organization.telecom.system",
+        "short": "phone | email"
+      },
+      {
+        "path": "Organization.telecom.value",
+        "definition": "The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address). ",
+        "comments": "Puhelinnumero tai sähköposti\r\n\r\nAdditional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value."
+      },
+      {
+        "path": "Organization.telecom.use",
+        "max": "0"
+      },
+      {
+        "path": "Organization.telecom.rank",
+        "max": "0"
+      },
+      {
+        "path": "Organization.telecom.period",
+        "max": "0"
+      },
+      {
+        "path": "Organization.address.use",
+        "max": "0"
+      },
+      {
+        "path": "Organization.address.type",
+        "max": "0"
+      },
+      {
+        "path": "Organization.address.district",
+        "max": "0"
+      },
+      {
+        "path": "Organization.address.state",
+        "max": "0"
+      },
+      {
+        "path": "Organization.address.period",
+        "max": "0"
+      },
+      {
+        "path": "Organization.partOf",
+        "max": "0"
+      },
+      {
+        "path": "Organization.contact",
+        "max": "0"
+      }
+    ]
+  }
+}
