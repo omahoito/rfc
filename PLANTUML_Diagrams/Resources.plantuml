@@ -93,11 +93,11 @@ object Appointment{
     participant.status
 }
 
-PatientCitizen -- Device
-PatientCitizen -- Appointment
+PatientCitizen "1" -- "1" Device
+PatientCitizen "*" -- "1" Appointment
 
-PatientCitizen -- CarePlan
+PatientCitizen "1" -- "*" CarePlan
 
-CarePlan -- CareTeam
-CarePlan -- Communication_Message
+CarePlan "1" -- "1" CareTeam
+CarePlan "1" -- "*" Communication_Message
 @enduml
