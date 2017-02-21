@@ -21,7 +21,7 @@ ODAAppointment -- "1..*" ODAPractitioner
 
 object ODAHealthcareService{
   identifier
-  providedBy (ODAOrganization 1..*)
+  providedBy (ODAOrganization)
   serviceCategory
   serviceType
   location
@@ -49,8 +49,8 @@ object ODAPractitioner{
   telecom
   telecom.value
   photo
-  practitionerRole.managingOrganization (ODAOrganization ..*)
-  practitionerRole.healthcareService (ODAHealthcareService ..*)
+  practitionerRole.managingOrganization (ODAOrganization)
+  practitionerRole.healthcareService (ODAHealthcareService)
   communication
 }
 
