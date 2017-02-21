@@ -1,0 +1,59 @@
+@startuml
+object Appointment{
+  identifier
+  identifier.system
+  identifier.value
+  identifier.assigner
+  status
+  type
+  reason
+  priority
+  start
+  end
+  minutesDuration
+  comment
+  participant (HealthcareService | Patient | Practitioner )
+}
+
+Appointment -- "1..*" HealthcareService
+Appointment -- "1..*" Patient
+Appointment -- "1..*" Practitioner
+
+object HealthcareService{
+  identifier
+  providedBy (Organization 1..*)
+  serviceCategory
+  serviceType
+  location
+  serviceName
+  comment
+}
+
+HealthcareService -- "1..*" Organization
+
+object Organization{
+  identifier
+  type
+  name  
+}
+
+object Patient{
+  identifier
+}
+
+object Practitioner{
+  identifier
+  identifier.system
+  identifier.value
+  name
+  telecom
+  telecom.value
+  photo
+  practitionerRole.managingOrganization (Organization ..*)
+  practitionerRole.healthcareService (HealthcareService ..*)
+  communication
+}
+
+Practitioner -- "..*" Organization
+Practitioner -- "..*" HealthcareService
+@enduml
