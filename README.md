@@ -15,8 +15,12 @@ Current schemas are in https://simplifier.net/FinnishPHR
 * For each profile there should be also an example resource in JSON format. Example resource demonstrates how the data elements are used and its name should match to the profile name for example: ODA-self-careplan.example.json.
 * Profiles should be compatible with HL7 FHIR STU3 standard.
 * A constraining profile can only allow what the base profile allows. Limitations are described more detailed in HL7 FHIR standard: http://hl7.org/fhir/2017Jan/profiling.html#5.1.0.7
-* Each profile should contain both the snapshot and differential components. The snapshot picture shows all elements in one description and the differential describes the differential to the base profile.
-* 
+* Each profile should contain both the snapshot and differential components. The snapshot component shows all resource elements in one description and the differential component describes the differencies compared to the base profile.
+* Documenting the profile elements: Profile element definitions contain three elements that describe textually what the element is and why it exists. These are:
+  * definition: A narrative text containing full formal definition of the element. This is required for all modified extensions or profile elements.
+  * comments: Comments and other relevant information about the use of this element. This is optional.
+  * requirements: Description why this element exists. This is optional.
+  
 
 
 
