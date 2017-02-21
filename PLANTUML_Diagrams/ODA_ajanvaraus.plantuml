@@ -1,5 +1,5 @@
 @startuml
-object Appointment{
+object ODAAppointment{
   identifier
   identifier.system
   identifier.value
@@ -12,16 +12,16 @@ object Appointment{
   end
   minutesDuration
   comment
-  participant (HealthcareService | Patient | Practitioner )
+  participant (ODAHealthcareService | ODAPatient | ODAPractitioner )
 }
 
-Appointment -- "1..*" HealthcareService
-Appointment -- "1..*" Patient
-Appointment -- "1..*" Practitioner
+ODAAppointment -- "1..*" ODAHealthcareService
+ODAAppointment -- "1..*" ODAPatient
+ODAAppointment -- "1..*" ODAPractitioner
 
-object HealthcareService{
+object ODAHealthcareService{
   identifier
-  providedBy (Organization 1..*)
+  providedBy (ODAOrganization 1..*)
   serviceCategory
   serviceType
   location
@@ -29,19 +29,19 @@ object HealthcareService{
   comment
 }
 
-HealthcareService -- "1..*" Organization
+ODAHealthcareService -- "1..*" ODAOrganization
 
-object Organization{
+object ODAOrganization{
   identifier
   type
   name  
 }
 
-object Patient{
+object ODAPatient{
   identifier
 }
 
-object Practitioner{
+object ODAPractitioner{
   identifier
   identifier.system
   identifier.value
@@ -49,11 +49,11 @@ object Practitioner{
   telecom
   telecom.value
   photo
-  practitionerRole.managingOrganization (Organization ..*)
-  practitionerRole.healthcareService (HealthcareService ..*)
+  practitionerRole.managingOrganization (ODAOrganization ..*)
+  practitionerRole.healthcareService (ODAHealthcareService ..*)
   communication
 }
 
-Practitioner -- "..*" Organization
-Practitioner -- "..*" HealthcareService
+ODAPractitioner -- "..*" ODAOrganization
+ODAPractitioner -- "..*" ODAHealthcareService
 @enduml
