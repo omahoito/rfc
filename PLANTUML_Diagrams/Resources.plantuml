@@ -93,12 +93,12 @@ object Appointment{
     participant.status
 }
 
-PatientCitizen "" -- "0..*" Device
-PatientCitizen "1..*" -- "" Appointment
+PatientCitizen -- "0..*" Device
+PatientCitizen "1..*" -- Appointment
 
 PatientCitizen "1..1" -- "*" CarePlan
 
-CarePlan "" -- "0..*" CareTeam
+CarePlan -- "0..*" CareTeam
 CarePlan "1" -- "*" Communication_Message
 
 CareTeam -- "0..1" PatientCitizen
