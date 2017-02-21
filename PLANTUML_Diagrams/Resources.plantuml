@@ -9,7 +9,7 @@ object PatientCitizen{
     photo
     managingOrganization
     active
-    link
+    link (Device)
 }
 
 object CareTeam{
@@ -17,7 +17,7 @@ object CareTeam{
     status
     category
     name
-    subject
+    subject (Patient)
     period
     participant
     participant.role
@@ -28,12 +28,12 @@ object CareTeam{
 
 object CarePlan{
     id
-    subject
+    subject (Patient)
     status
     context
     period
     author
-    careteam
+    careteam (CareTeam)
     addresses
     support
     modified
@@ -58,7 +58,7 @@ object Communication_Message{
     status
     category
     medium
-    subject
+    subject (Patient)
     topic
     context
     sent
@@ -88,16 +88,19 @@ object Appointment{
     minutesDuration
     slot
     comment
-    participant
+    participant (PatientCitizen | Device )
     participant.required
     participant.status
 }
 
-PatientCitizen "1" -- "1" Device
-PatientCitizen "*" -- "1" Appointment
+PatientCitizen "" -- "0..*" Device
+PatientCitizen "1..*" -- "" Appointment
 
-PatientCitizen "1" -- "*" CarePlan
+PatientCitizen "1..1" -- "*" CarePlan
 
-CarePlan "1" -- "1" CareTeam
+CarePlan "" -- "0..*" CareTeam
 CarePlan "1" -- "*" Communication_Message
+
+CareTeam -- "0..1" PatientCitizen
+
 @enduml
