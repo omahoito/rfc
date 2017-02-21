@@ -1,0 +1,149 @@
+{
+  "resourceType" : "Observation",
+  "_identifier_comment" : "Arvo saadaan kun havainto tallennetaan OmaKantaan. Pakollinen kenttä.",
+  "identifier" : [{ Identifier }],
+  "_status_comment" : "Observationin status ( registered | preliminary | final | amended ). Pakollinen kenttä.",
+  "status" : "<code>",
+  "_category_comment" : "Kategoria johon havainto kuuluu. Jos oirearviolomake rakentuu dynaamisesti vastausten perusteella, niin voi olla minkä oireen oirearviolomake lopulta täytetty.",
+  "category" : [{ 
+
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        }
+      ]
+  
+  }],
+  "_code_comment" : "Lyhyt koodi havainnon tyypille. Voi esim. olla viittaus siihen että oirearviolomake täytetty matkapuhelimella.",
+  "code" : {
+    "coding": [
+      {
+        "system": "http://acme.lab",
+        "code": "BT",
+        "display": "Kehon lämpötila"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "8310-5",
+        "display": "Kehon lämpötila"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "8331-1",
+        "display": "'Suun lämpötila"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "56342008",
+        "display": "Kehon lämpötilan mittaus."
+      }
+    ],
+    "text": "Lämpötila"
+  },
+
+  "_subject_comment" : "Viittaus havainnon laatuun, eli minkälaisesta havainnosta on kyse. (Patient|Group|Device|Location). Pakollinen kenttä.",
+  "subject" : { 
+    "reference": "Patient/f201",
+    "display": "Roel"  
+  },
+  "_encounter_comment" : "Viittaus terveydenhoitotapahtumaan (Encounter) jolloin havainto tehtiin.	",
+  "encounter" : { 
+    "reference" : "Encounter/e22",
+	"display" : "Helmikuun omahoit"
+  },
+
+  "_effective_comment" : "Ajankohta kun havainnon arvo on saatu. Milloin oirearviolomake on lähetetty sisään arvioitavaksi.",
+  // ei esimerkissä  
+  // effective[x]: Clinically relevant time/time-period for observation. One of these 2:
+  "effectiveDateTime" : "<dateTime>",
+  "effectivePeriod" : { Period },
+
+  "_issued_comment" : "Ajankohta kun havainto on saatettu muiden nähtäväksi.	",
+  "issued" : "2016-04-04T13:27:00+01:00",
+  "_performer_comment" : "Viittaus tahoon joka on vastuussa havainnosta. (Practitioner | Organization | Patient | RelatedPerson ). Se taho joka täyttää oirearviolomakkeen.",
+  "performer" : [{
+    "reference" : "Patient/022"
+  }],
+  "_value[x]_comment" : "Jos mittauksen arvo koostuu useammasta tekijästä, niin tässä ovat kunkin tekijän alkuperäisarvot.",
+  "valueQuantity": {
+    "value": 39,
+    "unit": "degrees C",
+    "system": "http://unitsofmeasure.org",
+    "code": "Cel"
+  },
+  
+  "_dataAbsentReason_comment" : "Syy siihen miksi joku tietty arvo puuttuu.",
+  "dataAbsentReason" : { CodeableConcept }, // C? Why the result is missing
+
+  "_interpretation_comment" : "Tulkinta havainnon arvosta.",
+  "interpretation" : {   "coding": [
+      {
+        "system": "http://hl7.org/fhir/v2/0078",
+        "code": "H"
+      }
+    ]
+  },
+
+  "_comment_comment" : "Havaintoon liittyviä kommentteja.",
+  "comment" : "<string>", // Comments about result
+  "_bodySite_comment" : "Paikka potilaan kehossa jossa havainto tehtiin.",
+  "bodySite" : { 
+   "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "74262004",
+        "display": "Suuontelo"
+      }
+    ]
+  },
+  "_method_comment" : "Menetelmä jolla havainto tehty. Ei välttämätön jos käy ilmi code-kentästä.",
+  "method" : { 
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "89003005",
+        "display": "Oral temperature taking"
+      }
+    ]
+  },
+
+  "_speciment_comment" : "Viittaus havaintoon liittyvään näytteeseen (Specimen).",
+  "specimen" : { Reference(Specimen) }, // Specimen used for this observation
+  "_device_comment" : "Viittaus mittauslaitteeseen ( Device | DeviceMetric ). Laite jolla oirearviolomaketta täytetään.",
+  "device" : { Reference(Device|DeviceMetric) }, // (Measurement) Device
+  "_referenceRange_comment" : "Ohjeistus miten mittauksen arvoa tulisi tulkita verrattuna normaaliarvoihin.",
+  "referenceRange" : [{
+    "high" : { 
+        "value": 38.2,
+        "unit": "degrees C"
+	},
+  }],
+
+  "_related_comment" : "Resurssi joka yhteydessä tähän havaintoon.",
+  "related" : [{ // Resource related to this observation
+    "_related_type_comment" : "Koodistot jotka määrittelevät kahden Observationin välisen yhteyden. ( has-member | derived-from | sequel-to | replaces | qualified-by | interfered-by ).",
+    "type" : "<code>", // has-member | derived-from | sequel-to | replaces | qualified-by | interfered-by
+	"_related_target_comment" : "Viittaus resurssiin joka on yhteydessä tähän havaintoon.",
+    "target" : { Reference(Observation|QuestionnaireResponse|Sequence) } // R!  Resource that is related to this one
+  }],
+  "_component_comment" : "Jos havainto koostuu useammasta havaintoyhdistelmästä, niin tässä ne on listattu yhdistelmäpareina (ei sama kun value[x]-kenttä).",
+  "component" : [{ // Component results
+    "code" : { CodeableConcept }, // R!  Type of component observation (code / type)
+    // value[x]: Actual component result. One of these 10:
+    "valueQuantity" : { Quantity },
+    "valueCodeableConcept" : { CodeableConcept },
+    "valueString" : "<string>",
+    "valueRange" : { Range },
+    "valueRatio" : { Ratio },
+    "valueSampledData" : { SampledData },
+    "valueAttachment" : { Attachment },
+    "valueTime" : "<time>",
+    "valueDateTime" : "<dateTime>",
+    "valuePeriod" : { Period },
+    "dataAbsentReason" : { CodeableConcept }, // C? Why the component result is missing
+    "interpretation" : { CodeableConcept }, // High, low, normal, etc.
+    "referenceRange" : [{ Content as for Observation.referenceRange }] // Provides guide for interpretation of component result
+  }]
+}
