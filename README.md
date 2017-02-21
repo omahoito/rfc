@@ -16,10 +16,15 @@ Current schemas are in https://simplifier.net/FinnishPHR
 * Profiles should be compatible with HL7 FHIR STU3 standard.
 * A constraining profile can only allow what the base profile allows. Limitations are described more detailed in HL7 FHIR standard: http://hl7.org/fhir/2017Jan/profiling.html#5.1.0.7
 * Each profile should contain both the snapshot and differential components. The snapshot component shows all resource elements in one description and the differential component describes the differencies compared to the base profile.
-* Documenting the profile elements: Profile element definitions contain three elements that describe textually what the element is and why it exists. These are:
+* Documenting the profile elements: Profile element definitions (http://hl7.org/fhir/2017Jan/elementdefinition.html) contain elements describing what the element is, why it exists and how it should or could be used. These include:
   * definition: A narrative text containing full formal definition of the element. This is required for all modified extensions or profile elements.
   * comments: Comments and other relevant information about the use of this element. This is optional.
   * requirements: Description why this element exists. This is optional.
+  * example: Example value for the element. This is optional.
+  * For example, the "category" element of the self-careplan profile could have following element definitions:
+    * definition: "Identifies what kind of plan this is to support differentiation between multiple co-existing plans; e.g. "Self-care", "Diabetes" etc."
+	* comments: "Only allowed value is 'Self-care'"
+	* requirements: "This allows filtering different kinds of care-plans"
   
 
 
