@@ -10,12 +10,12 @@ Current schemas are in https://simplifier.net/FinnishPHR
 ## Profiling guidelines
 
 * Profiles define the structures of the resources, data types, extensions and constraints used in ODA FHIR API. Profile implementers are expected to be familiar with the HL7 guidelines: http://hl7.org/fhir/2017Jan/profiling.html
-* Profile names start with project identifier "ODA" and the profile name should contain the resource and the special domain of the particular resource (if any). For example a care plan for customer's self care is named as "ODA self-careplan profile". 
-* Profiles should be in XML format and the filenames should contain the profile name, for example ODA-self-careplan.profile.xml
-* For each profile there should be also an example resource in JSON format. Example resource demonstrates how the data elements are used and its name should match to the profile name for example: ODA-self-careplan.example.json.
-* Profiles should be compatible with HL7 FHIR STU3 standard.
+* Profile names start with project identifier "ODA" and the profile name must contain the resource and the special domain of the particular resource (if any). For example a care plan for customer's self care is named as "ODA self-careplan profile". 
+* Profiles must be in XML format and their filenames must contain the profile name, for example ODA-self-careplan.profile.xml
+* For each profile there must be also an example resource in JSON format. Example resource demonstrates how the data elements are used and its name must match to the profile name, for example: ODA-self-careplan.example.json.
+* Profiles must be compatible with HL7 FHIR STU3 standard.
 * A constraining profile can only allow what the base profile allows. Limitations are described more detailed in HL7 FHIR standard: http://hl7.org/fhir/2017Jan/profiling.html#5.1.0.7
-* Each profile should contain both the snapshot and differential components. The snapshot component shows all resource elements in one description and the differential component describes the differencies compared to the base profile.
+* Each profile must contain both the snapshot and differential components. The snapshot component shows all resource elements in one description and the differential component describes the differencies compared to the base profile.
 * Documenting the profile elements: Profile element definitions (http://hl7.org/fhir/2017Jan/elementdefinition.html) contain elements describing what the element is, why it exists and how it should or could be used. These include:
   * definition: A narrative text containing full formal definition of the element. This is required for all modified extensions or profile elements.
   * comments: Comments and other relevant information about the use of this element. This is optional.
