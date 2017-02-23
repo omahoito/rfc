@@ -1,7 +1,10 @@
 {
   "resourceType" : "Observation",
-  "_identifier_comment" : "Arvo saadaan kun havainto tallennetaan OmaKantaan. Pakollinen kenttä.",
-  "identifier" : [{ Identifier }],
+"meta" : {
+	"profile": "https://github.com/omahoito/rfc/omahoito/temperature-profile/"	
+}
+	"_identifier_comment" : "Arvo saadaan kun havainto tallennetaan OmaKantaan. Pakollinen kenttä.",
+  "identifier" : [{ Identifier }], 
   "_status_comment" : "Observationin status ( registered | preliminary | final | amended ). Pakollinen kenttä.",
   "status" : "<code>",
   "_category_comment" : "Kategoria johon havainto kuuluu. Jos oirearviolomake rakentuu dynaamisesti vastausten perusteella, niin voi olla minkä oireen oirearviolomake lopulta täytetty.",
@@ -110,9 +113,9 @@
   },
 
   "_speciment_comment" : "Viittaus havaintoon liittyvään näytteeseen (Specimen).",
-  "specimen" : { Reference(Specimen) }, // Specimen used for this observation
+  "specimen" : { Reference(Specimen) },
   "_device_comment" : "Viittaus mittauslaitteeseen ( Device | DeviceMetric ). Laite jolla oirearviolomaketta täytetään.",
-  "device" : { Reference(Device|DeviceMetric) }, // (Measurement) Device
+  "device" : { Reference(Device|DeviceMetric) },
   "_referenceRange_comment" : "Ohjeistus miten mittauksen arvoa tulisi tulkita verrattuna normaaliarvoihin.",
   "referenceRange" : [{
     "high" : { 
@@ -126,24 +129,14 @@
     "_related_type_comment" : "Koodistot jotka määrittelevät kahden Observationin välisen yhteyden. ( has-member | derived-from | sequel-to | replaces | qualified-by | interfered-by ).",
     "type" : "<code>", // has-member | derived-from | sequel-to | replaces | qualified-by | interfered-by
 	"_related_target_comment" : "Viittaus resurssiin joka on yhteydessä tähän havaintoon.",
-    "target" : { Reference(Observation|QuestionnaireResponse|Sequence) } // R!  Resource that is related to this one
+    "target" : { Reference(Observation|QuestionnaireResponse|Sequence) }
   }],
   "_component_comment" : "Jos havainto koostuu useammasta havaintoyhdistelmästä, niin tässä ne on listattu yhdistelmäpareina (ei sama kun value[x]-kenttä).",
   "component" : [{ // Component results
     "code" : { CodeableConcept }, // R!  Type of component observation (code / type)
     // value[x]: Actual component result. One of these 10:
-    "valueQuantity" : { Quantity },
-    "valueCodeableConcept" : { CodeableConcept },
-    "valueString" : "<string>",
-    "valueRange" : { Range },
-    "valueRatio" : { Ratio },
-    "valueSampledData" : { SampledData },
-    "valueAttachment" : { Attachment },
-    "valueTime" : "<time>",
-    "valueDateTime" : "<dateTime>",
-    "valuePeriod" : { Period },
-    "dataAbsentReason" : { CodeableConcept }, // C? Why the component result is missing
-    "interpretation" : { CodeableConcept }, // High, low, normal, etc.
-    "referenceRange" : [{ Content as for Observation.referenceRange }] // Provides guide for interpretation of component result
+    "valueQuantity" : { 
+	       Reference: "Quantity/3"	       
+	       },
   }]
 }
