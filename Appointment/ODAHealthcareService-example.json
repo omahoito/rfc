@@ -1,0 +1,56 @@
+{
+	"resourceType": "HealthcareService",
+
+	"identifier": [{
+		"system": "url://for/healthcareserviceids",
+		"value": "600"
+	}],
+
+	"providedBy": {
+		"Reference": "Organization/2"
+	},
+	"serviceCategory": {
+		"coding": [{
+			"system": "45",
+			"code": "67",
+			"display": "78"
+		}]
+	},
+
+	"serviceType": [{
+		"type": {
+			"coding": [{
+				"system": "12",
+				"code": "34",
+				"display": "56"
+			}]
+		},
+		"specialty": [{
+			"coding": [{
+				"system": "biftek",
+				"code": "biffstek",
+				"display": "biff"
+			}]
+		}]
+	}],
+	"location": {
+		"reference": "Location/2"
+	},
+	"serviceName": "Terveyspalvelu X",
+
+	"telecom": [{
+		"system": "phone",
+		"value": "0555",
+		"use": "home"
+	}],
+	"characteristic": [{
+		"coding": [{
+			"system": "grey",
+			"code": "gray",
+			"display": "125,125,125"
+		}]
+	}],
+
+	"appointmentRequired": true
+
+}
