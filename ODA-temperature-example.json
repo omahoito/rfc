@@ -72,7 +72,7 @@
 		"coding": [{
 			"system": "http://snomed.info/sct",
 			"code": "89003005",
-			"display": "Oral temperature taking"
+			"display": "Lämpötilan mittaaminen suun kautta."
 		}]
 	},
 	"referenceRange": [{
