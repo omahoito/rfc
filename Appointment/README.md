@@ -3,13 +3,13 @@
 
 Luonnoksia ajanvaraus-profiilin resursseiksi.
 
-Sisältää json- ja xml-muotoisia tiedostoja seuraavista resursseista:
+Sisältää xml-muotoisia tiedostoja seuraavista resursseista:
 
-* ODAAppointment ([json](Appointment/ODAAppointment.json), [xml](Appointment/ODAAppointment.xml) )
-* ODAHealthcareService  ([json](Appointment/ODAHealthcareService.json), [xml](Appointment/ODAHealthcareService.xml) )
-* ODAPatient  ([json](Appointment/ODAPatient.json), [xml](Appointment/ODAPatient.xml) )
-* ODAOrganization  ([json](Appointment/ODAOrganization.json), [xml](Appointment/ODAOrganization.xml) )
-* ODAPractitioner  ([json](Appointment/ODAPractitioner.json), [xml](Appointment/ODAPractitioner.xml) )
+* ODAAppointment ([xml](Appointment/ODAAppointment.xml) )
+* ODAHealthcareService  ([xml](Appointment/ODAHealthcareService.xml) )
+* ODAPatient  ([xml](Appointment/ODAPatient.xml) )
+* ODAOrganization  ([xml](Appointment/ODAOrganization.xml) )
+* ODAPractitioner  ([xml](Appointment/ODAPractitioner.xml) )
 
 Alkuperäiset tiedostot täällä:
 https://simplifier.net/ODAajanvaraus
