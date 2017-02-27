@@ -60,7 +60,7 @@ Data models of the following profiles:
   * Relevant STU2 -> STU3 changes: topic added in STU3
   * [Discussion](https://github.com/omahoito/rfc/issues/7)
 
-* Device / Laite, laite jota käytetään oirearviokyselyn täyttämiseen.
+* Device, used to fill in the symptome questionnaire
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-device.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-device.example.json)
   * Profile as ([STU2](https://www.hl7.org/fhir/device.html), [STU3](http://hl7.org/fhir/2017Jan/device.html))
