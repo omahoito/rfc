@@ -1,77 +1,47 @@
 {
 	"resourceType": "CarePlan",
-	"_identifier_comment": "Arvo saadaan tallennettaessa KELA PHR:ään. Pakollinen kenttä.",
 	"identifier": [{
-		"_use_comment": "(usual | official | temp | secondary). Pakollinen kenttä.",
 		"use": "temp",
-		"_value_comment": "Tunnisteen arvo.",
 		"value": "3141592",
-		"_system_comment": "Lähde josta saadaan enemmän tietoa tunnisteesta.",
 		"system": "http://www.source.com"
 	}],
-	"_subject_comment": "Viittaus hoitosuunnitelman kohteena olevaan potilaaseen (Patient-resurssi)",
 	"subject": {
-		"_reference_comment": "Tunniste viitteenä olevaan kohteeseen.",
-		"reference": "Patient/749"
+		"reference": "Patient/49"
 	},
-	"_status_comment": " (proposed | draft | active | completed | cancelled ). Pakollinen kenttä.",
 	"status": "proposed",
 
-	"_context_comment": "Standardin mukaan tässä on viittaus palvelutapahtumaan. Palvelutapahtumia ei tallenneta PHR:ään, mutta voisiko olla viittaus palvelutapahtuman OID-koodiin silloin kun se on tiedossa?",
 	"context": {
-		"_context_reference_comment": "Tunniste viitteenä olevaan kohteeseen.",
 		"reference": "https://oda.medidemo.fi/oirearvioresponse/1"
 	},
-
-	"_period_comment": "Hoitosuunnitelman voimassaoloajanjakso",
 	"period": {
 		"start": "2016-10-19T00:00:00.000Z",
 		"end": "2016-10-26T23:59:59.999Z"
 	},
-
-	"_author_comment": "Viittaus hoitosuunnitelman laatijaan. Oirearvion perusteella tehdyssä itsehoitosuunnitelmassa viittaus potilaaseen itseensä. Author-viittauksia voi olla useita ja tässä listataan viittaus kaikkiin hoitosuunnitelman tekoon osallistuneisiin. Kuinka viitataan ammattilaiseen, jos niitä ei ole PHR:ssä? Tallennetaanko kaikki ammattilaiset omaan tietokantaan? Entä organisaatiot? MVP-vaiheessa vain Patient itse.",
 	"author": [{
-		"_reference_comment": "Tunniste viitteenä olevaan kohteeseen. (Patient | Practitioner | RelatedPerson | Organization)",
 		"reference": "Patient/749"
 	}],
-
-	"_modified_comment": "Viimeisin muokkausaika",
 	"modified": "2016-10-11T10:00:00.000Z",
-	"_category_comment": "Määriteltävä PHR:ään FHIR Value Set, jossa listattu hoitosuunnitelmakategoriat. Esim. Itsehoitosuunnitelma. MVP:ssä voi olla esim. tekstinä 'Hengitystieoireiden itsehoitosuunnitelma' tjsp.",
 	"category": [{
-		"_text_comment": "Ihmisymmärrettävä kuvaus hoitosuunnitelmakategoriasta.",
 		"text": "self care"
 	}],
-
-	"_description_comment": "Hoitosuunnitelman kuvaus",
 	"description": "Nieluvaivasi on todennäköisesti lievä virustauti, jonka yhteydessä oloa voi helpottaa levolla ja tulehduskipulääkkeillä (ks. Nuhakuume),         eikä tarvita lääkärin tai hoitajan antamaa hoitoa. Töistä poissaolon tarve riippuu voinnista ja työn vaatimuksista. Tarpeellisen poissaolon järjestämiseksi menettele työnantajasi antamien ohjeiden mukaan.\n",
-	
-	"_activity_comment" : "Toimintoja jotka tapahtuvat osana hoitosuunnitelmaa",
 	"activity": [{
 		"detail": {
-			"_detail_prohibited_comment": "Onko kyseinen action kielletty",
 			"prohibited": false,
-			"_activity_detail_category_comment": "diet | drug | encounter | observation | procedure | supply | other",
 			"category": {
-				"_activity_detail_category_text_comment": "Selväsanainen kuvaus kategoriasta",
 				"text": "observation"
 			},
 			"code": {
 				"coding": [{
-					"_system_comment": "Toimintasuosituksen tai muun activityn koodisto",
 					"system": "urn:oid:1.2.246.537.6.96.2008",
-					"_version_comment": "Toimintasuosituksen tai muun activityn koodiston versio",
 					"version": "1.2.246.537.6.96.2008",
-					"_code_comment": "Toimintasuosituksen tai muun activityn koodi",
 					"code": "8310-5"
 				}]
 			},
-			"_detail_status_comment": "(not-started | scheduled | in-progress | on-hold | completed | cancelled) Ehdotuksessa tila on “not-started”. Hoitosuunnitelmaan valittu toiminta on “scheduled” tai “in-progress”. Hoitosuunnitelmasta pois jätetty toimintosuunnitelma on “cancelled”.",
 			"status": "not-started",
 			"scheduledTiming": {
 				"event": ["2016-10-20T12:00:00.000Z"]
 			},
-			"_detail_description_comment": "Toiminnan kuvaus selkokielellä",
 			"description": "Mittaa lämpö uudelleen"
 		}
 	}, {
