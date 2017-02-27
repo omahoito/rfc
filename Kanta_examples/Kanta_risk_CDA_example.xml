@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:hl7fi="urn:hl7finland" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+    <realmCode code="FI"/>
+    <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+    <templateId root="1.2.246.777.11.2014.23"/>
+    <templateId root="1.2.246.777.11.2014.22"/>
+    <templateId root="1.2.246.777.11.2014.9"/>
+    <id root="1.2.246.10.1008258.91915.2017.402"/>
+    <code xsi:type="CV" code="2" codeSystem="1.2.246.537.5.40150.2009" codeSystemName="KanTa-palvelut - Potilasasiakirjan rekisteritunnus 2009" displayName="Julkinen terveydenhuolto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    <title>Riskitiedot</title>
+    <effectiveTime value="20170217111359"/>
+    <confidentialityCode code="5" codeSystem="1.2.246.777.5.99902.2006" codeSystemName="KanTa-palvelut - Asiakirjan luottamuksellisuus" displayName="Terveydenhuollon salassapidettävä"/>
+    <languageCode code="fi"/>
+    <setId root="1.2.246.10.1008258.91915.2017.402"/>
+    <versionNumber value="1"/>
+    <recordTarget>
+        <patientRole>
+            <id root="1.2.246.21" extension="010473-9755"/>
+            <patient>
+                <name>
+                    <given>PEKKA</given>
+                    <family>PURU</family>
+                    <given qualifier="CL">PEKKA</given>
+                </name>
+                <administrativeGenderCode code="1" codeSystem="1.2.246.537.5.1.1997" codeSystemName="AR/YDIN - Sukupuoli 1997" displayName="Mies"/>
+                <birthTime value="19730401"/>
+            </patient>
+        </patientRole>
+    </recordTarget>
+    <author>
+        <time value="20170217111343"/>
+        <assignedAuthor>
+            <id root="1.2.246.21" extension="161149-791B"/>
+            <assignedPerson>
+                <name>
+                    <given>JAAKKO</given>
+                    <family>DAHLBOM TES</family>
+                </name>
+            </assignedPerson>
+        </assignedAuthor>
+    </author>
+    <custodian>
+        <assignedCustodian>
+            <representedCustodianOrganization>
+                <id root="1.2.246.10.1008258.19.2"/>
+                <name>Mediconsult Oy, A</name>
+            </representedCustodianOrganization>
+        </assignedCustodian>
+    </custodian>
+    <componentOf>
+        <encompassingEncounter>
+            <id root="1.2.246.10.1008258.14915.2017.65"/>
+            <effectiveTime nullFlavor="NA"/>
+            <responsibleParty>
+                <assignedEntity>
+                    <id nullFlavor="NA"/>
+                    <representedOrganization>
+                        <id root="1.2.246.1008258.10.1"/>
+                        <name>Mediconsult Oy, A</name>
+                    </representedOrganization>
+                </assignedEntity>
+            </responsibleParty>
+        </encompassingEncounter>
+    </componentOf>
+    <hl7fi:localHeader>
+        <hl7fi:tableOfContents>
+            <hl7fi:contentsCode code="175" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - Näkymät" displayName="RIS"/>
+        </hl7fi:tableOfContents>
+        <hl7fi:fileFormat code="1" codeSystem="1.2.246.537.5.40179.2008" codeSystemName="eArkisto - Asiakirjan tiedostomuoto" displayName="CDA R2"/>
+        <hl7fi:softwareSupport moderator="Mediconsult Oy" product="Mediatri" version="KanTa-adapteri 4.2.0 build 47">Mediconsult Oy Mediatri/KanTa-adapteri 4.2.0 build 47</hl7fi:softwareSupport>
+        <hl7fi:documentType code="1" codeSystem="1.2.246.537.5.5001.2011" codeSystemName="eArkisto - Asiakirjatyyppi 2012" displayName="Kertomusteksti"/>
+        <hl7fi:functionCode code="06.03" codeSystem="1.2.246.537.6.300.2010" codeSystemName="STM - Terveydenhuollon tehtäväluokitus" displayName="Potilaan hoito"/>
+        <hl7fi:recordStatus code="3" codeSystem="1.2.246.537.5.40154.2008" codeSystemName="eArkisto - Asiakirjan valmistumisen tila" displayName="Arkistointivalmis"/>
+        <hl7fi:custodianTypeCode code="1" codeSystem="1.2.246.537.5.40172.2008" codeSystemName="eArkisto - Rekisteripitäjän laji 2008" displayName="Julkinen"/>
+        <hl7fi:encompassingEncounterMasterCode code="2" codeSystem="1.2.246.537.5.40180.2008" codeSystemName="eArkisto - Palvelutapahtuman ensisijaisuus  2008" displayName="Toissijainen"/>
+        <hl7fi:retentionPeriodClass code="2" codeSystem="1.2.246.537.5.40158.2008" codeSystemName="eArkisto - Säilytysaikaluokka" displayName="12 v. potilaan kuolemasta tai 120 v. syntymästä"/>
+    </hl7fi:localHeader>
+    <component>
+        <structuredBody ID="OID1.2.246.10.1008258.91915.2017.402">
+            <component>
+                <templateId root="1.2.246.777.11.2007.3"/>
+                <section ID="OID1.2.246.10.1008258.91915.2017.402.396.1">
+                    <id root="1.2.246.10.1008258.98789.396.138.0.1"/>
+                    <code code="175" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - Näkymät" displayName="RIS"/>
+                    <title>RIS</title>
+                    <text>
+                        <paragraph>MEDICONSULT</paragraph>
+                        <paragraph>DAHLBOM TES, JAAKKO</paragraph>
+                        <paragraph>17.02.2017 11:13</paragraph>
+                    </text>
+                    <subject typeCode="SBJ">
+                        <relatedSubject classCode="PAT">
+                            <code code="010473-9755" codeSystem="1.2.246.21" codeSystemName="VRK henkilötunnus" displayName="010473-9755"/>
+                        </relatedSubject>
+                    </subject>
+                    <author>
+                        <functionCode code="MER" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto - tekninen CDA R2 henkilötarkennin  2009" displayName="Merkinnän tekijä"/>
+                        <time value="20170217111343"/>
+                        <assignedAuthor>
+                            <id root="1.2.246.21" extension="161149-791B"/>
+                            <assignedPerson>
+                                <name>
+                                    <given>JAAKKO</given>
+                                    <family>DAHLBOM TES</family>
+                                </name>
+                            </assignedPerson>
+                            <representedOrganization>
+                                <id root="1.2.246.1008258.10.10"/>
+                                <name>MEDICONSULT A1</name>
+                            </representedOrganization>
+                        </assignedAuthor>
+                    </author>
+                    <component>
+                        <section>
+                            <code code="99" codeSystem="1.2.246.537.6.13.2006" codeSystemName="AR/YDIN - Hoitoprosessin vaihe 2006" displayName="Määrittämätön hoitoprosessin vaihe (ei vaihetta)"/>
+                            <title>Määrittämätön hoitoprosessin vaihe (ei vaihetta)</title>
+                            <component>
+                                <section>
+                                    <code code="43" codeSystem="1.2.246.537.6.14.2006" codeSystemName="AR/YDIN - Otsikot 2006" displayName="Riskitiedot"/>
+                                    <title>Riskitiedot</title>
+                                    <text ID="OID1.2.246.10.1008258.91915.2017.402.396.43.2">
+                                        <paragraph>
+                                            <caption>Aste</caption>
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.402.396.43.3">Kriittinen</content>
+                                        </paragraph>
+                                        <paragraph>
+                                            <caption>Tyyppi</caption>
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.402.396.43.4">Henkeä uhkaava ruoka-aineallergia</content>
+                                        </paragraph>
+                                        <paragraph>
+                                            <caption>Selite</caption>
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.402.396.43.5">Omena-allergia.</content>
+                                        </paragraph>
+                                        <paragraph>
+                                            <caption>Kuvaus</caption>
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.402.396.43.6">Riskitiedon kuvaus. Tähän voi kirjoittaa vaikka, että omena aiheuttanut aiemmin vakavan kurkun turpoamisen.</content>
+                                        </paragraph>
+                                        <paragraph>
+                                            <caption>Lisäselite</caption>
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.402.396.43.7">Lisätiedon voi kirjata riskitietoon.</content>
+                                        </paragraph>
+                                        <paragraph>
+                                            <caption>Huomiointi hoidossa</caption>
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.402.396.43.8">Ei anneta omenaa, eikä kuorita omenaa samassa huoneessa.</content>
+                                        </paragraph>
+                                        <paragraph>
+                                            <caption>Määreet</caption>
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.402.396.43.9">Pysyväisluonteinen Todennäköinen tai varma</content>
+                                        </paragraph>
+                                        <paragraph>
+                                            <caption>Tiedon lähde</caption>
+                                            <content>Hoitava organisaatio</content>
+                                        </paragraph>
+                                        <paragraph>
+                                            <caption>Voimassaoloaika</caption>
+                                            <content>17.02.2017 11:12 - </content>
+                                        </paragraph>
+                                        <paragraph>
+                                            <caption>Aloittaja</caption>
+                                            <content>DAHLBOM TES JAAKKO / MEDICONSULT</content>
+                                        </paragraph>
+                                    </text>
+                                    <entry typeCode="COMP">
+                                        <templateId root="1.2.246.777.11.2014.9"/>
+                                        <observation classCode="COND" moodCode="EVN">
+                                            <templateId root="1.2.246.537.6.12.999.2003.13"/>
+                                            <id root="1.2.246.10.1008258.98789.138.396.1.1"/>
+                                            <code code="13" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - tekninen CDA R2 rakennekoodisto 2003" displayName="Riskitieto"/>
+                                            <text>
+                                                <reference value="#OID1.2.246.10.1008258.91915.2017.402.396.43.2"/>
+                                            </text>
+                                            <effectiveTime value="20170217"/>
+                                            <value xsi:type="CV" nullFlavor="UNK" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                                <originalText>
+                                                    <reference value="#OID1.2.246.10.1008258.91915.2017.402.396.43.5"/>
+                                                </originalText>
+                                            </value>
+                                            <author>
+                                                <functionCode code="RIS" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto - tekninen CDA R2 henkilötarkennin  2009" displayName="Riskitiedon havainnut henkilö"/>
+                                                <time value="20170217111250"/>
+                                                <assignedAuthor>
+                                                    <id root="1.2.246.21" extension="161149-791B"/>
+                                                    <assignedPerson>
+                                                        <name>
+                                                            <given>JAAKKO</given>
+                                                            <family>DAHLBOM TES</family>
+                                                        </name>
+                                                    </assignedPerson>
+                                                    <representedOrganization>
+                                                        <id root="1.2.246.1008258.10.10"/>
+                                                        <name>MEDICONSULT A1</name>
+                                                    </representedOrganization>
+                                                </assignedAuthor>
+                                            </author>
+                                            <informant>
+                                                <assignedEntity classCode="ASSIGNED">
+                                                    <id/>
+                                                    <code code="HOIORG" codeSystem="1.2.246.537.5.40031.2006" codeSystemName="THL - Tiedon lähde 2006" displayName="Hoitava organisaatio"/>
+                                                </assignedEntity>
+                                            </informant>
+                                            <entryRelationship typeCode="COMP">
+                                                <observation classCode="COND" moodCode="EVN">
+                                                    <code code="13.6" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - tekninen CDA R2 rakennekoodisto 2003" displayName="Riskitiedon aste"/>
+                                                    <value xsi:type="CE" code="1" codeSystem="1.2.246.537.5.40033.2006" codeSystemName="AR/YDIN - Riskitiedon aste" displayName="Kriittinen riski" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                                        <originalText>
+                                                            <reference value="#OID1.2.246.10.1008258.91915.2017.402.396.43.3"/>
+                                                        </originalText>
+                                                    </value>
+                                                </observation>
+                                            </entryRelationship>
+                                            <entryRelationship typeCode="COMP">
+                                                <observation classCode="COND" moodCode="EVN">
+                                                    <code code="13.7" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - tekninen CDA R2 rakennekoodisto 2003" displayName="Riskitiedon tyyppi"/>
+                                                    <value xsi:type="CE" code="A1" codeSystem="1.2.246.537.5.40034.2006" codeSystemName="AR/YDIN - Riskitiedon tyyppi" displayName="Henkeä uhkaava ruoka-aineallergia" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                                        <originalText>
+                                                            <reference value="#OID1.2.246.10.1008258.91915.2017.402.396.43.4"/>
+                                                        </originalText>
+                                                    </value>
+                                                </observation>
+                                            </entryRelationship>
+                                            <entryRelationship typeCode="COMP">
+                                                <observation classCode="COND" moodCode="EVN">
+                                                    <code code="9" codeSystem="1.2.246.537.6.12.2012.343" codeSystemName="THL/Tietosisältö - Riskitiedot" displayName="Riskiin liittyvä lisätieto"/>
+                                                    <value xsi:type="CV" code="9" codeSystem="1.2.246.537.6.12.2012.343" codeSystemName="THL/Tietosisältö - Riskitiedot" displayName="Riskiin liittyvä lisätieto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                                        <originalText>
+                                                            <reference value="#OID1.2.246.10.1008258.91915.2017.402.396.43.7"/>
+                                                        </originalText>
+                                                    </value>
+                                                </observation>
+                                            </entryRelationship>
+                                            <entryRelationship typeCode="COMP">
+                                                <observation classCode="COND" moodCode="EVN">
+                                                    <code code="13.4" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - tekninen CDA R2 rakennekoodisto 2003" displayName="Selite, riskin huomiointi potilaan hoidossa"/>
+                                                    <value xsi:type="CV" code="13.4" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - tekninen CDA R2 rakennekoodisto 2003" displayName="Selite, riskin huomiointi potilaan hoidossa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                                        <originalText>
+                                                            <reference value="#OID1.2.246.10.1008258.91915.2017.402.396.43.8"/>
+                                                        </originalText>
+                                                    </value>
+                                                </observation>
+                                            </entryRelationship>
+                                            <entryRelationship typeCode="COMP">
+                                                <observation classCode="COND" moodCode="EVN">
+                                                    <code code="2.1" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin pysysyvyys"/>
+                                                    <value xsi:type="CE" code="PYS" codeSystem="1.2.246.537.5.40003.2003" codeSystemName="AR/YDIN - Pysyvyys 2003" displayName="Pysyväisluonteinen" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                                </observation>
+                                            </entryRelationship>
+                                            <entryRelationship typeCode="COMP">
+                                                <observation classCode="COND" moodCode="EVN">
+                                                    <code code="2.2" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin varmuusaste"/>
+                                                    <value xsi:type="CE" code="TOD" codeSystem="1.2.246.537.5.40004.2003" codeSystemName="AR/YDIN - Varmuusaste 2003" displayName="Todennäköinen tai varma" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                                </observation>
+                                            </entryRelationship>
+                                            <entryRelationship typeCode="COMP">
+                                                <observation classCode="COND" moodCode="EVN">
+                                                    <code code="1" codeSystem="1.2.246.537.6.12.2012.343" codeSystemName="THL/Tietosisältö - Riskitiedot" displayName="Riskin yksilöivä tunniste"/>
+                                                    <value xsi:type="II" root="1.2.246.10.1008258.98789.138.396.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                                </observation>
+                                            </entryRelationship>
+                                        </observation>
+                                    </entry>
+                                </section>
+                            </component>
+                        </section>
+                    </component>
+                </section>
+            </component>
+        </structuredBody>
+    </component>
+</ClinicalDocument>

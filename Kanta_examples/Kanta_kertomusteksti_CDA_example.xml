@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:hl7fi="urn:hl7finland" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+    <realmCode code="FI"/>
+    <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+    <templateId root="1.2.246.777.11.2014.23"/>
+    <templateId root="1.2.246.777.11.2014.22"/>
+    <templateId root="1.2.246.777.11.2014.9"/>
+    <id root="1.2.246.10.1008258.91915.2017.401"/>
+    <code xsi:type="CV" code="2" codeSystem="1.2.246.537.5.40150.2009" codeSystemName="KanTa-palvelut - Potilasasiakirjan rekisteritunnus 2009" displayName="Julkinen terveydenhuolto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+    <title>Yleisl‰‰ketiede</title>
+    <effectiveTime value="20170217111150"/>
+    <confidentialityCode code="5" codeSystem="1.2.246.777.5.99902.2006" codeSystemName="KanTa-palvelut - Asiakirjan luottamuksellisuus" displayName="Terveydenhuollon salassapidett‰v‰"/>
+    <languageCode code="fi"/>
+    <setId root="1.2.246.10.1008258.91915.2017.401"/>
+    <versionNumber value="1"/>
+    <recordTarget>
+        <patientRole>
+            <id root="1.2.246.21" extension="010473-9755"/>
+            <patient>
+                <name>
+                    <given>PEKKA</given>
+                    <family>PURU</family>
+                    <given qualifier="CL">PEKKA</given>
+                </name>
+                <administrativeGenderCode code="1" codeSystem="1.2.246.537.5.1.1997" codeSystemName="AR/YDIN - Sukupuoli 1997" displayName="Mies"/>
+                <birthTime value="19730401"/>
+            </patient>
+        </patientRole>
+    </recordTarget>
+    <author>
+        <time value="20170217110941"/>
+        <assignedAuthor>
+            <id root="1.2.246.21" extension="161149-791B"/>
+            <assignedPerson>
+                <name>
+                    <given>JAAKKO</given>
+                    <family>DAHLBOM TES</family>
+                </name>
+            </assignedPerson>
+        </assignedAuthor>
+    </author>
+    <custodian>
+        <assignedCustodian>
+            <representedCustodianOrganization>
+                <id root="1.2.246.10.1008258.19.2"/>
+                <name>Mediconsult Oy, A</name>
+            </representedCustodianOrganization>
+        </assignedCustodian>
+    </custodian>
+    <componentOf>
+        <encompassingEncounter>
+            <id root="1.2.246.10.1008258.14915.2017.65"/>
+            <effectiveTime nullFlavor="NA"/>
+            <responsibleParty>
+                <assignedEntity>
+                    <id nullFlavor="NA"/>
+                    <representedOrganization>
+                        <id root="1.2.246.1008258.10.1"/>
+                        <name>Mediconsult Oy, A</name>
+                    </representedOrganization>
+                </assignedEntity>
+            </responsibleParty>
+        </encompassingEncounter>
+    </componentOf>
+    <hl7fi:localHeader>
+        <hl7fi:tableOfContents>
+            <hl7fi:contentsCode code="98" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - N‰kym‰t" displayName="YLE"/>
+        </hl7fi:tableOfContents>
+        <hl7fi:fileFormat code="1" codeSystem="1.2.246.537.5.40179.2008" codeSystemName="eArkisto - Asiakirjan tiedostomuoto" displayName="CDA R2"/>
+        <hl7fi:softwareSupport moderator="Mediconsult Oy" product="Mediatri" version="KanTa-adapteri 4.2.0 build 47">Mediconsult Oy Mediatri/KanTa-adapteri 4.2.0 build 47</hl7fi:softwareSupport>
+        <hl7fi:documentType code="1" codeSystem="1.2.246.537.5.5001.2011" codeSystemName="eArkisto - Asiakirjatyyppi 2012" displayName="Kertomusteksti"/>
+        <hl7fi:functionCode code="06.03" codeSystem="1.2.246.537.6.300.2010" codeSystemName="STM - Terveydenhuollon teht‰v‰luokitus" displayName="Potilaan hoito"/>
+        <hl7fi:recordStatus code="3" codeSystem="1.2.246.537.5.40154.2008" codeSystemName="eArkisto - Asiakirjan valmistumisen tila" displayName="Arkistointivalmis"/>
+        <hl7fi:custodianTypeCode code="1" codeSystem="1.2.246.537.5.40172.2008" codeSystemName="eArkisto - Rekisteripit‰j‰n laji 2008" displayName="Julkinen"/>
+        <hl7fi:encompassingEncounterMasterCode code="2" codeSystem="1.2.246.537.5.40180.2008" codeSystemName="eArkisto - Palvelutapahtuman ensisijaisuus  2008" displayName="Toissijainen"/>
+        <hl7fi:retentionPeriodClass code="2" codeSystem="1.2.246.537.5.40158.2008" codeSystemName="eArkisto - S‰ilytysaikaluokka" displayName="12 v. potilaan kuolemasta tai 120 v. syntym‰st‰"/>
+    </hl7fi:localHeader>
+    <component>
+        <structuredBody ID="OID1.2.246.10.1008258.91915.2017.401">
+            <component>
+                <templateId root="1.2.246.777.11.2007.3"/>
+                <section ID="OID1.2.246.10.1008258.91915.2017.401.396.822.1">
+                    <templateId root="1.2.246.777.11.2012.5"/>
+                    <id root="1.2.246.10.1008258.98789.396.32.822.1"/>
+                    <code code="98" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - N‰kym‰t" displayName="YLE"/>
+                    <title>YLE</title>
+                    <text>
+                        <paragraph>MEDICONSULT</paragraph>
+                        <paragraph>DAHLBOM TES, JAAKKO</paragraph>
+                        <paragraph>17.02.2017 11:09</paragraph>
+                    </text>
+                    <subject typeCode="SBJ">
+                        <relatedSubject classCode="PAT">
+                            <code code="010473-9755" codeSystem="1.2.246.21" codeSystemName="VRK henkilˆtunnus" displayName="010473-9755"/>
+                        </relatedSubject>
+                    </subject>
+                    <author>
+                        <functionCode code="MER" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto - tekninen CDA R2 henkilˆtarkennin  2009" displayName="Merkinn‰n tekij‰"/>
+                        <time value="20170217110941"/>
+                        <assignedAuthor>
+                            <id root="1.2.246.21" extension="161149-791B"/>
+                            <assignedPerson>
+                                <name>
+                                    <given>JAAKKO</given>
+                                    <family>DAHLBOM TES</family>
+                                </name>
+                            </assignedPerson>
+                            <representedOrganization>
+                                <id root="1.2.246.1008258.10.10"/>
+                                <name>MEDICONSULT A1</name>
+                            </representedOrganization>
+                        </assignedAuthor>
+                    </author>
+                    <author>
+                        <functionCode code="KIR" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto - tekninen CDA R2 henkilˆtarkennin  2009" displayName="Merkinn‰n kirjaaja"/>
+                        <time value="20170217111138"/>
+                        <assignedAuthor>
+                            <id root="1.2.246.21" extension="161149-791B"/>
+                            <assignedPerson>
+                                <name>
+                                    <given>JAAKKO</given>
+                                    <family>DAHLBOM TES</family>
+                                </name>
+                            </assignedPerson>
+                            <representedOrganization>
+                                <id root="1.2.246.1008258.10.10"/>
+                                <name>MEDICONSULT A1</name>
+                            </representedOrganization>
+                        </assignedAuthor>
+                    </author>
+                    <component>
+                        <section>
+                            <code code="11" codeSystem="1.2.246.537.6.13.2006" codeSystemName="AR/YDIN - Hoitoprosessin vaihe 2006" displayName="Tulotilanne"/>
+                            <title>Tulotilanne</title>
+                            <component>
+                                <section>
+                                    <code code="37" codeSystem="1.2.246.537.6.14.2006" codeSystemName="AR/YDIN - Otsikot 2006" displayName="Nykytila (status)"/>
+                                    <title>Nykytila (status)</title>
+                                    <text>
+                                        <paragraph ID="OID1.2.246.10.1008258.91915.2017.401.396.822.1.1.1">
+                                            <caption>Status</caption>
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.401.396.822.1.1.2">Esimerkki normaalista kirjauksesta.</content>
+                                        </paragraph>
+                                    </text>
+                                </section>
+                            </component>
+                            <component>
+                                <section>
+                                    <code code="14" codeSystem="1.2.246.537.6.14.2006" codeSystemName="AR/YDIN - Otsikot 2006" displayName="Esitiedot (anamneesi)"/>
+                                    <title>Esitiedot (anamneesi)</title>
+                                    <text>
+                                        <paragraph ID="OID1.2.246.10.1008258.91915.2017.401.396.822.1.2.1">
+                                            <caption>Esitiedot</caption>
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.401.396.822.1.2.2">T‰h‰n voi kirjata esitietoja</content>
+                                        </paragraph>
+                                    </text>
+                                </section>
+                            </component>
+                        </section>
+                    </component>
+                    <component>
+                        <section>
+                            <code code="14" codeSystem="1.2.246.537.6.13.2006" codeSystemName="AR/YDIN - Hoitoprosessin vaihe 2006" displayName="Hoidon suunnittelu"/>
+                            <title>Hoidon suunnittelu</title>
+                            <component>
+                                <section>
+                                    <code code="13" codeSystem="1.2.246.537.6.14.2006" codeSystemName="AR/YDIN - Otsikot 2006" displayName="Diagnoosi"/>
+                                    <title>Diagnoosi</title>
+                                    <text>
+                                        <paragraph ID="OID1.2.246.10.1008258.91915.2017.401.396.822.1.3.1">
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.401.396.822.1.3.2">R01 Sivu‰‰net ja muut poikkeavat syd‰n‰‰net</content>
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.401.396.822.1.3.3">Episodin nimi: Sivu‰‰net ja muut poikkeavat syd‰n‰‰net</content>
+                                        </paragraph>
+                                    </text>
+                                    <entry>
+                                        <templateId root="1.2.246.777.11.2014.9"/>
+                                        <observation classCode="OBS" moodCode="EVN">
+                                            <templateId root="1.2.246.537.6.12.999.2003.2"/>
+                                            <id root="1.2.246.10.1008258.98789.137.396.2.2"/>
+                                            <code code="2" codeSystem="1.2.246.537.6.12.999.2003">
+                                                <qualifier>
+                                                    <value code="PAA" codeSystem="1.2.246.537.5.40005.2003" codeSystemName="AR/YDIN - Diagnoosin/toimenpiteen ensisijaisuus 2003" displayName="P‰‰diagnoosi tai p‰‰toimenpide"/>
+                                                </qualifier>
+                                            </code>
+                                            <text mediaType="text/xml">
+                                                <reference value="#OID1.2.246.10.1008258.91915.2017.401.396.822.1.3.2"/>
+                                            </text>
+                                            <effectiveTime value="20170217"/>
+                                            <value xsi:type="CD" code="R01" codeSystem="1.2.246.537.6.1.1999" codeSystemName="Tautiluokitus ICD-10 1999" displayName="Sivu‰‰net ja muut poikkeavat syd‰n‰‰net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                                <originalText>
+                                                    <reference value="#OID1.2.246.10.1008258.91915.2017.401.396.822.1.3.2"/>
+                                                </originalText>
+                                            </value>
+                                            <author>
+                                                <functionCode code="DAL" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto - tekninen CDA R2 henkilˆtarkennin  2009" displayName="Diagnoosin tehnyt henkilˆ"/>
+                                                <time value="20170217"/>
+                                                <assignedAuthor>
+                                                    <id root="1.2.246.21" extension="161149-791B"/>
+                                                    <assignedPerson>
+                                                        <name>
+                                                            <given>JAAKKO</given>
+                                                            <family>DAHLBOM TES</family>
+                                                        </name>
+                                                    </assignedPerson>
+                                                    <representedOrganization>
+                                                        <id root="1.2.246.1008258.10.10"/>
+                                                        <name>MEDICONSULT A1</name>
+                                                    </representedOrganization>
+                                                </assignedAuthor>
+                                            </author>
+                                            <informant typeCode="INF" contextControlCode="OP">
+                                                <assignedEntity classCode="ASSIGNED">
+                                                    <id/>
+                                                    <code code="HOIORG" codeSystem="1.2.246.537.5.40031.2006" codeSystemName="THL - Tiedon l‰hde 2006" displayName="Hoitava organisaatio"/>
+                                                </assignedEntity>
+                                            </informant>
+                                            <entryRelationship typeCode="MFST">
+                                                <observation classCode="OBS" moodCode="EVN">
+                                                    <templateId root="1.2.246.537.6.12.999.2003.2.2"/>
+                                                    <code code="2.2" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin varmuusaste"/>
+                                                    <text>
+                                                        <reference value="#OID1.2.246.10.1008258.91915.2017.401.396.822.1.3.2"/>
+                                                    </text>
+                                                    <statusCode code="active"/>
+                                                    <effectiveTime value="201702171109"/>
+                                                    <value xsi:type="CD" code="EP" codeSystem="1.2.246.537.5.40004.2003" codeSystemName="AR/YDIN - Varmuusaste 2003" displayName="Ep‰ilty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                                </observation>
+                                            </entryRelationship>
+                                            <entryRelationship typeCode="MFST">
+                                                <observation classCode="OBS" moodCode="EVN">
+                                                    <templateId root="1.2.246.537.6.12.999.2003.2.1"/>
+                                                    <code code="2.1" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin pysysyvyys"/>
+                                                    <effectiveTime value="201702171109"/>
+                                                    <value xsi:type="CD" code="KER" codeSystem="1.2.246.537.5.40003.2003" codeSystemName="AR/YDIN - Pysyvyys 2003" displayName="M‰‰r‰aikainen" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                                </observation>
+                                            </entryRelationship>
+                                            <entryRelationship typeCode="MFST">
+                                                <observation classCode="OBS" moodCode="EVN">
+                                                    <code code="9" codeSystem="1.2.246.6.12.2012.1001"/>
+                                                    <text>
+                                                        <reference value="#OID1.2.246.10.1008258.91915.2017.401.396.822.1.3.3"/>
+                                                    </text>
+                                                    <value xsi:type="II" root="1.2.246.10.1008258.98789.137.396.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                                </observation>
+                                            </entryRelationship>
+                                        </observation>
+                                    </entry>
+                                </section>
+                            </component>
+                        </section>
+                    </component>
+                    <component>
+                        <section>
+                            <code code="15" codeSystem="1.2.246.537.6.13.2006" codeSystemName="AR/YDIN - Hoitoprosessin vaihe 2006" displayName="Hoidon toteutus"/>
+                            <title>Hoidon toteutus</title>
+                            <component>
+                                <section>
+                                    <code code="68" codeSystem="1.2.246.537.6.14.2006" codeSystemName="AR/YDIN - Otsikot 2006" displayName="Ennaltaehk‰isy (preventio)"/>
+                                    <title>Ennaltaehk‰isy (preventio)</title>
+                                    <text>
+                                        <paragraph ID="OID1.2.246.10.1008258.91915.2017.401.396.822.1.5.1">
+                                            <caption>Rokotus</caption>
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.401.396.822.1.5.2">diTeBooster, 1, IM Vasen olkavarsi</content>
+                                        </paragraph>
+                                    </text>
+                                    <entry>
+                                        <templateId root="1.2.246.777.11.2013.26"/>
+                                        <substanceAdministration classCode="SBADM" moodCode="EVN">
+                                            <templateId root="1.2.246.537.6.12.999.2003.19"/>
+                                            <id root="1.2.246.10.1008258.98789.135.396.1"/>
+                                            <code xsi:type="CV" code="19" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - tekninen CDA R2 rakennekoodisto 2003" displayName="Rokotustieto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                                            <text>
+                                                <reference value="#OID1.2.246.10.1008258.91915.2017.401.396.822.1.5.2"/>
+                                            </text>
+                                            <statusCode code="completed"/>
+                                            <effectiveTime value="201702171109"/>
+                                            <repeatNumber value="1"/>
+                                            <routeCode code="IM" codeSystem="1.2.246.537.6.111.2007" codeSystemName="AR/YDIN - Rokotustapa 2007" displayName="Lihakseen"/>
+                                            <approachSiteCode code="VO" codeSystem="1.2.246.537.6.110.2007" codeSystemName="AR/YDIN - Pistoskohta 2007" displayName="Vasen olkavarsi"/>
+                                            <consumable typeCode="CSM">
+                                                <manufacturedProduct classCode="MANU">
+                                                    <manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                                                        <code code="J07AM51" codeSystem="1.2.246.537.6.32.2007" codeSystemName="Fimea - ATC Luokitus 2007" displayName="Tetanus-difteriatoksoidirokote">
+                                                            <originalText>
+                                                                <reference value="#OID1.2.246.10.1008258.91915.2017.401.396.822.1.5.2"/>
+                                                            </originalText>
+                                                        </code>
+                                                    </manufacturedMaterial>
+                                                </manufacturedProduct>
+                                            </consumable>
+                                            <informant typeCode="INF" contextControlCode="OP">
+                                                <assignedEntity classCode="ASSIGNED">
+                                                    <id/>
+                                                    <code code="HOIORG" codeSystem="1.2.246.537.5.40031.2006" codeSystemName="THL - Tiedon l‰hde 2006" displayName="Hoitava organisaatio"/>
+                                                </assignedEntity>
+                                            </informant>
+                                            <entryRelationship typeCode="COMP">
+                                                <supply classCode="SPLY" moodCode="EVN">
+                                                    <id root="1.2.246.10.1008258.98789.135.396.1.1"/>
+                                                    <text>
+                                                        <reference value="#OID1.2.246.10.1008258.91915.2017.401.396.822.1.5.2"/>
+                                                    </text>
+                                                    <product>
+                                                        <manufacturedProduct>
+                                                            <manufacturedMaterial>
+                                                                <code code="041332" codeSystem="1.2.246.537.6.55" codeSystemName="VNR" codeSystemVersion="2017.004" displayName="DITEBOOSTER">
+                                                                    <translation>
+                                                                        <qualifier>
+                                                                            <name code="94" codeSystem="1.2.246.537.6.12.2002.126" codeSystemName="L‰‰kityslista" displayName="L‰‰ketietokannan mukainen laji"/>
+                                                                            <value code="1" codeSystem="1.2.246.537.5.40126.2006" codeSystemName="S‰hkˆinen l‰‰kem‰‰r‰ys - L‰‰ketietokannasta saatava valmisteen laji" displayName="L‰‰ke"/>
+                                                                        </qualifier>
+                                                                    </translation>
+                                                                </code>
+                                                                <lotNumberText>FA212</lotNumberText>
+                                                            </manufacturedMaterial>
+                                                        </manufacturedProduct>
+                                                    </product>
+                                                </supply>
+                                            </entryRelationship>
+                                        </substanceAdministration>
+                                    </entry>
+                                </section>
+                            </component>
+                            <component>
+                                <section>
+                                    <code code="76" codeSystem="1.2.246.537.6.14.2006" codeSystemName="AR/YDIN - Otsikot 2006" displayName="Muu merkint‰"/>
+                                    <title>Muu merkint‰</title>
+                                    <text>
+                                        <paragraph ID="OID1.2.246.10.1008258.91915.2017.401.396.822.1.6.1">
+                                            <caption>ALLEKIRJOITUS</caption>
+                                            <content ID="OID1.2.246.10.1008258.91915.2017.401.396.822.1.6.2">JAAKKO DAHLBOM TES</content>
+                                        </paragraph>
+                                    </text>
+                                </section>
+                            </component>
+                        </section>
+                    </component>
+                </section>
+            </component>
+        </structuredBody>
+    </component>
+</ClinicalDocument>
