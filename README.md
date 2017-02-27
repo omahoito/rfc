@@ -48,7 +48,7 @@ Data models of the following profiles:
   * [Discussion](https://github.com/omahoito/rfc/issues/10)
 
 * CareTeam
-  * Profile resource as [json](https://github.com/omahoito/rfc/blob/master/CareTeam.json)
+  * Example resource as [json](https://github.com/omahoito/rfc/blob/master/CareTeam.json)
   * Profile as [STU3](http://hl7.org/fhir/2017Jan/careteam.html)
   * Introduced in STU3
   * [Discussion](https://github.com/omahoito/rfc/issues/11)
