@@ -70,10 +70,10 @@ object Communication_Message{
 }
 
 object Device{
-    type
-    model
     identifier
+    type
     note
+    model
 }
 
 object Appointment{
