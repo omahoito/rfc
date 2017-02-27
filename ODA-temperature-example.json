@@ -3,24 +3,18 @@
 	"meta": {
 		"profile": "https://github.com/omahoito/rfc/omahoito/temperature-profile/"
 	},
-	"_identifier_comment": "Arvo saadaan kun havainto tallennetaan OmaKantaan. Pakollinen kenttä.",
 	"identifier": [{
 		"system": "url:something",
 		"value": "1234"
 	}],
-	"_status_comment": "Observationin status ( registered | preliminary | final | amended ). Pakollinen kenttä.",
 	"status": "<code>",
-	"_category_comment": "Kategoria johon havainto kuuluu. Jos oirearviolomake rakentuu dynaamisesti vastausten perusteella, niin voi olla minkä oireen oirearviolomake lopulta täytetty.",
 	"category": [{
-
 		"coding": [{
 			"system": "http://hl7.org/fhir/observation-category",
 			"code": "vital-signs",
 			"display": "Vital Signs"
 		}]
-
 	}],
-	"_code_comment": "Lyhyt koodi havainnon tyypille. Voi esim. olla viittaus siihen että oirearviolomake täytetty matkapuhelimella.",
 	"code": {
 		"coding": [{
 			"system": "http://acme.lab",
@@ -41,48 +35,32 @@
 		}],
 		"text": "Lämpötila"
 	},
-	"_encounter_comment": "Viittaus terveydenhoitotapahtumaan (Encounter) jolloin havainto tehtiin.",
 	"encounter": {
 		"reference": "Encounter/e22",
 		"display": "Helmikuun omahoit"
 	},
-
-	"_subject_comment": "Viittaus havainnon laatuun, eli minkälaisesta havainnosta on kyse. (Patient|Group|Device|Location). Pakollinen kenttä.",
 	"subject": {
 		"reference": "Patient/f201",
 		"display": "Roel"
 	},
-
-
-
-	"_effective_comment": "Ajankohta kun havainnon arvo on saatu. Milloin oirearviolomake on lähetetty sisään arvioitavaksi.",
 	"effectiveDateTime": "2016-04-04T13:27:00+01:00",
-
-	"_issued_comment": "Ajankohta kun havainto on saatettu muiden nähtäväksi.",
 	"issued": "2016-04-04T13:27:00+01:00",
-	"_performer_comment": "Viittaus tahoon joka on vastuussa havainnosta. (Practitioner | Organization | Patient | RelatedPerson ). Se taho joka täyttää oirearviolomakkeen.",
 	"performer": [{
 		"reference": "Patient/022"
 	}],
-	"_valueQuantity_comment": "Mittauksen arvo.",
 	"valueQuantity": {
 		"value": 39,
 		"unit": "degrees C",
 		"system": "http://unitsofmeasure.org",
 		"code": "Cel"
 	},
-
-	"_interpretation_comment": "Tulkinta havainnon arvosta.",
 	"interpretation": {
 		"coding": [{
 			"system": "http://hl7.org/fhir/v2/0078",
 			"code": "H"
 		}]
 	},
-
-	"_comment_comment": "Havaintoon liittyviä kommentteja.",
 	"comment": "<string>",
-	"_bodySite_comment": "Paikka potilaan kehossa jossa havainto tehtiin.",
 	"bodySite": {
 		"coding": [{
 			"system": "http://snomed.info/sct",
@@ -90,7 +68,6 @@
 			"display": "Suuontelo"
 		}]
 	},
-	"_method_comment": "Menetelmä jolla havainto tehty. Ei välttämätön jos käy ilmi code-kentästä.",
 	"method": {
 		"coding": [{
 			"system": "http://snomed.info/sct",
@@ -98,8 +75,6 @@
 			"display": "Oral temperature taking"
 		}]
 	},
-
-	"_referenceRange_comment": "Ohjeistus miten mittauksen arvoa tulisi tulkita verrattuna normaaliarvoihin.",
 	"referenceRange": [{
 		"high": {
 			"value": 38.2,
