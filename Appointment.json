@@ -1,61 +1,39 @@
 {
 	"resourceType": "Appointment",
 	"id": "examplereq",
-	"_text_comment": "Yleinen kuvausteksti",
 	"text": {
 		"status": "generated",
 		"div": "<div>Ajanvarauslomake</div>"
 	},
-
-	"_missing_fields_comment": "ei löydy: serviceCategory, serviceType, speciality, schedule, overbooked",
-	"_existing_fields_comment": "löytyy: identifier, actor, aikaikkuna (= start, end) , appointment type, status, comment, viittaus slotiin, participant",
-
-	"_identifier_comment": "Tunniste joka luodaan tapahtuman luonnin yhteydessä",
 	"identifier": [{
 		"system": "http://example.org/sampleappointment-identifier",
 		"value": "123"
 	}],
-	"_status_comment": "Ajanvarauksen tila. (proposed | pending | booked | arrived | fulfilled | cancelled | noshow ) ",
 	"status": "proposed",
-	"_type_comment": "Minkätyyppinen ajanvaraus on kyseessä.",
 	"type": {
 		"coding": [{
-			"_type_coding_comment": "Koodi ajanvaraustyypille.",
 			"code": "52",
-			"_type_display_comment": "Ajanvaraustyyppi selväsanaisesti selitetty.",
 			"display": "General Discussion"
 		}]
 	},
-	"_reason_comment": "Syy miksi ajanvaraus on tehty",
 	"reason": {
 		"text": "Clinical Review"
 	},
-	"_start_comment": "Ajanvarauksen aloituksen ajankohta",
 	"start": "2013-12-10T09:00:00Z",
-	"_end_comment": "Ajanvarauksen lopetuksen ajankohta",
 	"end": "2013-12-10T11:00:00Z",
-	"_priority_comment": "Lisätietoa tapaamisesta jos on priorisointitarpeita",
 	"priority": 5,
-	"_description_comment": "Kuvaus ajanvarauksen aiheesta",
 	"description": "Discussion on the results of your recent MRI",
-	"_minutesDuration_comment": "Ajanvarauksen pituuden arvio",
 	"minutesDuration": 15,
-	"_slot_comment": "Viite aikaikkunnaan/aikaväliin ajanvarausjärjestelmässä",
 	"slot": [{
 		"reference": "Slot/example"
 	}],
-	"_comment_comment": "Lisätietoja ja -kommentteja ajanvarauksesta",
 	"comment": "Further expand on the results of the MRI and determine the next actions that may be appropriate.",
-	"_participant_comment": "Viitteitä tahoihin jotka osallisia ajanvaraukseen. Joko actor tai type pakollisia",
 	"participant": [{
-		"_participant_actor_comment": "Viite johonkin seuraavista: ( Person | Location | HealthcareService | Device) ",
 		"actor": {
 			"reference": "Patient/example",
 			"display": "Peter James Chalmers"
 		},
-		"_participant_required_comment": "Tieto läsnäolon tarpeesta. ( required | optional | information-only ). Pakollinen kenttä.",
 		"required": "required",
-		"_participant_status_comment": "Osallistuminen tapaamiseen. ( accepted | declined | tentative | needs-action ). Pakollinen kenttä.",
 		"status": "needs-action"
 	}, {
 		"type": [{
