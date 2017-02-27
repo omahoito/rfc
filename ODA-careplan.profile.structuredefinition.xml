@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-02-27T15:15:57.492+02:00" />
+  </meta>
+  <url value="StructureDefinition/MyCarePlan" />
+  <name value="ODA-careplan.profile" />
+  <status value="draft" />
+  <date value="2017-02-27T14:57:51.7241849+02:00" />
+  <kind value="resource" />
+  <constrainedType value="CarePlan" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+  <differential>
+    <element>
+      <path value="CarePlan" />
+    </element>
+    <element>
+      <path value="CarePlan.extension" />
+      <slicing>
+        <discriminator value="url" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element>
+      <path value="CarePlan.extension" />
+      <name value="careTeam" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/2017Jan/careteam.html" />
+      </type>
+    </element>
+    <element>
+      <path value="CarePlan.participant" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
