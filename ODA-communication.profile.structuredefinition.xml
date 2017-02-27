@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-02-27T14:54:59.347+02:00" />
+  </meta>
+  <url value="StructureDefinition/MyCommunication" />
+  <name value="ODA-communication.profile" />
+  <status value="draft" />
+  <date value="2017-02-27T14:40:24.5231849+02:00" />
+  <kind value="resource" />
+  <constrainedType value="Communication" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Communication" />
+  <differential>
+    <element>
+      <path value="Communication" />
+    </element>
+    <element>
+      <path value="Communication.encounter" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Communication.requestDetail" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
