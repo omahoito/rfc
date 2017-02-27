@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-02-27T13:54:59.859+02:00" />
+  </meta>
+  <url value="StructureDefinition/MyAppointment" />
+  <name value="ODA Appointment profile" />
+  <status value="draft" />
+  <date value="2017-02-27T13:43:27.5571849+02:00" />
+  <kind value="resource" />
+  <constrainedType value="Appointment" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Appointment" />
+  <differential>
+    <element>
+      <path value="Appointment" />
+    </element>
+    <element>
+      <path value="Appointment.participant.actor" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
