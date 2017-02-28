@@ -6,19 +6,16 @@
 		"system": "http://www.source.com"
 	}],
 	"subject": {
-		"reference": "Patient/49"
+		"reference": "Patient/1"
 	},
 	"status": "proposed",
 
-	"context": {
-		"reference": "https://oda.medidemo.fi/oirearvioresponse/1"
-	},
 	"period": {
 		"start": "2016-10-19T00:00:00.000Z",
 		"end": "2016-10-26T23:59:59.999Z"
 	},
 	"author": [{
-		"reference": "Patient/749"
+		"reference": "Patient/1"
 	}],
 	"modified": "2016-10-11T10:00:00.000Z",
 	"category": [{
