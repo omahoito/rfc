@@ -1,0 +1,7 @@
+{
+  "resourceType": "Quantity",
+  "value" : "37.0",
+  "unit": "degrees C",
+  "system" : "http://unitsofmeasure.org",
+  "code" : "Cel"
+}
