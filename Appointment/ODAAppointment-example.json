@@ -3,38 +3,27 @@
   "identifier": [
     {
       "system": "urn:oid:2.16.840.1.113883.3.19.2.3",
-      "value": "666666"
+      "value": "666666",
+      "assigner" : "Kela"
     }
   ],
   "status": "booked",
-  "serviceCategory": {
-    "coding": [
+  "appointmentType" : {
+    "coding" : [
       {
-        "system": "http://example.org/service-category",
-        "code": "gp",
-        "display": "General Practice"
+        "system" : "http://example.org/appointment-type",
+        "code" : "wik",
+        "display" : "suoraan vastaanotolle"
       }
     ]
-  },  
-  "serviceType": [
-    {
-      "coding": [
-        {
-          "code": "52",
-          "display": "General Discussion"
-        }
-      ]
-    }
-  ],
+  },
   "reason": {
     "text": "Clinical Review"
   },
   "start": "2013-12-10T09:00:00Z",
-  "end": "2013-12-10T11:00:00Z",
-  "priority": 5,
-  "description": "Discussion on the results of your recent MRI",
+  "end": "2013-12-10T09:15:00Z",
   "minutesDuration": 15,
-  "comment": "Further expand on the results of the MRI and determine the next actions that may be appropriate.",
+  "comment": "Further expand on the results of the MRI and determine the next actions that may be appropriate.",  
   "participant": [
     {
       "actor": {
