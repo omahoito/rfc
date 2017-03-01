@@ -1,17 +1,17 @@
 
 # ODA ajanvaraus
 
-Luonnoksia ajanvaraus-profiilin resursseiksi.
+Luonnoksia ajanvaraus-profiilista.
 
-Sisältää xml-muotoisia tiedostoja seuraavista resursseista:
+Sisältää xml-muotoisia profiileja ja json-muotoisia esimerkkitiedostoja seuraavasti:
 
-* ODAAppointment ([xml](Appointment/ODAAppointment.xml) )
-* ODAHealthcareService  ([xml](Appointment/ODAHealthcareService.xml) )
-* ODAPatient  ([xml](Appointment/ODAPatient.xml) )
-* ODAOrganization  ([xml](Appointment/ODAOrganization.xml) )
-* ODAPractitioner  ([xml](Appointment/ODAPractitioner.xml) )
+* ODAAppointment ([xml](ODAAppointment.xml), [json](ODAAppointment-example.json) )
+* ODAHealthcareService  ([xml](ODAHealthcareService.xml), [json](ODAHealthcareService-example.json) )
+* ODAPatient  ([xml](ODAPatient.xml), [json](ODAPatient-example.json) )
+* ODAOrganization  ([xml](ODAOrganization.xml), [json](ODAOrganization-example.json) )
+* ODAPractitioner  ([xml](ODAPractitioner.xml), [json](ODAPractitioner-example.json) )
 
-Alkuperäiset tiedostot täällä:
+Alkuperäiset profiilitiedostot täällä:
 https://simplifier.net/ODAajanvaraus
 
 Ajanvaraukseen osallistuu potilas ja ammatinharjoittaja, ja tapahtuma sijoittuu terveysasemalle. Terveysasema on osa organisaatiota, ja terveysasemalla työskentelee ammatinharjoittajia. Ammatinharjoittajat voivat kuulua useampaa organisaatioon, ja myös työskennellä useammalla terveysasemalla.
