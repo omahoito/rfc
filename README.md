@@ -74,6 +74,8 @@ Data models of the following profiles:
   * [Discussion](https://github.com/omahoito/rfc/issues/6)
 
 
+## Data model visualised
+
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-PHR-Datamodel.plantuml?) <!--- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
 
 <!--
