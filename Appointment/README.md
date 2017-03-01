@@ -11,6 +11,7 @@ Sisältää xml-muotoisia profiileja ja json-muotoisia esimerkkitiedostoja seura
 * ODAOrganization  ([xml](ODAOrganization.xml), [json](ODAOrganization-example.json) )
 * ODAPractitioner  ([xml](ODAPractitioner.xml), [json](ODAPractitioner-example.json) )
 
+XML-tiedostot ovat STU2 ja json-tiedostot DSTU3.
 Alkuperäiset profiilitiedostot täällä:
 https://simplifier.net/ODAajanvaraus
 
