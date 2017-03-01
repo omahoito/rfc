@@ -1,0 +1,68 @@
+@startuml
+
+note as N1
+* <b>Person</b> Person is created when first time logged in ODA. 
+Person contains personal information such as name, social security number etc.
+* <b>Patient</b> is created when person permits the first application
+  to his/her PHR data. In MVP-release this is created when person queries 
+  PHR data first time in ODA. Does not contain any personal information.
+* <b>Observation</b> references to <i>Patient</i>. When generated from
+the questionnaire answer, references also to corresponding <i>QuestionnaireResponse</i> 
+resource. When generated in the context of a <i>CarePlan</i>, references to corresponding plan.
+* <b>CarePlan</b> Self-careplan created by patient. The actions suggested by symptom check
+decision support are mapped as careplan activities.
+* <b>Questionnaire</b> Created by main user and saved to PHR as questionnaire templates.
+* <b>QuestionnaireResponse</b> Created when patient answers to a questionnaire\nand saves 
+the answers.
+* <b>CareTeam</b> Created when first professional patricipates to care.
+* <b>Practitioner</b> Created when professional participates to care first time.
+* <b>Communication</b> Patient's and professional's comments about the <i>CarePlan</i>.
+  end note
+
+class Person {
+Reference(Patient) link.target
+}
+class Patient
+class Observation {
+Reference(Patient) subject
+Reference(QuestionnaireResponse) related.target
+Reference(CarePlan) extension.basedOn
+}
+class CarePlan {
+Reference(Patient) subject
+Reference(CareTeam) careteam
+Reference(QuestionnaireResponse) support
+}
+class Questionnaire
+class QuestionnaireResponse {
+Reference(Patient) source
+Reference(Questionnaire) questionnaire
+}
+class CareTeam {
+Reference(Patient) subject
+Reference(Practitioner) participant
+}
+class Practitioner
+class Communication {
+Reference(CarePlan) topic
+}
+
+Person --> Patient
+
+CarePlan --> Patient
+CarePlan --> CareTeam
+CarePlan --> QuestionnaireResponse
+
+CareTeam --> Practitioner 
+CareTeam --> Patient
+
+Observation --> CarePlan
+Observation --> Patient
+Observation --> QuestionnaireResponse
+
+QuestionnaireResponse --> Patient
+QuestionnaireResponse --> Questionnaire
+
+Communication --> CarePlan
+
+@enduml
