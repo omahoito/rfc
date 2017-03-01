@@ -70,7 +70,7 @@ Data models of the following profiles:
 * Person - FinnishPatient. Person and patient information. Person-profile is based on the FHIR-standard's STU3-version, FinnishPatient on Kela's profile
   * Person: http://hl7.org/fhir/2017Jan/person.html
   * Kela's FinnishPatient-profile: https://simplifier.net/FinnishPHR/FinnishPatient/
-  * Resource as [json](https://github.com/omahoito/rfc/blob/master/PatientCitizen.json)
+  * Resources as json: [Person](https://github.com/omahoito/rfc/blob/master/ODA-person.example.json) and [Patient] (https://github.com/omahoito/rfc/blob/master/ODA-finnishpatient-patient.example.json)
   * [Discussion](https://github.com/omahoito/rfc/issues/6)
 
 
