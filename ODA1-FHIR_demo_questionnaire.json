@@ -1,0 +1,236 @@
+{
+	"resourceType": "Questionnaire",
+	"language": "fi",
+	"url": "https://www.ebmeds.org/form/api/FHIR/forms/export/701",
+	"status": "published",
+	"date": "2017-02-09T11:44:05.374Z",
+	"publisher": "Saara Vimpeli",
+	"identifier": [{
+			"system": "https://www.ebmeds.org/form/api/FHIR/forms/export/701",
+			"value": 701
+		}
+	],
+	"useContext": [{
+			"text": "selfcare"
+		}
+	],
+	"code": [{
+			"code": 701
+		}
+	],
+	"title": "FHIR demolomake",
+	"text": {
+		"status": "generated",
+		"div": "<div>T‰m‰ on testilomake jota k‰yt‰n n‰ytt‰m‰‰n miten FHIR rajapinta edistyy.</div>"
+	},
+	"extension": [{
+			"url": "https://www.ebmeds.org/form#selfCareInstructions",
+			"extension": [{
+					"url": "instruction_text",
+					"valueString": "<h1>Itsehoito-ohje:</h1><div>Lep‰‰, ota s‰rkyl‰‰kett‰ ja pepanteenia.</div>"
+				}, {
+					"url": "instruction_url",
+					"valueString": "http://www.hs.fi/fingerpori/"
+				}
+			]
+		}, {
+			"url": "https://www.ebmeds.org/form#copyright",
+			"valueString": {
+				"value": "Duodecim"
+			}
+		}
+	],
+	"item": [{
+			"linkId": "introduction",
+			"text": "Tervetuloa FHIR rajapinnalla generoituun testilomakkeeseen.",
+			"type": "group",
+			"item": [{
+					"linkId": 1161,
+					"concept": {
+						"Coding": {
+							"system": "1.2.246.537.6.1",
+							"display": "ICD-10",
+							"code": "123"
+						}
+					},
+					"text": "Oletko varma ett‰ haluat t‰ytt‰‰ t‰m‰n lomakkeen?",
+					"type": "boolean"
+				}, {
+					"linkId": 1162,
+					"concept": {
+						"Coding": {
+							"system": "1.2.246.537.6.1",
+							"display": "ICD-10",
+							"code": "456"
+						}
+					},
+					"text": "Esit‰ numeerisesti el‰m‰n tarkoitus. (Vinkki: Syˆt‰ 42).",
+					"type": "decimal",
+					"enableWhen": [{
+							"question": "1161",
+							"answerString": "yes",
+							"operator": null
+						}
+					]
+				}, {
+					"linkId": 1167,
+					"concept": {
+						"Coding": {
+							"system": null,
+							"display": null,
+							"code": null
+						}
+					},
+					"text": "Nyt taisi menn‰ v‰‰rinp‰in. Kokeile 42.",
+					"type": "feedback",
+					"enableWhen": [{
+							"question": "1162",
+							"answerString": "24",
+							"operator": null,
+							"answerReference": {
+								"Quantity": {
+									"value": "24"
+								}
+							}
+						}
+					]
+				}, {
+					"linkId": 1166,
+					"concept": {
+						"Coding": {
+							"system": null,
+							"display": null,
+							"code": null
+						}
+					},
+					"text": "<h1>V‰liotsikko</h1><div>V‰liotsikon leip‰teksti</div>",
+					"type": "display"
+				}, {
+					"linkId": 1163,
+					"concept": {
+						"Coding": {
+							"system": null,
+							"display": null,
+							"code": null
+						}
+					},
+					"text": "Vapaata teksti‰ yksi rivi",
+					"type": "string",
+					"enableWhen": [{
+							"question": "1161",
+							"answerString": "yes",
+							"operator": null
+						}, {
+							"question": "1162",
+							"answerString": "42",
+							"operator": "AND",
+							"answerReference": {
+								"Quantity": {
+									"value": "42"
+								}
+							}
+						}
+					]
+				}, {
+					"linkId": 1164,
+					"concept": {
+						"Coding": {
+							"system": "1.2.246.537.6.96",
+							"display": "finLOINC",
+							"code": "789"
+						}
+					},
+					"text": "Mik‰ n‰ist‰ on paras",
+					"type": "radio",
+					"option": [{
+							"valueCoding": {
+								"id": 101,
+								"code": "11",
+								"display": "eharth"
+							},
+							"valueInteger": "1"
+						}, {
+							"valueCoding": {
+								"id": 102,
+								"code": "22",
+								"display": "whind"
+							},
+							"valueInteger": "2"
+						}, {
+							"valueCoding": {
+								"id": 103,
+								"code": "33",
+								"display": "fhir"
+							},
+							"valueInteger": "3"
+						}
+					],
+					"enableWhen": [{
+							"question": "1161",
+							"answerString": "yes",
+							"operator": null
+						}, {
+							"question": "1162",
+							"answerString": "42",
+							"operator": "AND",
+							"answerReference": {
+								"Quantity": {
+									"value": "42"
+								}
+							}
+						}
+					]
+				}, {
+					"linkId": 1165,
+					"concept": {
+						"Coding": {
+							"system": "1.2.246.537.6.96",
+							"display": "finLOINC",
+							"code": "987"
+						}
+					},
+					"text": "N‰ist‰ voit valita monta",
+					"type": "choice",
+					"option": [{
+							"valueCoding": {
+								"id": 104,
+								"code": "x1",
+								"display": "shandels"
+							},
+							"valueInteger": "1"
+						}, {
+							"valueCoding": {
+								"id": 105,
+								"code": "y2",
+								"display": "holvi"
+							},
+							"valueInteger": "2"
+						}, {
+							"valueCoding": {
+								"id": 106,
+								"code": "z3",
+								"display": "khoff"
+							},
+							"valueInteger": "3"
+						}
+					],
+					"enableWhen": [{
+							"question": "1161",
+							"answerString": "yes",
+							"operator": null
+						}, {
+							"question": "1162",
+							"answerString": "42",
+							"operator": "AND",
+							"answerReference": {
+								"Quantity": {
+									"value": "42"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
