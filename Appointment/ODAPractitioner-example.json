@@ -1,0 +1,51 @@
+{
+	"resourceType": "Practitioner",
+	"identifier": [{
+		"system": "http://laakari.fi",
+		"value": "23"
+	}],
+
+	"name": {
+		"family": [
+			"Mallikas"
+		],
+		"given": [
+			"Matti"
+		],
+		"prefix": [
+			"Dr"
+		]
+	},
+	"telecom": [{
+		"system": "phone",
+		"value": "040044",
+		"use": "work"
+	}],
+	"address": [{
+		"use": "home",
+		"line": [
+			"12 Terveyskuja"
+		]
+	}],
+	"gender": "male",
+	"practitionerRole": [{
+		"managingOrganization": {
+			"reference": "Organization/2"
+		},
+		"location": [{
+			"reference": "Location/1",
+			"display": "Malminkartano"
+		}],
+		"healthcareService": [{
+			"reference": "HealthcareService/1"
+		}]
+	}],
+	"communication": [{
+		"coding": [{
+			"system": "languagelist",
+			"code": "FI",
+			"display": "Finnish"
+		}],
+		"text": "Finnish"
+	}]
+}

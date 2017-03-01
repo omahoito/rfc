@@ -1,0 +1,27 @@
+{
+	"resourceType": "Device",
+	"identifier": {
+		"system": "http://www.imei.info/",
+		"value": "123 456 789 101 112"
+	},
+	"type": {
+		"text": "pulsemeter",
+		"code": [{
+			"system": "http://carefusion.com/",
+			"code": "alaris-pulse-ox",
+			"display": "pulsemeter"
+		}],
+		"extension": [{
+			"definition": "The operating system used by the device",
+			"url": "https://en.wikipedia.org/wiki/Operating_system",
+			"valueString": "linux"
+		}]
+	},
+	"note": [{
+		"authorReference": {
+			"reference": "person who made note"
+		},
+		"time": "time when note done in utc format"
+	}],
+	"model": "string"
+}

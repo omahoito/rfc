@@ -1,0 +1,59 @@
+@startuml
+object ODAAppointment{
+  identifier
+  identifier.system
+  identifier.value
+  identifier.assigner
+  status
+  type
+  reason
+  priority
+  start
+  end
+  minutesDuration
+  comment
+  participant (ODAHealthcareService | ODAPatient | ODAPractitioner )
+}
+
+ODAAppointment -- "1..*" ODAHealthcareService
+ODAAppointment -- "1..*" ODAPatient
+ODAAppointment -- "1..*" ODAPractitioner
+
+object ODAHealthcareService{
+  identifier
+  providedBy (ODAOrganization)
+  serviceCategory
+  serviceType
+  location
+  serviceName
+  comment
+}
+
+ODAHealthcareService -- "1..*" ODAOrganization
+
+object ODAOrganization{
+  identifier
+  type
+  name  
+}
+
+object ODAPatient{
+  identifier
+}
+
+object ODAPractitioner{
+  identifier
+  identifier.system
+  identifier.value
+  name
+  telecom
+  telecom.value
+  photo
+  practitionerRole.managingOrganization (ODAOrganization)
+  practitionerRole.healthcareService (ODAHealthcareService)
+  communication
+}
+
+ODAPractitioner -- "..*" ODAOrganization
+ODAPractitioner -- "..*" ODAHealthcareService
+@enduml

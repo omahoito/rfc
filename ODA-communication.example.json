@@ -1,0 +1,52 @@
+{
+	"resourceType": "Communication",
+	"id": "communication-example",
+	"text": {
+		"status": "generated",
+		"div": "<div>Your doctor here, hello</div>"
+	},
+	"identifier": [{
+		"type": {
+			"text": "Chat System"
+		},
+		"system": "urn:oid:1.3.4.5.6.7",
+		"value": "2345678901"
+	}],
+	"status": "suspended",
+	"category": {
+		"coding": [{
+			"system": "http://acme.org/messagetypes",
+			"code": "Prescription"
+		}],
+		"text": "Medication assignment"
+	},
+	"medium": {
+		"coding": [{
+			"system": "https://hl7.org/fhir/2016Sep/v2%5C0202%5Cindex.html",
+			"code": "cp"
+		}],
+		"text": "Cellular Phone"
+	},
+	"subject": {
+		"reference": "Patient/21"
+	},
+	"topic": {},
+	"context": {},
+	"sent": "2016-12-12T18:01:10-08:00",
+	"received": "2016-12-12T18:01:10-09:00",
+	"sender": {
+		"reference": "Practitioner/f001"
+	},
+	"recipient": [{
+		"reference": "Patient/21"
+	}],
+	"reason": "Tohtorin ehdotus",
+	"payload": [{
+		"contentString": "You seem to need some medication."
+	}, {
+		"contentReference": {
+			"fhir_comments": [],
+			"reference": "Event/23457"
+		}
+	}]
+}

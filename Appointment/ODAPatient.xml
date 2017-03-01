@@ -1,0 +1,136 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="c0a4e895-bb1f-40d9-9c51-1ecac887d16a" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2017-02-19T20:06:02.157+00:00" />
+  </meta>
+  <url value="StructureDefinition/ODA_Patient" />
+  <name value="ODA_Patient" />
+  <status value="draft" />
+  <date value="2017-02-17T08:23:06.5098968+02:00" />
+  <description value="Base StructureDefinition for Patient Resource, ODA patient" />
+  <kind value="resource" />
+  <constrainedType value="Patient" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <differential>
+    <element>
+      <path value="Patient" />
+    </element>
+    <element>
+      <path value="Patient.identifier" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element>
+      <path value="Patient.identifier.use" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.identifier.type" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.identifier.system" />
+      <comments value="The namespace for the identifier. &#xD;&#xA;&#xD;&#xA;VTJ OID specifies identifier assingning authority&#xD;&#xA;&#xD;&#xA;see http://en.wikipedia.org/wiki/Uniform_resource_identifier" />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+    </element>
+    <element>
+      <path value="Patient.identifier.value" />
+      <comments value="UUID&#xD;&#xA;'hetu'&#xD;&#xA;&#xD;&#xA;If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986." />
+      <min value="1" />
+      <exampleString value="121212-987T" />
+    </element>
+    <element>
+      <path value="Patient.identifier.period" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.active" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.name" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.telecom.system" />
+      <short value="phone | email" />
+    </element>
+    <element>
+      <path value="Patient.telecom.use" />
+      <short value="home | work | mobile" />
+    </element>
+    <element>
+      <path value="Patient.telecom.rank" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.telecom.period" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.gender" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.birthDate" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.deceased[x]" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.address" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.maritalStatus" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.multipleBirth[x]" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.photo" />
+      <max value="0" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Contact" />
+      </extension>
+      <path value="Patient.contact" />
+      <max value="0" />
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Animal" />
+      </extension>
+      <path value="Patient.animal" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.communication.language.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.careProvider" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.managingOrganization" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Patient.link" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

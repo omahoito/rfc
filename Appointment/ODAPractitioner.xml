@@ -1,7 +1,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="2456fcec-37e3-4592-a3a7-38e2fbfa9e1e" />
   <meta>
-    <versionId value="1" />
-    <lastUpdated value="2017-02-12T20:47:45.121+00:00" />
+    <versionId value="4" />
+    <lastUpdated value="2017-02-19T20:06:30.621+00:00" />
   </meta>
   <url value="StructureDefinition/ODA_Practitioner" />
   <name value="ODA_Practitioner" />
@@ -86,7 +87,8 @@
     </element>
     <element>
       <path value="Practitioner.address" />
-      <comments value="Note: address is for postal addresses, not physical locations.&#xD;&#xA;&#xD;&#xA;Esimerkiksi millä terveysasemalla tarjottu aika, osoite" />
+      <comments value="Note: address is for postal addresses, not physical locations.&#xD;&#xA;&#xD;&#xA;Esimerkiksi millä terveysasemalla tarjottu aika, osoite -&gt; Organization resurssi" />
+      <max value="0" />
     </element>
     <element>
       <path value="Practitioner.address.use" />
@@ -118,11 +120,16 @@
     </element>
     <element>
       <path value="Practitioner.photo" />
-      <max value="0" />
+      <max value="1" />
     </element>
     <element>
-      <path value="Practitioner.practitionerRole.managingOrganization.display" />
-      <requirements value="Esimerkiksi terveysaseman nimi tänne" />
+      <path value="Practitioner.practitionerRole.managingOrganization" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://simplifier.net/ODAajanvaraus/ODAOrganization" />
+        <aggregation value="contained" />
+        <aggregation value="bundled" />
+      </type>
     </element>
     <element>
       <path value="Practitioner.practitionerRole.role" />
@@ -140,6 +147,7 @@
     <element>
       <path value="Practitioner.practitionerRole.location" />
       <comments value="Sijainti, kaupunki / alue" />
+      <max value="0" />
     </element>
     <element>
       <path value="Practitioner.practitionerRole.location.reference" />
@@ -151,7 +159,11 @@
     </element>
     <element>
       <path value="Practitioner.practitionerRole.healthcareService" />
-      <comments value="Palvelun tiedot tähän resurssiin" />
+      <comments value="Mitä palvelua ammattilainen tarjoaa tässä ajanvarauksessa / varatussa ajassa" />
+      <type>
+        <code value="Reference" />
+        <profile value="https://simplifier.net/ODAajanvaraus/ODAHealthcareService" />
+      </type>
     </element>
     <element>
       <path value="Practitioner.qualification" />

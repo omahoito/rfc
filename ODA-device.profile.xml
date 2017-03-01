@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-02-27T13:24:29.578+02:00" />
+  </meta>
+  <url value="StructureDefinition/MyDevice" />
+  <name value="ODA-device.profile" />
+  <status value="draft" />
+  <date value="2017-02-27T12:20:45.9351849+02:00" />
+  <kind value="resource" />
+  <constrainedType value="Device" />
+  <abstract value="false" />
+  <base value="http://hl7.org/fhir/StructureDefinition/Device" />
+  <differential>
+    <element>
+      <path value="Device" />
+    </element>
+    <element>
+      <path value="Device.identifier.use" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.identifier.type" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.identifier.period" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.type.extension" />
+      <slicing>
+        <discriminator value="url" />
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element>
+      <path value="Device.type.extension" />
+      <name value="operatingSystem" />
+      <code>
+        <system value="http://hl7.org/fhir/sid/icd-10" />
+      </code>
+      <short value="Operating system on device." />
+      <definition value="The operation system used by the device." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://en.wikipedia.org/wiki/Operating_system" />
+      </type>
+      <binding>
+        <strength value="preferred" />
+        <description value="Operating system" />
+        <valueSetUri value="https://en.wikipedia.org/wiki/Operating_system" />
+      </binding>
+    </element>
+    <element>
+      <path value="Device.status" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.manufacturer" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.version" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.manufactureDate" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.expiry" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.udi" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.lotNumber" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.owner" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.location" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.patient" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.contact" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Device.url" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

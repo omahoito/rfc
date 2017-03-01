@@ -1,0 +1,85 @@
+{
+	"resourceType": "Observation",
+	"meta": {
+		"profile": "https://github.com/omahoito/rfc/omahoito/temperature-profile/"
+	},
+	"identifier": [{
+		"system": "url:something",
+		"value": "1234"
+	}],
+	"status": "<code>",
+	"category": [{
+		"coding": [{
+			"system": "http://hl7.org/fhir/observation-category",
+			"code": "vital-signs",
+			"display": "Vital Signs"
+		}]
+	}],
+	"code": {
+		"coding": [{
+			"system": "http://acme.lab",
+			"code": "BT",
+			"display": "Kehon lämpötila"
+		}, {
+			"system": "http://loinc.org",
+			"code": "8310-5",
+			"display": "Kehon lämpötila"
+		}, {
+			"system": "http://loinc.org",
+			"code": "8331-1",
+			"display": "'Suun lämpötila"
+		}, {
+			"system": "http://snomed.info/sct",
+			"code": "56342008",
+			"display": "Kehon lämpötilan mittaus."
+		}],
+		"text": "Lämpötila"
+	},
+	"encounter": {
+		"reference": "Encounter/e22",
+		"display": "Helmikuun omahoit"
+	},
+	"subject": {
+		"reference": "Patient/f201",
+		"display": "Roel"
+	},
+	"effectiveDateTime": "2016-04-04T13:27:00+01:00",
+	"issued": "2016-04-04T13:27:00+01:00",
+	"performer": [{
+		"reference": "Patient/022"
+	}],
+	"valueQuantity": {
+		"value": 39,
+		"unit": "degrees C",
+		"system": "http://unitsofmeasure.org",
+		"code": "Cel"
+	},
+	"interpretation": {
+		"coding": [{
+			"system": "http://hl7.org/fhir/v2/0078",
+			"code": "H"
+		}]
+	},
+	"comment": "<string>",
+	"bodySite": {
+		"coding": [{
+			"system": "http://snomed.info/sct",
+			"code": "74262004",
+			"display": "Suuontelo"
+		}]
+	},
+	"method": {
+		"coding": [{
+			"system": "http://snomed.info/sct",
+			"code": "89003005",
+			"display": "Lämpötilan mittaaminen suun kautta."
+		}]
+	},
+	"referenceRange": [{
+		"high": {
+			"value": 38.2,
+			"unit": "degrees C"
+		}
+	}]
+
+}

@@ -1,0 +1,84 @@
+{
+	"resourceType": "CarePlan",
+	"identifier": [{
+		"use": "temp",
+		"value": "3141592",
+		"system": "http://www.source.com"
+	}],
+	"subject": {
+		"reference": "Patient/1"
+	},
+	"status": "proposed",
+
+	"period": {
+		"start": "2016-10-19T00:00:00.000Z",
+		"end": "2016-10-26T23:59:59.999Z"
+	},
+	"author": [{
+		"reference": "Patient/1"
+	}],
+	"modified": "2016-10-11T10:00:00.000Z",
+	"category": [{
+		"text": "self care"
+	}],
+	"description": "Nieluvaivasi on todennäköisesti lievä virustauti, jonka yhteydessä oloa voi helpottaa levolla ja tulehduskipulääkkeillä (ks. Nuhakuume),         eikä tarvita lääkärin tai hoitajan antamaa hoitoa. Töistä poissaolon tarve riippuu voinnista ja työn vaatimuksista. Tarpeellisen poissaolon järjestämiseksi menettele työnantajasi antamien ohjeiden mukaan.\n",
+	"activity": [{
+		"detail": {
+			"prohibited": false,
+			"category": {
+				"text": "observation"
+			},
+			"code": {
+				"coding": [{
+					"system": "urn:oid:1.2.246.537.6.96.2008",
+					"version": "1.2.246.537.6.96.2008",
+					"code": "8310-5"
+				}]
+			},
+			"status": "not-started",
+			"scheduledTiming": {
+				"event": ["2016-10-20T12:00:00.000Z"]
+			},
+			"description": "Mittaa lämpö uudelleen"
+		}
+	}, {
+		"detail": {
+			"prohibited": false,
+			"category": {
+				"text": "other"
+			},
+			"code": {
+				"coding": [{
+					"system": "urn:oid:1.2.246.537.999.123456",
+					"version": "1.00",
+					"code": "1"
+				}]
+			},
+			"status": "not-started",
+			"scheduledPeriod": {
+				"start": "2016-10-19T00:00:00.000Z",
+				"end": "2016-10-26T23:59:59.999Z"
+			},
+			"description": "Tee arvio uudelleen, mikäli olosi pahenee"
+		}
+	}, {
+		"detail": {
+			"prohibited": false,
+			"category": {
+				"text": "other"
+			},
+			"code": {
+				"coding": [{
+					"system": "urn:oid:1.2.246.537.999.123456",
+					"version": "1.00",
+					"code": "2"
+				}]
+			},
+			"status": "not-started",
+			"scheduledTiming": {
+				"event": ["2016-10-26T16:30:00.000Z"]
+			},
+			"description": "Tee arvio uudelleen viimeistään 7 päivän kuluttua"
+		}
+	}]
+}
