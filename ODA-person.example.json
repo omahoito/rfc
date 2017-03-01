@@ -1,0 +1,44 @@
+{
+	"resourceType" : "Person",
+	"id" : "21",
+	"text": {
+		"status" : "generated"
+	},
+  "name": [
+      {
+        "text": "Anna Testi",
+        "family": "Testi",
+        "given": [
+          "Anna"
+        ]
+      }
+  ],
+  "address": [
+      {
+        "line": [
+          "Osuuspankkitie 2"
+        ],
+        "city": "Helsinki",
+        "postalCode": "00120",
+        "country": "Suomi"
+      }
+  ],
+  "request": {
+    "method": "POST",
+    "url": "Patient"
+  },  
+  "active": true,
+  "telecom": [
+    {
+      "use": "home"
+    },
+    {
+      "system": "phone",
+      "value": "(044) 1234567",
+      "use": "work"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1981-11-08",
+  "deceasedBoolean": false
+}
