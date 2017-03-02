@@ -478,6 +478,7 @@
         </element>
         <element>
             <path value="Patient.active" />
+            <!-- Merkintä siitä onko potilaan rekisteritiedot aktiivisia. -->
             <short value="Whether this patient's record is in active use" />
             <definition value="Whether this patient record is in active use." />
             <comments value="Default is true. If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient." />
@@ -510,6 +511,7 @@
         </element>
         <element>
             <path value="Patient.name" />
+            <!-- Potilaan nimi. -->
             <short value="A name associated with the patient" />
             <definition value="A name associated with the individual." />
             <comments value="A patient may have multiple names with different uses or applicable periods. For animals, the name is a "HumanName" in the sense that is assigned and used by humans and has the same patterns." />
@@ -788,6 +790,7 @@
         </element>
         <element>
             <path value="Patient.telecom" />
+            <!-- Lista yhteystietoja potilaalle, esimerkiksi puhelinnumero tai sähköpostiosoite. -->
             <short value="A contact detail for the individual" />
             <definition value="A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted." />
             <comments value="A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address may not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone)." />
@@ -818,6 +821,7 @@
         </element>
         <element>
             <path value="Patient.gender" />
+            <!-- Sukupuoli. Pakollinen kenttä. -->
             <short value="male | female | other | unknown" />
             <definition value="Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes." />
             <comments value="The gender may not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though the vast majority of systems and contexts only support M and F.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific gender aspect of interest (anatomical, chromosonal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosonal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overrideable error, not a "hard" error." />
@@ -855,6 +859,7 @@
         </element>
         <element>
             <path value="Patient.birthDate" />
+            <!-- Potilaan syntymäaika. -->
             <short value="The date of birth for the individual" />
             <definition value="The date of birth for the individual." />
             <comments value="At least an estimated year should be provided as a guess if the real DOB is unknown  There is a standard extension "patient-birthTime" available that should be used where Time is required (such as in maternaty/infant care systems)." />
@@ -923,6 +928,7 @@
         </element>
         <element>
             <path value="Patient.address" />
+            <!-- Potilaan osoite. -->
             <short value="Addresses for the individual" />
             <definition value="Addresses for the individual." />
             <comments value="Patient may have multiple addresses with different uses or applicable periods." />
@@ -1019,6 +1025,7 @@
         </element>
         <element>
             <path value="Patient.photo" />
+            <!-- Potilaan valokuva. -->
             <short value="Image of the patient" />
             <definition value="Image of the patient." />
             <requirements value="Many EHR systems have the capability to capture an image of the patient. Fits with newer social media usage too." />
@@ -1570,6 +1577,7 @@
         </element>
         <element>
             <path value="Patient.communication" />
+            <!-- Lista kielistä joita voi käyttää potilaan kanssa keskustellessa. -->
             <short value="A list of Languages which may be used to communicate with the patient about his or her health" />
             <definition value="Languages which may be used to communicate with the patient about his or her health." />
             <comments value="If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required." />
@@ -1760,6 +1768,7 @@
         </element>
         <element>
             <path value="Patient.managingOrganization" />
+            <!-- Organisaatio joka vastaa henkilörekisteristä josta tiedot on saatu. -->
             <short value="Organization that is the custodian of the patient record" />
             <definition value="Organization that is the custodian of the patient record." />
             <comments value="There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association)." />
@@ -1787,6 +1796,7 @@
         </element>
         <element>
             <path value="Patient.link" />
+            <!-- Viite resurssiin joka koskee henkilöä. -->
             <short value="Link to another patient resource that concerns the same actual person" />
             <definition value="Link to another patient resource that concerns the same actual patient." />
             <comments value="There is no assumption that linked patient records have mutual links." />
@@ -1947,6 +1957,7 @@
         </element>
         <element>
             <path value="Patient.identifier" />
+            <!-- Potilaan yksilöivä henkilötunnus. Pakollinen kenttä. -->
             <definition value="An identifier for this patient. Pseudonym generated by PHR is used." />
             <requirements value="Patients have always assigned specific identifiers." />
             <min value="1" />
