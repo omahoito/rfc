@@ -100,6 +100,7 @@ Temperature in celsius" />
         </element>
         <element>
             <path value="Quantity.value" />
+            <!-- Mitatun suureen numeerinen arvo, tässä tapauksessa kuumemittarin antama arvo -->
             <short value="Finnish PHR: The value of the measured temperature" />
             <definition value="Finnish PHR:
 The value of the measured temperature" />
@@ -162,6 +163,7 @@ The value of the measured temperature" />
         </element>
         <element>
             <path value="Quantity.unit" />
+            <!-- Yksikkö jota käytetään mittausta varten -->
             <short value="Degrees centigrate" />
             <definition value="Body temperature Degrees centigrate" />
             <requirements value="Particular representation for units of measure is fixed and required." />
@@ -188,6 +190,7 @@ The value of the measured temperature" />
         </element>
         <element>
             <path value="Quantity.system" />
+            <!-- Järjestelmä joka määrittelee koodiston -->
             <short value="System that defines coded unit form" />
             <definition value="Code system not allowed for heart rate." />
             <requirements value="Code system not needed for heart rate." />
@@ -214,6 +217,7 @@ The value of the measured temperature" />
         </element>
         <element>
             <path value="Quantity.code" />
+            <!-- Mittausarvon koodi -->
             <short value="Coded form of the unit" />
             <definition value="Code not allowed for heart rate." />
             <comments value="Code system not needed for heart rate." />
@@ -264,6 +268,7 @@ The value of the measured temperature" />
         </element>
         <element>
             <path value="Quantity.unit" />
+            <!-- Yksikkö jota käytetään mittausta varten -->
             <short value="Degrees centigrate" />
             <definition value="Body temperature Degrees centigrate" />
             <requirements value="Particular representation for units of measure is fixed and required." />
@@ -272,12 +277,14 @@ The value of the measured temperature" />
         </element>
         <element>
             <path value="Quantity.system" />
+            <!-- Järjestelmä joka määrittelee koodiston -->
             <definition value="Code system not allowed for heart rate." />
             <requirements value="Code system not needed for heart rate." />
             <max value="0" />
         </element>
         <element>
-            <path value="Quantity.code" />
+            <path value="Quantity" />
+            <!-- Mittausyksikön koodi -->
             <definition value="Code not allowed for heart rate." />
             <comments value="Code system not needed for heart rate." />
             <requirements value="Code system not needed for heart rate." />
