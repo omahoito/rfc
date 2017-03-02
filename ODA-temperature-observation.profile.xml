@@ -336,7 +336,6 @@
     </element>
     <element>
       <path value="Observation.category.id" />
-      <!-- -->
       <representation value="xmlAttr" />
       <short value="xml:id (or equivalent in JSON)" />
       <definition value="unique id for the element within a resource (for internal references)." />
