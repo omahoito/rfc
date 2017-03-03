@@ -1,5 +1,6 @@
 {
 	"resourceType": "Observation",
+	"id" : "Observation/OBS001",
 	"meta": {
 		"profile": "https://github.com/omahoito/rfc/omahoito/temperature-profile/"
 	},
@@ -35,18 +36,14 @@
 		}],
 		"text": "Lämpötila"
 	},
-	"encounter": {
-		"reference": "Encounter/e22",
-		"display": "Helmikuun omahoit"
-	},
 	"subject": {
-		"reference": "Patient/f201",
-		"display": "Roel"
+		"reference": "Patient/P1001",
+		"display": "Anna Demo"
 	},
 	"effectiveDateTime": "2016-04-04T13:27:00+01:00",
 	"issued": "2016-04-04T13:27:00+01:00",
 	"performer": [{
-		"reference": "Patient/022"
+		"reference": "Patient/P1001"
 	}],
 	"valueQuantity": {
 		"value": 39,
