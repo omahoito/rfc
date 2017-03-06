@@ -8,7 +8,7 @@
 		"system": "url:something",
 		"value": "1234"
 	}],
-	"status": "<code>",
+	"status": "final",
 	"category": [{
 		"coding": [{
 			"system": "http://hl7.org/fhir/observation-category",
@@ -57,7 +57,7 @@
 			"code": "H"
 		}]
 	},
-	"comment": "<string>",
+	"comment": "Potilaan kuumemittaus",
 	"bodySite": {
 		"coding": [{
 			"system": "http://snomed.info/sct",
