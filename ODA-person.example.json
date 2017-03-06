@@ -23,10 +23,6 @@
         "country": "Suomi"
       }
   ],
-  "request": {
-    "method": "POST",
-    "url": "Patient"
-  },  
   "active": true,
   "telecom": [
     {
