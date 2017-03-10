@@ -1,0 +1,35 @@
+{
+  "resourceType": "ActivityDefinition",
+  "Identifier": [
+    {
+      "rule": "scr01725",
+      "reminder": "2"
+    }
+  ],
+  "description": "Vaivasi tarkemmaksi selvittämiseksi sinun tulee hakeutua päivystysvastaanotolle lähimmän vuorokauden sisällä. /*ohjeet lääkäriin hakeutumisesta*/ Lue lisää:  Nielurisatulehdus ja Kurkkupaise",
+  "code": {
+    "coding": [
+      {
+        "system": "DMPReminderLevel",
+        "display": "prompt",
+        "code": "1"
+      },
+      {
+        "system": "1.2.246.537.6.3",
+        "display": "Streptokokkipikatesti nielusta (www.terveysportti.fi/dtk/ltk/avaa?p_artikkeli=lab33681)",
+        "code": "3635"
+      }
+    ]
+  },
+  "timingPeriod": {
+    "start": "",
+    "end": ""
+  },
+  "participant": {
+    "type": "patient",
+    "role": "patient"
+  },
+  "title": "",
+  "kind": "Observation",
+  "copyright": "Kustannus Oy Duodecim, 2017"
+}
