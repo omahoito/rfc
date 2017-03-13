@@ -1,0 +1,53 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "example007",
+  "text": {
+    "status": "generated",
+  },
+  "contained": [
+    {
+      "resourceType": "Medication",
+      "id": "med0315",
+      "code": {
+        "coding": [
+          {
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "358793",
+            "display": "Mometasone Furoate 0.05mg/Actuat"
+          }
+        ]
+      },
+      "isBrand": false,
+      "product": {
+        "form": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "385157007",
+              "display": "Nasal Spray"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "status": "intended",
+  "medicationReference": {
+    "reference": "#med0315"
+  },
+  "subject": {
+    "reference": "Patient/PATIENT1",
+    "display": "Anna Demo"
+  },
+  "informationSource": {
+    "reference": "Patient/PATIENT1",
+    "display": "Anna Demo"
+  },
+  "dateAsserted": "2015-02-22",
+  "notTaken": "y",
+  "note": [
+    {
+      "text": "Potilas alkaa ottaa lääkettä keväällä kun ilmassa on korkeat siitepölypitoisuudet."
+    }
+  ]
+}
