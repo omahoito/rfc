@@ -27,8 +27,8 @@
   "participant": [
     {
       "actor": {
-        "reference": "ODAPatient/2",
-        "display": "Peter James Chalmers"
+        "reference": "PATIENT2",
+        "display": "Anna Demo"
       },
       "required": "required",
       "status": "accepted"
@@ -45,15 +45,15 @@
         }
       ],
       "actor": {
-        "reference": "ODAPractitioner/1",
-        "display": "Dr Adam Careful"
+        "reference": "PRACTITIONER1",
+        "display": "Tri Pekka Puoskari"
       },
       "required": "required",
       "status": "accepted"
     },
     {
       "actor": {
-        "reference": "ODAHealthcareService/1",
+        "reference": "HEALTHCARESERVICE1",
         "display": "Malminkartano"
       },
       "required": "required",
