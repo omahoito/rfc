@@ -10,7 +10,7 @@
 		"value": "123"
 	}],
 	"status": "proposed",
-	"type": {
+	"appointmentType": {
 		"coding": [{
 			"code": "52",
 			"display": "General Discussion"
@@ -19,19 +19,16 @@
 	"reason": {
 		"text": "Clinical Review"
 	},
-	"start": "2013-12-10T09:00:00Z",
-	"end": "2013-12-10T11:00:00Z",
 	"priority": 5,
 	"description": "Discussion on the results of your recent MRI",
+	"start": "2013-12-10T09:00:00Z",
+	"end": "2013-12-10T11:00:00Z",
 	"minutesDuration": 15,
-	"slot": [{
-		"reference": "Slot/example"
-	}],
 	"comment": "Further expand on the results of the MRI and determine the next actions that may be appropriate.",
 	"participant": [{
 		"actor": {
-			"reference": "Patient/example",
-			"display": "Peter James Chalmers"
+			"reference": "PATIENT2",
+			"display": "Anna Demo"
 		},
 		"required": "required",
 		"status": "needs-action"
@@ -45,23 +42,10 @@
 		"status": "needs-action"
 	}, {
 		"actor": {
-			"reference": "Practitioner/example",
-			"display": "Dr Brown"
+			"reference": "PRACTITIONER1",
+			"display": "Tri Pekka Puoskari"
 		},
 		"required": "required",
-		"status": "accepted"
-
-	}, {
-		"actor": {
-			"reference": "Location/1",
-			"display": "South Wing, second floor"
-		},
-		"required": "required",
-		"_required": {
-			"fhir_comments": [
-				"  This resource auto accepts, so doesn't need negotiation  "
-			]
-		},
 		"status": "accepted"
 	}]
 }
