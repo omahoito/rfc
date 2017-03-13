@@ -1,16 +1,14 @@
 {
 	"resourceType": "HealthcareService",
+	"id" : "HEALTHCARESERVICE1",
 	"identifier": [{
 		"system": "url://for/healthcareserviceids",
 		"value": "600"
 	}],
 	"providedBy": {
-		"Reference": "Organization/2"
+		"Reference": "ORGANIZATION1"
 	},
-	"location": {
-		"reference": "Location/2"
-	},
-	"serviceName": "Terveyspalvelu X",
+	"serviceName": "Malminkartanon terveysasema",
 	"telecom": [{
 		"system": "phone",
 		"value": "0555",
