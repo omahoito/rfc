@@ -1,9 +1,39 @@
 {
   "resourceType": "Patient",
+  "id": "PATIENT2",
+  "text": {
+    "status": "generated"
+  },
   "identifier": [
     {
-      "system" : "",
-      "value" : "19811108-2345"
+      "system": "urn:oid:1.2.36.146.595.217.0.1",
+      "value": "10001"
     }
+  ],
+   "communication": [
+    {
+      "language": {
+        "coding": [
+          {
+            "system": "urn:ietf:bcp:47",
+            "code": "fi-FI",
+            "display": "Finnish"
+          }
+        ]
+      },
+      "preferred": true
+    },
+    {
+      "language": {
+        "coding": [
+          {
+            "system": "urn:ietf:bcp:47",
+            "code": "en-US",
+            "display": "English"
+          }
+        ]
+      },
+      "preferred": false
+    }	
   ]
 }
