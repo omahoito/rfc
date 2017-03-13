@@ -1,53 +1,22 @@
 {
 	"resourceType": "CareTeam",
+	"id": "CARETEAM1-PATIENT2",
 	"identifier": [{
 		"use": "usual",
-		"value": "3141592",
-		"system": "http://www.source.com"
+		"value": "3141592"
 	}],
-	"status": {
-		"coding": {
-			"code": "cat",
-			"system": "123"
-		},
-		"text": "itsehoitosuunnitelma"
-	},
-	"category": [{
-		"coding": {
-			"code": "",
-			"system": "123"
-		},
-		"text": "itsehoitosuunnitelma"
-	}],
-	"name": "YLE-lääk",
-	"subject": {
-		"reference": "Group22"
-	},
+	"name": "Intensive care team",
 	"period": {
-		"period": {
-			"start": "01022011",
-			"end": "01012011"
-		}
+		"start": "01012011",
+		"end": "01022011"
 	},
 	"participant": [{
-		"participant_role": {
-			"coding": {
-				"code": "",
-				"system": "123"
-			},
-			"text": "itsehoitosuunnitelma"
+		"role": {
+			"text": "Chief quack"
 		},
 		"participant_member": {
-			"reference": "Practitioner/02"
-		},
-		"participant_period": {
-			"period": {
-				"start": "01022011",
-				"end": "01012011"
-			}
+			"reference": "Practitioner/PRACTITIONER1",
+			"display": "Pekka Puoskari"
 		}
-	}],
-	"managingOrganization": [{
-		"managinOrganization_reference": "Organization/02"
 	}]
 }
