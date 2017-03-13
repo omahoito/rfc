@@ -37,34 +37,34 @@ Data models of the following profiles:
 * Appointment
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-appointment.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-appointment.example.json)
-  * Profile as ([STU2](https://www.hl7.org/fhir/appointment.html), [STU3](http://hl7.org/fhir/2017Jan/appointment.html))
+  * Profile documentation ([STU2](https://www.hl7.org/fhir/appointment.html), [STU3](http://hl7.org/fhir/2017Jan/appointment.html))
   * Relevant STU2 -> STU3 changes: type renamed to appointmentType
   * [Discussion](https://github.com/omahoito/rfc/issues/3)
 
 * CarePlan
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-careplan.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-careplan.example.json)
-  * Profile as ([STU2](https://www.hl7.org/fhir/careplan.html), [STU3](http://hl7.org/fhir/2017Jan/careplan.html))
+  * Profile documentation ([STU2](https://www.hl7.org/fhir/careplan.html), [STU3](http://hl7.org/fhir/2017Jan/careplan.html))
   * Relevant STU2 -> STU3 changes: participant deleted in STU2, careteam added in STU3
   * [Discussion](https://github.com/omahoito/rfc/issues/10)
 
 * CareTeam
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/CareTeam.json)
-  * Profile as [STU3](http://hl7.org/fhir/2017Jan/careteam.html)
+  * Profile documentation [STU3](http://hl7.org/fhir/2017Jan/careteam.html)
   * Introduced in STU3
   * [Discussion](https://github.com/omahoito/rfc/issues/11)
 
 * Communication, used in communication between patient and practitioner
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-communication.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-communication.example.json)
-  * Profile as ([STU2](https://www.hl7.org/fhir/communication.html), [STU3](http://hl7.org/fhir/2017Jan/communication.html))
+  * Profile documentation ([STU2](https://www.hl7.org/fhir/communication.html), [STU3](http://hl7.org/fhir/2017Jan/communication.html))
   * Relevant STU2 -> STU3 changes: topic added in STU3
   * [Discussion](https://github.com/omahoito/rfc/issues/7)
 
 * Device, used to fill in the symptome questionnaire
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-device.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-device.example.json)
-  * Profile as ([STU2](https://www.hl7.org/fhir/device.html), [STU3](http://hl7.org/fhir/2017Jan/device.html))
+  * Profile documentation ([STU2](https://www.hl7.org/fhir/device.html), [STU3](http://hl7.org/fhir/2017Jan/device.html))
   * Relevant STU2 -> STU3 changes: device minimum cardinality changed from 1 to 0 in STU3
   * [Discussion](https://github.com/omahoito/rfc/issues/1)
 
