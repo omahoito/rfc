@@ -1,13 +1,9 @@
 @startuml
 object ODAAppointment{
   identifier
-  identifier.system
-  identifier.value
-  identifier.assigner
   status
-  type
+  appointmentType
   reason
-  priority
   start
   end
   minutesDuration
@@ -22,11 +18,10 @@ ODAAppointment -- "1..*" ODAPractitioner
 object ODAHealthcareService{
   identifier
   providedBy (ODAOrganization)
-  serviceCategory
-  serviceType
-  location
   serviceName
-  comment
+  telecom
+  characteristic
+  appointmentRequired
 }
 
 ODAHealthcareService -- "1..*" ODAOrganization
@@ -34,23 +29,24 @@ ODAHealthcareService -- "1..*" ODAOrganization
 object ODAOrganization{
   identifier
   type
-  name  
+  name
 }
 
 object ODAPatient{
   identifier
+  communication
 }
 
 object ODAPractitioner{
   identifier
-  identifier.system
-  identifier.value
   name
   telecom
-  telecom.value
+  address
+  gender
+  birthDate  
   photo
-  practitionerRole.managingOrganization (ODAOrganization)
-  practitionerRole.healthcareService (ODAHealthcareService)
+  role.organization (ODAOrganization)
+  role.healthcareService (ODAHealthcareService)
   communication
 }
 
