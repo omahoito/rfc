@@ -1,0 +1,160 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "language": "fi",
+  "url": "https://www.ebmeds.org/form/api/ebmedsfhir",
+  "status": "completed",
+  "questionnaire": 3,
+  "item": [
+    {
+      "linkId": 20,
+      "answer": [
+        {
+          "valueCoding": {
+            "id": 46,
+            "system": null,
+            "code": null,
+            "display": "Oireeni sopivat itse hoidettaviksi ja haluan vain itsehoito-ohjeen"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": 3,
+      "answer": [
+        {
+          "valueDecimal": "50"
+        }
+      ]
+    },
+    {
+      "linkId": 16,
+      "answer": [
+        {
+          "valueCoding": {
+            "id": 28,
+            "system": null,
+            "code": "1",
+            "display": "alle ½ vuorokautta"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": 38,
+      "answer": [
+        {
+          "valueBoolean": "1"
+        }
+      ]
+    },
+    {
+      "linkId": 7,
+      "answer": [
+        {
+          "valueDecimal": "37"
+        }
+      ]
+    },
+    {
+      "linkId": 54,
+      "answer": [
+        {
+          "valueBoolean": "0"
+        }
+      ]
+    },
+    {
+      "linkId": 136,
+      "answer": [
+        {
+          "valueBoolean": "0"
+        }
+      ]
+    },
+    {
+      "linkId": 55,
+      "answer": [
+        {
+          "valueBoolean": "0"
+        }
+      ]
+    },
+    {
+      "linkId": 18,
+      "answer": [
+        {
+          "valueCoding": {
+            "id": 36,
+            "system": null,
+            "code": "2",
+            "display": "Jompikumpi nielun seinämistä on turvonnut toista enemmän (kuva 2)"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": 35,
+      "answer": [
+        {
+          "valueBoolean": "0"
+        }
+      ]
+    },
+    {
+      "linkId": 141,
+      "answer": [
+        {
+          "valueBoolean": "0"
+        }
+      ]
+    },
+    {
+      "linkId": 142,
+      "answer": [
+        {
+          "valueBoolean": "0"
+        }
+      ]
+    },
+    {
+      "linkId": 143,
+      "answer": [
+        {
+          "valueBoolean": "0"
+        }
+      ]
+    },
+    {
+      "linkId": 144,
+      "answer": [
+        {
+          "valueBoolean": "0"
+        }
+      ]
+    },
+    {
+      "linkId": 145,
+      "answer": [
+        {
+          "valueBoolean": "0"
+        }
+      ]
+    },
+    {
+      "linkId": 146,
+      "answer": [
+        {
+          "valueBoolean": "0"
+        }
+      ]
+    },
+    {
+      "linkId": 147,
+      "answer": [
+        {
+          "valueBoolean": "0"
+        }
+      ]
+    }
+  ]
+}
