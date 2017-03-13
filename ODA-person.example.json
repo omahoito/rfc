@@ -1,40 +1,42 @@
 {
-	"resourceType" : "Person",
-	"id" : "21",
+	"resourceType": "Person",
+	"id": "PERSON2",
 	"text": {
-		"status" : "generated"
+		"status": "generated"
 	},
-  "name": [
-      {
-        "text": "Anna Testi",
-        "family": "Testi",
-        "given": [
-          "Anna"
-        ]
-      }
-  ],
-  "address": [
-      {
-        "line": [
-          "Osuuspankkitie 2"
-        ],
-        "city": "Helsinki",
-        "postalCode": "00120",
-        "country": "Suomi"
-      }
-  ],
-  "active": true,
-  "telecom": [
-    {
-      "use": "home"
-    },
-    {
-      "system": "phone",
-      "value": "(044) 1234567",
-      "use": "work"
-    }
-  ],
-  "gender": "female",
-  "birthDate": "1981-11-08",
-  "deceasedBoolean": false
+	"identifier": [{
+		"system": "urn:oid:1.2.246.21",
+		"value": "081181-9984"
+	}],
+	"name": [{
+		"text": "Anna Demo",
+		"family": "Demo",
+		"given": [
+			"Anna"
+		]
+	}],
+	"telecom": [{
+		"use": "home"
+	}, {
+		"system": "phone",
+		"value": "(044) 1234567",
+		"use": "work"
+	}],
+	"gender": "female",
+	"birthDate": "1981-11-08",
+	"address": [{
+		"line": [
+			"S-Pankki Ålandsbanken 2"
+		],
+		"city": "Helsinki",
+		"postalCode": "00120",
+		"country": "Suomi"
+	}],
+	"active": true,
+	"link": [{
+		"target": {
+			"reference": "Patient/PATIENT2",
+			"display": "Anna Demo"
+		}
+	}]
 }
