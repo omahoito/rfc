@@ -83,6 +83,8 @@ class MVP::ActivityDefinition {
 
 }
 
+class Medication
+
 hide methods
 hide circle
 
@@ -115,6 +117,8 @@ MVP::Patient "1"--"0..*" MVP::MedicationStatement
 MVP::Patient "1"--"0..*" Immunization
 MVP::Patient "1"--"0..*" Flag
 
-MVP::Consent "0..*"--"1" MVP::Patient
+MVP::Consent "0..*"-up-"1" MVP::Patient
+
+MVP::MedicationStatement "0..*" -- "1" Medication
 
 @enduml
