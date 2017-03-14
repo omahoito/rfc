@@ -27,7 +27,7 @@
   "participant": [
     {
       "actor": {
-        "reference": "PATIENT2",
+        "reference": "Patient/PATIENT2",
         "display": "Anna Demo"
       },
       "required": "required",
@@ -45,7 +45,7 @@
         }
       ],
       "actor": {
-        "reference": "PRACTITIONER1",
+        "reference": "Practitioner/PRACTITIONER1",
         "display": "Tri Pekka Puoskari"
       },
       "required": "required",
@@ -53,7 +53,7 @@
     },
     {
       "actor": {
-        "reference": "HEALTHCARESERVICE1",
+        "reference": "HealtcareService/HEALTHCARESERVICE1",
         "display": "Malminkartano"
       },
       "required": "required",
