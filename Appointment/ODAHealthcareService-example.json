@@ -9,7 +9,7 @@
 		"value": "600"
 	}],
 	"providedBy": {
-		"Reference": "ORGANIZATION1"
+		"Reference": "Organization/ORGANIZATION1"
 	},
 	"serviceName": "Malminkartanon terveysasema",
 	"telecom": [{
