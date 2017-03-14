@@ -7,16 +7,19 @@
 	}],
 	"name": "Intensive care team",
 	"period": {
-		"start": "01012011",
-		"end": "01022011"
+		"start": "2013-12-10T09:00:00Z",
+		"end": "2013-12-10T11:00:00Z"
 	},
 	"participant": [{
 		"role": {
 			"text": "Chief quack"
 		},
-		"participant_member": {
+		"member": {
 			"reference": "Practitioner/PRACTITIONER1",
 			"display": "Pekka Puoskari"
 		}
-	}]
+	}],
+	"managingOrganization": {
+		"display" : "Tylypahka"
+	}
 }
