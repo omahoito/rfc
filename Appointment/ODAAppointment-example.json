@@ -54,7 +54,7 @@
     },
     {
       "actor": {
-        "reference": "HealtcareService/HEALTHCARESERVICE1",
+        "reference": "HealthcareService/HEALTHCARESERVICE1",
         "display": "Malminkartano"
       },
       "required": "required",
