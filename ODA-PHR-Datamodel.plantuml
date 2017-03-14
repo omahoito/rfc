@@ -8,6 +8,7 @@ Person contains personal information such as name, social security number etc.
 * <b>Patient</b> is created when person permits the first application
   to his/her PHR data. In MVP-release this is created when person logs in first time. 
   Does not contain any personal information.
+* <b>Consent</b> Patient's consent to share PHR data with his/her careteam.
 * <b>Observation</b> references to <i>Patient</i>. When generated from
 the questionnaire answer, references also to corresponding <i>QuestionnaireResponse</i> 
 resource. Authorized to care-team by linking <i>CarePlan</i> to the <i>Observation</i> instance.
@@ -15,6 +16,7 @@ resource. Authorized to care-team by linking <i>CarePlan</i> to the <i>Observati
 decision support are mapped as careplan activities. Supporting information (medications, 
 immunizations, allergies etc.) is authorized to care-team by patient. Supporting information is 
 referenced by <i>CarePlan.support</i> element.
+* <b>ActivityDefinition</b> Definition of the suggested action. Suggested careplan activities are based on these definitions. 
 * <b>Questionnaire</b> Created by main user and saved to PHR as questionnaire templates.
 * <b>QuestionnaireResponse</b> Created when patient answers to a questionnaire and saves 
 the answers.
@@ -28,51 +30,64 @@ by linking <i>CarePlan</i> to the <i>MedicationStatement</i> instance.
 * <b>Flag</b> Risk-information added by patient and authorized to care-team via careplan.
   end note
 
+class MVP::Consent {
+Reference<Patient> patient
+}
 
 class MVP::Person {
-Reference(Patient) link.target
+Reference<Patient | Practitioner> link.target
 }
 class MVP::Patient
 class MVP::Observation {
-Reference(Patient) subject
-Reference(QuestionnaireResponse) related
+Reference<Patient> subject
+Reference<QuestionnaireResponse> related
 }
 class MVP::CarePlan {
-Reference(Patient) subject
-Reference(CareTeam) careteam
-Reference(Any) support
+Reference<Patient> subject
+Reference<CareTeam> careteam
+Reference<Any> support
 }
 class MVP::Questionnaire
 class MVP::QuestionnaireResponse {
-Reference(Patient) source
-Reference(Questionnaire) questionnaire
+Reference<Patient> source
+Reference<Questionnaire> questionnaire
 }
 class MVP::CareTeam {
-'Reference(Patient) subject
-Reference(Practitioner) participant
+'Reference<Patient> subject
+Reference<Practitioner> participant
 }
-class MVP::Practitioner
+class MVP::Practitioner {
+	
+}
 class MVP::Communication {
-Reference(Any) topic
+Reference<Any> topic
 }
 
 class AllergyIntolerance {
-Reference(Patient) patient
+Reference<Patient> patient
 }
 
 class Immunization {
-Reference(Patient) patient
+Reference<Patient> patient
 }
 
 class MVP::MedicationStatement {
-Reference(Patient) subject
+Reference<Patient> subject
 }
 
 class Flag {
-Reference(Patient) subject
+Reference<Patient> subject
 }
 
-MVP::Person "1"--"1" MVP::Patient
+class MVP::ActivityDefinition {
+
+}
+
+hide methods
+hide circle
+
+MVP::Person "1"--"0..1" MVP::Patient
+MVP::Person "1"--"0..1" MVP::Practitioner
 
 MVP::CarePlan "0..*"--"1" MVP::Patient
 MVP::CarePlan "1"--"0..1" MVP::CareTeam
@@ -81,6 +96,7 @@ MVP::CarePlan "0..*"--"0..*" AllergyIntolerance
 MVP::CarePlan "0..*"--"0..*" MVP::MedicationStatement
 MVP::CarePlan "0..*"--"0..*" Immunization
 MVP::CarePlan "0..*"--"0..*" Flag
+MVP::CarePlan "0..*"--"0..*" MVP::ActivityDefinition
 
 MVP::CareTeam "0..*"--"0..*" MVP::Practitioner 
 'MVP::CareTeam "0..*"--"1" MVP::Patient
@@ -99,5 +115,6 @@ MVP::Patient "1"--"0..*" MVP::MedicationStatement
 MVP::Patient "1"--"0..*" Immunization
 MVP::Patient "1"--"0..*" Flag
 
+MVP::Consent "0..*"--"1" MVP::Patient
 
 @enduml
