@@ -27,7 +27,7 @@
 	"comment": "Further expand on the results of the MRI and determine the next actions that may be appropriate.",
 	"participant": [{
 		"actor": {
-			"reference": "PATIENT2",
+			"reference": "Patient/PATIENT2",
 			"display": "Anna Demo"
 		},
 		"required": "required",
@@ -42,7 +42,7 @@
 		"status": "needs-action"
 	}, {
 		"actor": {
-			"reference": "PRACTITIONER1",
+			"reference": "Practitioner/PRACTITIONER1",
 			"display": "Tri Pekka Puoskari"
 		},
 		"required": "required",
