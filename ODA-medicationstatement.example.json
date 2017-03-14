@@ -2,46 +2,28 @@
   "resourceType": "MedicationStatement",
   "id": "MEDICATIONSTATEMENT1",
   "text": {
-    "status": "generated",
+    "status": "generated"
   },
   "identifier" : "1234",
-  "contained": [
-    {
-      "resourceType": "Medication",
-      "id": "med0315",
-      "code": {
-        "coding": [
-          {
-            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-            "code": "358793",
-            "display": "Mometasone Furoate 0.05mg/Actuat"
-          }
-        ]
-      },
-      "isBrand": false,
-      "product": {
-        "form": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "385157007",
-              "display": "Nasal Spray"
-            }
-          ]
-        }
-      }
-    }
-  ],
-  "status": "intended",
+  "status": "active",
+  "medicationReference": {
+    "display": "Burana 400 mg"
+  },
   "subject": {
     "reference": "Patient/PATIENT1",
     "display": "Anna Demo"
   },
+  "effectiveDateTime": "2017-02-23",  
   "dateAsserted": "2015-02-22",
-  "notTaken": "y",
+  "notTaken": "n",
+  "reasonForUseCodeableConcept": [
+    {
+      "text": "Päänsärky"
+    }
+  ],
   "note": [
     {
-      "text": "Potilas alkaa ottaa lääkettä keväällä kun ilmassa on korkeat siitepölypitoisuudet."
+      "text": "Auttoi hyvin"
     }
   ]
 }
