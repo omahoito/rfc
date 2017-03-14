@@ -1,0 +1,231 @@
+{
+      "resourceType": "Questionnaire",
+      "id" : "QUESTIONNAIRE1",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2017-02-24T13:52:01.743+02:00"
+      },
+      "language": "fi",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tämä on testilomake jota käytän näyttämään miten FHIR rajapinta edistyy.</div>"
+      },
+      "extension": [
+        {
+          "url": "https://www.ebmeds.org/form#selfCareInstructions",
+          "extension": [
+            {
+              "url": "instruction_text",
+              "valueString": "<h1>Itsehoito-ohje:</h1><div>Lepää, ota särkylääkettä ja pepanteenia.</div>"
+            },
+            {
+              "url": "instruction_url",
+              "valueString": "http://www.hs.fi/fingerpori/"
+            }
+          ]
+        }
+      ],
+      "url": "https://www.ebmeds.org/form/api/FHIR/forms/export/701",
+      "identifier": [
+        {
+          "system": "https://www.ebmeds.org/form/api/FHIR/forms/export/701",
+          "value": "701"
+        }
+      ],
+      "status": "published",
+      "date": "2017-02-21T11:26:12.154Z",
+      "publisher": "Saara Vimpeli",
+      "useContext": [
+        {
+          "coding": [
+            {
+              "system": "http://questionnaire/types",
+              "code": "123"
+            }
+          ],
+          "text": "selfcare"
+        }
+      ],
+      "title": "FHIR demolomake",
+      "concept": [
+        {
+          "code": "701"
+        }
+      ],
+      "item": [
+        {
+          "linkId": "introduction",
+          "text": "Tervetuloa FHIR rajapinnalla generoituun testilomakkeeseen.",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "1161",
+              "concept": [
+                {
+                  "system": "urn:1.2.246.537.6.1",
+                  "code": "123",
+                  "display": "ICD-10"
+                }
+              ],
+              "text": "Oletko varma että haluat täyttää tämän lomakkeen?",
+              "type": "boolean"
+            },
+            {
+              "linkId": "1162",
+              "concept": [
+                {
+                  "system": "urn:1.2.246.537.6.1",
+                  "code": "456",
+                  "display": "ICD-10"
+                }
+              ],
+              "text": "Esitä numeerisesti elämän tarkoitus. (Vinkki: Syötä 42).",
+              "type": "decimal",
+              "enableWhen": [
+                {
+                  "question": "1161",
+                  "answerString": "yes"
+                }
+              ]
+            },
+            {
+              "linkId": "1167",
+              "concept": [
+                {
+                  "system": "http://EBMeDS",
+                  "code": "feedback",
+                  "display": "answer_type"
+                }
+              ],
+              "text": "Nyt taisi mennä väärinpäin. Kokeile 42.",
+              "type": "display",
+              "enableWhen": [
+                {
+                  "question": "1162",
+                  "hasAnswer" : false
+                }
+              ]
+            },
+            {
+              "linkId": "1166",
+              "concept": [
+                {
+                  "system": "http://EBMeDS",
+                  "code": "subtitle",
+                  "display": "answer_type"
+                }
+              ],
+              "text": "<h1>Väliotsikko</h1><div>Väliotsikon leipäteksti</div>",
+              "type": "display"
+            },
+            {
+              "linkId": "1163",
+              "text": "Vapaata tekstiä yksi rivi",
+              "type": "string",
+              "enableWhen": [
+                {
+                  "question": "1161",
+                  "answerString": "yes"
+                },
+                {
+                  "question": "1162",
+                  "hasAnswer" : false
+                }
+              ]
+            },
+            {
+              "linkId": "1164",
+              "concept": [
+                {
+                  "system": "urn:1.2.246.537.6.96",
+                  "code": "789",
+                  "display": "finLOINC"
+                }
+              ],
+              "text": "Mikä näistä on paras",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "1161",
+                  "answerString": "yes"
+                },
+                {
+                  "question": "1162",
+                  "hasAnswer" : false
+                }
+              ],
+              "repeats": false,
+              "option": [
+                {
+                  "valueCoding": {
+                    "id": "101",
+                    "code": "11",
+                    "display": "eharth"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "id": "102",
+                    "code": "22",
+                    "display": "whind"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "id": "103",
+                    "code": "33",
+                    "display": "fhir"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "1165",
+              "concept": [
+                {
+                  "system": "urn:1.2.246.537.6.96",
+                  "code": "987",
+                  "display": "finLOINC"
+                }
+              ],
+              "text": "Näistä voit valita monta",
+              "type": "choice",
+              "enableWhen": [
+                {
+                  "question": "1161",
+                  "answerString": "yes"
+                },
+                {
+                  "question": "1162",
+                  "hasAnswer" : false
+                }
+              ],
+              "repeats": true,
+              "option": [
+                {
+                  "valueCoding": {
+                    "id": "104",
+                    "code": "x1",
+                    "display": "shandels"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "id": "105",
+                    "code": "y2",
+                    "display": "holvi"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "id": "106",
+                    "code": "z3",
+                    "display": "khoff"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }

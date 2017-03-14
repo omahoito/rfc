@@ -1,11 +1,7 @@
 {
 	"resourceType": "Observation",
-	"id" : "Observation/OBS001",
-	"meta": {
-		"profile": "https://github.com/omahoito/rfc/omahoito/temperature-profile/"
-	},
+	"id": "OBSERVATION1-PATIENT2",
 	"identifier": [{
-		"system": "url:something",
 		"value": "1234"
 	}],
 	"status": "final",
@@ -18,10 +14,6 @@
 	}],
 	"code": {
 		"coding": [{
-			"system": "http://acme.lab",
-			"code": "BT",
-			"display": "Kehon lämpötila"
-		}, {
 			"system": "http://loinc.org",
 			"code": "8310-5",
 			"display": "Kehon lämpötila"
@@ -29,21 +21,17 @@
 			"system": "http://loinc.org",
 			"code": "8331-1",
 			"display": "'Suun lämpötila"
-		}, {
-			"system": "http://snomed.info/sct",
-			"code": "56342008",
-			"display": "Kehon lämpötilan mittaus."
 		}],
 		"text": "Lämpötila"
 	},
 	"subject": {
-		"reference": "Patient/P1001",
+		"reference": "Patient/PATIENT2",
 		"display": "Anna Demo"
 	},
 	"effectiveDateTime": "2016-04-04T13:27:00+01:00",
 	"issued": "2016-04-04T13:27:00+01:00",
 	"performer": [{
-		"reference": "Patient/P1001"
+		"reference": "Patient/PATIENT1"
 	}],
 	"valueQuantity": {
 		"value": 39,
@@ -74,9 +62,12 @@
 	},
 	"referenceRange": [{
 		"high": {
-			"value": 38.2,
+			"value": 37.2,
+			"unit": "degrees C"
+		},
+		"low": {
+			"value": 36.5,
 			"unit": "degrees C"
 		}
 	}]
-
 }

@@ -1,19 +1,20 @@
 {
   "resourceType": "MedicationStatement",
-  "id": "example001",
+  "id": "MEDICATIONSTATEMENT1",
   "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>MedicationStatement Narrative with Details</b></p></div>"
+    "status": "generated"
   },
+  "identifier" : "1234",
   "status": "active",
   "medicationReference": {
     "display": "Burana 400 mg"
   },
   "subject": {
-    "reference": "Patient/pat1",    
+    "reference": "Patient/PATIENT1",
+    "display": "Anna Demo"
   },
   "effectiveDateTime": "2017-02-23",  
-  "dateAsserted": "2017-02-24",
+  "dateAsserted": "2015-02-22",
   "notTaken": "n",
   "reasonForUseCodeableConcept": [
     {

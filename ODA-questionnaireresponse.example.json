@@ -1,0 +1,29 @@
+{
+	"resourceType": "QuestionnaireResponse",
+	"id": "QUESTIONNAIRERESPONSE1-PATIENT2",
+	"questionnaire": {
+		"reference": "Questionnaire/QUESTIONNAIRE1"
+	},
+	"status": "completed",
+	"subject": {
+		"reference": "Patient/PATIENT2"
+	},
+	"author": {
+		"reference": "Practitioner/PRACTITIONER1"
+	},
+	"authored": "2017-03-06T14:15:00-05:00",
+	"item": [{
+		"linkId": "introduction",
+		"item": [{
+			"linkId": "1161",
+			"answer": [{
+				"valueBoolean": true
+			}]
+		}, {
+			"linkId": "1162",
+			"answer": [{
+				"valueDecimal": 42
+			}]
+		}]
+	}]
+}

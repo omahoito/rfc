@@ -17,11 +17,11 @@
 			"valueString": "linux"
 		}]
 	},
+	"model": "string",
 	"note": [{
 		"authorReference": {
 			"reference": "person who made note"
 		},
 		"time": "time when note done in utc format"
-	}],
-	"model": "string"
+	}]
 }
