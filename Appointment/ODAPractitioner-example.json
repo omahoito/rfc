@@ -46,11 +46,11 @@
 	}],
 	"role": [{
 		"organization": {
-			"reference": "ORGANIZATION1"
+			"reference": "Organization/ORGANIZATION1"
 		}
 	}, {
 		"healthcareService": {
-			"reference": "HEALTHCARESERVICE1"
+			"reference": "HealthcareService/HEALTHCARESERVICE1"
 		}
 	}]
 }
