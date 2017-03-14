@@ -1,9 +1,10 @@
 {
   "resourceType": "MedicationStatement",
-  "id": "example007",
+  "id": "MEDICATIONSTATEMENT1",
   "text": {
     "status": "generated",
   },
+  "identifier" : "1234",
   "contained": [
     {
       "resourceType": "Medication",
@@ -32,14 +33,7 @@
     }
   ],
   "status": "intended",
-  "medicationReference": {
-    "reference": "#med0315"
-  },
   "subject": {
-    "reference": "Patient/PATIENT1",
-    "display": "Anna Demo"
-  },
-  "informationSource": {
     "reference": "Patient/PATIENT1",
     "display": "Anna Demo"
   },
