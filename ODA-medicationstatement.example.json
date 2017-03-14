@@ -1,0 +1,28 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "example001",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>MedicationStatement Narrative with Details</b></p></div>"
+  },
+  "status": "active",
+  "medicationReference": {
+    "display": "Burana 400 mg"
+  },
+  "subject": {
+    "reference": "Patient/pat1",    
+  },
+  "effectiveDateTime": "2017-02-23",  
+  "dateAsserted": "2017-02-24",
+  "notTaken": "n",
+  "reasonForUseCodeableConcept": [
+    {
+      "text": "Päänsärky"
+    }
+  ],
+  "note": [
+    {
+      "text": "Auttoi hyvin"
+    }
+  ]
+}

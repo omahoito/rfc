@@ -1,0 +1,16 @@
+{
+  "resourceType": "Practitioner",
+  "id": "example",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Practitioner Hannu Hoitaja</div>"
+  },
+  "name" {
+	"text": "Hannu Hoitaja"
+	},
+  "telecom" {
+	"system": "phone",
+	"value": "1234567890"
+	}
+}
+
