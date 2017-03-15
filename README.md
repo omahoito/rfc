@@ -65,6 +65,7 @@ Data models of the following profiles:
   * [Discussion](https://github.com/omahoito/rfc/issues/7)
 
 * Consent, information about the patient's policy choices
+  * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-consent-example.json)
   * Profile documentation [STU3](http://hl7.org/fhir/2017Jan/consent.html)
   
 * Device, used to fill in the symptome questionnaire
