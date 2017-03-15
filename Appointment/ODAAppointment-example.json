@@ -4,7 +4,7 @@
   "identifier": [
     {
       "system": "urn:oid:2.16.840.1.113883.3.19.2.3",
-      "value": "666666",
+      "value": "1234",
       "assigner" : "Kela"
     }
   ],
@@ -47,7 +47,7 @@
       ],
       "actor": {
         "reference": "Practitioner/PRACTITIONER1",
-        "display": "Tri Pekka Puoskari"
+        "display": "Tri Pekka Pakarinen"
       },
       "required": "required",
       "status": "accepted"
