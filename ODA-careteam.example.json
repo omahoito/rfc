@@ -12,14 +12,14 @@
 	},
 	"participant": [{
 		"role": {
-			"text": "Chief quack"
+			"text": "Hoitava lääkäri"
 		},
 		"member": {
 			"reference": "Practitioner/PRACTITIONER1",
-			"display": "Pekka Puoskari"
+			"display": "Pekka Pakarinen"
 		}
 	}],
 	"managingOrganization": {
-		"display" : "Tylypahka"
+		"display" : "Malminkartano"
 	}
 }
