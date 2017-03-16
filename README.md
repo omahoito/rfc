@@ -36,6 +36,7 @@ Data models of the following profiles:
 
 * ActivityDefinition
   * Profile documentation [STU3](http://hl7.org/fhir/2017Jan/activitydefinition.html)
+  * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-activitydefinition.example.json)
 
 * Appointment
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-appointment.profile.xml)
