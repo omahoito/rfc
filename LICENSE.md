@@ -7,9 +7,9 @@ This content is licensed under Creative Commons "No Rights Reserved", CC0.
 
 HL7®, HEALTH LEVEL SEVEN®, FHIR® and the FHIR ® are trademarks owned by Health Level Seven International, registered with the United States Patent and Trademark Office.
 
-EBMeDS® Duodecim Medical Publications Ltd, 2017
+EBMeDS® is a regitered trademark of Duodecim Medical Publications Ltd 2017
 
-EBMeDS® Kustannus Oy Duodecim, 2017
+EBMeDS® on rekisteröity tuotemerkki, Kustannus Oy Duodecim 2017
 
 ## Content:
 
