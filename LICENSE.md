@@ -14,4 +14,4 @@ HL7®, HEALTH LEVEL SEVEN®, FHIR® and the FHIR ® are trademarks owned by Heal
 
 CC BY 4.0 2016 City of Espoo
 
-CC BY 4.0 2016 Espoon kaupunki
+CC BY 4.0 2016 Espoon kaupunki, ODA, Omahoito ja digitaaliset arvopalvelut
