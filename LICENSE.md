@@ -1,7 +1,7 @@
 ## Specifications:
-CC0 2016 City of Espoo
+CC0 2016 City of Espoo, ODA - E-Services for Your Well-being
 
-CC0 2016 Espoon kaupunki, ODA, Omahoito ja digitaaliset arvopalvelut
+CC0 2016 Espoon kaupunki, ODA - Omahoito ja digitaaliset arvopalvelut
 
 This content is licensed under Creative Commons "No Rights Reserved", CC0.
 
@@ -13,6 +13,6 @@ EBMeDS® Kustannus Oy Duodecim, 2017
 
 ## Content:
 
-CC BY 4.0 2016 City of Espoo
+CC BY 4.0 2016 City of Espoo, ODA - E-Services for Your Well-being
 
-CC BY 4.0 2016 Espoon kaupunki, ODA, Omahoito ja digitaaliset arvopalvelut
+CC BY 4.0 2016 Espoon kaupunki, ODA - Omahoito ja digitaaliset arvopalvelut
