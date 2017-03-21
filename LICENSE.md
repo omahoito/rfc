@@ -1,7 +1,5 @@
 
 ## Specifications:
-CC0 License
-
 CC0 2016 City of Espoo
 
 CC0 2016 Espoon kaupunki, ODA, Omahoito ja digitaaliset arvopalvelut
