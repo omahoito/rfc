@@ -6,11 +6,20 @@ unset xmap
 
 # paths to the folders. need absolute paths for xsd referencing to work
 
+# Resolve local base dir
+if [[ -z "$TRAVIS_BUILD_DIR" ]]; then
+  if $(which realpath > /dev/null 2>&1); then
+    SCRIPT_SELF=$(realpath "$0")
+    TRAVIS_BUILD_DIR=$(dirname "$SCRIPT_SELF")
+  else
+    # replace this with your own path if run locally
+    # and realpath command is not available
+    TRAVIS_BUILD_DIR=.
+  fi
+fi
+
 # TRAVIS_BUILD_DIR has no trailing slash, so adding a /
 BASE_PATH="$TRAVIS_BUILD_DIR""/"
-
-# replace this with your own path if run locally
-#BASE_PATH="/cygdrive/c/Users/elbegom/Desktop/gitStuff/rfc/"
 
 RFC_PATH="$BASE_PATH"
 APPOINTMENT_PATH="$BASE_PATH""Appointment/"
