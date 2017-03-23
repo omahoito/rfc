@@ -7,7 +7,7 @@ xmap=()  # or 'unset xmap'
 #BASE_PATH="https://raw.githubusercontent.com/gellati/rfc-oda/master/"
 ##https://raw.githubusercontent.com/gellati/rfc-oda/master/Appointment/ODAOrganization.xml
 
-BASE_PATH="/cygdrive/c/Users/elbegom/Desktop/gitStuff/rfc-oda/"
+#BASE_PATH="/cygdrive/c/Users/elbegom/Desktop/gitStuff/rfc-oda/"
 
 BASE_PATH="$TRAVIS_BUILD_DIR""/"
 
