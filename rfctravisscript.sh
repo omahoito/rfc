@@ -18,6 +18,11 @@ XSD_PATH="$BASE_PATH""xsd/STU2/fhir-all-xsd/"
 # for STU3 profiles
 XSD3_PATH="$BASE_PATH""xsd/STU3/fhir-all-xsd/"
 
+SCRIPT_SELF=$(realpath "$0")
+SCRIPT_DIR=$(dirname "$SCRIPT_SELF")
+
+echo $SCRIPT_DIR
+
 
 # declare a dictionary with mappings from xml to corresponding xsd file
 
