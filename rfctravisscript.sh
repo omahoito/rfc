@@ -7,7 +7,7 @@ unset xmap
 # paths to the folders. need absolute paths for xsd referencing to work
 
 # replace this with your own path if run locally
-#BASE_PATH="/cygdrive/c/Users/elbegom/Desktop/gitStuff/rfc-oda/"
+#BASE_PATH="/cygdrive/c/Users/elbegom/Desktop/gitStuff/rfc/"
 
 # TRAVIS_BUILD_DIR has no trailing slash, so adding a /
 BASE_PATH="$TRAVIS_BUILD_DIR""/"

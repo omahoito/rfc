@@ -45,7 +45,7 @@
     </mapping>
     <kind value="resource" />
     <abstract value="false" />
-    <baseType value="http://hl7.org/fhir/StructureDefinition/DomainResource" />
+    <base value="http://hl7.org/fhir/StructureDefinition/Person" />
     <snapshot>
         <element>
             <path value="Person" />
