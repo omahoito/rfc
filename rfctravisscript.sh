@@ -5,9 +5,8 @@
 unset xmap
 
 # paths to the folders. need absolute paths for xsd referencing to work
-#BASE_PATH="https://raw.githubusercontent.com/gellati/rfc-oda/master/"
-##https://raw.githubusercontent.com/gellati/rfc-oda/master/Appointment/ODAOrganization.xml
 
+# replace this with your own path if run locally
 #BASE_PATH="/cygdrive/c/Users/elbegom/Desktop/gitStuff/rfc-oda/"
 
 # TRAVIS_BUILD_DIR has no trailing slash, so adding a /
@@ -26,6 +25,7 @@ SCRIPT_DIR=$(dirname "$SCRIPT_SELF")
 echo $SCRIPT_DIR
 echo $TRAVIS_BUILD_DIR
 echo $BASE_PATH
+echo $(xmllint --version)
 
 
 # declare a dictionary with mappings from xml to corresponding xsd file
@@ -51,8 +51,10 @@ xmap["$APPOINTMENT_PATH""ODAPractitioner.xml"]="$XSD_PATH""practitioner.xsd"
 for key in ${!xmap[@]}
 do 
   echo "${xmap[$key]}" "$key"
+  xmllint --noout --schema "${xmap[$key]}" "$key"
   xmllint --noout --schema "${xmap[$key]}" "$key" > /dev/null 2>&1 # STDIN to STDOUT
   OP=$?
+  echo $OP
   if [ $OP -ne 0 ] # did not pass validation
   then
     echo "${xmap[$key]}"" did not pass validation"
