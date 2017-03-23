@@ -22,6 +22,8 @@ SCRIPT_SELF=$(realpath "$0")
 SCRIPT_DIR=$(dirname "$SCRIPT_SELF")
 
 echo $SCRIPT_DIR
+echo $TRAVIS_BUILD_DIR
+echo $BASE_PATH
 
 
 # declare a dictionary with mappings from xml to corresponding xsd file
