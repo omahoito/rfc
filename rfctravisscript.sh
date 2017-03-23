@@ -13,7 +13,7 @@ unset xmap
 BASE_PATH="$TRAVIS_BUILD_DIR""/"
 
 RFC_PATH="$BASE_PATH"
-APPOINTMENT_PATH="$BASE_PATH""APPOINTMENT/"
+APPOINTMENT_PATH="$BASE_PATH""Appointment/"
 XSD_PATH="$BASE_PATH""xsd/STU2/fhir-all-xsd/"
 
 # for STU3 profiles

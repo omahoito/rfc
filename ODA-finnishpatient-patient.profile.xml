@@ -1,4 +1,5 @@
-<StructureDefinition>
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
     <id value="FinnishPatient" />
     <meta>
         <versionId value="13" />
@@ -121,7 +122,7 @@
         <element>
             <path value="Patient.text" />
             <short value="Text summary of the resource, for human interpretation" />
-            <definition value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." />
+            <definition value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it 'clinically safe' for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety." />
             <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative." />
             <alias value="narrative" />
             <alias value="html" />
@@ -290,7 +291,7 @@
             <path value="Patient.identifier.use" />
             <short value="The purpose of this identifier" />
             <definition value="The purpose of this identifier. usual | official | temp | secondary (If known)" />
-            <comments value="This is labeled as "Is Modifier" because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary." />
+            <comments value="This is labeled as 'Is Modifier' because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary." />
             <requirements value="No need to specify person identifier use in case of official identifier." />
             <min value="0" />
             <max value="0" />
@@ -514,7 +515,7 @@
             <!-- Potilaan nimi. -->
             <short value="A name associated with the patient" />
             <definition value="A name associated with the individual." />
-            <comments value="A patient may have multiple names with different uses or applicable periods. For animals, the name is a "HumanName" in the sense that is assigned and used by humans and has the same patterns." />
+            <comments value="A patient may have multiple names with different uses or applicable periods. For animals, the name is a 'HumanName' in the sense that is assigned and used by humans and has the same patterns." />
             <requirements value="Need to be able to track the patient by multiple names. Examples are your official name and a partner name." />
             <min value="0" />
             <max value="0" />
@@ -586,7 +587,7 @@
             <path value="Patient.name.use" />
             <short value="usual | official | temp | nickname | anonymous | old | maiden" />
             <definition value="Identifies the purpose for this name." />
-            <comments value="This is labeled as "Is Modifier" because applications should not mistake a temporary or old name etc.for a current/permanent one. Applications can assume that a name is current unless it explicitly says that it is temporary or old." />
+            <comments value="This is labeled as 'Is Modifier' because applications should not mistake a temporary or old name etc.for a current/permanent one. Applications can assume that a name is current unless it explicitly says that it is temporary or old." />
             <requirements value="Allows the appropriate name for a particular context of use to be selected from among a set of names." />
             <min value="0" />
             <max value="1" />
@@ -650,7 +651,7 @@
             <path value="Patient.name.family" />
             <short value="Family name (often called 'Surname')" />
             <definition value="The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father." />
-            <comments value="For family name, hyphenated names such as "Smith-Jones" are a single name, but names with spaces such as "Smith Jones" are broken into multiple parts." />
+            <comments value="For family name, hyphenated names such as 'Smith-Jones' are a single name, but names with spaces such as 'Smith Jones' are broken into multiple parts." />
             <alias value="surname" />
             <min value="0" />
             <max value="*" />
@@ -680,7 +681,7 @@
             <path value="Patient.name.given" />
             <short value="Given names (not always 'first'). Includes middle names" />
             <definition value="Given name." />
-            <comments value="If only initials are recorded, they may be used in place of the full name.  Not called "first name" since given names do not always come first." />
+            <comments value="If only initials are recorded, they may be used in place of the full name.  Not called 'first name' since given names do not always come first." />
             <alias value="first name" />
             <alias value="middle name" />
             <min value="0" />
@@ -781,7 +782,7 @@
             </mapping>
             <mapping>
                 <identity value="rim" />
-                <map value="./usablePeriod[type="IVL<TS>"]" />
+                <map value="./usablePeriod[type='IVL&lt;TS&gt;']" />
             </mapping>
             <mapping>
                 <identity value="servd" />
@@ -824,7 +825,7 @@
             <!-- Sukupuoli. Pakollinen kenttä. -->
             <short value="male | female | other | unknown" />
             <definition value="Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes." />
-            <comments value="The gender may not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though the vast majority of systems and contexts only support M and F.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific gender aspect of interest (anatomical, chromosonal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosonal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overrideable error, not a "hard" error." />
+            <comments value="The gender may not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though the vast majority of systems and contexts only support M and F.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific gender aspect of interest (anatomical, chromosonal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosonal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overrideable error, not a 'hard' error." />
             <requirements value="Needed for identification of the individual, in combination with (at least) name and birth date. Gender of individual drives many clinical processes." />
             <min value="0" />
             <max value="0" />
@@ -862,7 +863,7 @@
             <!-- Potilaan syntymäaika. -->
             <short value="The date of birth for the individual" />
             <definition value="The date of birth for the individual." />
-            <comments value="At least an estimated year should be provided as a guess if the real DOB is unknown  There is a standard extension "patient-birthTime" available that should be used where Time is required (such as in maternaty/infant care systems)." />
+            <comments value="At least an estimated year should be provided as a guess if the real DOB is unknown  There is a standard extension 'patient-birthTime' available that should be used where Time is required (such as in maternaty/infant care systems)." />
             <requirements value="Age of the individual drives many clinical processes." />
             <min value="0" />
             <max value="0" />
@@ -1376,7 +1377,7 @@
             <path value="Patient.animal" />
             <short value="This patient is known to be an animal (non-human)" />
             <definition value="This patient is known to be an animal." />
-            <comments value="The animal element is labeled "Is Modifier" since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject declared animal records.   The absense of the animal element does not imply that the patient is a human. If a system requires such a positive assertion that the patient is human, an extension will be required.  (Do not use a species of homo-sapiens in animal species, as this would incorrectly infer that the patient is an animal)." />
+            <comments value="The animal element is labeled 'Is Modifier' since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject declared animal records.   The absense of the animal element does not imply that the patient is a human. If a system requires such a positive assertion that the patient is human, an extension will be required.  (Do not use a species of homo-sapiens in animal species, as this would incorrectly infer that the patient is an animal)." />
             <requirements value="Many clinical systems are extended to care for animal patients as well as human." />
             <min value="0" />
             <max value="0" />
@@ -1469,7 +1470,7 @@
             <path value="Patient.animal.species" />
             <short value="E.g. Dog, Cow" />
             <definition value="Identifies the high level taxonomic categorization of the kind of animal." />
-            <comments value="If the patient is non-human, at least a species SHALL be specified. Species SHALL be a widely recognised taxonomic classification.  It may or may not be Linnaean taxonomy and may or may not be at the level of species. If the level is finer than species--such as a breed code--the code system used SHALL allow inference of the species.  (The common example is that the word "Hereford" does not allow inference of the species Bos taurus, because there is a Hereford pig breed, but the SNOMED CT code for "Hereford Cattle Breed" does.)." />
+            <comments value="If the patient is non-human, at least a species SHALL be specified. Species SHALL be a widely recognised taxonomic classification.  It may or may not be Linnaean taxonomy and may or may not be at the level of species. If the level is finer than species--such as a breed code--the code system used SHALL allow inference of the species.  (The common example is that the word 'Hereford' does not allow inference of the species Bos taurus, because there is a Hereford pig breed, but the SNOMED CT code for 'Hereford Cattle Breed' does.)." />
             <requirements value="Need to know what kind of animal." />
             <min value="1" />
             <max value="1" />
@@ -1670,7 +1671,7 @@
         <element>
             <path value="Patient.communication.language" />
             <short value="The language which can be used to communicate with the patient about his or her health" />
-            <definition value="The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. "en" for English, or "en-US" for American English versus "en-EN" for England English." />
+            <definition value="The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. 'en' for English, or 'en-US' for American English versus 'en-EN' for England English." />
             <comments value="The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type." />
             <requirements value="Most systems in multilingual countries will want to convey language. Not all systems actually need the regional dialect." />
             <min value="1" />
