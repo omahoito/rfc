@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/omahoito/rfc.svg?branch=master)](https://travis-ci.org/omahoito/rfc)
+
+
+
 # rfc
 Request for Comments and Change process for ODA Application Interfaces
 
