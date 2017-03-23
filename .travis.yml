@@ -1,5 +1,5 @@
 # assumption: Travis build runs in bash 4.0 (or greater)
-script: rfcscript.sh
+script: rfctravisscript.sh
 
 notifications:
   email: false
