@@ -48,7 +48,7 @@ xmap["$APPOINTMENT_PATH""ODAOrganization.xml"]="$XSD_PATH""organization.xsd"
 xmap["$APPOINTMENT_PATH""ODAPatient.xml"]="$XSD_PATH""patient.xsd"
 xmap["$APPOINTMENT_PATH""ODAPractitioner.xml"]="$XSD_PATH""practitioner.xsd"
 
-
+RETVAL=0
 for key in ${!xmap[@]}
 do 
   xmllint --noout --schema "${xmap[$key]}" "$key" > /dev/null 2>&1 # STDIN to STDOUT
@@ -56,5 +56,8 @@ do
   if [ $OP -ne 0 ] # did not pass validation
   then
     echo "${xmap[$key]}"" did not pass validation"
+    RETVAL=1
   fi
-done  
+done
+
+exit $RETVAL
