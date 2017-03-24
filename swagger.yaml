@@ -419,13 +419,13 @@ definitions:
             type: object
             properties:
               response:
-                description: If this resource was gotten from a FHIR server, what was its HTTP response?
                 type: object
+                description: If this resource was gotten from a FHIR server, what was its HTTP response?
                 properties:
-                status:
-                  type: string
-                  description: HTTP response code from the FHIR server
-                  example: 200 OK
+                  status:
+                    type: string
+                    description: HTTP response code from the FHIR server
+                    example: 200 OK
               resource:
                 $ref: '#/definitions/questionnaireResponse'
           patient:
@@ -702,8 +702,7 @@ definitions:
     type: object
     properties:
       item:
-        description: items may contain other items.
-        $ref: '#/definitions/questionnaire-response-item' # recursion, doesn't seem to work very well to show
+        $ref: '#/definitions/questionnaireResponse-item' # recursion, doesn't seem to work very well to show
       linkId:
         type: string
         example: "1161"
