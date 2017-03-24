@@ -77,12 +77,11 @@ paths:
       description: >
         Produce reminders and links from the given patient data. This utilizes the entire set of
         EBMeDS engine functions as seen in EBMeDS 1.0. Reminders are in regard to diagnoses,
-        medication dosage, medication interactions, allergies, pregnancy and lactation. In ODA
-        also questionnaire responses are read.
+        medication dosage, medication interactions, allergies, pregnancy and lactation.
       parameters:
         - name: dss-fhir-request
           in: body
-          description: The FHIR form of the EBMeDS DSSRequest format.
+          description: The FHIR form of the EBMeDS DSSRequest format. TBD.
           required: true
           schema:
             $ref: '#/definitions/dss-fhir-request'
@@ -121,7 +120,7 @@ paths:
       produces:
         - 'application/json'
       tags:
-        - VKT
+        - Questionnaire database
       responses:
         200:
           description: 'OK'
@@ -150,7 +149,7 @@ paths:
             required: true
             type: integer
         tags:
-          - VKT
+          - Questionnaire database
         responses:
           200:
             description: OK. Return Questionnaire FHIR resource.
@@ -188,7 +187,7 @@ paths:
             required: true
             type: integer
         tags:
-          - VKT
+          - Questionnaire database
         responses:
           200:
             description: OK. Return Questionnaire FHIR resource.
@@ -491,29 +490,31 @@ paths:
 definitions:
   dss-fhir-response:
     type: object
+    description: TBD.
   dss-fhir-request:
     type: object
-    properties:
-      patient:
-        type: object
-        properties:
-          reference:
-            type: string
-            description: TODO
-            example: 'Patient/example'
-      resourceType:
-        type: string
-        enum:
-        - 'Bundle'
-      id:
-        type: string
-        # format: uuid?
-      entry:
-        type: array
-        items:
-          $ref: '#/definitions/dss-fhir-request-entry'
-  dss-fhir-request-entry:
-    type: object
+    description: TBD.
+#    properties:
+#      patient:
+#        type: object
+#        properties:
+#          reference:
+#            type: string
+#            description: TODO
+#            example: 'Patient/example'
+#      resourceType:
+#        type: string
+#        enum:
+#        - 'Bundle'
+#      id:
+#        type: string
+#        # format: uuid?
+#      entry:
+#        type: array
+#        items:
+#          $ref: '#/definitions/dss-fhir-request-entry'
+#  dss-fhir-request-entry:
+#    type: object
   cds-services:
     type: object
     description: Standard CDS Hook response
