@@ -1,0 +1,830 @@
+# Copypaste this into http://editor.swagger.io to get a nicely rendered view of the REST API.
+swagger: '2.0'
+info:
+  title: ODA API for EBMeDS 2.0
+  description: RESTful FHIR resources for clinical decision support in ODA 1
+  version: "0.2.0"
+# the domain of the service
+host: api.ebmedscloud.org
+# array of all schemes that your API supports
+schemes:
+  - https
+# will be prefixed to all paths
+basePath: /rest
+produces:
+  - application/json+fhir
+paths:
+  #######
+  # CDS Hooks
+  #######
+  '/cds-services':
+    get:
+      summary: Available CDS Hooks
+      description: |
+        The cds-services endpoint returns information about the available CDS services (i.e. events/hooks) that *EBMeDS* may subscribe to. These event hooks follow the [CDS Hooks](http://cds-hooks.org/) standard. These services are also listed in this API description.
+      tags:
+        - CDS Hooks
+      responses:
+        200:
+          description: An array of CDS Hooks services
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/cds-services'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  '/cds-services/questionnaire-cds':
+    post:
+      summary: TODO
+      description: TODO
+      parameters:
+        - name: questionnaire-cds-request
+          in: body
+          description: TODO
+          required: true
+          schema:
+            $ref: '#/definitions/questionnaire-cds-request'
+      tags:
+        - CDS Hooks
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/questionnaire-cds-response'
+  '/cds-services/general-cds':
+    post:
+      summary: The full set of analysis as produced by the EBMeDS engine.
+      description: Produce reminders and links from the given patient data. This utilizes the entire set of EBMeDS engine functions as seen in EBMeDS 1.0. Reminders are in regard to diagnoses, medication dosage, medication interactions, allergies, pregnancy and lactation. In ODA also questionnaire responses are read.
+      parameters:
+        - name: dss-fhir-request
+          in: body
+          description: The FHIR form of the EBMeDS DSSRequest format.
+          required: true
+          schema:
+            $ref: '#/definitions/dss-fhir-request'
+      tags:
+        - EBMeDS
+      responses:
+        200:
+          description: EBMeDS 1.0 response message
+          schema:
+            $ref: '#/definitions/dss-fhir-response'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
+
+  ########
+  # Questionnaire catalogue
+  ########
+  '/questionnaires':
+    get:
+      summary: List the available questionnaires
+      description: List the latest versions of all published questionnaires
+      tags:
+        - VKT
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/list-questionnaires'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  '/questionnaires/{id}':
+      get:
+        summary: Get the latest version of a specific questionnaire.
+        description: The latest published FHIR version of a questionnaire with this id.
+        parameters:
+          - name: id
+            in: path
+            description: The questionnaire ID.
+            required: true
+            type: integer
+        tags:
+          - VKT
+        responses:
+          200:
+            description: OK. Return Questionnaire FHIR resource.
+            schema:
+              $ref: '#/definitions/questionnaire'
+  '/questionnaires/{id}/{version}':
+      get:
+        summary: Get a specific version of a questionnaire.
+        description: A specific version of a published FHIR questionnaire with this id. The versions can be found at '/questionnaires'.
+        parameters:
+          - name: id
+            in: path
+            description: The questionnaire ID.
+            required: true
+            type: integer
+          - name: version
+            in: path
+            description: The version number
+            required: true
+            type: integer
+        tags:
+          - VKT
+        responses:
+          200:
+            description: OK. Return Questionnaire FHIR resource.
+            schema:
+              $ref: '#/definitions/questionnaire'
+
+
+
+  ########
+  # Coaching (i.e. STAR)
+  ########
+  '/coaching/dailyMessages':
+    get:
+      summary: Receive list of coaching messages from active coaching programs for all users.
+      description: STAR generates a daily list of messages to be sent to those users who have one or more active coaching programs. This endpoint supplies this list.
+      tags:
+        - Coaching
+      responses:
+        200:
+          description: A bundle of FHIR **Communication** resources.
+          schema:
+            $ref: '#/definitions/star-daily-messages'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  '/coaching/dailyMessages/user/{userID}':
+    get:
+      summary: Receive list of coaching messages for a specific user.
+      parameters:
+        - name: userID
+          in: path
+          description: The unique user ID as used elsewhere in the system, presumably a UUID
+          required: true
+          type: string
+          format: uuid
+      tags:
+        - Coaching
+      responses:
+        200:
+          description: A bundle of FHIR **Communication** resources.
+          schema:
+            $ref: '#/definitions/star-daily-messages'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  '/coaching/programs':
+    get:
+      summary: Receive a list of available coaching programs.
+      tags:
+        - Coaching
+      responses:
+        200:
+          description: An array of key/name pairs.
+          schema:
+            $ref: '#/definitions/star-coaching-programs'
+        default:
+            description: Unexpected error
+            schema:
+              $ref: '#/definitions/Error'
+  '/coaching/users':
+    post:
+      summary: Create a new user for STAR coaching.
+      parameters:
+        - name: userID
+          in: formData
+          required: true
+          type: string
+          format: string
+      tags:
+        - Coaching
+      responses:
+        201:
+          description: User created.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  '/coaching/users/{userID}':
+    get:
+      summary: Receive list of coaching programs for a specific user.
+      parameters:
+        - name: userID
+          in: path
+          description: The unique user ID as used elsewhere in the system, presumably a UUID
+          required: true
+          type: string
+          format: uuid
+      tags:
+        - Coaching
+      responses:
+        200:
+          description: An array of XXX.
+          schema:
+            $ref: '#/definitions/coaching-program-status'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a new program for user.
+      parameters:
+        - name: userID
+          in: path
+          description: The unique user ID as used elsewhere in the system, presumably a UUID
+          required: true
+          type: string
+          format: uuid
+        - name: programName
+          in: query
+          description: The ID of the type of STAR coaching program.
+          required: true
+          type: string
+      tags:
+        - Coaching
+      responses:
+        201:
+          description: Coaching program created.
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
+  '/coaching/users/{userID}/programs/{programName}':
+    get:
+      summary: Get status of given coaching program.
+      parameters:
+        - name: userID
+          in: path
+          description: The unique user ID as used elsewhere in the system, presumably a UUID
+          required: true
+          type: string
+          format: string
+        - name: programName
+          in: path
+          required: true
+          description: One of the program names (see above)
+          type: string
+      tags:
+        - Coaching
+      responses:
+        200:
+          description: TODO.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/star-coaching-program'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    patch:
+      summary: Change state of coaching program for user.
+      parameters:
+        - name: userID
+          in: path
+          description: The unique user ID as used elsewhere in the system, presumably a UUID
+          required: true
+          type: string
+          format: uuid
+        - name: programName
+          in: path
+          description: The ID of the type of STAR coaching program.
+          required: true
+          type: string
+        - name: state
+          in: query
+          description: The new state of the affected coaching program.
+          required: true
+          type: string
+      tags:
+        - Coaching
+      responses:
+        200:
+          description: Coaching program state changed.
+        # 404 not found?
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
+definitions:
+  dss-fhir-response:
+    type: object
+  dss-fhir-request:
+    type: object
+    properties:
+      patient:
+        type: object
+        properties:
+          reference:
+            type: string
+            description: TODO
+            example: 'Patient/example'
+      resourceType:
+        type: string
+        enum:
+        - 'Bundle'
+      id:
+        type: string
+        # format: uuid?
+      entry:
+        type: array
+        items:
+          $ref: '#/definitions/dss-fhir-request-entry'
+  dss-fhir-request-entry:
+    type: object
+  cds-services:
+    type: object
+    description: Standard CDS Hook response
+    properties:
+      services:
+        type: array
+        items:
+          type: object
+          properties:
+            hook:
+              type: string
+              description: Hook name, e.g. 'patient-view'
+            name:
+              type: string
+              description: Human readable service name e.g. "CMS drug ordination service"
+            description:
+              type: string
+              description: Longer description of service
+            id:
+              type: string
+              description: The {id} portion when calling this service at {baseURL}/cds-services/{id}
+            prefetch:
+              type: object
+              description: An object containing key/value pairs of FHIR queries to data that this service would like the EHR prefetch and provide on each service call. The key is a string that describes the type of data being requested and the value is a string representing the FHIR query.
+              example: 'An example is { "patient": "Patient/{{Patient.id}}" }.'
+  questionnaire-cds-request:
+    type: object
+    description: TODO
+    properties:
+      hookInstance:
+        type: string
+        format: uuid
+        description: TODO
+      fhirServer:
+        type: string
+        format: url
+        description: TODO
+      hook:
+        type: string
+        description: The hook name as given in the catalogue.
+      redirect:
+        type: string
+        format: url
+        description: TODO
+      user:
+        type: string
+        description: TODO
+      context:
+        type: object
+        description: TODO (empty?)
+      patient:
+        type: string
+        description: FHIR Patient.id
+      prefetch:
+        type: object
+        properties:
+          questionnaire:
+            type: object
+            properties:
+              response:
+               type: object
+               properties:
+                status:
+                  type: string
+                  description: HTTP response code from FHIR server, e.g. "200 OK"
+              resource:
+                $ref: '#/definitions/questionnaire'
+          patient:
+            type: object
+            properties:
+              response:
+               type: object
+               properties:
+                status:
+                  type: string
+                  description: HTTP response code from FHIR server, e.g. "200 OK"
+              resource:
+                $ref: '#/definitions/patient'
+  patient:
+    type: object
+
+  questionnaire:
+    type: object
+    description: Questionnaire resource (FHIR) with Duodecim extensions
+    properties:
+      concept:
+        type: array
+        description: TODO
+        items:
+          type: object
+          properties:
+            code:
+              type: string
+              description: TODO
+      date:
+        type: string
+        format: date # TODO RFCxxx?
+        description: TODO
+      extension:
+        type: array
+        maxItems: 1 # TODO is this true?
+        minItems: 1
+        items:
+          type: object
+          description: 'selfCareInstructions extension'
+          properties:
+            url:
+              type: string
+              format: url
+              enum:
+              - 'https://www.ebmeds.org/form#selfCareInstructions'
+            extension:
+              type: array
+              minItems: 1
+              maxItems: 1
+              items:
+                type: object
+                properties:
+                  url:
+                    type: string
+                  valueString:
+                    description: TODO
+                    type: string
+                    format: url
+      id:
+        type: string
+        example: "QUESTIONNAIRE1"
+      identifier:
+        type: array
+        minItems: 1
+        maxItems: 1
+        items:
+          type: object
+          properties:
+            system:
+              type: string
+              format: url
+              example: "https://www.ebmeds.org/form/api/FHIR/forms/export/701"
+            value:
+              type: string
+              example: "701"
+      item:
+        $ref: '#/definitions/questionnaire-item'
+      language:
+        type: string
+        description: "TODO: RFCXXX language code"
+        example: "fi"
+      meta:
+        type: object
+        properties:
+          lastUpdated:
+            type: string
+            format: date # RFC what?
+          versionId:
+            type: string
+      publisher:
+        type: string
+      resourceType:
+        description: 'Always "Questionnaire"'
+        type: string
+        enum:
+        - "Questionnaire"
+      status:
+        type: string
+        enum:
+        - draft
+        - published
+        - retired
+      text: # is this a FHIR extension?
+        type: object
+        properties:
+          div:
+            type: string
+            format: xml
+          status:
+            type: string
+            example: "generated" # any other possible values?
+      title:
+        type: string
+        description: TODO
+      url:
+        type: string
+        description: TODO
+        format: url
+      useContext:
+        type: array
+        minItems: 1
+        maxItems: 1
+        items:
+          type: object
+          properties:
+            coding:
+              type: array
+              minItems: 1
+              maxItems: 1
+              items:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    example: 123
+                  system:
+                    type: string
+                    format: url
+                    description: TODO
+                    example: 'http://questionnaire/types'
+
+  questionnaire-item:
+    # This might have to be split up into different definitions depending on the question type. Not all props are present in all types etc.
+    description: "A Questionnaire item. Can be nested, Swagger has trouble showing that."
+    type: array
+    items:
+      type: object
+      properties:
+        item:
+          $ref: '#/definitions/questionnaire-item' # doesn't seem to show properly
+        concept:
+          type: array
+          minItems: 1
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+              display:
+                type: string
+                example: 'ICD-10'
+              system:
+                type: string
+                example: 'urn:1.2.246.537.6.1'
+        enableWhen:
+          type: array
+          items:
+            type: object
+            description: 'Condition for when to show this item'
+            properties:
+              answerString:
+                type: string
+              question:
+                type: string
+                description: 'ID of another question'
+        linkId:
+          type: string
+        text:
+          type: string
+        type:
+          type: string
+        option:
+          type: array
+          items:
+            type: object
+            properties:
+              valueCoding:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    description: TODO
+                  display:
+                    type: string
+                    description: TODO
+                  id:
+                    type: string
+                    description: TODO
+        repeats:
+          description: TODO
+          type: boolean
+
+  questionnaire-response:
+    type: object
+    properties:
+      resourceType:
+        description: 'Always "QuestionnaireResponse".'
+        type: string
+        enum:
+        - QuestionnaireResponse
+      id:
+        type: string
+        example: "QUESTIONNAIRERESPONSE1-PATIENT2"
+      questionnaire:
+        type: object
+        properties:
+          reference:
+            type: string
+            description: TODO
+            example: "Questionnaire/QUESTIONNAIRE1"
+      status:
+        type: string
+        enum:
+        - in-progress
+        - completed
+        - amended
+        - entered-in-error
+        - stopped
+      subject:
+        type: object
+        properties:
+          reference:
+            type: string
+            description: TODO
+            example: "Patient/PATIENT2"
+      author:
+        type: object
+        properties:
+          reference:
+            type: string
+            description: TODO
+            example: "Practitioner/PRACTITIONER1"
+      authored:
+        type: string
+        format: date # TODO: RFCxxx?
+      item:
+        type: array
+        items:
+          $ref: '#/definitions/questionnaire-response-item'
+  questionnaire-response-item:
+    type: object
+    properties:
+      item:
+        $ref: '#/definitions/questionnaire-response-item' # recursion
+      linkId:
+        type: string
+        example: "1161"
+        description: "ID of a specific question"
+      answer:
+        type: array
+        items:
+          type: object
+          properties:
+            # TODO: can there only be one of these per answer? Or multiple?
+            valueBoolean:
+              type: boolean
+            valueDecimal:
+              type: number
+              format: float
+            valueInteger:
+              type: integer
+            valueDate:
+              type: string
+              format: date
+            valueDateTime:
+              type: string
+              format: date-time
+            valueString:
+              type: string
+  questionnaire-cds-response:
+    type: object
+    description: CDS response cards
+    properties:
+      cards:
+        type: array
+        items:
+          type: object
+          description: Card containing suggestions, for both the patient and practitioner.
+          properties:
+            summary:
+              type: string
+            indicator:
+              type: string
+              enum:
+                - success
+            detail:
+              type: string
+            suggestions:
+              type: array
+              items:
+                $ref: '#/definitions/questionnaire-activity-definition'
+  questionnaire-activity-definition:
+    type: object
+    description: FHIR ActivityDefinition based on a filled-out Questionnaire
+    properties:
+      identifier:
+        type: array
+        minItems: 1
+        maxItems: 1
+        items:
+          type: object
+          properties:
+            rule:
+              type: string
+            reminder:
+              type: string
+      description:
+        type: string
+        description: Human-readable message given to the user/practitioner.
+      code:
+        type: object
+        properties:
+          coding:
+            type: array
+            items:
+              type: object
+              properties:
+                system:
+                  type: string
+                  description: E.g. DMPReminderLevel or some other official code system
+                display:
+                  type: string
+                  description: Short description of the activity suggested, for e.g. a button to click.
+                code:
+                  type: string
+                  description: The actual code.
+      timingPeriod:
+        type: object
+        properties:
+          start:
+            type: string # or date?
+          end:
+            type: string # or date?
+      participant:
+        type: object
+        properties:
+          type: # TODO are type and role correctly described?
+            type: string
+            enum:
+              - patient
+              - practitioner
+          role:
+            type: string
+      title:
+        type: string
+      kind:
+        type: string
+        enum:
+          - Observation
+          - TODO # TODO
+      copyright:
+        type: string
+        enum:
+          - "Kustannus Oy Duodecim, 2017"
+
+  list-questionnaires:
+    type: array
+    description: Array of all available and published Questionnaire FHIR resources.
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        url:
+          type: string
+          format: url
+        createdAt:
+          type: string
+          format: date
+          description: The date when the form was first created
+        modifiedAt:
+          type: string
+          format: date
+          description: The date when the latest form version was published
+        versions:
+          type: array
+          description: Array of all version numbers of a form, and their publish dates
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                description: Version ID, not the same as the questionnaire ID.
+              createdAt:
+                type: string
+                format: date
+                description: Creation date of this version of the questionnaire
+  star-daily-messages:
+    type: object
+  star-coaching-programs:
+    type: object
+  coaching-program-status:
+    type: object
+    properties:
+      patient:
+        type: string
+        description: User ID
+      program:
+        type: string
+        description: Name of coaching program
+      status:
+        type: string
+        description: Status code of program. E.g. 'fi.duodecim.star.coaching.status.end'
+  star-coaching-program:
+    type: object
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
