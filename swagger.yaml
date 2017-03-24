@@ -44,7 +44,7 @@ paths:
       parameters:
         - name: questionnaire-cds-request
           in: body
-          description: TODO
+          description: A CDS Hook call with the QuestionnaireResponse as payload.
           required: true
           schema:
             $ref: '#/definitions/questionnaire-cds-request'
@@ -413,31 +413,51 @@ definitions:
         example: '1288992'
       prefetch:
         type: object
+        description: The meat of the hook call. We need the QuestionnaireResponse and Patient resources.
         properties:
-          questionnaire:
+          questionnaireResponse:
             type: object
             properties:
               response:
-               type: object
-               properties:
+                description: If this resource was gotten from a FHIR server, what was its HTTP response?
+                type: object
+                properties:
                 status:
                   type: string
-                  description: HTTP response code from the FHIR server, e.g. "200 OK"
+                  description: HTTP response code from the FHIR server
+                  example: 200 OK
               resource:
                 $ref: '#/definitions/questionnaire'
           patient:
             type: object
             properties:
               response:
-               type: object
-               properties:
-                status:
-                  type: string
-                  description: HTTP response code from FHIR server, e.g. "200 OK"
+                description: If this resource was gotten from a FHIR server, what was its HTTP response?
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: HTTP response code from FHIR server
+                    example: 200 OK
               resource:
                 $ref: '#/definitions/patient'
   patient:
+    description: "A FHIR Patient resource. NOTE: The data should be anonymized! EBMeDS minimum requirements are birthDate and gender"
     type: object
+    properties:
+      birthDate:
+        type: string
+        format: date
+        example: "1976-07-12"
+      gender:
+        type: string
+        enum:
+          - male
+          - female
+          - other
+          - unknown
+        example: female
+    # TODO more properties needed in Patient?
 
   questionnaire:
     type: object
