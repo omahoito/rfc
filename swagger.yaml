@@ -79,7 +79,7 @@ paths:
             $ref: '#/definitions/Error'
   '/cds-services/general-cds':
     post:
-      summary: The full set of analysis as produced by the EBMeDS engine.
+      summary: The full set of analysis as produced by the EBMeDS engine. Not available at the moment.
       description: >
         Produce reminders and links from the given patient data. This utilizes the entire set of
         EBMeDS engine functions as seen in EBMeDS 1.0. Reminders are in regard to diagnoses,
