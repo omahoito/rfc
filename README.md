@@ -11,7 +11,7 @@ Please see https://github.com/omahoito/rfc/projects/1 for the progress of reques
 
 Current schemas are in https://simplifier.net/FinnishPHR
 
-## Profiling guidelines
+## <a name="profiling_guide"></a>Profiling guidelines
 
 * Profiles define the structures of the resources, data types, extensions and constraints used in ODA FHIR API. Profile implementers are expected to be familiar with the HL7 guidelines: http://hl7.org/fhir/2017Jan/profiling.html
 * Profile names start with project identifier "ODA" and the profile name must contain the resource and the special domain of the particular resource (if any). For example a care plan for customer's self care is named as "ODA self-CarePlan profile". 
@@ -116,20 +116,11 @@ Data models of the following profiles:
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-PHR-Datamodel.plantuml?6) 
 <!--- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
 
-<!--
 
-![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/datamodel.md?2)
---->
+## Contributing
 
-<!--- This generates a picture based on datamodel.md. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 
+If you are interested in contributing new profiles, please feel free to do so. The profiles have been made with [Forge](https://fhir.furore.com/forge/), and the same tool can be used for further development or modification of existing profiles or creation of new ones. Please see the [Profiling section](#profiling_guide) for further information.
 
-*Initial version from an old architecture document, to be updated*
+Contributions are done through pull requests. Profile files are checked with [xmllint](http://xmlsoft.org/xmllint.html) and [Travis](https://travis-ci.org/). Please add a validation test for the profile to the [validation script] (https://github.com/omahoito/rfc/blob/master/rfctravisscript.sh) together with the schema file that the profile is based on. Passing the validation test is a precondition for new profiles to be accepted.
 
---->
-
-
-<!---
-
-![Data model](http://g.gravizo.com/source?https%3A%2F%2Fraw.githubusercontent.com%2Fomahoito%2Frfc%2FPLANTUML_Diagrams%2Fmaster%2Fmodel.dot%3F2)
---->
-<!-- Increment the last number (after %3F) to invalidate gravizo and browser cache -->
+Schema validation files for DSTU2 profiles are located [here](https://github.com/omahoito/rfc/tree/master/xsd/STU2/fhir-all-xsd) and files for STU3 can be found [here](https://github.com/omahoito/rfc/tree/master/xsd/STU3/fhir-all-xsd). The schema files end with a xsd suffix.
