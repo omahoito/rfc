@@ -1,9 +1,9 @@
 # Copypaste this into http://editor.swagger.io to get a nicely rendered view of the REST API.
 swagger: '2.0'
 info:
-  title: ODA API for EBMeDS 2.0
+  title: ODA API for EBMeDS (ALPHA, not for use)
   description: RESTful FHIR resources for clinical decision support in ODA 1
-  version: "0.2.0"
+  version: "0.1.0-alpha"
 # the domain of the service
 host: api.ebmedscloud.org
 # array of all schemes that your API supports
