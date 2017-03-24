@@ -670,11 +670,11 @@ definitions:
         description: The status of this QuestionnaireResponse. In practice this should never be 'stopped' or 'entered-in-error' when being sent to EBMeDS.
         example: completed
         enum:
-          - in-progress
-          - completed
-          - amended
-          - entered-in-error
-          - stopped
+        - in-progress
+        - completed
+        - amended
+        - entered-in-error
+        - stopped
       subject:
         type: object
         description: A reference to the subject of this Questionnaire, usually a Patient.id
