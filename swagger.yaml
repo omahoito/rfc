@@ -427,7 +427,7 @@ definitions:
                   description: HTTP response code from the FHIR server
                   example: 200 OK
               resource:
-                $ref: '#/definitions/questionnaire'
+                $ref: '#/definitions/questionnaireResponse'
           patient:
             type: object
             properties:
@@ -646,7 +646,7 @@ definitions:
           description: TODO
           type: boolean
 
-  questionnaire-response:
+  questionnaireResponse:
     type: object
     properties:
       resourceType:
