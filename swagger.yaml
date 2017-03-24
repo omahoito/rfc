@@ -652,6 +652,7 @@ definitions:
       resourceType:
         description: 'Always "QuestionnaireResponse".'
         type: string
+        example: QuestionnaireResponse
         enum:
         - QuestionnaireResponse
       id:
@@ -662,52 +663,58 @@ definitions:
         properties:
           reference:
             type: string
-            description: TODO
+            description: The reference to the original Questionnaire that was filled out.
             example: "Questionnaire/QUESTIONNAIRE1"
       status:
         type: string
+        description: The status of this QuestionnaireResponse. In practice this should never be 'stopped' or 'entered-in-error' when being sent to EBMeDS.
+        example: completed
         enum:
-        - in-progress
-        - completed
-        - amended
-        - entered-in-error
-        - stopped
+          - in-progress
+          - completed
+          - amended
+          - entered-in-error
+          - stopped
       subject:
         type: object
+        description: A reference to the subject of this Questionnaire, usually a Patient.id
         properties:
           reference:
             type: string
-            description: TODO
             example: "Patient/PATIENT2"
-      author:
-        type: object
-        properties:
-          reference:
-            type: string
-            description: TODO
-            example: "Practitioner/PRACTITIONER1"
-      authored:
-        type: string
-        format: date # TODO: RFCxxx?
+#      author:
+#        type: object
+#        description: A reference to the author of the Questionnaire, in practice this is Duodecim.
+#        properties:
+#          reference:
+#            type: string
+#            example: "Practitioner/PRACTITIONER1"
+#      authored:
+#        type: string
+#        format: date
+#        description: When was the questionnaire first authored?
+#        example: '2017-03-20'
       item:
         type: array
         items:
-          $ref: '#/definitions/questionnaire-response-item'
-  questionnaire-response-item:
+          $ref: '#/definitions/questionnaireResponse-item'
+  questionnaireResponse-item:
     type: object
     properties:
       item:
-        $ref: '#/definitions/questionnaire-response-item' # recursion
+        description: items may contain other items.
+        $ref: '#/definitions/questionnaire-response-item' # recursion, doesn't seem to work very well to show
       linkId:
         type: string
         example: "1161"
         description: "ID of a specific question"
       answer:
         type: array
+        description: The actual answers to a specific question. May contain many answers, usually only one.
         items:
           type: object
+          description: We may have many answers, but each object may only contain one of the listed properties.
           properties:
-            # TODO: can there only be one of these per answer? Or multiple?
             valueBoolean:
               type: boolean
             valueDecimal:
