@@ -546,7 +546,11 @@ definitions:
               example: questionnaire-cds
             prefetch:
               type: object
-              description: An object containing key/value pairs of FHIR queries to data that this service would like the EHR prefetch and provide on each service call. The key is a string that describes the type of data being requested and the value is a string representing the FHIR query.
+              description: >
+                An object containing key/value pairs of FHIR queries to data that this service
+                would like the EHR prefetch and provide on each service call. The key is a string
+                that describes the type of data being requested and the value is a string
+                representing the FHIR query.
               example:
                 questionnaireResponse: 'QuestionnaireResponse/Patient.id'
   questionnaire-cds-request:
