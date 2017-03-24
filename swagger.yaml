@@ -65,7 +65,7 @@ paths:
           schema:
             $ref: '#/definitions/dss-fhir-request'
       tags:
-        - EBMeDS
+        - CDS Hooks
       responses:
         200:
           description: EBMeDS 1.0 response message
@@ -98,7 +98,7 @@ paths:
             $ref: '#/definitions/Error'
   '/questionnaires/{id}':
       get:
-        summary: Get the latest version of a specific questionnaire.
+        summary: Get the latest version of a specific FHIR questionnaire.
         description: The latest published FHIR version of a questionnaire with this id.
         parameters:
           - name: id
@@ -851,3 +851,6 @@ definitions:
         format: int32
       message:
         type: string
+    example:
+      code: 45
+      message: 'Unexpected error'
