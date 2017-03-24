@@ -58,15 +58,15 @@ paths:
         400:
           description: Bad request
           schema:
-            $ref: '#/definitions/BadRequest'
+            $ref: '#/definitions/Error'
         401:
           description: Unauthorized
           schema:
-            $ref: '#/definitions/Unauthorized'
+            $ref: '#/definitions/Error'
         500:
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/InternalServerError'
+            $ref: '#/definitions/Error'
         default:
           description: Unknown error
           schema:
@@ -96,15 +96,15 @@ paths:
         400:
           description: Bad request
           schema:
-            $ref: '#/definitions/BadRequest'
+            $ref: '#/definitions/Error'
         401:
           description: Unauthorized
           schema:
-            $ref: '#/definitions/Unauthorized'
+            $ref: '#/definitions/Error'
         500:
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/InternalServerError'
+            $ref: '#/definitions/Error'
         default:
           description: Unknown error
           schema:
@@ -130,11 +130,11 @@ paths:
         401:
           description: Unauthorized
           schema:
-            $ref: '#/definitions/Unauthorized'
+            $ref: '#/definitions/Error'
         500:
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/InternalServerError'
+            $ref: '#/definitions/Error'
         default:
           description: Unknown error
           schema:
@@ -159,15 +159,15 @@ paths:
           401:
             description: Unauthorized
             schema:
-              $ref: '#/definitions/Unauthorized'
+              $ref: '#/definitions/Error'
           404:
             description: Not found
             schema:
-              $ref: '#/definitions/NotFound'
+              $ref: '#/definitions/Error'
           500:
             description: Internal Server Error
             schema:
-              $ref: '#/definitions/InternalServerError'
+              $ref: '#/definitions/Error'
           default:
             description: Unknown error
             schema:
@@ -197,15 +197,15 @@ paths:
           401:
             description: Unauthorized
             schema:
-              $ref: '#/definitions/Unauthorized'
+              $ref: '#/definitions/Error'
           404:
             description: Not found
             schema:
-              $ref: '#/definitions/NotFound'
+              $ref: '#/definitions/Error'
           500:
             description: Internal Server Error
             schema:
-              $ref: '#/definitions/InternalServerError'
+              $ref: '#/definitions/Error'
           default:
             description: Unknown error
             schema:
@@ -229,11 +229,11 @@ paths:
         401:
           description: Unauthorized
           schema:
-            $ref: '#/definitions/Unauthorized'
+            $ref: '#/definitions/Error'
         500:
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/InternalServerError'
+            $ref: '#/definitions/Error'
         default:
           description: Unknown error
           schema:
@@ -258,15 +258,15 @@ paths:
         401:
           description: Unauthorized
           schema:
-            $ref: '#/definitions/Unauthorized'
+            $ref: '#/definitions/Error'
         404:
           description: Not found
           schema:
-            $ref: '#/definitions/NotFound'
+            $ref: '#/definitions/Error'
         500:
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/InternalServerError'
+            $ref: '#/definitions/Error'
         default:
           description: Unknown error
           schema:
@@ -284,11 +284,11 @@ paths:
         401:
           description: Unauthorized
           schema:
-            $ref: '#/definitions/Unauthorized'
+            $ref: '#/definitions/Error'
         500:
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/InternalServerError'
+            $ref: '#/definitions/Error'
         default:
           description: Unknown error
           schema:
@@ -313,19 +313,19 @@ paths:
         400:
           description: Bad request
           schema:
-            $ref: '#/definitions/BadRequest'
+            $ref: '#/definitions/Error'
         401:
           description: Unauthorized
           schema:
-            $ref: '#/definitions/Unauthorized'
+            $ref: '#/definitions/Error'
         409: # userID already exists
           description: Conflict
           schema:
-            $ref: '#/definitions/Conflict'
+            $ref: '#/definitions/Error'
         500:
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/InternalServerError'
+            $ref: '#/definitions/Error'
         default:
           description: Unknown error
           schema:
@@ -350,15 +350,15 @@ paths:
         401:
           description: Unauthorized
           schema:
-            $ref: '#/definitions/Unauthorized'
+            $ref: '#/definitions/Error'
         404:
           description: Not found
           schema:
-            $ref: '#/definitions/NotFound'
+            $ref: '#/definitions/Error'
         500:
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/InternalServerError'
+            $ref: '#/definitions/Error'
         default:
           description: Unknown error
           schema:
@@ -385,19 +385,19 @@ paths:
         400:
           description: Bad request
           schema:
-            $ref: '#/definitions/BadRequest'
+            $ref: '#/definitions/Error'
         401:
           description: Unauthorized
           schema:
-            $ref: '#/definitions/Unauthorized'
+            $ref: '#/definitions/Error'
         409: # userID already exists
           description: Conflict
           schema:
-            $ref: '#/definitions/Conflict'
+            $ref: '#/definitions/Error'
         500:
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/InternalServerError'
+            $ref: '#/definitions/Error'
         default:
           description: Unknown error
           schema:
@@ -430,15 +430,15 @@ paths:
         401:
           description: Unauthorized
           schema:
-            $ref: '#/definitions/Unauthorized'
+            $ref: '#/definitions/Error'
         404:
           description: Not found
           schema:
-            $ref: '#/definitions/NotFound'
+            $ref: '#/definitions/Error'
         500:
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/InternalServerError'
+            $ref: '#/definitions/Error'
         default:
           description: Unknown error
           schema:
@@ -470,19 +470,19 @@ paths:
         400:
           description: Bad request
           schema:
-            $ref: '#/definitions/BadRequest'
+            $ref: '#/definitions/Error'
         401:
           description: Unauthorized
           schema:
-            $ref: '#/definitions/Unauthorized'
+            $ref: '#/definitions/Error'
         404:
           description: Not found
           schema:
-            $ref: '#/definitions/NotFound'
+            $ref: '#/definitions/Error'
         500:
           description: Internal Server Error
           schema:
-            $ref: '#/definitions/InternalServerError'
+            $ref: '#/definitions/Error'
         default:
           description: Unknown error
           schema:
@@ -1059,6 +1059,7 @@ definitions:
         description: Status code of program. E.g. 'fi.duodecim.star.coaching.status.end'
   star-coaching-program:
     type: object
+
   Error:
     type: object
     properties:
@@ -1068,5 +1069,5 @@ definitions:
       message:
         type: string
     example:
-      code: 45
-      message: 'Unknown error'
+      code: 500
+      message: 'Some error message'
