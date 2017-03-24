@@ -2,7 +2,9 @@
 swagger: '2.0'
 info:
   title: ODA API for EBMeDS (ALPHA, not for use)
-  description: RESTful FHIR resources for clinical decision support in ODA 1
+  description: >
+    RESTful FHIR resources for clinical decision support in ODA 1. This is a preview,
+    some endpoint names may change, some JSON fields may change. The overall structure is like this.
   version: "0.1.0-alpha"
 # the domain of the service
 host: ebmedscloud.org
@@ -447,7 +449,7 @@ paths:
           schema:
             $ref: '#/definitions/Error'
     patch:
-      summary: Change state of coaching program for user.
+      summary: Change status of coaching program for user.
       parameters:
         - name: userID
           in: path
@@ -531,7 +533,7 @@ definitions:
             hook:
               type: string
               description: Hook name
-              example: patient-view
+              example: questionnaire-completed
             name:
               type: string
               description: Human readable service name
