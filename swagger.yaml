@@ -20,8 +20,7 @@ paths:
   '/cds-services':
     get:
       summary: Available CDS Hooks
-      description: |
-        The cds-services endpoint returns information about the available CDS services (i.e. events/hooks) that *EBMeDS* may subscribe to. These event hooks follow the [CDS Hooks](http://cds-hooks.org/) standard. These services are also listed in this API description.
+      description: The cds-services endpoint returns information about the available CDS services (i.e. events/hooks) that *EBMeDS* may subscribe to. These event hooks follow the [CDS Hooks](http://cds-hooks.org/) standard. These services are also listed in this API description.
       tags:
         - CDS Hooks
       responses:
@@ -38,9 +37,10 @@ paths:
   '/cds-services/questionnaire-cds':
     post:
       summary: Send a QuestionnaireResponse to EBMeDS for analysis.
-      description: Post a single filled-out FHIR Questionnaire (i.e. a QuestionnaireResponse) |
-      to EBMeDS. Returns a CDS Hook Card that contains a Bundle of ActivityDefinitions, i.e. |
-      suggestions that can be both for patients and for practitioners.
+      description: >
+        Post a single filled-out FHIR Questionnaire (i.e. a QuestionnaireResponse)
+        to EBMeDS. Returns a CDS Hook Card that contains a Bundle of ActivityDefinitions, i.e.
+        suggestions that can be both for patients and for practitioners.
       parameters:
         - name: questionnaire-cds-request
           in: body
@@ -58,7 +58,11 @@ paths:
   '/cds-services/general-cds':
     post:
       summary: The full set of analysis as produced by the EBMeDS engine.
-      description: Produce reminders and links from the given patient data. This utilizes the entire set of EBMeDS engine functions as seen in EBMeDS 1.0. Reminders are in regard to diagnoses, medication dosage, medication interactions, allergies, pregnancy and lactation. In ODA also questionnaire responses are read.
+      description: >
+        Produce reminders and links from the given patient data. This utilizes the entire set of
+        EBMeDS engine functions as seen in EBMeDS 1.0. Reminders are in regard to diagnoses,
+        medication dosage, medication interactions, allergies, pregnancy and lactation. In ODA
+        also questionnaire responses are read.
       parameters:
         - name: dss-fhir-request
           in: body
@@ -86,7 +90,8 @@ paths:
     get:
       summary: List the available questionnaires
       description: List the latest versions of all published FHIR questionnaires
-      produces: 'application/json'
+      produces:
+        - 'application/json'
       tags:
         - VKT
       responses:
@@ -366,8 +371,9 @@ definitions:
               description: An object containing key/value pairs of FHIR queries to data that this service would like the EHR prefetch and provide on each service call. The key is a string that describes the type of data being requested and the value is a string representing the FHIR query.
   questionnaire-cds-request:
     type: object
-    description: A standard CDS Hook call, with the QuestionnaireResponse resource in the prefetch |
-    property. See http://cds-hooks.org/#calling-a-cds-service for details.
+    description: >
+      A standard CDS Hook call, with the QuestionnaireResponse resource in the prefetch
+      property. See http://cds-hooks.org/#calling-a-cds-service for details.
     properties:
       hookInstance:
         type: string
@@ -391,14 +397,16 @@ definitions:
         example: 'http://hooks2.smarthealthit.org/service-done.html'
       user:
         type: string # TODO: enum and regex to only allow Practitioner/123, Patient/123 and RelatedPerson/123 where 123 is id
-        description: The FHIR resource type and id representing the current user, i.e. the one |
-        calling the service. The type is one of Practitioner, Patient or RelatedPerson
+        description: >
+          The FHIR resource type and id representing the current user, i.e. the one
+          calling the service. The type is one of Practitioner, Patient or RelatedPerson
         example: Practitioner/123
       context:
         # TODO should perhaps the QuestionnaireResponse be here instead? It's not stored in the FHIR server, is it?
         type: object
-        description: Hook-specific contextual data that the CDS service will need. Especially data |
-        that can not be gotten from the FHIR server.
+        description: >
+          Hook-specific contextual data that the CDS service will need. Especially data
+          that can not be gotten from the FHIR server.
       patient:
         type: string
         description: The FHIR Patient.id in the current context.
