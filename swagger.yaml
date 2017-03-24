@@ -709,14 +709,14 @@ definitions:
         $ref: '#/definitions/questionnaire-item'
       language:
         type: string
-        description: "TODO: RFCXXX language code"
+        description: "A two-letter language code, ISO 639-1."
         example: "fi"
       meta:
         type: object
         properties:
           lastUpdated:
             type: string
-            format: date # RFC what?
+            format: dateTime
           versionId:
             type: string
       publisher:
@@ -732,7 +732,7 @@ definitions:
         - draft
         - published
         - retired
-      text: # is this a FHIR extension?
+      text:
         type: object
         properties:
           div:
@@ -740,7 +740,12 @@ definitions:
             format: xml
           status:
             type: string
-            example: "generated" # any other possible values?
+            enum:
+              - generated
+              - extensions
+              - additional
+              - empty
+            example: "generated"
       title:
         type: string
         description: TODO
