@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # reset the dictionary before adding new elements
-# xmap=()  # or '
 unset xmap
 
 # paths to the folders. need absolute paths for xsd referencing to work
