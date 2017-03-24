@@ -5,12 +5,12 @@ info:
   description: RESTful FHIR resources for clinical decision support in ODA 1
   version: "0.1.0-alpha"
 # the domain of the service
-host: api.ebmedscloud.org
+host: ebmedscloud.org
 # array of all schemes that your API supports
 schemes:
   - https
 # will be prefixed to all paths
-basePath: /rest
+basePath: /api/v1
 produces:
   - application/json+fhir
 paths:
@@ -91,6 +91,8 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/list-questionnaires'
+          example:
+            $ref: '#/definitions/list-questionnaires-example'
         default:
           description: Unexpected error
           schema:
@@ -361,7 +363,6 @@ definitions:
             prefetch:
               type: object
               description: An object containing key/value pairs of FHIR queries to data that this service would like the EHR prefetch and provide on each service call. The key is a string that describes the type of data being requested and the value is a string representing the FHIR query.
-              example: 'An example is { "patient": "Patient/{{Patient.id}}" }.'
   questionnaire-cds-request:
     type: object
     description: TODO
@@ -787,7 +788,7 @@ definitions:
           description: The date when the form was first created
         modifiedAt:
           type: string
-          format: date
+          format: dateTime
           description: The date when the latest form version was published
         versions:
           type: array
@@ -800,8 +801,31 @@ definitions:
                 description: Version ID, not the same as the questionnaire ID.
               createdAt:
                 type: string
-                format: date
+                format: dateTime
                 description: Creation date of this version of the questionnaire
+  list-questionnaires-example:
+    - id: 1
+      title: Example questionnaire one
+      url: http://ebmedscloud.org/api/v1/questionnaires/1
+      createdAt: 2017-01-24T13:10:02.3
+      modifiedAt: 2017-03-24T16:40:53.0
+      versions:
+        - id: 3
+          createdAt: 2016-01-24T09:09:09.9
+        - id: 2
+          createdAt: 2012-02-22T09:09:09.9
+    - id: 2
+      title: Example questionnaire two
+      url: http://ebmedscloud.org/api/v1/questionnaires/1
+      createdAt: 2016-01-24T09:09:09.9
+      modifiedAt: 2017-03-24T16:45:00.0
+      versions:
+        - id: 5
+          createdAt: 2016-01-24T09:09:09.9
+        - id: 4
+          createdAt: 2012-01-24T09:09:09.9
+        - id: 2
+          createdAt: 2010-01-24T09:09:09.9
   star-daily-messages:
     type: object
   star-coaching-programs:
