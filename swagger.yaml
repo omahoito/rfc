@@ -84,6 +84,7 @@ paths:
     get:
       summary: List the available questionnaires
       description: List the latest versions of all published questionnaires
+      produces: application/json
       tags:
         - VKT
       responses:
@@ -92,7 +93,7 @@ paths:
           schema:
             $ref: '#/definitions/list-questionnaires'
           examples:
-            application/json+fhir:
+            application/json:
               - id: 1
                 title: Example questionnaire one
                 url: http://ebmedscloud.org/api/v1/questionnaires/1
