@@ -526,19 +526,30 @@ definitions:
           properties:
             hook:
               type: string
-              description: Hook name, e.g. 'patient-view'
+              description: Hook name
+              example: patient-view
             name:
               type: string
-              description: Human readable service name e.g. "CMS drug ordination service"
+              description: Human readable service name
+              example: ODA Questionnaire analysis service
             description:
               type: string
               description: Longer description of service
+              example: This is a longer description of a hypothetical CDS Hook service.
             id:
               type: string
               description: The {id} portion when calling this service at {baseURL}/cds-services/{id}
+              example: questionnaire-cds
             prefetch:
               type: object
               description: An object containing key/value pairs of FHIR queries to data that this service would like the EHR prefetch and provide on each service call. The key is a string that describes the type of data being requested and the value is a string representing the FHIR query.
+              example:
+                type: object
+                properties:
+                  questionnaireResponse:
+                    type: string
+                    enum:
+                      - 'QuestionnaireResponse/Patient.id'
   questionnaire-cds-request:
     type: object
     description: >
