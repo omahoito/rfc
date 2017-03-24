@@ -93,7 +93,7 @@ paths:
           schema:
             $ref: '#/definitions/list-questionnaires'
           examples:
-            application/json:
+            application/json: |
               - id: 1
                 title: Example questionnaire one
                 url: http://ebmedscloud.org/api/v1/questionnaires/1
