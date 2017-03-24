@@ -30,6 +30,10 @@ paths:
             type: array
             items:
               $ref: '#/definitions/cds-services'
+        500:
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/Error'
         default:
           description: Unknown error
           schema:
