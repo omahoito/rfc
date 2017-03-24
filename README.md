@@ -121,6 +121,6 @@ Data models of the following profiles:
 
 If you are interested in contributing new profiles, please feel free to do so. The profiles have been made with [Forge](https://fhir.furore.com/forge/), and the same tool can be used for further development or modification of existing profiles or creation of new ones. Please see the [Profiling section](#profiling_guide) for further information.
 
-Contributions are done through pull requests. Profile files are checked with [xmllint](http://xmlsoft.org/xmllint.html) and [Travis](https://travis-ci.org/). Please add a validation test for the profile to the [validation script] (https://github.com/omahoito/rfc/blob/master/rfctravisscript.sh) together with the schema file that the profile is based on. Passing the validation test is a precondition for new profiles to be accepted.
+Contributions are done through pull requests. Profile files are checked with [xmllint](http://xmlsoft.org/xmllint.html) and [Travis](https://travis-ci.org/). Please add a validation test for the profile to the [validation script](https://github.com/omahoito/rfc/blob/master/rfctravisscript.sh) together with the schema file that the profile is based on. Passing the validation test is a precondition for new profiles to be accepted.
 
 Schema validation files for DSTU2 profiles are located [here](https://github.com/omahoito/rfc/tree/master/xsd/STU2/fhir-all-xsd) and files for STU3 can be found [here](https://github.com/omahoito/rfc/tree/master/xsd/STU3/fhir-all-xsd). The schema files end with a xsd suffix.
