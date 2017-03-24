@@ -31,7 +31,7 @@ paths:
             items:
               $ref: '#/definitions/cds-services'
         default:
-          description: Unexpected error
+          description: Unknown error
           schema:
             $ref: '#/definitions/Error'
   '/cds-services/questionnaire-cds':
@@ -55,6 +55,22 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/questionnaire-cds-response'
+        400:
+          description: Bad request
+          schema:
+            $ref: '#/definitions/BadRequest'
+        401:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Unauthorized'
+        500:
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/InternalServerError'
+        default:
+          description: Unknown error
+          schema:
+            $ref: '#/definitions/Error'
   '/cds-services/general-cds':
     post:
       summary: The full set of analysis as produced by the EBMeDS engine.
@@ -77,8 +93,20 @@ paths:
           description: EBMeDS 1.0 response message
           schema:
             $ref: '#/definitions/dss-fhir-response'
+        400:
+          description: Bad request
+          schema:
+            $ref: '#/definitions/BadRequest'
+        401:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Unauthorized'
+        500:
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/InternalServerError'
         default:
-          description: Unexpected error
+          description: Unknown error
           schema:
             $ref: '#/definitions/Error'
 
@@ -99,8 +127,16 @@ paths:
           description: 'OK'
           schema:
             $ref: '#/definitions/list-questionnaires'
+        401:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Unauthorized'
+        500:
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/InternalServerError'
         default:
-          description: Unexpected error
+          description: Unknown error
           schema:
             $ref: '#/definitions/Error'
   '/questionnaires/{id}':
@@ -120,6 +156,22 @@ paths:
             description: OK. Return Questionnaire FHIR resource.
             schema:
               $ref: '#/definitions/questionnaire'
+          401:
+            description: Unauthorized
+            schema:
+              $ref: '#/definitions/Unauthorized'
+          404:
+            description: Not found
+            schema:
+              $ref: '#/definitions/NotFound'
+          500:
+            description: Internal Server Error
+            schema:
+              $ref: '#/definitions/InternalServerError'
+          default:
+            description: Unknown error
+            schema:
+              $ref: '#/definitions/Error'
   '/questionnaires/{id}/{version}':
       get:
         summary: Get a specific version of a questionnaire.
@@ -142,7 +194,22 @@ paths:
             description: OK. Return Questionnaire FHIR resource.
             schema:
               $ref: '#/definitions/questionnaire'
-
+          401:
+            description: Unauthorized
+            schema:
+              $ref: '#/definitions/Unauthorized'
+          404:
+            description: Not found
+            schema:
+              $ref: '#/definitions/NotFound'
+          500:
+            description: Internal Server Error
+            schema:
+              $ref: '#/definitions/InternalServerError'
+          default:
+            description: Unknown error
+            schema:
+              $ref: '#/definitions/Error'
 
 
   ########
@@ -159,8 +226,16 @@ paths:
           description: A bundle of FHIR **Communication** resources.
           schema:
             $ref: '#/definitions/star-daily-messages'
+        401:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Unauthorized'
+        500:
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/InternalServerError'
         default:
-          description: Unexpected error
+          description: Unknown error
           schema:
             $ref: '#/definitions/Error'
   '/coaching/dailyMessages/user/{userID}':
@@ -180,8 +255,20 @@ paths:
           description: A bundle of FHIR **Communication** resources.
           schema:
             $ref: '#/definitions/star-daily-messages'
+        401:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Unauthorized'
+        404:
+          description: Not found
+          schema:
+            $ref: '#/definitions/NotFound'
+        500:
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/InternalServerError'
         default:
-          description: Unexpected error
+          description: Unknown error
           schema:
             $ref: '#/definitions/Error'
   '/coaching/programs':
@@ -194,10 +281,18 @@ paths:
           description: An array of key/name pairs.
           schema:
             $ref: '#/definitions/star-coaching-programs'
+        401:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Unauthorized'
+        500:
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/InternalServerError'
         default:
-            description: Unexpected error
-            schema:
-              $ref: '#/definitions/Error'
+          description: Unknown error
+          schema:
+            $ref: '#/definitions/Error'
   '/coaching/users':
     post:
       summary: Create a new user for STAR coaching.
@@ -212,8 +307,27 @@ paths:
       responses:
         201:
           description: User created.
+          schema:
+            type: string
+            description: The user ID of the created user
+        400:
+          description: Bad request
+          schema:
+            $ref: '#/definitions/BadRequest'
+        401:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Unauthorized'
+        409: # userID already exists
+          description: Conflict
+          schema:
+            $ref: '#/definitions/Conflict'
+        500:
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/InternalServerError'
         default:
-          description: Unexpected error
+          description: Unknown error
           schema:
             $ref: '#/definitions/Error'
   '/coaching/users/{userID}':
@@ -233,8 +347,20 @@ paths:
           description: An array of XXX.
           schema:
             $ref: '#/definitions/coaching-program-status'
+        401:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Unauthorized'
+        404:
+          description: Not found
+          schema:
+            $ref: '#/definitions/NotFound'
+        500:
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/InternalServerError'
         default:
-          description: Unexpected error
+          description: Unknown error
           schema:
             $ref: '#/definitions/Error'
     post:
@@ -256,8 +382,24 @@ paths:
       responses:
         201:
           description: Coaching program created.
+        400:
+          description: Bad request
+          schema:
+            $ref: '#/definitions/BadRequest'
+        401:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Unauthorized'
+        409: # userID already exists
+          description: Conflict
+          schema:
+            $ref: '#/definitions/Conflict'
+        500:
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/InternalServerError'
         default:
-          description: Unexpected error
+          description: Unknown error
           schema:
             $ref: '#/definitions/Error'
 
@@ -285,8 +427,20 @@ paths:
             type: array
             items:
               $ref: '#/definitions/star-coaching-program'
+        401:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Unauthorized'
+        404:
+          description: Not found
+          schema:
+            $ref: '#/definitions/NotFound'
+        500:
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/InternalServerError'
         default:
-          description: Unexpected error
+          description: Unknown error
           schema:
             $ref: '#/definitions/Error'
     patch:
@@ -313,9 +467,24 @@ paths:
       responses:
         200:
           description: Coaching program state changed.
-        # 404 not found?
+        400:
+          description: Bad request
+          schema:
+            $ref: '#/definitions/BadRequest'
+        401:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Unauthorized'
+        404:
+          description: Not found
+          schema:
+            $ref: '#/definitions/NotFound'
+        500:
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/InternalServerError'
         default:
-          description: Unexpected error
+          description: Unknown error
           schema:
             $ref: '#/definitions/Error'
 
@@ -900,4 +1069,4 @@ definitions:
         type: string
     example:
       code: 45
-      message: 'Unexpected error'
+      message: 'Unknown error'
