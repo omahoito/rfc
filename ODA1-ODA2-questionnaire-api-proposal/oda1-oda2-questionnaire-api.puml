@@ -1,0 +1,34 @@
+@startuml
+header
+Sequence diagram - ODA1 acts as a client. ODA2 publishes Questionnaire API.
+endheader
+
+participant ODA2
+participant ODA1
+
+box "Proposed ODA2 FHIR Questionnaire REST API" #LightBlue
+	participant ODA2
+	participant ODA1
+end box
+
+group Publish new questionnaire
+ODA1 -> ODA2: POST https://[oda2-fhir-base]/Questionnaire
+ODA1 <-- ODA2: HTTP 201 Created [Operation outcome - includes id and version number]
+end
+
+group Update questionnaire
+ODA1 -> ODA2: PUT https://[oda2-fhir-base]/Questionnaire/[id]
+ODA1 <-- ODA2: HTTP 200 OK [Operation outcome - includes id and version number]
+end
+
+group Delete questionnaire by id
+ODA1 -> ODA2: DELETE https://[oda2-fhir-base]/Questionnaire/[id]
+ODA1 <-- ODA2: HTTP 200 OK
+end
+
+group Read questionnaire by id
+ODA1 -> ODA2: GET https://[oda2-fhir-base]/Questionnaire/[id]
+ODA1 <-- ODA2: HTTP 200 OK [Questionnaire]
+end
+
+@enduml
