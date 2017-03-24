@@ -544,12 +544,7 @@ definitions:
               type: object
               description: An object containing key/value pairs of FHIR queries to data that this service would like the EHR prefetch and provide on each service call. The key is a string that describes the type of data being requested and the value is a string representing the FHIR query.
               example:
-                type: object
-                properties:
-                  questionnaireResponse:
-                    type: string
-                    enum:
-                      - 'QuestionnaireResponse/Patient.id'
+                questionnaireResponse: 'QuestionnaireResponse/Patient.id'
   questionnaire-cds-request:
     type: object
     description: >
