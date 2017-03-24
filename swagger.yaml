@@ -91,7 +91,7 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/list-questionnaires'
-          example:
+          examples:
             - id: 1
               title: Example questionnaire one
               url: http://ebmedscloud.org/api/v1/questionnaires/1
