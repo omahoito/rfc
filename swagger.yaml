@@ -84,7 +84,7 @@ paths:
     get:
       summary: List the available questionnaires
       description: List the latest versions of all published questionnaires
-      produces: application/json
+      produces: 'application/json'
       tags:
         - VKT
       responses:
