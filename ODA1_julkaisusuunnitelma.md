@@ -17,7 +17,7 @@
 - polven oireet 31.5.17 mennessä
 - närästys 31.5.17 mennessä
 - silmätulehduksen oireet 31.5.17 mennessä
-ODAn oma tuotanto:
+### ODAn oma tuotanto:
 - Suun terveydenhuollon oirearvio 30.6.17 mennessä
 - Keuhkotuberkuloosin oireavio 30.6.17 mennessä
 - Sukupuolitaudin oirearvio 30.6.17 mennessä
