@@ -1,13 +1,13 @@
-# Copypaste this into http://editor.swagger.io to get a nicely rendered view of the REST API.
+# A nicely rendered view of this API c
 swagger: '2.0'
 info:
-  title: ODA API for EBMeDS (ALPHA, not for use)
+  title: EBMeDS API for ODA (ALPHA)
   description: >
     RESTful FHIR resources for clinical decision support in ODA 1. This is a preview,
-    some endpoint names may change, some JSON fields may change. The overall structure is like this.
+    some endpoint names may change, some JSON fields may change.
   version: "0.1.0-alpha"
 # the domain of the service
-host: ebmedscloud.org
+host: oda.ebmedscloud.org
 # array of all schemes that your API supports
 schemes:
   - https
@@ -22,7 +22,11 @@ paths:
   '/cds-services':
     get:
       summary: Available CDS Hooks
-      description: The cds-services endpoint returns information about the available CDS services (i.e. events/hooks) that *EBMeDS* may subscribe to. These event hooks follow the [CDS Hooks](http://cds-hooks.org/) standard. These services are also listed in this API description.
+      description: >
+        The cds-services endpoint returns information about the available CDS services
+        (i.e. events/hooks) that *EBMeDS* may subscribe to. These event hooks follow the
+        [CDS Hooks](http://cds-hooks.org/) standard. These services are also listed in
+        this API description.
       tags:
         - CDS Hooks
       responses:
@@ -40,7 +44,7 @@ paths:
           description: Unknown error
           schema:
             $ref: '#/definitions/Error'
-  '/cds-services/questionnaire-cds':
+  '/cds-services/filled-questionnaire':
     post:
       summary: Send a QuestionnaireResponse to EBMeDS for analysis.
       description: >
@@ -77,7 +81,7 @@ paths:
           description: Unknown error
           schema:
             $ref: '#/definitions/Error'
-  '/cds-services/general-cds':
+  '/cds-services/patient-view':
     post:
       summary: The full set of analysis as produced by the EBMeDS engine. Not available at the moment.
       description: >
@@ -448,7 +452,7 @@ paths:
           description: Unknown error
           schema:
             $ref: '#/definitions/Error'
-    patch:
+    put:
       summary: Change status of coaching program for user.
       parameters:
         - name: userID
