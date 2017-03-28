@@ -1,10 +1,10 @@
-# A nicely rendered view of this API c
+# This file can be rendered e.g. by pasting the raw github file url in http://petstore.swagger.io
 swagger: '2.0'
 info:
   title: EBMeDS API for ODA (ALPHA)
   description: >
     RESTful FHIR resources for clinical decision support in ODA 1. This is a preview,
-    some endpoint names may change, some JSON fields may change.
+    some endpoint names may change, some JSON properties may change.
   version: "0.1.0-alpha"
 # the domain of the service
 host: oda.ebmedscloud.org
@@ -49,7 +49,8 @@ paths:
       summary: Send a QuestionnaireResponse to EBMeDS for analysis.
       description: >
         Post a single filled-out FHIR Questionnaire (i.e. a QuestionnaireResponse)
-        to EBMeDS. Returns a CDS Hook Card that contains a Bundle of ActivityDefinitions, i.e.
+        to EBMeDS. Returns a [CDS Hook Card](http://cds-hooks.org/#cds-service-response)
+        that contains a Bundle of ActivityDefinitions, i.e.
         suggestions that can be both for patients and for practitioners.
       parameters:
         - name: questionnaire-cds-request
@@ -83,7 +84,7 @@ paths:
             $ref: '#/definitions/Error'
   '/cds-services/patient-view':
     post:
-      summary: The full set of analysis as produced by the EBMeDS engine. Not available at the moment.
+      summary: The full set of analysis as produced by the EBMeDS engine. FHIR API is TBD.
       description: >
         Produce reminders and links from the given patient data. This utilizes the entire set of
         EBMeDS engine functions as seen in EBMeDS 1.0. Reminders are in regard to diagnoses,
@@ -123,102 +124,102 @@ paths:
   ########
   # Questionnaire catalogue
   ########
-  '/questionnaires':
-    get:
-      summary: List the available questionnaires
-      description: List the latest versions of all published FHIR questionnaires
-      produces:
-        - 'application/json'
-      tags:
-        - Questionnaire database
-      responses:
-        200:
-          description: 'OK'
-          schema:
-            $ref: '#/definitions/list-questionnaires'
-        401:
-          description: Unauthorized
-          schema:
-            $ref: '#/definitions/Error'
-        500:
-          description: Internal Server Error
-          schema:
-            $ref: '#/definitions/Error'
-        default:
-          description: Unknown error
-          schema:
-            $ref: '#/definitions/Error'
-  '/questionnaires/{id}':
-      get:
-        summary: Get the latest version of a specific FHIR questionnaire.
-        description: The latest published FHIR version of a questionnaire with this id.
-        parameters:
-          - name: id
-            in: path
-            description: The questionnaire ID.
-            required: true
-            type: integer
-        tags:
-          - Questionnaire database
-        responses:
-          200:
-            description: OK. Return Questionnaire FHIR resource.
-            schema:
-              $ref: '#/definitions/questionnaire'
-          401:
-            description: Unauthorized
-            schema:
-              $ref: '#/definitions/Error'
-          404:
-            description: Not found
-            schema:
-              $ref: '#/definitions/Error'
-          500:
-            description: Internal Server Error
-            schema:
-              $ref: '#/definitions/Error'
-          default:
-            description: Unknown error
-            schema:
-              $ref: '#/definitions/Error'
-  '/questionnaires/{id}/{version}':
-      get:
-        summary: Get a specific version of a questionnaire.
-        description: A specific version of a published FHIR questionnaire with this id. The versions can be found at '/questionnaires'.
-        parameters:
-          - name: id
-            in: path
-            description: The questionnaire ID.
-            required: true
-            type: integer
-          - name: version
-            in: path
-            description: The version number
-            required: true
-            type: integer
-        tags:
-          - Questionnaire database
-        responses:
-          200:
-            description: OK. Return Questionnaire FHIR resource.
-            schema:
-              $ref: '#/definitions/questionnaire'
-          401:
-            description: Unauthorized
-            schema:
-              $ref: '#/definitions/Error'
-          404:
-            description: Not found
-            schema:
-              $ref: '#/definitions/Error'
-          500:
-            description: Internal Server Error
-            schema:
-              $ref: '#/definitions/Error'
-          default:
-            description: Unknown error
-            schema:
-              $ref: '#/definitions/Error'
+  # '/questionnaires':
+  #   get:
+  #     summary: List the available questionnaires
+  #     description: List the latest versions of all published FHIR questionnaires
+  #     produces:
+  #       - 'application/json'
+  #     tags:
+  #       - Questionnaire database
+  #     responses:
+  #       200:
+  #         description: 'OK'
+  #         schema:
+  #           $ref: '#/definitions/list-questionnaires'
+  #       401:
+  #         description: Unauthorized
+  #         schema:
+  #           $ref: '#/definitions/Error'
+  #       500:
+  #         description: Internal Server Error
+  #         schema:
+  #           $ref: '#/definitions/Error'
+  #       default:
+  #         description: Unknown error
+  #         schema:
+  #           $ref: '#/definitions/Error'
+  # '/questionnaires/{id}':
+  #     get:
+  #       summary: Get the latest version of a specific FHIR questionnaire.
+  #       description: The latest published FHIR version of a questionnaire with this id.
+  #       parameters:
+  #         - name: id
+  #           in: path
+  #           description: The questionnaire ID.
+  #           required: true
+  #           type: integer
+  #       tags:
+  #         - Questionnaire database
+  #       responses:
+  #         200:
+  #           description: OK. Return Questionnaire FHIR resource.
+  #           schema:
+  #             $ref: '#/definitions/questionnaire'
+  #         401:
+  #           description: Unauthorized
+  #           schema:
+  #             $ref: '#/definitions/Error'
+  #         404:
+  #           description: Not found
+  #           schema:
+  #             $ref: '#/definitions/Error'
+  #         500:
+  #           description: Internal Server Error
+  #           schema:
+  #             $ref: '#/definitions/Error'
+  #         default:
+  #           description: Unknown error
+  #           schema:
+  #             $ref: '#/definitions/Error'
+  # '/questionnaires/{id}/{version}':
+  #     get:
+  #       summary: Get a specific version of a questionnaire.
+  #       description: A specific version of a published FHIR questionnaire with this id. The versions can be found at '/questionnaires'.
+  #       parameters:
+  #         - name: id
+  #           in: path
+  #           description: The questionnaire ID.
+  #           required: true
+  #           type: integer
+  #         - name: version
+  #           in: path
+  #           description: The version number
+  #           required: true
+  #           type: integer
+  #       tags:
+  #         - Questionnaire database
+  #       responses:
+  #         200:
+  #           description: OK. Return Questionnaire FHIR resource.
+  #           schema:
+  #             $ref: '#/definitions/questionnaire'
+  #         401:
+  #           description: Unauthorized
+  #           schema:
+  #             $ref: '#/definitions/Error'
+  #         404:
+  #           description: Not found
+  #           schema:
+  #             $ref: '#/definitions/Error'
+  #         500:
+  #           description: Internal Server Error
+  #           schema:
+  #             $ref: '#/definitions/Error'
+  #         default:
+  #           description: Unknown error
+  #           schema:
+  #             $ref: '#/definitions/Error'
 
 
   ########
@@ -227,7 +228,9 @@ paths:
   '/coaching/dailyMessages':
     get:
       summary: Receive list of coaching messages from active coaching programs for all users.
-      description: STAR generates a daily list of messages to be sent to those users who have one or more active coaching programs. This endpoint supplies this list.
+      description: >
+        STAR generates a daily list of messages to be sent to those users who have one or more
+        active coaching programs. This endpoint supplies this list.
       tags:
         - Coaching
       responses:
@@ -328,7 +331,7 @@ paths:
           schema:
             $ref: '#/definitions/Error'
         409: # userID already exists
-          description: Conflict
+          description: Conflict, probably since userID already exists.
           schema:
             $ref: '#/definitions/Error'
         500:
@@ -400,7 +403,7 @@ paths:
           schema:
             $ref: '#/definitions/Error'
         409: # userID already exists
-          description: Conflict
+          description: Conflict, probably since userID already exists
           schema:
             $ref: '#/definitions/Error'
         500:
