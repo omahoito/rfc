@@ -124,6 +124,7 @@ paths:
   ########
   # Questionnaire catalogue
   ########
+  # NOTE: It looks like we might push the questionnaires to ODA2 instead, so this API is unneeded.
   # '/questionnaires':
   #   get:
   #     summary: List the available questionnaires
