@@ -928,6 +928,10 @@ definitions:
               format: date-time
             valueString:
               type: string
+      text:
+        type: string
+        description: >
+          Human readable description of whatever it is this item measures (probably from Snomed CT)
   questionnaire-cds-response:
     type: object
     description: CDS response cards
