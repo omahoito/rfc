@@ -668,12 +668,12 @@ definitions:
               description: TODO
       date:
         type: string
-        format: date # TODO RFCxxx?
+        format: date-time
         description: TODO
       extension:
         type: array
-        maxItems: 1 # TODO is this true?
         minItems: 1
+        maxItems: 1
         items:
           type: object
           description: 'selfCareInstructions extension'
@@ -685,8 +685,6 @@ definitions:
               - 'https://www.ebmeds.org/form#selfCareInstructions'
             extension:
               type: array
-              minItems: 1
-              maxItems: 1
               items:
                 type: object
                 properties:
@@ -728,6 +726,8 @@ definitions:
           versionId:
             type: string
       publisher:
+        type: string
+      copyright:
         type: string
       resourceType:
         description: 'Always "Questionnaire"'
