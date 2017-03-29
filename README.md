@@ -117,6 +117,39 @@ Data models of the following profiles:
 <!--- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
 
 
+
+## <a name="profiling_tools"></a>Tools for editing profiles
+
+[Notepad++](https://notepad-plus-plus.org/) has a plugin for FHIR.
+http://www.healthintersections.com.au/?p=2386
+
+Install files here:
+http://www.healthintersections.com.au/FhirServer/fhirnpp.htm
+
+-------------------------------------------
+
+Forge is a FHIR profile editor for Windows.
+http://fhir.furore.com/forge
+https://simplifier.net/ui/Info/Forge
+
+Connects to [Simplifier](https://www.simplifier.net/), a registry for FHIR profiles.
+
+-------------------------------------------
+
+Simple FHIR editor online at
+http://docs.smarthealthit.org/fred/
+source: https://github.com/smart-on-fhir/fred
+
+FHIR Resource Editor (FRED) usage is simple and intuitive. The choice of elements is limited. No custom elements. If attempt with custom elements, they will be displayed as red. Null and undefined values give message about profile containing errors.
+
+A separate instance of FRED can be set up and run on a server.
+
+-------------------------------------------
+
+There are currently no known FHIR editing tools for Linux or Mac.
+
+
+
 ## Contributing
 
 If you are interested in contributing new profiles, please feel free to do so. The profiles have been made with [Forge](https://fhir.furore.com/forge/), and the same tool can be used for further development or modification of existing profiles or creation of new ones. Please see the [Profiling section](#profiling_guide) for further information.
