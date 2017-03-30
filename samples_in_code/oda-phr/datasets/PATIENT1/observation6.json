@@ -1,0 +1,66 @@
+{
+	"resourceType": "Observation",
+    "id" : "OBSERVATION6-PATIENT1",	
+	"category": [{
+		"coding": [{
+			"system": "http://hl7.org/fhir/observation-category",
+			"code": "vital-signs",
+			"display": "Vital Signs"
+		}]
+	}],	
+
+	"status": "final",
+	"code": {
+		"coding": [{
+			"system": "http://loinc.org",
+			"code": "8310-5",
+			"display": "Kehon lämpötila"
+		}],
+		"text": "Lämpötila"
+	},
+	"subject": {
+		"reference": "Patient/PATIENT1",
+		"display": "Anna Testi"
+	},
+	"effectiveDateTime": "2017-03-10T23:51:00+01:00",
+	"issued": "2017-03-10T23:51:00+01:00",
+	"performer": [{
+		"reference": "Patient/PATIENT1"
+	}],
+	"valueQuantity": {
+		"value": 37.1,
+		"unit": "degrees C"
+	},
+	"interpretation": {
+		"coding": [{
+			"system": "http://hl7.org/fhir/v2/0078",
+			"code": "N"
+		}]
+	},
+	"comment": "Potilaan kuumemittaus",
+	"bodySite": {
+		"coding": [{
+			"system": "http://snomed.info/sct",
+			"code": "74262004",
+			"display": "Suuontelo"
+		}]
+	},
+	"method": {
+		"coding": [{
+			"system": "http://snomed.info/sct",
+			"code": "89003005",
+			"display": "Lämpötilan mittaaminen suun kautta."
+		}]
+	},
+	"referenceRange": [{
+		"low": {
+			"value": 36.5,
+			"unit": "degrees C"
+		},
+		"high": {
+			"value": 37.2,
+			"unit": "degrees C"
+		}
+	}]
+}
+
