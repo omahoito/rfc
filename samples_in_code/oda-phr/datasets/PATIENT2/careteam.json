@@ -1,0 +1,23 @@
+{
+  "resourceType": "CareTeam",
+  "id" : "CARETEAM1-PATIENT2",
+  "subject": {
+    "reference": "Patient/PATIENT2",
+    "display": "Anna Demo"
+  },
+  "period": {
+    "end": "2017-05-01"
+  },
+  "name": "Hoitotiimi",
+  "participant": [
+    {
+      "role": {
+        "text": "Hoitava lääkäri"
+      },
+      "member": {
+        "reference": "Practitioner/PRACTITIONER1",
+        "display": "Pekka Pakarinen"
+      }
+    }
+  ]
+}

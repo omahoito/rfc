@@ -1,0 +1,54 @@
+{
+	"resourceType" : "Person",
+	"id" : "PERSON2",
+	"text": {
+		"status" : "generated"
+	},
+	"identifier": [
+        {
+          "system": "urn:oid:1.2.246.21",
+          "value": "010170-960F"
+        }
+    ],
+    "name": [
+      {
+        "text": "Anna Demo",
+        "family": "Demo",
+        "given": [
+          "Anna"
+        ]
+      }
+    ],
+    "address": [
+      {
+        "line": [
+          "S-Pankki Ålandsbanken 2"
+        ],
+        "city": "Helsinki",
+        "postalCode": "00120",
+        "country": "Suomi"
+      }
+    ],
+    "active": true,
+    "telecom": [
+        {
+            "use": "home"
+        },
+        {
+            "system": "phone",
+            "value": "(044) 22335s67",
+            "use": "work"
+        }
+    ],
+    "gender": "female",
+    "birthDate": "1970-01-01",
+    "link":[
+        {   
+            "target":{
+                "reference": "Patient/PATIENT2",
+                "display" : "Anna Demo"            
+            }         
+        }
+    ]
+      
+}
