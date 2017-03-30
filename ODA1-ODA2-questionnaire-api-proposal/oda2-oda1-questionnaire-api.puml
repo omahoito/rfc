@@ -1,0 +1,29 @@
+@startuml
+header
+Sequence diagram - ODA2 acts as a client. ODA1 publishes Questionnaire API.
+endheader
+
+participant ODA2
+participant ODA1
+
+box "Proposed ODA1 FHIR Questionnaire REST API" #LightBlue
+	participant ODA2
+	participant ODA1
+end box
+
+group Search questionnaires by useContext code and language
+ODA2 -> ODA1: GET http://[oda1-fhir-base]/Questionnaire?context=[system]|[code]&_language=[langugae]
+ODA2 <-- ODA1: HTTP 200 OK[Bundle - collection of Questionnaires]
+end
+
+group Search questionnaires by useContext text and language
+ODA2 -> ODA1: GET http://[oda1-fhir-base]/Questionnaire?context=[text]&_language=[langugae]
+ODA2 <-- ODA1: HTTP 200 OK[Bundle - collection of Questionnaires]
+end
+
+group Read questionnaire by id
+ODA2 -> ODA1: GET https://[oda2-fhir-base]/Questionnaire/[id]
+ODA2 <-- ODA1: HTTP 200 OK [Questionnaire]
+end
+
+@enduml
