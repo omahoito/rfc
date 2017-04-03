@@ -16,20 +16,29 @@ resource. Authorized to care-team by linking <i>CarePlan</i> to the <i>Observati
 check decision support are mapped as careplan activities. Supporting information 
 (medications, immunizations, allergies etc.) is authorized to care-team by patient. 
 Supporting information is referenced by <i>CarePlan.support</i> element.
+* <b>EpisodeOfCare</b> is created when care-relationship starts between professional and 
+patient. CareManager relates to the responsible professional and the team contains 
+other professionals participating to care.
 * <b>ActivityDefinition</b> Definition of the suggested action. Suggested careplan 
 activities are based on these definitions. 
 * <b>Questionnaire</b> Created by main user and saved to PHR as questionnaire 
 templates.
 * <b>QuestionnaireResponse</b> Created when patient answers to a questionnaire 
 and saves the answers.
-* <b>CareTeam</b> Created when first professional patricipates to care.
-* <b>Practitioner</b> Created when professional participates to care first time.
-* <b>Communication</b> Patient's and professional's comments about the <i>CarePlan</i>.
+* <b>CareTeam</b> CareTeam referenced by <i>EpisodeOfCare</i> represents the team participating
+to patient's care. CareTeam is also used to authorize practitioners to a service request list.
+* <b>Practitioner</b> In MVP, Practitioner is created when organizations' service request lists 
+with participating professionals are saved to ODA PHR.
+* <b>Communication</b> Patient's and professional's comments about the <i>CarePlan</i> or any
+other resource.
 * <b>MedicationStatement</b> Medication information added by patient. Authorized 
 to care-team by linking <i>CarePlan</i> to the <i>MedicationStatement</i> instance.
 * <b>Immunization</b> Added by patient and authorized to care-team via careplan.
 * <b>AllergyIntolerance</b> Added by patient and authorized to care-team via careplan.
 * <b>Flag</b> Risk-information added by patient and authorized to care-team via careplan.
+* <b>Organization</b> Managing organization of the CareTeam representing the service 
+request list.
+* <b>Goal</b> The "master" goal of the patient.
   end note
 
 
@@ -44,6 +53,7 @@ Reference<QuestionnaireResponse> related
 class MVP::CarePlan {
 Reference<Patient> subject
 Reference<CareTeam> careteam
+Reference<EpisodeOfCare> context
 Reference<Any> support
 }
 class MVP::Questionnaire
@@ -52,8 +62,8 @@ Reference<Patient> source
 Reference<Questionnaire> questionnaire
 }
 class MVP::CareTeam {
-'Reference<Patient> subject
 Reference<Practitioner> participant
+Reference<Organization> managingOrganization
 }
 class MVP::Practitioner {
 	
@@ -84,14 +94,37 @@ class MVP::ActivityDefinition {
 
 class Medication
 
+class MVP::EpisodeOfCare {
+    status
+    Reference<Practitioner> careManager
+    Reference<CareTeam> team     
+    } 
+
+class MVP::Goal {
+    description
+}
+
+class MVP::Organization {
+}
+
+
 hide methods
 hide circle
+
+MVP::CarePlan "0..*" -- "0..*" MVP::CareTeam : Authorization
+MVP::CareTeam "0..*" -- "0..*" MVP::EpisodeOfCare : Team participating to care
+MVP::CareTeam "0..*" -- "0..*" MVP::Organization
+
+MVP::EpisodeOfCare "0..*" -- "1" MVP::Practitioner : careManager 
+MVP::EpisodeOfCare -- MVP::CarePlan : < context 
+MVP::EpisodeOfCare "*" -- "1" MVP::Patient : patient >
+
+MVP::CarePlan "1" -- "0..*" MVP::Goal
 
 MVP::Person "1"--"0..1" MVP::Patient
 MVP::Person "1"--"0..1" MVP::Practitioner
 
 MVP::CarePlan "0..*"--"1" MVP::Patient
-MVP::CarePlan "1"--"0..1" MVP::CareTeam
 MVP::CarePlan "0..*"--"0..*" MVP::QuestionnaireResponse
 MVP::CarePlan "0..*"--"0..*" AllergyIntolerance
 MVP::CarePlan "0..*"--"0..*" MVP::MedicationStatement
@@ -100,7 +133,6 @@ MVP::CarePlan "0..*"--"0..*" Flag
 MVP::CarePlan "0..*"--"0..*" MVP::ActivityDefinition
 
 MVP::CareTeam "0..*"--"0..*" MVP::Practitioner 
-'MVP::CareTeam "0..*"--"1" MVP::Patient
 
 MVP::Observation "0..*"--"0..*" MVP::CarePlan
 MVP::Observation "0..*"--"1" MVP::Patient
@@ -115,6 +147,7 @@ AllergyIntolerance "0..*" -- "1" MVP::Patient
 MVP::Patient "1"--"0..*" MVP::MedicationStatement
 MVP::Patient "1"--"0..*" Immunization
 MVP::Patient "1"--"0..*" Flag
+
 
 MVP::MedicationStatement "0..*" -- "1" Medication
 
