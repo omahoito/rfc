@@ -1001,7 +1001,7 @@ definitions:
         description: >
           When the described activity should occur. If the activity is some kind of procedure etc.,
           the patient should be reserved a time to perform the procedure within this time period.
-          Note that the activity may also be the reservation in itself: in that case the reservation
+          Note that the activity may also be the reservation in itself, in that case the reservation
           may only be done within this time period.
         properties:
           start:
