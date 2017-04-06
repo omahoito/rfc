@@ -958,6 +958,11 @@ definitions:
     type: object
     description: FHIR ActivityDefinition based on a filled-out Questionnaire
     properties:
+      resourceType:
+        type: string
+        description: Always 'ActivityDefinition'
+        enum:
+          - ActivityDefinition
       identifier:
         type: array
         minItems: 1
@@ -993,9 +998,11 @@ definitions:
         type: object
         properties:
           start:
-            type: string # or date?
+            type: string
+            format: date-time
           end:
-            type: string # or date?
+            type: string
+            format: date-time
       participant:
         type: object
         properties:
