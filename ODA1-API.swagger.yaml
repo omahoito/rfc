@@ -956,8 +956,15 @@ definitions:
                 $ref: '#/definitions/questionnaire-activity-definition'
   questionnaire-activity-definition:
     type: object
-    description: FHIR ActivityDefinition based on a filled-out Questionnaire
+    description: >
+      FHIR ActivityDefinition based on a filled-out Questionnaire. May describe e.g. a lab test,
+      the act of reserving a lab test, a visit to the doctor, calling emergency services.
     properties:
+      resourceType:
+        type: string
+        description: Always 'ActivityDefinition'
+        enum:
+          - ActivityDefinition
       identifier:
         type: array
         minItems: 1
@@ -991,11 +998,24 @@ definitions:
                   description: The actual code.
       timingPeriod:
         type: object
+        description: >
+          When the described activity should occur. If the activity is some kind of procedure etc.,
+          the patient should be reserved a time to perform the procedure within this time period.
+          Note that the activity may also be the reservation in itself, in that case the reservation
+          may only be done within this time period.
         properties:
           start:
-            type: string # or date?
+            description: >
+              The start time of the activity. If it is in the past or missing, the start time
+              should be immediate. If the start time is in the future, the activity is not current.
+            type: string
+            format: date-time
           end:
-            type: string # or date?
+            description: >
+              The end time of the activity. If the activity has not been performed before this
+              time, take appropriate measures.
+            type: string
+            format: date-time
       participant:
         type: object
         properties:
