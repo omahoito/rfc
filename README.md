@@ -148,6 +148,15 @@ A separate instance of FRED can be set up and run on a server.
 
 There are currently no known FHIR editing tools for Linux or Mac.
 
+## Commenting the data schemas
+
+The profile data schemas are written in XML. [Forge](https://fhir.furore.com/forge/) is a tool with to create and comment FHIR profiles. It also shows the structure of the data schema.
+
+Forge makes it possible to focus on the functional side of modelling without having to get involved in the complexity of XML files. Forge also automatically validates the profiles.
+
+Forge can be downloaded [here](https://fhir.furore.com/forge/). The software only works in Windows. It is only possible to do profiles in XML format.
+
+In Forge the profile elements and attributes can be commented in the "Comments" or "Reason for inclusion and constrainment" sections. The comments section can include explanatory comments and application information, and information on the correct way of using the element. The reason section can include information about why an element or attribute has been created, and also include references to support these decisions.
 
 
 ## Contributing
