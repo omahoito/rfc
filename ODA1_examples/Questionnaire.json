@@ -1,0 +1,224 @@
+{
+  "resourceType": "Questionnaire",
+  "id": 701,
+  "url": "https://www.ebmeds.org/form/api/FHIR/forms/export/701",
+  "status": "published",
+  "date": "2017-02-09T11:44:05.374Z",
+  "publisher": "Saara Vimpeli",
+  "title": "FHIR demolomake",
+  "text": {
+    "description": "Tämä on testilomake jota käytän näyttämään miten FHIR rajapinta edistyy.",
+    "copyright": "Duodecim",
+    "introduction": "Tervetuloa FHIR rajapinnalla generoituun testilomakkeeseen.",
+    "selfcare": "<h1>Itsehoito-ohje:</h1><div>Lepää, ota särkylääkettä ja pepanteenia.</div>",
+    "selfcare_url": "http://www.hs.fi/fingerpori/"
+  },
+  "item": [
+    {
+      "linkId": 1161,
+      "concept": {
+        "Coding": {
+          "system": "1.2.246.537.6.1",
+          "display": "ICD-10",
+          "code": "123"
+        }
+      },
+      "text": "Oletko varma että haluat täyttää tämän lomakkeen?",
+      "type": "boolean"
+    },
+    {
+      "linkId": 1162,
+      "concept": {
+        "Coding": {
+          "system": "1.2.246.537.6.1",
+          "display": "ICD-10",
+          "code": "456"
+        }
+      },
+      "text": "Esitä numeerisesti elämän tarkoitus. (Vinkki: Syötä 42).",
+      "type": "decimal",
+      "enableWhen": [
+        {
+          "question": "1161",
+          "answerString": "yes",
+          "operator": null
+        }
+      ]
+    },
+    {
+      "linkId": 1167,
+      "concept": {
+        "Coding": {
+          "system": null,
+          "display": null,
+          "code": null
+        }
+      },
+      "text": "Nyt taisi mennä väärinpäin. Kokeile 42.",
+      "type": "feedback",
+      "enableWhen": [
+        {
+          "question": "1162",
+          "answerString": "24",
+          "operator": null,
+          "answerReference": {
+            "Quantity": {
+              "value": "24"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "linkId": 1166,
+      "concept": {
+        "Coding": {
+          "system": null,
+          "display": null,
+          "code": null
+        }
+      },
+      "text": "<h1>Väliotsikko</h1><div>Väliotsikon leipäteksti</div>",
+      "type": "display"
+    },
+    {
+      "linkId": 1163,
+      "concept": {
+        "Coding": {
+          "system": null,
+          "display": null,
+          "code": null
+        }
+      },
+      "text": "Vapaata tekstiä yksi rivi",
+      "type": "string",
+      "enableWhen": [
+        {
+          "question": "1161",
+          "answerString": "yes",
+          "operator": null
+        },
+        {
+          "question": "1162",
+          "answerString": "42",
+          "operator": "AND",
+          "answerReference": {
+            "Quantity": {
+              "value": "42"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "linkId": 1164,
+      "concept": {
+        "Coding": {
+          "system": "1.2.246.537.6.96",
+          "display": "finLOINC",
+          "code": "789"
+        }
+      },
+      "text": "Mikä näistä on paras",
+      "type": "radio",
+      "option": [
+        {
+          "valueCoding": {
+            "id": 101,
+            "code": "11",
+            "display": "eharth"
+          },
+          "valueInteger": "1"
+        },
+        {
+          "valueCoding": {
+            "id": 102,
+            "code": "22",
+            "display": "whind"
+          },
+          "valueInteger": "2"
+        },
+        {
+          "valueCoding": {
+            "id": 103,
+            "code": "33",
+            "display": "fhir"
+          },
+          "valueInteger": "3"
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "1161",
+          "answerString": "yes",
+          "operator": null
+        },
+        {
+          "question": "1162",
+          "answerString": "42",
+          "operator": "AND",
+          "answerReference": {
+            "Quantity": {
+              "value": "42"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "linkId": 1165,
+      "concept": {
+        "Coding": {
+          "system": "1.2.246.537.6.96",
+          "display": "finLOINC",
+          "code": "987"
+        }
+      },
+      "text": "Näistä voit valita monta",
+      "type": "choice",
+      "option": [
+        {
+          "valueCoding": {
+            "id": 104,
+            "code": "x1",
+            "display": "shandels"
+          },
+          "valueInteger": "1"
+        },
+        {
+          "valueCoding": {
+            "id": 105,
+            "code": "y2",
+            "display": "holvi"
+          },
+          "valueInteger": "2"
+        },
+        {
+          "valueCoding": {
+            "id": 106,
+            "code": "z3",
+            "display": "khoff"
+          },
+          "valueInteger": "3"
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "1161",
+          "answerString": "yes",
+          "operator": null
+        },
+        {
+          "question": "1162",
+          "answerString": "42",
+          "operator": "AND",
+          "answerReference": {
+            "Quantity": {
+              "value": "42"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
