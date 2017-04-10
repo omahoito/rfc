@@ -2,8 +2,13 @@
 
 before_script:
   - chmod +x xmlvalidator.sh
+  - chmod +x jsonvalidator.sh
+  - sed -i '1 s/\xEF\xBB\xBF//' json_schemas/fhir.schema.json
+  - pip install json-spec
 
-script: ./xmlvalidator.sh
+script:
+  - ./xmlvalidator.sh
+  - ./jsonvalidator.sh
 
 notifications:
   email: false
