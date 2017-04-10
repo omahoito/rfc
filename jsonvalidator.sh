@@ -9,7 +9,7 @@ declare -A jmap
 JSD_PATH="json_schemas/"
 APPOINTMENT_PATH="Appointment/"
 
-jmap["ODA-activitydefinition.example.json"]
+jmap["ODA-activitydefinition.example.json"]="$JSD_PATH""fhir.schema.json"
 jmap["ODA-appointment.example.json"]="$JSD_PATH""fhir.schema.json"
 jmap["ODA-careplan.example.json"]="$JSD_PATH""fhir.schema.json"
 jmap["ODA-careteam.example.json"]="$JSD_PATH""fhir.schema.json"
@@ -24,7 +24,6 @@ jmap["ODA-questionnaire.example.json"]="$JSD_PATH""fhir.schema.json"
 jmap["ODA-questionnaireresponse.example.json"]="$JSD_PATH""fhir.schema.json"
 jmap["ODA-temperature-observation.example.json"]="$JSD_PATH""fhir.schema.json"
 jmap["ODA-temperature-quantity.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["questionnaireresponse-example.json"]="$JSD_PATH""fhir.schema.json"
 
 jmap["$APPOINTMENT_PATH""ODAAppointment-example.json"]="$JSD_PATH""fhir.schema.json"
 jmap["$APPOINTMENT_PATH""ODAHealthcareService-example.json"]="$JSD_PATH""fhir.schema.json"
@@ -41,9 +40,9 @@ do
   echo $OP
   if [ $OP -ne 0 ]
   then
-    echo "${jmap[$key]}"" did not pass validation"
+    echo "$key"" did not pass validation"
     RETVAL=1
   else
-    echo "${jmap[$key]}"" passed validation"
+    echo "$key"" passed validation"
   fi
 done
