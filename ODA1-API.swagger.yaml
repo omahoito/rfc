@@ -940,16 +940,32 @@ definitions:
         type: array
         items:
           type: object
-          description: Card containing suggestions, for both the patient and practitioner.
+          description: >
+            Card containing suggestions, for both the patient and practitioner. Analogous to the
+            EBMeDS concept of reminders.
           properties:
             summary:
+              description: A short title of the reminder.
+              example: Order a lab test
               type: string
             indicator:
+              description: Specify the reminder type, usually its severity.
               type: string
+              example: info
               enum:
                 - success
+                - info
+                - warning
+                - hard-stop
             detail:
+              description: >
+                The full reminder text. The standard specifies a markdown format, but at the moment
+                we use HTML.
               type: string
+              format: html # markdown?
+              example: >
+                Due to your described symptoms, please order a lab test. This is not a <b>bold</b>
+                move.
             suggestions:
               type: array
               items:
