@@ -37,12 +37,9 @@ do
 #  echo $key
   json validate --schema-file="${jmap[$key]}" --document-file="$key"
   OP=$?
-  echo $OP
   if [ $OP -ne 0 ]
   then
     echo "$key"" did not pass validation"
     RETVAL=1
-  else
-    echo "$key"" passed validation"
   fi
 done
