@@ -14,7 +14,7 @@ response: Questionnaire resource (content profile for questionnaire: [Questionna
 curl example:
 ```
 curl --request GET \
-  --url [BaseUrl]/QUESTIONNAIRE1 \
+  --url [BaseUrl]/245 \
   --header 'authorization: Bearer [Authorization token]' \
   --header 'cache-control: no-cache' \
   --header 'content-type: application/json'
