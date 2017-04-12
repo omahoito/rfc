@@ -792,7 +792,9 @@ definitions:
       type: object
       properties:
         item:
-          $ref: '#/definitions/questionnaire-item' # doesn't seem to show properly
+          type: object
+          description: items can contain other items
+          #$ref: '#/definitions/questionnaire-item' # doesn't seem to show properly
         concept:
           type: array
           minItems: 1
@@ -901,7 +903,9 @@ definitions:
     type: object
     properties:
       item:
-        $ref: '#/definitions/questionnaireResponse-item' # recursion, doesn't seem to work very well to show
+        description: items can contain other items
+        type: object
+        #$ref: '#/definitions/questionnaireResponse-item' # recursion, doesn't seem to work very well to show
       linkId:
         type: string
         example: "1161"
