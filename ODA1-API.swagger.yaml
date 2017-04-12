@@ -590,12 +590,12 @@ definitions:
       #  format: url
       #  description: The URL that a Link Card should redirect to. Unused for other card types.
       #  example: 'http://hooks2.smarthealthit.org/service-done.html'
-      user:
-        type: string # TODO: enum and regex to only allow Practitioner/123, Patient/123 and RelatedPerson/123 where 123 is id
-        description: >
-          The FHIR resource type and id representing the current user, i.e. the one
-          calling the service. The type is one of Practitioner, Patient or RelatedPerson
-        example: Practitioner/123
+      #user:
+      #  type: string # TODO: enum and regex to only allow Practitioner/123, Patient/123 and RelatedPerson/123 where 123 is id
+      #  description: >
+      #    The FHIR resource type and id representing the current user, i.e. the one
+      #    calling the service. The type is one of Practitioner, Patient or RelatedPerson
+      #  example: Practitioner/123
       context:
         # TODO should perhaps the QuestionnaireResponse be here instead? It's not stored in the FHIR server, is it?
         type: object
