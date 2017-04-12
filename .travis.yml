@@ -1,9 +1,7 @@
 # assumption: Travis build runs in bash 4.0 (or greater)
 
 before_script:
-  - chmod +x xmlvalidator.sh
-  - chmod +x jsonvalidator.sh
-  - sed -i '1 s/\xEF\xBB\xBF//' json_schemas/fhir.schema.json
+  - chmod +x *.sh
   - sudo pip install json-spec
 
 script:

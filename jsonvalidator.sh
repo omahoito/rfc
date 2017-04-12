@@ -8,33 +8,33 @@ declare -A jmap
 
 JSD_PATH="json_schemas/"
 APPOINTMENT_PATH="Appointment/"
+FHIR_SCHEMA_FILE="$JSD_PATH""fhir.schema.json"
 
-jmap["ODA-activitydefinition.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-appointment.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-careplan.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-careteam.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-communication.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-consent.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-device.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-finnishpatient-patient.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-medicationstatement.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-person.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-practitioner.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-questionnaire.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-questionnaireresponse.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-temperature-observation.example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["ODA-temperature-quantity.example.json"]="$JSD_PATH""fhir.schema.json"
+jmap["ODA-activitydefinition.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-appointment.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-careplan.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-careteam.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-communication.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-consent.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-device.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-finnishpatient-patient.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-medicationstatement.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-person.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-practitioner.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-questionnaire.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-questionnaireresponse.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-temperature-observation.example.json"]=FHIR_SCHEMA_FILE
+jmap["ODA-temperature-quantity.example.json"]=FHIR_SCHEMA_FILE
 
-jmap["$APPOINTMENT_PATH""ODAAppointment-example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["$APPOINTMENT_PATH""ODAHealthcareService-example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["$APPOINTMENT_PATH""ODAOrganization-example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["$APPOINTMENT_PATH""ODAPatient-example.json"]="$JSD_PATH""fhir.schema.json"
-jmap["$APPOINTMENT_PATH""ODAPractitioner-example.json"]="$JSD_PATH""fhir.schema.json"
+jmap["$APPOINTMENT_PATH""ODAAppointment-example.json"]=FHIR_SCHEMA_FILE
+jmap["$APPOINTMENT_PATH""ODAHealthcareService-example.json"]=FHIR_SCHEMA_FILE
+jmap["$APPOINTMENT_PATH""ODAOrganization-example.json"]=FHIR_SCHEMA_FILE
+jmap["$APPOINTMENT_PATH""ODAPatient-example.json"]=FHIR_SCHEMA_FILE
+jmap["$APPOINTMENT_PATH""ODAPractitioner-example.json"]=FHIR_SCHEMA_FILE
 
 RETVAL=0
 for key in ${!jmap[@]}
 do
-#  echo $key
   json validate --schema-file="${jmap[$key]}" --document-file="$key"
   OP=$?
   if [ $OP -ne 0 ]
