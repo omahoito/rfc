@@ -1,9 +1,13 @@
 # assumption: Travis build runs in bash 4.0 (or greater)
 
-before_script:
-  - chmod +x xmlvalidator.sh
+language: python
 
-script: ./xmlvalidator.sh
+before_script:
+  - chmod +x *.sh
+
+script:
+  - ./xmlvalidator.sh
+  - ./jsonvalidator.sh
 
 notifications:
   email: false
