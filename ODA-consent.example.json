@@ -1,9 +1,6 @@
 {
   "resourceType": "Consent",
   "id": "CONSENT1",
-  "text": {
-    "status": "generated"
-  },
   "status": "active",
   "dateTime": "2016-05-11",
   "period": {

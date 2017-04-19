@@ -1,10 +1,11 @@
 {
   "resourceType": "MedicationStatement",
   "id": "MEDICATIONSTATEMENT1",
-  "text": {
-    "status": "generated"
-  },
-  "identifier" : "1234",
+  "identifier" : [
+    {
+      "value": "1234"
+    }
+  ],
   "status": "active",
   "medicationReference": {
     "display": "Burana 400 mg"
@@ -13,7 +14,7 @@
     "reference": "Patient/PATIENT1",
     "display": "Anna Demo"
   },
-  "effectiveDateTime": "2017-02-23",  
+  "effectiveDateTime": "2017-02-23",
   "dateAsserted": "2015-02-22",
   "notTaken": "n",
   "reasonForUseCodeableConcept": [

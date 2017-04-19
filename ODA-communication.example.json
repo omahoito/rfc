@@ -1,14 +1,19 @@
 {
     "resourceType": "Communication",
     "id" : "COMMUNICATION1-PATIENT2",
-    "text": {
-        "status": "generated",
-        "div": "<div>You are progressing well! Good work!</div>"
-    },        
     "status": "completed",
-    "category": {        
-        "text": "oda-careplan-comment"
-    },    
+    "category":
+      {
+        "coding": [
+          {
+            "system": "http://oda.fi/messagetypes",
+            "code": "COMMENT"
+          }
+        ],
+          "text": "oda-careplan-comment"
+      }
+    ,
+
     "subject": {
         "reference": "Patient/PATIENT2"
     },
@@ -22,7 +27,8 @@
     },
     "recipient": [{
         "reference": "Patient/PATIENT2"
-    }],   
+    }],
+
     "payload": [{
         "contentString": "You are progressing well! Good work!"
     }]
