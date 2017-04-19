@@ -19,7 +19,9 @@
 			"display": "Pekka Pakarinen"
 		}
 	}],
-	"managingOrganization": {
+	"managingOrganization": [		
+		{
 		"display" : "Malminkartano"
-	}
+   	}
+ 	]
 }

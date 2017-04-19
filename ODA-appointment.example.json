@@ -1,51 +1,49 @@
 {
 	"resourceType": "Appointment",
 	"id": "APPOINTMENT1",
-	"text": {
-		"status": "generated",
-		"div": "<div>Ajanvarauslomake</div>"
-	},
 	"identifier": [{
 		"system": "http://example.org/sampleappointment-identifier",
 		"value": "123"
-	}],
-	"status": "proposed",
-	"appointmentType": {
-		"coding": [{
-			"code": "52",
-			"display": "General Discussion"
-		}]
-	},
-	"reason": {
-		"text": "Clinical Review"
-	},
-	"priority": 5,
-	"description": "Discussion on the results of your recent MRI",
-	"start": "2013-12-10T09:00:00Z",
-	"end": "2013-12-10T11:00:00Z",
-	"minutesDuration": 15,
-	"comment": "Further expand on the results of the MRI and determine the next actions that may be appropriate.",
-	"participant": [{
-		"actor": {
-			"reference": "Patient/PATIENT2",
-			"display": "Anna Demo"
-		},
-		"required": "required",
-		"status": "needs-action"
-	}, {
-		"type": [{
-			"coding": [{
-				"code": "attending"
-			}]
 		}],
-		"required": "required",
-		"status": "needs-action"
-	}, {
-		"actor": {
-			"reference": "Practitioner/PRACTITIONER1",
-			"display": "Tri Pekka Pakarinen"
-		},
-		"required": "required",
-		"status": "accepted"
-	}]
-}
+		"status": "proposed",
+		"appointmentType": {
+			"coding": [{
+				"code": "FOLLOWUP",
+				"display": "General Discussion"
+				}]
+			},
+			"reason": {
+				"text": "Clinical Review"
+			},
+			"priority": 5,
+			"description": "Discussion on the results of your recent MRI",
+			"start": "2013-12-10T09:00:00Z",
+			"end": "2013-12-10T11:00:00Z",
+			"minutesDuration": 15,
+			"comment": "Further expand on the results of the MRI and determine the next actions that may be appropriate.",
+			"participant": [
+				{
+					"type": [{
+						"coding": [{
+							"system": "http://oda.fi/appointment-type",
+							"code" : "mt",
+							"display": "meeting"
+							}]
+						}],
+						"actor": {
+							"reference": "Patient/PATIENT2",
+							"display": "Anna Demo"
+						},
+						"required": "required",
+						"status": "needs-action"
+					},
+					{
+					"actor": {
+							"reference": "Practitioner/PRACTITIONER1",
+							"display": "Tri Pekka Pakarinen"
+						},
+						"required": "required",
+						"status": "accepted"
+					}
+				]
+			}
