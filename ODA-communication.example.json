@@ -13,6 +13,7 @@
           "text": "oda-careplan-comment"
       }
     ,
+
     "subject": {
         "reference": "Patient/PATIENT2"
     },
@@ -27,6 +28,7 @@
     "recipient": [{
         "reference": "Patient/PATIENT2"
     }],
+
     "payload": [{
         "contentString": "You are progressing well! Good work!"
     }]

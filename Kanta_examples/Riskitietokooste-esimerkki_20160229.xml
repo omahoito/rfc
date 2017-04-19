@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hl7fi="urn:hl7finland" xsi:schemaLocation="urn:hl7-org:v3 t:\skempulat\cda\schema-xml-muotoilu\CDA_fi.xsd">
+<!-- 
+********************************************************
+HL7 CDA R2 header tiedot
+********************************************************
+-->
+   <!-- 1. Asiakirjan aluekoodi pakollinen -->
+   <realmCode code="FI"/>
+   <!-- 2. Asiakirjassa noudatettu tekninen standardiversio CDA R2 Ansi Standard -->
+   <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+   	<!-- Määrittelykokoelma-->
+	<templateId root="1.2.246.777.5.1" extension="2018.10"/>	   
+   <!-- 3. eArkiston asiakirjojen kuvailutiedot versio 2.37 2015-06-10 -->
+   <templateId root="1.2.246.777.11.2015.22"/>
+   <!-- CDA R2 Header versio 4.65 2015-06-25 -->
+   <templateId root="1.2.246.777.11.2015.23"/>
+   <!-- CDA R2 Kertomus ja lomakkeet versio 5.10 2015-06-18 -->
+   <templateId root="1.2.246.777.11.2015.28"/>
+   <!-- Tiedonhallintapalvelun koosteet ja ylläpidettävät asiakirjat, versio 1.01 2016-02-29 -->
+   <templateId root="1.2.246.777.11.2016.7"/>
+   <!-- 4. Asiakirjan OID-tunnus pakollinen -->
+   <id root="1.2.246.537.10.1246109.11.2014.170"/>
+   <!-- 5. Asiakirjan potilasrekisteritunnus, EI ANNETA KOOSTEELLA, on pakollinen skeemassa, siksi nullFlavor -->
+    <code nullFlavor="NA"/>
+    <!-- 6. Asiakirjan otsikko -->
+   <title>Riskitietokooste 5.10.2013 - 15.10.2014</title>
+   <!-- 7. Asiakirjan luontiaika-->
+   <effectiveTime value="20141106124547+0200"/>
+   <!-- 8. Asiakirjan luottamuksellisuus -->
+   <confidentialityCode code="5" codeSystem="1.2.246.777.5.99902.2006" codeSystemName="KanTa-palvelut - Asiakirjan luottamuksellisuus" displayName="Terveydenhuollon salassapidettävä"/>
+   <!-- 9. Asiakirjan kieli -->
+   <!-- 10. Alkuperäisen asiakirjan OID-tunnus, EI ANNETA KOOSTEELLA-->
+   <!-- 11. Asiakirjan versio, EI ANNETA KOOSTEELLA -->
+    <!-- 12. Asiakirjan kopiontiaika (arkisto täyttää), EI ANNETA KOOSTEELLA  -->
+   <!-- 13. Potilaan tiedot pakollinen -->
+   <recordTarget>
+      <!-- Potilaan tiedot -->
+      <patientRole>
+         <!-- Potilaan henkilötunnus -->
+         <id extension="050138-1234" root="1.2.246.21"/>
+         <patient>
+            <!-- Potilaan nimi -->
+            <name>
+               <given>Reijo</given>
+               <family>Riskinen</family>
+            </name>
+            <!-- Potilaan syntymäaika -->
+            <birthTime value="19380105"/>
+         </patient>
+      </patientRole>
+   </recordTarget>
+   <!-- 14. Asiakirjan laatija, EI ANNETA KOOSTEELLA, on pakollinen skeemassa, siksi rakenteissa nullFlavor -->
+   <author>
+      <!--  Ammattihenkilön kirjautumisaika -->
+      <time nullFlavor="NA"/>
+      <assignedAuthor>
+         <!-- Ammattihenkilön perustunniste henkilötunnus-->
+         <id nullFlavor="NA"/>
+      </assignedAuthor>
+   </author>
+   <!-- 17. Asiakirjan rekisterinpitäjä, EI ANNETA KOOSTEELLA, on pakollinen skeemassa, siksi rakenteissa nullFlavor -->
+   <custodian>
+      <assignedCustodian>
+         <representedCustodianOrganization>
+            <!-- Rekisterinpitäjä/toimintayksikkö -->
+            <id nullFlavor="NA"/>
+         </representedCustodianOrganization>
+      </assignedCustodian>
+   </custodian>
+   <!-- 18. informationRecipient, EI ANNETA KOOSTEELLA -->
+   <!-- 19. legalAuthenticator ei käytössä Suomessa  -->
+   <!-- 20. authenticator Asiakirjan aitouden varmistaja ei käytössä Suomessa  -->
+   <!-- 21. participant Toisen henkilön tunnistetiedot, EI ANNETA KOOSTEELLA-->
+   <!-- 22. inFulfillmentOf ei käytössä Suomessa  -->
+   <!-- 23. documentationOf, EI ANNETA KOOSTEELLA   -->
+   <!-- 24. relatedDocument, EI ANNETA KOOSTEELLA -->
+   <!-- 25. authorization, EI ANNETA KOOSTEELLA  -->
+   <!-- 26. componentOf - palvelutapahtuman käyntitiedot, EI ANNETA KOOSTEELLA -->
+
+<!--
+********************************************************
+27 any HL7 CDA R2 Local Header
+********************************************************
+-->
+
+  <hl7fi:localHeader>
+        <!-- FI 2 hl7fi:tableOfContents - asiakirjan sisällysluettelo -->
+        <hl7fi:tableOfContents>
+           <hl7fi:contentsCode displayName="Riskitietokooste" code="343" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - Näkymät 2002"/>
+        </hl7fi:tableOfContents>
+		<!-- FI 4 hl7fi:declaredTime - asiakirjan arkistointiaika (arkisto täyttää), EI ANNETA KOOSTEELLA -->
+		<!-- FI 5 hl7fi:typeCode - asiakirjan laji, EI ANNETA KOOSTEILLA -->
+		<!-- FI 6 hl7fi:fileFormat - asiakirjan tiedostomuoto, EI ANNETA KOOSTEELLA -->
+		<!-- FI 7 hl7fi:softwareSupport - Asiakirjan tuottanut ohjelmisto ja sen versio, EI ANNETA KOOSTEELLA -->
+		<!-- FI 9 hl7fi:documentType - asiakirjan tyyppi, EI ANNETA KOOSTEELLA -->
+		<!-- FI 11 hl7fi:retentionPeriod - asiakirjan hävittämispäivä (arkisto täyttää), EI ANNETA KOOSTEELLA -->
+		<!-- FI 12 hl7fi:functionCode - asiakirjan tehtäväluokka (eAMS), EI ANNETA KOOSTEELLA -->
+		<!-- FI 13 hl7fi:recordStatus - asiakirjan valmistumisen tila, EI ANNETA KOOSTEELLA -->
+		<!-- FI 15 hl7fi:serviceChainLink - asiakirjan linkit palvelukokonaisuuksiin, EI ANNETA KOOSTEELLA -->		
+		<!-- FI 16 hl7fi:episodeLink Asiakirjan linkit palveluntuottajan omiin palvelukokonaisuuksiin, EI ANNETA KOOSTEELLA -->
+		<!-- FI 17 hl7fi:product - asiakirjan toimittajan alue, EI ANNETA KOOSTEELLA -->
+		<!-- FI 18 hl7fi:signature - asiakirjan sähköiset allekirjoitustiedot, EI ANNETA KOOSTEELLA -->
+		<!-- FI  21   hl7fi: patientRegistrySpecifier – asiakirjan (potilas)rekisteritarkenne ja tarkenteen nimi, EI ANNETA KOOSTEELLA -->
+		<!-- FI  22   hl7fi:custodianTypecode – Rekisteripitäjän laji, EI ANNETA KOOSTEELLA  -->
+		<!-- FI  23   hl7fi: encompassingEncounterCode – palvelutapahtuman laji, EI ANNETA KOOSTEELLA  -->
+		<!-- FI 24 hl7fi:activeCustodian – asiakirjan aktiivi rekisterinpitäjä ja nimi (arkisto täyttää), EI ANNETA KOOSTEELLA -->
+		<!-- FI  25   encompassingMaster.code  – palvelutapahtuman ensisijaisuus, EI ANNETA KOOSTEELLA -->
+		<!-- FI  27   hl7fi:outsourcingServiceCustomer – palvelunjärjestäjä (ja nimi), EI ANNETA KOOSTEELLA -->	
+		<!-- FI  28   hl7fi:retentionPeriodClass – asiakirjan säilytysaikaluokka, EI ANNETA KOOSTEELLA -->
+		<!-- FI  29   hl7fi:extendedRetentionPeriod – asiakirjan säilytysajan jatko (arkisto täyttää), EI ANNETA KOOSTEELLA -->
+		<!-- FI  30   hl7fi:sensitiveDocument – asiakirjan erityissisältö, EI ANNETA KOOSTEELLA -->
+		<!-- FI  32   2.4.32	hl7fi:releaseDateForPatientViewing – kansalaisen katselun viivästyttäminen, EI ANNETA KOOSTEELLA -->
+		<!-- FI  33   hl7fi:patientHomeMunicipality – potilaan kotikunta, EI ANNETA KOOSTEELLA -->
+    </hl7fi:localHeader>
+    <!--  End of local Header -->
+
+   <!--
+********************************************************
+  CDA Body
+********************************************************
+-->
+   <component>
+      <structuredBody>
+         <!-- Ensimmäinen riski, riskitietomerkintä tahdonilmaisusta -->
+         <component>
+            <section>
+               <!-- Koosteerkinnän tunnus  -->
+               <id root="1.2.246.537.10.1246109.11.2013.170.2"/>
+               <!-- Näkymä riskitietojen mukainen-->
+               <code code="175" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - Näkymät" displayName="Riskitiedot"/>
+               <!-- Tahdonilmaisujen riskitietomerkinnän tapahtuma-aika (merkinnän muodostamisaika tiedonhallintapalvelussa) -->
+               <author>
+                  <time value="20140424155500+0300"/>
+                  <assignedAuthor>
+					 <!-- vain tapahtuma-aika annetetaan, ei merkinnän tekijää, id pakollinen skeemassa, siksi koosteella nullFlavor --> 
+                     <id nullFlavor="NA"/>
+                  </assignedAuthor>
+               </author>
+                <!-- Koostetietoon liittyviä muita kontekstitietoja ei anneta (erillinen näkymätason entry) -->
+               <component>
+                  <section>
+                    <component>
+                        <section>
+                           <entry>
+                               <!-- Minkä määrityksen mukaan tieto on tuotettu. CDA R2 Kertomus ja lomakkeet versio 5.11 -->
+                               <templateId root="1.2.246.777.11.2015.30"/>
+                               <observation classCode="OBS" moodCode="EVN">
+                                  <templateId root="1.2.246.537.6.12.999.2003.13"/>
+                                  <!-- Riskitieto-entryn tunniste -->
+                                  <id root="1.2.246.10.1246109.11.2014.152.1.2"/>
+                                  <code code="13" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskitieto"/>
+                                  <value xsi:type="CV" nullFlavor="UNK">
+									<!-- 2 Riskin nimi tai lyhyt kuvaus -->
+                                    <originalText>Potilaalla on Tiedonhallintapalvelussa hoitotahto, elinluovutustahto tai muu tahdonilmaisu</originalText>
+                                  </value>
+                                  <!-- Author tässä pois -->
+                                  <!-- 1 Riskin yksilöivä tunniste, OID-tunniste, THP muodostaa-->
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.9" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin yksilöivä tunniste"/>
+                                       <value xsi:type="II" root="1.2.246.10.1246109.11.2014.152.4.1"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <!-- 4 Riskin aste-->
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.6" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin aste"/>
+                                       <value xsi:type="CV" code="2" codeSystem="1.2.246.537.5.40033.2006" codeSystemName="AR/YDIN - Riskitiedon aste 2006" displayName="Hoidossa huomioitava riski"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <!-- 5 Riskin tyyppi -->
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.7" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin tyyppi"/>
+                                       <value xsi:type="CV" code="R1" codeSystem="1.2.246.537.5.40034.2006" codeSystemName="AR/YDIN - Riskitiedon tyyppi 2006" displayName="Potilaan tahdonilmaisu"/>
+                                    </observation>
+                                 </entryRelationship>
+                              </observation>
+                           </entry>
+                        </section>
+                    </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <!-- Toinen riski -->
+         <component>
+            <section>
+               <!-- Koostemerkinnän tunnus  -->
+               <id root="1.2.246.537.10.1246109.11.2013.170.3"/>
+               <!-- alkuperäinen näkymä-->
+               <code code="175" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - Näkymät" displayName="Riskitiedot"/>
+               <!-- alkuperäisen merkinnän tapahtuma-aika  -->
+               <author>
+                  <time value="20131001141000+0300"/>
+                  <assignedAuthor>
+					  <!-- vain tapahtuma-aika annetetaan, ei merkinnän tekijää, id pakollinen skeemassa, siksi koosteella nullFlavor --> 
+                     <id nullFlavor="NA"/>
+                  </assignedAuthor>
+               </author>
+                <!-- Erillinen entry-rakenne muita koostetiedon syntykontekstin tietoja varten -->
+                <entry>
+                    <encounter classCode="ENC" moodCode="EVN">
+                        <templateId root="1.2.246.537.6.12.999.2003.5"/>
+                        <!-- Palvelutapahtuman tiedot -->
+                        <performer>
+                            <assignedEntity>
+                                <!-- Palvelutapahtuman id -->
+                                <id root="1.2.246.10.1234567.14.2013.123"/>
+                                <representedOrganization>
+                                    <!-- Palveluntuottajan id (OID) -->
+                                   <id root="1.2.246.10.1246109.10.2006.371"/>
+                                   <!-- palveluntuottajan nimi -->
+                                   <name>Katriinan sairaala, os. 1, Vantaan soster</name>
+                                </representedOrganization>
+                            </assignedEntity>
+                        </performer>
+                        <!-- Linkki asiakirjaan, josta kyseinen merkitä on -->
+                        <reference typeCode="REFR">
+                            <externalDocument>
+                                <!-- asiakirjaviittausrakenteen templateId -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.6"/>
+                                <!-- asiakirjan id-->
+                                <id root="1.2.246.537.10.1246109.11.2014.152"/>
+                                <!-- Alkuperäisen asiakirjan setId, missä merkintä on tehty -->
+                                <setId root="1.2.246.537.10.1246109.11.2014.152"/>
+                            </externalDocument>
+                        </reference>
+                        <!-- Linkki alkuperäiseen merkintään -->
+                        <reference typeCode="REFR">
+                            <externalAct>
+                                <!-- merkintäviittausrakenteen templateId -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.7"/>
+                                <!-- merkinnän id-->
+                                <id root="1.2.246.10.1246109.11.2014.152.1"/>
+                            </externalAct>
+                        </reference>
+                    </encounter>
+                </entry>
+               <component>
+                  <section>
+                    <component>
+                        <section>
+                           <entry>
+                              <!-- Minkä määrityksen mukaan tieto on tuotettu. CDA R2 Kertomus ja lomakkeet versio 5.11 -->
+							  <templateId root="1.2.246.777.11.2015.30"/>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <templateId root="1.2.246.537.6.12.999.2003.13"/>
+                                 <id root="1.2.246.10.1234567.11.2014.152.1.1"/>
+                                 <code code="13" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskitieto"/>
+                                 <effectiveTime value="20131001"/>
+                                 <value xsi:type="CV" code="J46" codeSystem="1.2.246.537.6.1.1999" codeSystemName="THL - Tautiluokitus ICD-10" displayName="Äkillinen vaikea astma">
+                                    <originalText>Kipulääkkeen aiheuttama astmakohtaus</originalText>
+                                 </value>
+                                 <author>
+                                      <functionCode code="RIS" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto – tekninen CDA R2 henkilötarkennin" displayName="Riskitiedon havainnut henkilö"/>
+                                      <time value="20131001"/>
+                                      <assignedAuthor>
+                                         <id extension="121256-5678" root="1.2.246.21"/>
+                                         <assignedPerson>
+                                            <name>
+                                               <given>Matti</given>
+                                               <family>Muje</family>
+                                               <suffix>lääkäri</suffix>
+                                            </name>
+                                         </assignedPerson>
+                                         <representedOrganization>
+                                            <id root="1.2.246.10.1246109.10.2006.371"/>
+                                            <name>Katriinan sairaala, os. 1, Vantaan soster</name>
+                                         </representedOrganization>
+                                      </assignedAuthor>
+                                 </author>
+                                 <informant typeCode="INF" contextControlCode="OP">
+                                    <assignedEntity classCode="ASSIGNED">
+                                       <id/>
+                                       <code code="HOIORG" codeSystem="1.2.246.537.5.40031.2006" codeSystemName="THL - Tiedon lähde 2006" displayName="Hoitava organisaatio"/>
+                                       </assignedEntity>
+                                 </informant>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.9" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin yksilöivä tunniste"/>
+                                       <value xsi:type="II" root="1.2.246.10.1246109.11.2014.152.4.1"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.6" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin aste"/>
+                                       <value xsi:type="CV" code="1" codeSystem="1.2.246.537.5.40033.2006" codeSystemName="AR/YDIN - Riskitiedon aste 2006" displayName="Kriittinen riski"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.7" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin tyyppi"/>
+                                       <value xsi:type="CV" code="L9" codeSystem="1.2.246.537.5.40034.2006" codeSystemName="AR/YDIN - Riskitiedon tyyppi 2006" displayName="Muu lääkereaktio"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="2.2" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn varmuusaste"/>
+                                       <value xsi:type="CV" code="TOD" codeSystem="1.2.246.537.5.40004.2003" codeSystemName="AR/YDIN - Varmuusaste 2003" displayName="Todennäköinen tai varma"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="2.1" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn pysyvyys"/>
+                                       <value xsi:type="CV" code="PYS" codeSystem="1.2.246.537.5.40003.2003" codeSystemName="AR/YDIN - Pysyvyys 2003" displayName="Pysyväisluonteinen"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.2" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskiin liittyvä lisätieto"/>
+                                       <value xsi:type="CV" code="M01AE03" codeSystem="1.2.246.537.6.32.2007" codeSystemName="Fimea - ATC Luokitus 2007" displayName="Ketoprofeeni">
+                                          <originalText>Ketorin 100mg kaps.</originalText>
+                                       </value>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.4" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Selite, riskin huomiointi potilaan hoidossa"/>
+                                       <value xsi:type="ST">Ei saa käyttää tulehduskipulääkkettä</value>
+                                    </observation>
+                                 </entryRelationship>
+                              </observation>
+                           </entry>
+                        </section>
+                    </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <!-- kolmas riski -->
+         <component>
+            <section>
+               <!-- Koostemerkinnän tunnus  -->
+               <id root="1.2.246.537.10.1246109.11.2013.170.4"/>
+               <!-- alkuperäinen näkymä-->
+               <code code="175" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - Näkymät" displayName="Riskitiedot"/>
+               <!-- alkuperäisen merkinnän tapahtuma-aika  -->
+               <author>
+                  <time value="20140424155500+0300"/>
+                  <assignedAuthor>
+					<!-- vain tapahtuma-aika annetetaan, ei merkinnän tekijää, id pakollinen skeemassa, siksi koosteella nullFlavor --> 
+                     <id nullFlavor="NA"/>
+                  </assignedAuthor>
+               </author>
+                <!-- Erillinen entry-rakenne muita koostetiedon syntykontekstin tietoja varten  -->
+                <entry>
+                    <encounter classCode="ENC" moodCode="EVN">
+                        <!-- Palvelutapahtuman tiedot -->
+                        <templateId root="1.2.246.537.6.12.999.2003.5"/>
+                        <!-- Palvelutapahtuman tiedot -->
+                        <performer>
+                            <assignedEntity>
+                                <!-- Palvelutapahtuman id -->
+                                <id root="1.2.246.10.1234567.14.2013.123"/>
+                                <representedOrganization>
+                                    <!-- Palveluntuottajan id (OID) -->
+                                   <id root="1.2.246.10.1246109.10.2006.371"/>
+                                   <!-- palveluntuottajan nimi -->
+                                   <name>Katriinan sairaala, os. 1, Vantaan soster</name>
+                                </representedOrganization>
+                            </assignedEntity>
+                        </performer>
+                        <!-- Linkki asiakirjaan, josta kyseinen merkitä on -->
+                        <reference typeCode="REFR">
+                            <externalDocument>
+                                <!-- asiakirjaviittausrakenteen templateId -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.6"/>
+                                <!-- asiakirjan id-->
+                                <id root="1.2.246.537.10.1246109.11.2014.152"/>
+                                <!-- Alkuperäisen asiakirjan setId, missä merkintä on tehty -->
+                                <setId root="1.2.246.537.10.1246109.11.2014.152"/>
+                            </externalDocument>
+                        </reference>
+                        <!-- Linkki alkuperäiseen merkintään -->
+                        <reference typeCode="REFR">
+                            <externalAct>
+                                <!-- merkintäviittausrakenteen templateId, uusi -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.7"/>
+                                <!-- merkinnän id-->
+                                <id root="1.2.246.10.1246109.11.2014.152.2"/>
+                            </externalAct>
+                        </reference>
+                    </encounter>
+                </entry>
+               <component>
+                  <section>
+                    <component>
+                        <section>
+                           <entry>
+                               <!-- Minkä määrityksen mukaan tieto on tuotettu. CDA R2 Kertomus ja lomakkeet versio 5.11 -->
+                               <templateId root="1.2.246.777.11.2015.30"/>
+                               <observation classCode="OBS" moodCode="EVN">
+                                  <templateId root="1.2.246.537.6.12.999.2003.13"/>
+                                  <id root="1.2.246.10.1234567.11.2014.152.1.2"/>
+                                  <code code="13" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskitieto"/>
+                                  <effectiveTime value="20131015"/>
+                                  <value xsi:type="CV" code="NFB10" codeSystem="1.2.246.537.6.2.2007" codeSystemName="THL - Toimenpideluokitus 2007" displayName="Lonkan osatekonivel, sementitön">
+                                    <originalText>Potilas on kertonut, että hanelle on asennettu lonkkaproteesi vuonna 1977.</originalText>
+                                  </value>
+                                  <author>
+                                      <functionCode code="RIS" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto – tekninen CDA R2 henkilötarkennin" displayName="Riskitiedon havainnut henkilö"/>
+                                      <time value="20131001"/>
+                                      <assignedAuthor>
+                                         <id extension="121256-5678" root="1.2.246.21"/>
+                                         <assignedPerson>
+                                            <name>
+                                               <given>Matti</given>
+                                               <family>Muje</family>
+                                               <suffix>lääkäri</suffix>
+                                            </name>
+                                         </assignedPerson>
+                                         <representedOrganization>
+                                            <id root="1.2.246.10.1246109.10.2006.371"/>
+                                            <name>Katriinan sairaala, os. 1, Vantaan soster</name>
+                                         </representedOrganization>
+                                      </assignedAuthor>
+                                 </author>
+                                 <informant typeCode="INF" contextControlCode="OP">
+                                    <relatedEntity classCode="PAT">
+                                       <code code="POT" codeSystem="1.2.246.537.5.40031.2006" codeSystemName="THL - Tiedon lähde 2006" displayName="Potilas"/>
+                                    </relatedEntity>
+                                 </informant>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.9" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin yksilöivä tunniste"/>
+                                       <value xsi:type="II" root="1.2.246.10.1246109.11.2014.152.4.2"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.6" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin aste"/>
+                                       <value xsi:type="CV" code="1" codeSystem="1.2.246.537.5.40033.2006" codeSystemName="AR/YDIN - Riskitiedon aste 2006" displayName="Kriittinen riski"/>
+                                    </observation>
+                                 </entryRelationship>
+                                <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.7" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin tyyppi"/>
+                                       <value xsi:type="CV" code="I6" codeSystem="1.2.246.537.5.40034.2006" codeSystemName="AR/YDIN - Riskitiedon tyyppi 2006" displayName="Proteesit ja implantit"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="2.2" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn varmuusaste"/>
+                                       <value xsi:type="CV" code="TOD" codeSystem="1.2.246.537.5.40004.2003" codeSystemName="AR/YDIN - Varmuusaste 2003" displayName="Todennäköinen tai varma"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="2.1" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn pysyvyys"/>
+                                       <value xsi:type="CV" code="PYS" codeSystem="1.2.246.537.5.40003.2003" codeSystemName="AR/YDIN - Pysyvyys 2003" displayName="Pysyväisluonteinen"/>
+                                    </observation>
+                                 </entryRelationship>
+                              </observation>
+                           </entry>
+                        </section>
+                    </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <!-- Neljäs riski -->
+         <component>
+            <section>
+               <!-- Koostemerkinnän tunnus  -->
+               <id root="1.2.246.537.10.1246109.11.2013.170.5"/>
+               <!-- alkuperäinen näkymä-->
+               <code code="175" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - Näkymät" displayName="Riskitiedot"/>
+               <!-- alkuperäisen merkinnän tapahtuma-aika  -->
+               <author>
+                  <time value="20140424155500+0300"/>
+                  <assignedAuthor>
+					  <!-- vain tapahtuma-aika annetetaan, ei merkinnän tekijää, id pakollinen skeemassa, siksi koosteella nullFlavor --> 
+                     <id nullFlavor="NA"/>
+                  </assignedAuthor>
+               </author>
+                <!-- Erillinen entry-rakenne muita koostetiedon syntykontekstin tietoja varten  -->
+                <entry>
+                    <encounter classCode="ENC" moodCode="EVN">
+                        <!-- Palvelutapahtuman tiedot -->
+                        <templateId root="1.2.246.537.6.12.999.2003.5"/>
+                        <!-- Palvelutapahtuman tiedot -->
+                        <performer>
+                            <assignedEntity>
+                                <!-- Palvelutapahtuman id -->
+                                <id root="1.2.246.10.1234567.14.2013.123"/>
+                                <representedOrganization>
+                                    <!-- Palveluntuottajan id (OID) -->
+                                   <id root="1.2.246.10.1246109.10.2006.371"/>
+                                   <!-- palveluntuottajan nimi -->
+                                   <name>Katriinan sairaala, os. 1, Vantaan soster</name>
+                                </representedOrganization>
+                            </assignedEntity>
+                        </performer>
+                        <!-- Linkki asiakirjaan, josta kyseinen merkitä on -->
+                        <reference typeCode="REFR">
+                            <externalDocument>
+                                <!-- asiakirjaviittausrakenteen templateId -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.6"/>
+                                <!-- asiakirjan id-->
+                                <id root="1.2.246.537.10.1246109.11.2014.152"/>
+                                <!-- Alkuperäisen asiakirjan setId, missä merkintä on tehty -->
+                                <setId root="1.2.246.537.10.1246109.11.2014.152"/>
+                            </externalDocument>
+                        </reference>
+                        <!-- Linkki alkuperäiseen merkintään -->
+                        <reference typeCode="REFR">
+                            <externalAct>
+                                <!-- merkintäviittausrakenteen templateId -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.7"/>
+                                <!-- merkinnän id-->
+                                <id root="1.2.246.10.1246109.11.2014.152.1"/>
+                            </externalAct>
+                        </reference>
+                    </encounter>
+                </entry>
+               <component>
+                  <section>
+                    <component>
+                        <section>
+                           <entry>
+                              <!-- Minkä määrityksen mukaan tieto on tuotettu. CDA R2 Kertomus ja lomakkeet versio 5.11 -->
+                              <templateId root="1.2.246.777.11.2015.30"/>
+                               <observation classCode="OBS" moodCode="EVN">
+                                 <templateId root="1.2.246.537.6.12.999.2003.13"/>
+                                 <id root="1.2.246.10.1234567.11.2014.152.1.3"/>
+                                 <code code="13" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskitieto"/>
+                                  <effectiveTime>
+                                    <low value="20131001"/>
+                                    <high value="20141015"/>
+                                 </effectiveTime>
+                                 <value xsi:type="CV" nullFlavor="UNK">
+                                     <originalText>Väkivaltaisuus hoitotilanteessa</originalText>
+                                 </value>
+                                 <author>
+                                      <functionCode code="RIS" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto – tekninen CDA R2 henkilötarkennin" displayName="Riskitiedon havainnut henkilö"/>
+                                      <time value="20131001"/>
+                                      <assignedAuthor>
+                                         <id extension="121256-5678" root="1.2.246.21"/>
+                                         <assignedPerson>
+                                            <name>
+                                               <given>Matti</given>
+                                               <family>Muje</family>
+                                               <suffix>lääkäri</suffix>
+                                            </name>
+                                         </assignedPerson>
+                                         <representedOrganization>
+                                            <id root="1.2.246.10.1246109.10.2006.371"/>
+                                            <name>Katriinan sairaala, os. 1, Vantaan soster</name>
+                                         </representedOrganization>
+                                      </assignedAuthor>
+                                 </author>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.9" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin yksilöivä tunniste"/>
+                                       <value xsi:type="II" root="1.2.246.10.1246109.11.2014.152.1.3"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.6" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin aste"/>
+                                       <value xsi:type="CV" code="2" codeSystem="1.2.246.537.5.40033.2006" codeSystemName="AR/YDIN - Riskitiedon aste 2006" displayName="Hoidossa huomioitava riski"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.7" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin tyyppi"/>
+                                       <value xsi:type="CV" code="K1" codeSystem="1.2.246.537.5.40034.2006" codeSystemName="AR/YDIN - Riskitiedon tyyppi 2006" displayName="Väkivaltaisuus hoitotilanteessa"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="2.1" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn pysyvyys"/>
+                                       <value xsi:type="CV" code="KER" codeSystem="1.2.246.537.5.40003.2003" codeSystemName="AR/YDIN - Pysyvyys 2003" displayName="Määräaikainen"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.4" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Selite, riskin huomiointi potilaan hoidossa"/>
+                                       <value xsi:type="ST">Vartija tarvitaan hoitotilanteessa</value>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="13.10" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Päättymispäivä arvioitu"/>
+                                       <value xsi:type="BL" value="true"/>
+                                    </observation>
+                                 </entryRelationship>
+                              </observation>
+                           </entry>
+                        </section>
+                    </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <!-- Viides riski-->
+         <component>
+            <section>
+               <!-- Koostemerkinnän tunnus  -->
+               <id root="1.2.246.537.10.1246109.11.2013.170.6"/>
+               <!-- alkuperäinen näkymä-->
+               <code code="175" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - Näkymät" displayName="Riskitiedot"/>
+               <!-- alkuperäisen merkinnän tapahtuma-aika  -->
+               <author>
+                  <time value="201310151410+0300"/>
+                  <assignedAuthor>
+					  <!-- vain tapahtuma-aika annetetaan, ei merkinnän tekijää, id pakollinen skeemassa, siksi koosteella nullFlavor --> 
+                     <id nullFlavor="NA"/>
+                  </assignedAuthor>
+               </author>
+                <!-- Erillinen entry-rakenne muita koostetiedon syntykontekstin tietoja varten -->
+                <entry>
+                    <encounter classCode="ENC" moodCode="EVN">
+                        <!-- Palvelutapahtuman tiedot -->
+                        <templateId root="1.2.246.537.6.12.999.2003.5"/>
+                        <!-- Palvelutapahtuman tiedot -->
+                        <performer>
+                            <assignedEntity>
+                                <!-- Palvelutapahtuman id -->
+                                <id root="1.2.246.10.1234567.14.2013.124"/>
+                                <representedOrganization>
+                                    <!-- Palveluntuottajan id (OID) -->
+                                    <id root="1.2.246.10.1714953.10.20489034.10.123"/>
+                                    <name>Sisätautien osasto 3/ hematologinen osasto KYS</name>
+                                </representedOrganization>
+                            </assignedEntity>
+                        </performer>
+                        <!-- Linkki asiakirjaan, josta kyseinen merkitä on -->
+                        <reference typeCode="REFR">
+                            <externalDocument>
+                                <!-- asiakirjaviittausrakenteen templateId -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.6"/>
+                                <!-- asiakirjan id-->
+                                <id root="1.2.246.537.10.1246500.11.2013.301"/>
+                                <!-- Alkuperäisen asiakirjan setId, missä merkintä on tehty -->
+                                <setId root="1.2.246.537.10.1246500.11.2013.301"/>
+                            </externalDocument>
+                        </reference>
+                        <!-- Linkki alkuperäiseen merkintään -->
+                        <reference typeCode="REFR">
+                            <externalAct>
+                                <!-- merkintäviittausrakenteen templateId -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.7"/>
+                                <!-- merkinnän id-->
+                                <id root="1.2.246.10.1246500.11.2013.301.1"/>
+                            </externalAct>
+                        </reference>
+                    </encounter>
+                </entry>
+               <component>
+                  <section>
+                    <component>
+                        <section>
+                           <entry>
+                             <!-- Minkä määrityksen mukaan tieto on tuotettu. CDA R2 Kertomus ja lomakkeet versio 5.11 -->
+                             <templateId root="1.2.246.777.11.2015.30"/>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <templateId root="1.2.246.537.6.12.999.2003.13"/>
+                                 <id root="1.2.246.10.1234567.11.2013.301.1.1"/>
+                                 <code code="13" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskitieto"/>
+                                 <effectiveTime>
+                                    <low value="20131013"/>
+                                    <high value="20131015"/>
+                                 </effectiveTime>
+                                 <value xsi:type="CV" nullFlavor="UNK">
+                                    <originalText>Poikkeavia vasta-aineita veressä.</originalText>
+                                 </value>
+                                 <author>
+                                   <functionCode code="RIS" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto – tekninen CDA R2 henkilötarkennin" displayName="Riskitiedon havainnut henkilö"/>
+                                    <time value="20131013"/>
+                                    <assignedAuthor>
+                                       <id extension="hetu" root="1.2.246.21"/>
+                                      <assignedPerson>
+                                          <name>
+                                             <given>Ville</given>
+                                             <family>Vilu</family>
+                                             <suffix>lääkäri</suffix>
+                                          </name>
+                                       </assignedPerson>
+                                       <representedOrganization>
+                                          <id root="1.2.246.10.1246109.10.20489034.10.149"/>
+                                          <name>Leikkausosasto, Pieksamäen perusturva</name>
+                                       </representedOrganization>
+                                    </assignedAuthor>
+                                 </author>
+                                 <author>
+                                    <functionCode code="EIRIS" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto – tekninen CDA R2 henkilötarkennin" displayName="Riskitiedon poistanut henkilö"/>
+                                    <time value="20131015"/>
+                                    <assignedAuthor>
+                                       <id extension="hetu" root="1.2.246.21"/>
+                                       <assignedPerson>
+                                          <name>
+                                             <given>Lasse</given>
+                                             <family>Lekuri</family>
+                                             <suffix>lääkäri</suffix>
+                                          </name>
+                                       </assignedPerson>
+                                       <representedOrganization>
+                                          <id root="1.2.246.10.1714953.10.20489034.10.123"/>
+                                          <name>Sisätautien osasto 3/ hematologinen osasto KYS</name>
+                                       </representedOrganization>
+                                    </assignedAuthor>
+                                 </author>
+                                 <informant typeCode="INF" contextControlCode="OP">
+                                    <assignedEntity classCode="ASSIGNED">
+                                       <id/>
+                                       <code code="HOIORG" codeSystem="1.2.246.537.5.40031.2006" codeSystemName="THL - Tiedon lähde 2006" displayName="Hoitava organisaatio"/>
+                                       </assignedEntity>
+                                 </informant>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="COND" moodCode="EVN">
+                                       <code code="13.9" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin yksilöivä tunniste"/>
+                                       <value xsi:type="II" root="1.2.246.10.1246500.11.2013.201.1.1"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="COND" moodCode="EVN">
+                                       <code code="13.6" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin aste"/>
+                                       <value xsi:type="CV" code="2" codeSystem="1.2.246.537.5.40033.2006" codeSystemName="AR/YDIN - Riskitiedon aste 2006" displayName="Hoidossa huomioitava riski"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="COND" moodCode="EVN">
+                                       <code code="13.7" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin tyyppi"/>
+                                       <value xsi:type="CV" code="V9" codeSystem="1.2.246.537.5.40034.2006" codeSystemName="AR/YDIN - Riskitiedon tyyppi 2006" displayName="Muut verituotteiden annossa huomioitavat asiat"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="COND" moodCode="EVN">
+                                       <code code="2.2" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn varmuusaste"/>
+                                       <value xsi:type="CV" code="EP" codeSystem="1.2.246.537.5.40004.2003" codeSystemName="AR/YDIN - Varmuusaste 2003" displayName="Epäilty"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="COND" moodCode="EVN">
+                                       <code code="2.1" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn pysyvyys"/>
+                                       <value xsi:type="CV" code="PYS" codeSystem="1.2.246.537.5.40003.2003" codeSystemName="AR/YDIN - Pysyvyys 2003" displayName="Pysyväisluonteinen"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                    <observation classCode="COND" moodCode="EVN">
+                                       <code code="13.4" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Selite, riskin huomiointi potilaan hoidossa"/>
+                                      <value xsi:type="ST">Aina tarkennettu vasta-aineseulonta.</value>
+                                   </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="COMP">
+                                   <observation classCode="COND" moodCode="EVN">
+                                      <code code="13.5" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Riskin päättymisen syy"/>
+                                      <value xsi:type="CV" code="VIR" codeSystem="1.2.246.537.6.602.2013" codeSystemName="AR/YDIN- Terveystiedon voimassaolon päättymisen syy 2013" displayName="Kirjausvirhe">
+                                           <originalText>Riskin päättymisen syytä tarkentava vapaamuotoinen teksti</originalText>
+                                      </value>
+                                   </observation>
+                                 </entryRelationship>
+                              </observation>
+                           </entry>
+                        </section>
+                    </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</ClinicalDocument>
