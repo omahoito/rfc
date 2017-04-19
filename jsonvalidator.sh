@@ -6,7 +6,7 @@ unset jmap
 
 declare -A jmap
 
-JSD_PATH="json_schemas/"
+JSD_PATH="./json_schemas/"
 APPOINTMENT_PATH="Appointment/"
 FHIR_SCHEMA_FILE="$JSD_PATH""fhir.schema.json"
 
