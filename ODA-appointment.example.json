@@ -25,9 +25,9 @@
 				{
 					"type": [{
 						"coding": [{
-							"system": "http://oda.fi/appointment-type",
-							"code" : "mt",
-							"display": "meeting"
+							"system": "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+							"code" : "ATND",
+							"display": "attender"
 							}]
 						}],
 						"actor": {
