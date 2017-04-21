@@ -1,15 +1,13 @@
 {
 	"resourceType": "HealthcareService",
 	"id" : "HEALTHCARESERVICE1",
-	"text" : {
-		"status" : "generated"
-	},
 	"identifier": [{
-		"system": "url://for/healthcareserviceids",
-		"value": "600"
+		"system": "http://oda.fi/healthcarereferences",
+		"value": "HC-600"
 	}],
 	"providedBy": {
-		"Reference": "Organization/ORGANIZATION1"
+		"reference": "Organization/ORGANIZATION1",
+		"display": "Malminkartanon terveysasema"
 	},
 	"serviceName": "Malminkartanon terveysasema",
 	"telecom": [{
@@ -19,7 +17,7 @@
 	}],
 	"characteristic": [{
 		"coding": [{
-			"system": "grey",
+			"system": "http://oda.fi/healtchcarecharacteristics",
 			"code": "gray",
 			"display": "125,125,125"
 		}]

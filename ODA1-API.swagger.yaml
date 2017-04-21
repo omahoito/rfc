@@ -1,11 +1,10 @@
 # This file can be rendered e.g. by pasting the raw github file url in http://petstore.swagger.io
 swagger: '2.0'
 info:
-  title: EBMeDS API for ODA (ALPHA)
+  title: EBMeDS API for ODA (BETA)
   description: >
-    RESTful FHIR resources for clinical decision support in ODA 1. This is a preview,
-    some endpoint names may change, some JSON properties may change.
-  version: "0.1.0-alpha"
+    RESTful FHIR resources for clinical decision support in ODA 1.
+  version: "0.2.0"
 # the domain of the service
 host: oda.ebmedscloud.org
 # array of all schemes that your API supports
@@ -565,49 +564,53 @@ definitions:
                 questionnaireResponse: 'QuestionnaireResponse/Patient.id'
   questionnaire-cds-request:
     type: object
-    description: >
-      A standard CDS Hook call, with the QuestionnaireResponse resource in the prefetch
-      property. See http://cds-hooks.org/#calling-a-cds-service for details.
+    description: 'A standard CDS Hook call, with the QuestionnaireResponse resource in the prefetch property. See http://cds-hooks.org/#calling-a-cds-service for details.'
+    required:
+      - hookInstance
+      - hook
+      - prefetch
     properties:
       hookInstance:
         type: string
         format: uuid
         description: A UUID for this particular hook call.
-        example: d1577c69-dfbe-44ad-ba6d-3e05e953b2ea
-      fhirServer:
-        type: string
-        format: url
-        description: The base URL for the EHR's FHIR server. The scheme should be https.
-        example: 'https://hooks.smarthealthit.org:9080'
+        example: 'd1577c69-dfbe-44ad-ba6d-3e05e953b2ea'
+      #fhirServer:
+      #  type: string
+      #  format: url
+      #  description: The base URL for the EHR's FHIR server. The scheme should be https.
+      #  example: 'https://hooks.smarthealthit.org:9080'
       hook:
         type: string
         enum:
           - questionnaire-completed
         description: The hook name as given in the catalogue. In this call, always set to 'questionnaire-completed' # TODO is this a good hook name?
-      redirect:
-        type: string
-        format: url
-        description: The URL that a Link Card should redirect to. Unused for other card types.
-        example: 'http://hooks2.smarthealthit.org/service-done.html'
-      user:
-        type: string # TODO: enum and regex to only allow Practitioner/123, Patient/123 and RelatedPerson/123 where 123 is id
-        description: >
-          The FHIR resource type and id representing the current user, i.e. the one
-          calling the service. The type is one of Practitioner, Patient or RelatedPerson
-        example: Practitioner/123
+      #redirect:
+      #  type: string
+      #  format: url
+      #  description: The URL that a Link Card should redirect to. Unused for other card types.
+      #  example: 'http://hooks2.smarthealthit.org/service-done.html'
+      #user:
+      #  type: string # TODO: enum and regex to only allow Practitioner/123, Patient/123 and RelatedPerson/123 where 123 is id
+      #  description: >
+      #    The FHIR resource type and id representing the current user, i.e. the one
+      #    calling the service. The type is one of Practitioner, Patient or RelatedPerson
+      #  example: Practitioner/123
       context:
         # TODO should perhaps the QuestionnaireResponse be here instead? It's not stored in the FHIR server, is it?
         type: object
         description: >
           Hook-specific contextual data that the CDS service will need. Especially data
           that can not be gotten from the FHIR server.
-      patient:
-        type: string
-        description: The FHIR Patient.id in the current context.
-        example: '1288992'
+      #patient:
+      #  type: string
+      #  description: The FHIR Patient.id in the current context.
+      #  example: '1288992'
       prefetch:
         type: object
         description: The meat of the hook call. We need the QuestionnaireResponse and Patient resources.
+        required:
+          - questionnaireResponse
         properties:
           questionnaireResponse:
             type: object
@@ -622,228 +625,200 @@ definitions:
                     example: 200 OK
               resource:
                 $ref: '#/definitions/questionnaireResponse'
-          patient:
-            type: object
-            properties:
-              response:
-                description: If this resource was gotten from a FHIR server, what was its HTTP response?
-                type: object
-                properties:
-                  status:
-                    type: string
-                    description: HTTP response code from FHIR server
-                    example: 200 OK
-              resource:
-                $ref: '#/definitions/patient'
-  patient:
-    description: "A FHIR Patient resource. NOTE: The data should be anonymized! EBMeDS minimum requirements are birthDate and gender"
-    type: object
-    properties:
-      birthDate:
-        type: string
-        format: date
-        example: "1976-07-12"
-      gender:
-        type: string
-        enum:
-          - male
-          - female
-          - other
-          - unknown
-        example: female
-    # TODO more properties needed in Patient?
 
-  questionnaire:
-    type: object
-    description: Questionnaire resource (FHIR) with Duodecim extensions
-    properties:
-      concept:
-        type: array
-        description: TODO
-        items:
-          type: object
-          properties:
-            code:
-              type: string
-              description: TODO
-      date:
-        type: string
-        format: date-time
-        description: TODO
-      extension:
-        type: array
-        minItems: 1
-        maxItems: 1
-        items:
-          type: object
-          description: 'selfCareInstructions extension'
-          properties:
-            url:
-              type: string
-              format: url
-              enum:
-              - 'https://www.ebmeds.org/form#selfCareInstructions'
-            extension:
-              type: array
-              items:
-                type: object
-                properties:
-                  url:
-                    type: string
-                  valueString:
-                    description: TODO
-                    type: string
-                    format: url
-      id:
-        type: string
-        example: "QUESTIONNAIRE1"
-      identifier:
-        type: array
-        minItems: 1
-        maxItems: 1
-        items:
-          type: object
-          properties:
-            system:
-              type: string
-              format: url
-              example: "https://www.ebmeds.org/form/api/FHIR/forms/export/701"
-            value:
-              type: string
-              example: "701"
-      item:
-        $ref: '#/definitions/questionnaire-item'
-      language:
-        type: string
-        description: "A two-letter language code, ISO 639-1."
-        example: "fi"
-      meta:
-        type: object
-        properties:
-          lastUpdated:
-            type: string
-            format: dateTime
-          versionId:
-            type: string
-      publisher:
-        type: string
-      copyright:
-        type: string
-      resourceType:
-        description: 'Always "Questionnaire"'
-        type: string
-        enum:
-        - "Questionnaire"
-      status:
-        type: string
-        enum:
-        - draft
-        - published
-        - retired
-      text:
-        type: object
-        properties:
-          div:
-            type: string
-            format: xml
-          status:
-            type: string
-            enum:
-              - generated
-              - extensions
-              - additional
-              - empty
-            example: "generated"
-      title:
-        type: string
-        description: TODO
-      url:
-        type: string
-        description: TODO
-        format: url
-      useContext:
-        type: array
-        minItems: 1
-        maxItems: 1
-        items:
-          type: object
-          properties:
-            coding:
-              type: array
-              minItems: 1
-              maxItems: 1
-              items:
-                type: object
-                properties:
-                  code:
-                    type: string
-                    example: 123
-                  system:
-                    type: string
-                    format: url
-                    description: TODO
-                    example: 'http://questionnaire/types'
+  #questionnaire:
+  #  type: object
+  #  description: Questionnaire resource (FHIR) with Duodecim extensions
+  #  properties:
+  #    concept:
+  #      type: array
+  #      description: TODO
+  #      items:
+  #        type: object
+  #        properties:
+  #          code:
+  #            type: string
+  #            description: TODO
+  #    date:
+  #      type: string
+  #      format: date-time
+  #      description: TODO
+  #    extension:
+  #      type: array
+  #      minItems: 1
+  #      maxItems: 1
+  #      items:
+  #        type: object
+  #        description: 'selfCareInstructions extension'
+  #        properties:
+  #          url:
+  #            type: string
+  #            format: url
+  #            enum:
+  #            - 'https://www.ebmeds.org/form#selfCareInstructions'
+  #          extension:
+  #            type: array
+  #            items:
+  #              type: object
+  #              properties:
+  #                url:
+  #                  type: string
+  #                valueString:
+  #                  description: TODO
+  #                  type: string
+  #                  format: url
+  #    id:
+  #      type: string
+  #      example: "QUESTIONNAIRE1"
+  #    identifier:
+  #      type: array
+  #      minItems: 1
+  #      maxItems: 1
+  #      items:
+  #        type: object
+  #        properties:
+  #          system:
+  #            type: string
+  #            format: url
+  #            example: "https://www.ebmeds.org/form/api/FHIR/forms/export/701"
+  #          value:
+  #            type: string
+  #            example: "701"
+  #    item:
+  #      $ref: '#/definitions/questionnaire-item'
+  #    language:
+  #      type: string
+  #      description: "A two-letter language code, ISO 639-1."
+  #      example: "fi"
+  #    meta:
+  #      type: object
+  #      properties:
+  #        lastUpdated:
+  #          type: string
+  #          format: dateTime
+  #        versionId:
+  #          type: string
+  #    publisher:
+  #      type: string
+  #    copyright:
+  #      type: string
+  #    resourceType:
+  #      description: 'Always "Questionnaire"'
+  #      type: string
+  #      enum:
+  #      - "Questionnaire"
+  #    status:
+  #      type: string
+  #      enum:
+  #      - draft
+  #      - published
+  #      - retired
+  #    text:
+  #      type: object
+  #      properties:
+  #        div:
+  #          type: string
+  #          format: xml
+  #        status:
+  #          type: string
+  #          enum:
+  #            - generated
+  #            - extensions
+  #            - additional
+  #            - empty
+  #          example: "generated"
+  #    title:
+  #      type: string
+  #      description: TODO
+  #    url:
+  #      type: string
+  #      description: TODO
+  #      format: url
+  #    useContext:
+  #      type: array
+  #      minItems: 1
+  #      maxItems: 1
+  #      items:
+  #        type: object
+  #        properties:
+  #          coding:
+  #            type: array
+  #            minItems: 1
+  #            maxItems: 1
+  #            items:
+  #              type: object
+  #              properties:
+  #                code:
+  #                  type: string
+  #                  example: 123
+  #                system:
+  #                  type: string
+  #                  format: url
+  #                  description: TODO
+  #                  example: 'http://questionnaire/types'
 
-  questionnaire-item:
+  #questionnaire-item:
     # This might have to be split up into different definitions depending on the question type. Not all props are present in all types etc.
-    description: "A Questionnaire item. Can be nested, Swagger has trouble showing that."
-    type: array
-    items:
-      type: object
-      properties:
-        item:
-          $ref: '#/definitions/questionnaire-item' # doesn't seem to show properly
-        concept:
-          type: array
-          minItems: 1
-          items:
-            type: object
-            properties:
-              code:
-                type: string
-              display:
-                type: string
-                example: 'ICD-10'
-              system:
-                type: string
-                example: 'urn:1.2.246.537.6.1'
-        enableWhen:
-          type: array
-          items:
-            type: object
-            description: 'Condition for when to show this item'
-            properties:
-              answerString:
-                type: string
-              question:
-                type: string
-                description: 'ID of another question'
-        linkId:
-          type: string
-        text:
-          type: string
-        type:
-          type: string
-        option:
-          type: array
-          items:
-            type: object
-            properties:
-              valueCoding:
-                type: object
-                properties:
-                  code:
-                    type: string
-                    description: TODO
-                  display:
-                    type: string
-                    description: TODO
-                  id:
-                    type: string
-                    description: TODO
-        repeats:
-          description: TODO
-          type: boolean
+  #  description: "A Questionnaire item. Can be nested, Swagger has trouble showing that."
+  #  type: array
+  #  items:
+  #    type: object
+  #    properties:
+  #      item:
+  #        type: object
+  #        description: items can contain other items
+          #$ref: '#/definitions/questionnaire-item' # doesn't seem to show properly
+  #      concept:
+  #        type: array
+  #        minItems: 1
+  #        items:
+  #          type: object
+  #          properties:
+  #            code:
+  #              type: string
+  #            display:
+  #              type: string
+  #              example: 'ICD-10'
+  #            system:
+  #              type: string
+  #              example: 'urn:1.2.246.537.6.1'
+  #      enableWhen:
+  #        type: array
+  #        items:
+  #          type: object
+  #          description: 'Condition for when to show this item'
+  #          properties:
+  #            answerString:
+  #              type: string
+  #            question:
+  #              type: string
+  #              description: 'ID of another question'
+  #      linkId:
+  #        type: string
+  #      text:
+  #        type: string
+  #      type:
+  #        type: string
+  #      option:
+  #        type: array
+  #        items:
+  #          type: object
+  #          properties:
+  #            valueCoding:
+  #              type: object
+  #              properties:
+  #                code:
+  #                  type: string
+  #                  description: TODO
+  #                display:
+  #                  type: string
+  #                  description: TODO
+  #                id:
+  #                  type: string
+  #                  description: TODO
+  #      repeats:
+  #        description: TODO
+  #        type: boolean
 
   questionnaireResponse:
     type: object
@@ -874,13 +849,13 @@ definitions:
         - amended
         - entered-in-error
         - stopped
-      subject:
-        type: object
-        description: A reference to the subject of this Questionnaire, usually a Patient.id
-        properties:
-          reference:
-            type: string
-            example: "Patient/PATIENT2"
+      #subject:
+      #  type: object
+      #  description: A reference to the subject of this Questionnaire, usually a Patient.id
+      #  properties:
+      #    reference:
+      #      type: string
+      #      example: "Patient/PATIENT2"
 #      author:
 #        type: object
 #        description: A reference to the author of the Questionnaire, in practice this is Duodecim.
@@ -901,7 +876,9 @@ definitions:
     type: object
     properties:
       item:
-        $ref: '#/definitions/questionnaireResponse-item' # recursion, doesn't seem to work very well to show
+        description: items can contain other items
+        type: object
+        #$ref: '#/definitions/questionnaireResponse-item' # recursion, doesn't seem to work very well to show
       linkId:
         type: string
         example: "1161"
@@ -940,16 +917,32 @@ definitions:
         type: array
         items:
           type: object
-          description: Card containing suggestions, for both the patient and practitioner.
+          description: >
+            Card containing suggestions, for both the patient and practitioner. Analogous to the
+            EBMeDS concept of reminders.
           properties:
             summary:
+              description: A short title of the reminder.
+              example: Order a lab test
               type: string
             indicator:
+              description: Specify the reminder type, usually its severity.
               type: string
+              example: info
               enum:
                 - success
+                - info
+                - warning
+                - hard-stop
             detail:
+              description: >
+                The full reminder text. The standard specifies a markdown format, but at the moment
+                we use HTML.
               type: string
+              format: html # markdown?
+              example: >
+                Due to your described symptoms, please order a lab test. This is not a <b>bold</b>
+                move.
             suggestions:
               type: array
               items:
@@ -1038,63 +1031,41 @@ definitions:
         enum:
           - "Kustannus Oy Duodecim, 2017"
 
-  list-questionnaires:
-    type: array
-    description: Array of all available and published Questionnaire FHIR resources.
-    items:
-      type: object
-      properties:
-        id:
-          type: integer
-        title:
-          type: string
-        url:
-          type: string
-          format: url
-        createdAt:
-          type: string
-          format: date
-          description: The date when the form was first created
-        modifiedAt:
-          type: string
-          format: dateTime
-          description: The date when the latest form version was published
-        versions:
-          type: array
-          description: Array of all version numbers of a form, and their publish dates
-          items:
-            type: object
-            properties:
-              id:
-                type: integer
-                description: Version ID, not the same as the questionnaire ID.
-              createdAt:
-                type: string
-                format: dateTime
-                description: Creation date of this version of the questionnaire
-    example:
-      - id: 1
-        title: Example questionnaire one
-        url: http://ebmedscloud.org/api/v1/questionnaires/1
-        createdAt: '2017-01-24T13:10:02.3'
-        modifiedAt: '2017-03-24T16:40:53.0'
-        versions:
-          - id: 3
-            createdAt: '2016-01-24T09:09:09.9'
-          - id: 2
-            createdAt: '2012-02-22T09:09:09.9'
-      - id: 2
-        title: Example questionnaire two
-        url: http://ebmedscloud.org/api/v1/questionnaires/1
-        createdAt: '2016-01-24T09:09:09.9'
-        modifiedAt: '2017-03-24T16:45:00.0'
-        versions:
-          - id: 5
-            createdAt: '2016-01-24T09:09:09.9'
-          - id: 4
-            createdAt: '2012-01-24T09:09:09.9'
-          - id: 2
-            createdAt: '2010-01-24T09:09:09.9'
+  #list-questionnaires:
+  #  type: array
+  #  description: Array of all available and published Questionnaire FHIR resources.
+  #  items:
+  #    type: object
+  #    properties:
+  #      id:
+  #        type: integer
+  #      title:
+  #        type: string
+  #      url:
+  #        type: string
+  #        format: url
+  #      createdAt:
+  #        type: string
+  #        format: date
+  #        description: The date when the form was first created
+  #      modifiedAt:
+  #        type: string
+  #        format: dateTime
+  #        description: The date when the latest form version was published
+  #      versions:
+  #        type: array
+  #        description: Array of all version numbers of a form, and their publish dates
+  #        items:
+  #          type: object
+  #          properties:
+  #            id:
+  #              type: integer
+  #              description: Version ID, not the same as the questionnaire ID.
+  #            createdAt:
+  #              type: string
+  #              format: dateTime
+  #              description: Creation date of this version of the questionnaire
+
   star-daily-messages:
     type: object
   star-coaching-programs:

@@ -1,9 +1,6 @@
 {
   "resourceType": "Patient",
   "id": "PATIENT2",
-  "text": {
-    "status": "generated"
-  },
   "identifier": [
     {
       "system": "urn:oid:1.2.36.146.595.217.0.1",
@@ -16,7 +13,7 @@
         "coding": [
           {
             "system": "urn:ietf:bcp:47",
-            "code": "fi-FI",
+            "code": "fi",
             "display": "Finnish"
           }
         ]
@@ -34,6 +31,6 @@
         ]
       },
       "preferred": false
-    }	
+    }
   ]
 }

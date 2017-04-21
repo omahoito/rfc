@@ -1,9 +1,6 @@
 {
   "resourceType": "ActivityDefinition",
   "id": "ACTIVITYDEFINITION1",
-  "text": {
-    "status": "generated"
-  },
   "status": "draft",
   "description": "Viitataan oirearviolomakkeeseen kurkkukipua ja vastaavia vaivoja varten.",
   "category": "referral",
