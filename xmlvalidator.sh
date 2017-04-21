@@ -49,7 +49,7 @@ xmap["$APPOINTMENT_PATH""ODAPractitioner.xml"]="$XSD_PATH""practitioner.xsd"
 
 RETVAL=0
 for key in ${!xmap[@]}
-do 
+do
   xmllint --noout --schema "${xmap[$key]}" "$key" > /dev/null 2>&1 # STDIN to STDOUT
   OP=$?
   if [ $OP -ne 0 ] # did not pass validation

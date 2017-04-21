@@ -4,16 +4,14 @@
   "identifier": [
     {
       "system": "urn:oid:2.16.840.1.113883.3.19.2.3",
-      "value": "1234",
-      "assigner" : "Kela"
+      "value": "1234"
     }
   ],
   "status": "booked",
   "appointmentType" : {
     "coding" : [
       {
-        "system" : "http://example.org/appointment-type",
-        "code" : "wik",
+        "code" : "WALKIN",
         "display" : "suoraan vastaanotolle"
       }
     ]
@@ -24,7 +22,7 @@
   "start": "2013-12-10T09:00:00Z",
   "end": "2013-12-10T09:15:00Z",
   "minutesDuration": 15,
-  "comment": "Further expand on the results of the MRI and determine the next actions that may be appropriate.",  
+  "comment": "Further expand on the results of the MRI and determine the next actions that may be appropriate.",
   "participant": [
     {
       "actor": {
@@ -61,4 +59,4 @@
       "status": "accepted"
     }
   ]
-}  
+}

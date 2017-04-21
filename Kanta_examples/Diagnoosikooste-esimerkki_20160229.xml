@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:voc="urn:hl7-org:v3/voc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hl7fi="urn:hl7finland" xsi:schemaLocation="urn:hl7-org:v3 CDA_fi.xsd">
+
+<!-- 
+********************************************************
+HL7 CDA R2 header tiedot
+********************************************************
+-->
+   <!-- 1. Asiakirjan aluekoodi pakollinen -->
+   <realmCode code="FI"/>
+   <!-- 2. Asiakirjassa noudatettu tekninen standardiversio CDA R2 Ansi Standard 2005-04-21-->
+   <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+   	<!-- Määrittelykokoelma-->
+	<templateId root="1.2.246.777.5.1" extension="2018.10"/>	   
+    <!-- 3. eArkiston asiakirjojen kuvailutiedot versio 2.37 2015-06-10 -->
+    <templateId root="1.2.246.777.11.2015.22"/>
+    <!-- CDA R2 Header versio 4.65 2015-06-25 -->
+    <templateId root="1.2.246.777.11.2015.23"/>
+    <!-- CDA R2 Kertomus ja lomakkeet versio 5.10 2015-06-18 -->
+    <templateId root="1.2.246.777.11.2015.18"/>
+   <!-- Tiedonhallintapalvelun koosteet ja ylläpidettävät asiakirjat, versio 1.01 2016-02-29 -->
+   <templateId root="1.2.246.777.11.2016.7"/>
+   <!-- 4. Asiakirjan OID-tunnus pakollinen -->
+   <id root="1.2.246.537.10.1246109.11.2014.171"/>
+	<!-- 5. Asiakirjan potilasrekisteritunnus, EI ANNETA KOOSTEELLA, on pakollinen skeemassa, siksi nullFlavor -->
+    <code nullFlavor="NA"/>
+    <!-- 6. Asiakirjan otsikko -->
+   <title>Diagnoosikooste 5.10.2013 - 15.10.2014</title>
+   <!-- 7. Asiakirjan luontiaika pakollinen-->
+   <effectiveTime value="20141106124547+0200"/>
+   <!-- 8. Asiakirjan luottamuksellisuus -->
+   <confidentialityCode code="5" codeSystem="1.2.246.777.5.99902.2006" codeSystemName="KanTa-palvelut - Asiakirjan luottamuksellisuus" displayName="Terveydenhuollon salassapidettävä"/>
+   <!-- 9. Asiakirjan kieli -->
+   <!-- 10. Alkuperäisen asiakirjan OID-tunnus, EI ANNETA KOOSTEELLA-->
+   <!-- 11. Asiakirjan versio, EI ANNETA KOOSTEELLA -->
+   <!-- 12. Asiakirjan kopiontiaika (arkisto täyttää), EI ANNETA KOOSTEELLA  -->
+   <!-- 13. Potilaan tiedot pakollinen -->
+   <recordTarget>
+      <!-- Potilaan tiedot -->
+      <patientRole>
+         <!-- Potilaan henkilötunnus -->
+         <id extension="050138-1234" root="1.2.246.21"/>
+         <patient>
+            <!-- Potilaan nimi -->
+            <name>
+               <given>Reijo</given>
+               <family>Riskinen</family>
+            </name>
+            <!-- Potilaan syntymäaika -->
+            <birthTime value="19380105"/>
+         </patient>
+      </patientRole>
+   </recordTarget>
+   <!-- 14. Asiakirjan laatija, EI ANNETA KOOSTEELLA, on pakollinen skeemassa, siksi rakenteissa nullFlavor -->
+   <author>
+      <!--  Ammattihenkilön kirjautumisaika -->
+      <time nullFlavor="NA"/>
+      <assignedAuthor>
+         <!-- Ammattihenkilön perustunniste henkilötunnus-->
+         <id nullFlavor="NA"/>
+      </assignedAuthor>
+   </author>
+   <!-- 17. Asiakirjan rekisterinpitäjä, EI ANNETA KOOSTEELLA, on pakollinen skeemassa, siksi rakenteissa nullFlavor -->
+   <custodian>
+      <assignedCustodian>
+         <representedCustodianOrganization>
+            <!-- Rekisterinpitäjä/toimintayksikkö -->
+            <id nullFlavor="NA"/>
+         </representedCustodianOrganization>
+      </assignedCustodian>
+   </custodian>
+   <!-- 18. informationRecipient, EI ANNETA KOOSTEELLA -->
+   <!-- 19. legalAuthenticator ei käytössä Suomessa  -->
+   <!-- 20. authenticator Asiakirjan aitouden varmistaja ei käytössä Suomessa  -->
+   <!-- 21. participant Toisen henkilön tunnistetiedot, EI ANNETA KOOSTEELLA-->
+   <!-- 22. inFulfillmentOf ei käytössä Suomessa  -->
+   <!-- 23. documentationOf, EI ANNETA KOOSTEELLA   -->
+   <!-- 24. relatedDocument, EI ANNETA KOOSTEELLA -->
+   <!-- 25. authorization, EI ANNETA KOOSTEELLA  -->
+   <!-- 26. componentOf - palvelutapahtuman käyntitiedot, EI ANNETA KOOSTEELLA -->
+
+<!--
+********************************************************
+27 any HL7 CDA R2 Local Header
+********************************************************
+-->
+
+  <hl7fi:localHeader>
+        <!-- FI 2 hl7fi:tableOfContents - asiakirjan sisällysluettelo -->
+        <hl7fi:tableOfContents>
+           <hl7fi:contentsCode displayName="Diagnoosikooste" code="333" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - Näkymät 2002"/>
+        </hl7fi:tableOfContents>
+		<!-- FI 4 hl7fi:declaredTime - asiakirjan arkistointiaika (arkisto täyttää), EI ANNETA KOOSTEELLA -->
+		<!-- FI 5 hl7fi:typeCode - asiakirjan laji, EI ANNETA KOOSTEILLA -->
+		<!-- FI 6 hl7fi:fileFormat - asiakirjan tiedostomuoto, EI ANNETA KOOSTEELLA -->
+		<!-- FI 7 hl7fi:softwareSupport - Asiakirjan tuottanut ohjelmisto ja sen versio, EI ANNETA KOOSTEELLA -->
+		<!-- FI 9 hl7fi:documentType - asiakirjan tyyppi, EI ANNETA KOOSTEELLA -->
+		<!-- FI 11 hl7fi:retentionPeriod - asiakirjan hävittämispäivä (arkisto täyttää), EI ANNETA KOOSTEELLA -->
+		<!-- FI 12 hl7fi:functionCode - asiakirjan tehtäväluokka (eAMS), EI ANNETA KOOSTEELLA -->
+		<!-- FI 13 hl7fi:recordStatus - asiakirjan valmistumisen tila, EI ANNETA KOOSTEELLA -->
+		<!-- FI 15 hl7fi:serviceChainLink - asiakirjan linkit palvelukokonaisuuksiin, EI ANNETA KOOSTEELLA -->		
+		<!-- FI 16 hl7fi:episodeLink Asiakirjan linkit palveluntuottajan omiin palvelukokonaisuuksiin, EI ANNETA KOOSTEELLA -->
+		<!-- FI 17 hl7fi:product - asiakirjan toimittajan alue, EI ANNETA KOOSTEELLA -->
+		<!-- FI 18 hl7fi:signature - asiakirjan sähköiset allekirjoitustiedot, EI ANNETA KOOSTEELLA -->
+		<!-- FI  21   hl7fi: patientRegistrySpecifier – asiakirjan (potilas)rekisteritarkenne ja tarkenteen nimi, EI ANNETA KOOSTEELLA -->
+		<!-- FI  22   hl7fi:custodianTypecode – Rekisteripitäjän laji, EI ANNETA KOOSTEELLA  -->
+		<!-- FI  23   hl7fi: encompassingEncounterCode – palvelutapahtuman laji, EI ANNETA KOOSTEELLA  -->
+		<!-- FI 24 hl7fi:activeCustodian – asiakirjan aktiivi rekisterinpitäjä ja nimi (arkisto täyttää), EI ANNETA KOOSTEELLA -->
+		<!-- FI  25   encompassingMaster.code  – palvelutapahtuman ensisijaisuus, EI ANNETA KOOSTEELLA -->
+		<!-- FI  27   hl7fi:outsourcingServiceCustomer – palvelunjärjestäjä (ja nimi), EI ANNETA KOOSTEELLA -->	
+		<!-- FI  28   hl7fi:retentionPeriodClass – asiakirjan säilytysaikaluokka, EI ANNETA KOOSTEELLA -->
+		<!-- FI  29   hl7fi:extendedRetentionPeriod – asiakirjan säilytysajan jatko (arkisto täyttää), EI ANNETA KOOSTEELLA -->
+		<!-- FI  30   hl7fi:sensitiveDocument – asiakirjan erityissisältö, EI ANNETA KOOSTEELLA -->
+		<!-- FI  32   2.4.32	hl7fi:releaseDateForPatientViewing – kansalaisen katselun viivästyttäminen, EI ANNETA KOOSTEELLA -->
+		<!-- FI  33   hl7fi:patientHomeMunicipality – potilaan kotikunta, EI ANNETA KOOSTEELLA -->
+    </hl7fi:localHeader>
+    <!--  End of local Header -->
+
+   <!--
+********************************************************
+  CDA Body
+********************************************************
+-->
+   <component>
+      <structuredBody>
+         <!-- Ensimmäinen diagnoosi -->
+         <component>
+            <section>
+               <!-- Koostemerkinnän tunnus  -->
+               <id root="1.2.246.537.10.1246109.11.2014.171.1"/>
+               <!-- alkuperäinen näkymä-->
+               <code code="98" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - Näkymät" displayName="Yleislääketiede"/>
+               <!-- alkuperäisen merkinnän tapahtuma-aika  -->
+               <author>
+                  <time value="20150605091200+0300"/>
+                  <assignedAuthor>
+					  <!-- vain tapahtuma-aika annetetaan, ei merkinnän tekijää, id pakollinen skeemassa, siksi koosteella nullFlavor --> 
+                     <id nullFlavor="NA"/>
+                  </assignedAuthor>
+               </author>
+                <!-- Erillinen entry-rakenne muita koostetiedon syntykontekstin tietoja varten  -->
+                <entry>
+                    <encounter classCode="ENC" moodCode="EVN">
+                        <!-- Palvelutapahtuman tiedot -->
+                        <templateId root="1.2.246.537.6.12.999.2003.5"/>
+                        <!-- Palvelutapahtuman tiedot -->
+                        <performer>
+                            <assignedEntity>
+                                <!-- Palvelutapahtuman id -->
+                                <id root="1.2.246.10.1234567.14.2015.123"/>
+                                <!-- Palvelutapahtuman tiedot -->
+                                <representedOrganization>
+                                    <!-- Palveluntuottajan id (OID) -->
+                                   <id root="1.2.246.10.1246109.10.2006.371"/>
+                                   <!-- palveluntuottajan nimi -->
+                                   <name>Katriinan sairaala, os. 1, Vantaan soster</name>
+                                </representedOrganization>
+                            </assignedEntity>
+                        </performer>
+                        <!-- Linkki asiakirjaan, josta kyseinen merkitä on -->
+                        <reference typeCode="REFR">
+                            <externalDocument>
+                                <!-- asiakirjaviittausrakenteen templateId -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.6"/>
+                                <!-- asiakirjan id-->
+                                <id root="1.2.246.537.10.1246109.11.2015.155.0"/>
+                                <!-- Alkuperäisen asiakirjan setId, missä merkintä on tehty -->
+                                <setId root="1.2.246.537.10.1246109.11.2015.155.0"/>
+                            </externalDocument>
+                        </reference>
+                        <!-- Linkki alkuperäiseen merkintään -->
+                        <reference typeCode="REFR">
+                            <externalAct>
+                                <!-- merkintäviittausrakenteen templateId, uusi -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.7"/>
+                                <!-- merkinnän id-->
+                                <id root="1.2.246.537.10.1246109.14.2015.155"/>
+                            </externalAct>
+                        </reference>
+                    </encounter>
+                </entry>
+               <component>
+                  <section>
+                    <component>
+                        <section>
+                            <entry>
+                                <!-- Minkä määrityksen mukaan tieto on tuotettu. CDA R2 Kertomus ja lomakkeet versio 5.11 -->
+                                <templateId root="1.2.246.777.11.2015.30"/>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.2.246.537.6.12.999.2003.2"/>
+                                    <id root="1.2.246.537.10.1234567.14.2015.155.1.13"/>
+                                    <code code="2" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosi">
+                                        <qualifier>
+                                            <value code="PAA" codeSystem="1.2.246.537.5.40005.2003" codeSystemName="AR/YDIN - Diagnoosin/toimenpiteen ensisijaisuus 2003" displayName="Päädiagnoosi tai päätoimenpide"/>
+                                        </qualifier>
+                                    </code>
+                                    <effectiveTime value="20150605"/>
+                                    <value xsi:type="CD" code="S90.8" codeSystem="1.2.246.537.6.1.1999" codeSystemName="THL - Tautiluokitus ICD-10" displayName="Muu nilkan tai jalkaterän pinnallinen vamma">
+                                        <originalText>Nilkan nyrjähdys</originalText>
+                                    </value>
+                                    <author>
+                                       <functionCode code="DAL" displayName="Diagnoosin tehnyt henkilö" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto – tekninen CDA R2 henkilötarkennin"/>
+                                       <time value="20150605"/>
+                                       <assignedAuthor>
+                                          <id extension="121256-5678" root="1.2.246.21"/>
+                                          <assignedPerson>
+                                             <name>
+                                                <given>Matti</given>
+                                                <family>Muje</family>
+                                                <suffix qualifier="AC">LL</suffix>
+                                             </name>
+                                          </assignedPerson>
+                                          <representedOrganization>
+                                              <id root="1.2.246.10.99999984.10.4"/>
+                                              <name>Testi tk vuodeosasto 2</name>
+                                          </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                     <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                           <code code="2.10" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Käyntisyy"/>
+                                           <value xsi:type="BL" value="false"/>
+                                        </observation>
+                                     </entryRelationship>
+                                     <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                           <code code="2.5" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin ulkoinen syy"/>
+                                           <value xsi:type="CV" code="V19" codeSystem="1.2.246.537.6.1.1999" codeSystemName="THL - Tautiluokitus ICD-10" displayName="Polkupyöräilijän muu tai määrittämätön liikennetapaturma"/>
+                                        </observation>
+                                     </entryRelationship>
+                                     <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                           <code code="2.6" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tapaturmatyyppi"/>
+                                           <value xsi:type="CV" code="Y94.4" codeSystem="1.2.246.537.6.1.1999" codeSystemName="Tautiluokitus ICD-10 1999" displayName="Tapaturma liikennealueella"/>
+                                        </observation>
+                                     </entryRelationship>
+                                     <!-- Liikuntalajiluokitus ei ole vielä koodistopalvelimella, sen vuoksi esimerkissä äksiä--> 
+                                     <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                           <code code="2.13" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Liikuntalaji, jossa tapaturma tapahtunut"/>
+                                           <value xsi:type="CV" code="X" codeSystem="X" codeSystemName="UKK-Instituutti - Liikuntalajiluokitus" displayName="X"/>
+                                        </observation>
+                                     </entryRelationship>
+                                     <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                           <code code="2.7" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Haittavaikutuksen aiheuttaja"/>
+                                           <value xsi:type="CV" code="NHA10" codeSystem="1.2.246.537.6.2.2007" displayName="Neulakudosnäytteen otto jalkaterästä"/>
+                                        </observation>
+                                     </entryRelationship>
+                                     <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                           <code code="2.2" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn varmuusaste"/>
+                                           <value xsi:type="CV" code="TOD" codeSystem="1.2.246.537.5.40004.2003" codeSystemName="AR/YDIN - Varmuusaste 2003" displayName="Todennäköinen tai varma"/>
+                                        </observation>
+                                     </entryRelationship>
+                                     <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                           <code code="2.1" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn pysyvyys"/>
+                                           <value xsi:type="CV" code="KER" codeSystem="1.2.246.537.5.40003.2003" codeSystemName="AR/YDIN - Pysyvyys 2003" displayName="Määräaikainen"/>
+                                        </observation>
+                                     </entryRelationship>
+                                     <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                           <code code="2.14" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn episoditunnus"/>
+                                           <value xsi:type="II" root="1.2.246.9999.2015.199"/>
+                                        </observation>
+                                     </entryRelationship>
+                                     <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                           <code code="2.15" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Episodin nimi"/>
+                                          <value xsi:type="ST">nimi tähän</value>
+                                        </observation>
+                                     </entryRelationship>
+                                  </observation>
+                               </entry>
+                        </section>
+                    </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <!-- toinen diagnoosi -->
+         <component>
+            <section>
+               <!-- Koostemerkinnän tunnus  -->
+               <id root="1.2.246.537.10.1246109.11.2013.171.2"/>
+               <!-- alkuperäinen näkymä-->
+               <code code="98" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - Näkymät" displayName="Yleislääketiede"/>
+               <!-- alkuperäisen merkinnän tapahtuma-aika  -->
+               <author>
+                  <time value="20140424155500+0300"/>
+                  <assignedAuthor>
+					  <!-- vain tapahtuma-aika annetetaan, ei merkinnän tekijää, id pakollinen skeemassa, siksi koosteella nullFlavor --> 
+                     <id nullFlavor="NA"/>
+                  </assignedAuthor>
+               </author>
+                <!-- Erillinen entry-rakenne muita koostetiedon syntykontekstin tietoja varten  -->
+                <entry>
+                    <encounter classCode="ENC" moodCode="EVN">
+                        <!-- Palvelutapahtuman tiedot -->
+                        <templateId root="1.2.246.537.6.12.999.2003.5"/>
+                        <!-- Palvelutapahtuman tiedot -->
+                        <performer>
+                            <assignedEntity>
+                                <!-- Palvelutapahtuman id -->
+                                <id root="1.2.246.10.1234567.14.2015.123"/>
+                                <!-- Palvelutapahtuman tiedot -->
+                                <representedOrganization>
+                                    <!-- Palveluntuottajan id (OID) -->
+                                   <id root="1.2.246.10.1246109.10.2006.371"/>
+                                   <!-- palveluntuottajan nimi -->
+                                   <name>Katriinan sairaala, os. 1, Vantaan soster</name>
+                                </representedOrganization>
+                            </assignedEntity>
+                        </performer>
+                        <!-- Linkki asiakirjaan, josta kyseinen merkitä on -->
+                        <reference typeCode="REFR">
+                            <externalDocument>
+                                <!-- asiakirjaviittausrakenteen templateId -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.6"/>
+                                <!-- asiakirjan id-->
+                                <id root="1.2.246.537.10.1246109.11.2015.155.0"/>
+                                <!-- Alkuperäisen asiakirjan setId, missä merkintä on tehty -->
+                                <setId root="1.2.246.537.10.1246109.11.2015.155.0"/>
+                            </externalDocument>
+                        </reference>
+                        <!-- Linkki alkuperäiseen merkintään -->
+                        <reference typeCode="REFR">
+                            <externalAct>
+                                <!-- merkintäviittausrakenteen templateId, uusi -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.7"/>
+                                <!-- merkinnän id-->
+                                <id root="1.2.246.537.10.1246109.14.2015.155.2"/>
+                            </externalAct>
+                        </reference>
+                    </encounter>
+               </entry>
+               <component>
+                  <section>
+                    <component>
+                        <section>
+                            <entry>
+                                <!-- Minkä määrityksen mukaan tieto on tuotettu. CDA R2 Kertomus ja lomakkeet versio 5.11 -->
+                                <templateId root="1.2.246.777.11.2015.30"/>
+                                <observation classCode="OBS" moodCode="EVN">
+                                    <templateId root="1.2.246.537.6.12.999.2003.2"/>
+                                    <id root="1.2.246.537.10.1234567.14.2015.155.2.0"/>
+                                    <code code="2" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosi">
+                                        <qualifier>
+                                            <value code="PAA" codeSystem="1.2.246.537.5.40005.2003" codeSystemName="AR/YDIN - Diagnoosin/toimenpiteen ensisijaisuus 2003" displayName="Päädiagnoosi tai päätoimenpide"/>
+                                        </qualifier>
+                                    </code>
+                                    <effectiveTime value="20150605"/>
+                                    <value xsi:type="CD" code="L77" codeSystem="1.2.246.537.6.31.2007" codeSystemName="Kuntaliitto - ICPC Perusterveydenhuollon luokitus" displayName="Nyrjähdys/venähdys, nilkka">
+                                       <originalText>Nyrjähdys/venähdys, nilkka</originalText>
+                                    </value>
+                                    <author>
+                                       <functionCode code="DAL" displayName="Diagnoosin tehnyt henkilö" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto – tekninen CDA R2 henkilötarkennin"/>
+                                       <time value="20150605"/>
+                                       <assignedAuthor>
+                                          <id extension="123456-1234" root="1.2.246.21"/>
+                                          <assignedPerson>
+                                              <name>
+                                                  <given>Hellä</given>
+                                                  <given qualifier="CL">Hellä</given>
+                                                  <family>Hoitaja</family>
+                                                  <suffix>hoitaja</suffix>
+                                              </name>
+                                          </assignedPerson>
+                                          <representedOrganization>
+                                              <id root="1.2.246.10.99999984.10.4"/>
+                                              <name>Testi tk vuodeosasto 2</name>
+                                          </representedOrganization>
+                                        </assignedAuthor>
+                                    </author>
+                                     <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                           <code code="2.10" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Käyntisyy"/>
+                                           <value xsi:type="BL" value="false"/>
+                                        </observation>
+                                     </entryRelationship>
+                                     <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                           <code code="2.1" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn pysyvyys"/>
+                                           <value xsi:type="CV" code="KER" codeSystem="1.2.246.537.5.40003.2003" codeSystemName="AR/YDIN - Pysyvyys 2003" displayName="Määräaikainen"/>
+                                        </observation>
+                                     </entryRelationship>
+                                     <entryRelationship typeCode="MFST">
+                                        <observation classCode="OBS" moodCode="EVN">
+                                           <code code="2.14" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn episoditunnus"/>
+                                           <value xsi:type="II" root="1.2.246.9999.2015.199"/>
+                                        </observation>
+                                     </entryRelationship>
+                                  </observation>
+                               </entry>
+                        </section>
+                    </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <!-- Kolmas diagnoosi -->
+         <component>
+            <section>
+               <!-- Koostemerkinnän tunnus  -->
+               <id root="1.2.246.537.10.1246109.11.2013.171.3"/>
+               <!-- alkuperäinen näkymä-->
+               <code code="98" codeSystem="1.2.246.537.6.12.2002" codeSystemName="AR/YDIN - Näkymät" displayName="Yleislääketiede"/>
+               <!-- alkuperäisen merkinnän tapahtuma-aika  -->
+               <author>
+                  <time value="20150705091200+0300"/>
+                  <assignedAuthor>
+					  <!-- vain tapahtuma-aika annetetaan, ei merkinnän tekijää, id pakollinen skeemassa, siksi koosteella nullFlavor --> 
+                     <id nullFlavor="NA"/>
+                  </assignedAuthor>
+               </author>
+                <!-- Erillinen entry-rakenne muita koostetiedon syntykontekstin tietoja varten  -->
+                <entry>
+                    <encounter classCode="ENC" moodCode="EVN">
+                        <!-- Palvelutapahtuman tiedot -->
+                        <templateId root="1.2.246.537.6.12.999.2003.5"/>
+                        <performer>
+                            <assignedEntity>
+                                <!-- Palvelutapahtuman id -->
+                                <id root="1.2.246.10.1234567.14.2015.345"/>
+                                <representedOrganization>
+                                    <!-- Palveluntuottajan id (OID) -->
+                                   <id root="1.2.246.10.1246109.10.2006.371"/>
+                                   <!-- palveluntuottajan nimi -->
+                                   <name>Katriinan sairaala, os. 1, Vantaan soster</name>
+                                </representedOrganization>
+                            </assignedEntity>
+                        </performer>
+                        <!-- Linkki asiakirjaan, josta kyseinen merkitä on -->
+                        <reference typeCode="REFR">
+                            <externalDocument>
+                                <!-- asiakirjaviittausrakenteen templateId -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.6"/>
+                                <!-- asiakirjan id-->
+                                <id root="1.2.246.537.10.1246109.11.2015.156"/>
+                                <!-- Alkuperäisen asiakirjan setId, missä merkintä on tehty -->
+                                <setId root="1.2.246.537.10.1246109.11.2015.156"/>
+                            </externalDocument>
+                        </reference>
+                        <!-- Linkki alkuperäiseen merkintään -->
+                        <reference typeCode="REFR">
+                            <externalAct>
+                                <!-- merkintäviittausrakenteen templateId, uusi -->
+                                <templateId root="1.2.246.537.6.12.999.2003.5.7"/>
+                                <!-- merkinnän id-->
+                                <id root="1.2.246.537.10.1246109.14.2015.156"/>
+                            </externalAct>
+                        </reference>
+                    </encounter>
+                </entry>
+               <component>
+                  <section>
+                    <component>
+                        <section>
+                           <entry>
+                                <!-- Minkä määrityksen mukaan tieto on tuotettu. CDA R2 Kertomus ja lomakkeet versio 5.11 -->
+                                <templateId root="1.2.246.777.11.2015.30"/>
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <templateId root="1.2.246.537.6.12.999.2003.2"/>
+                                 <id root="1.2.246.537.10.1234567.14.2015.156.1.13"/>
+                                 <code code="2" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosi">
+                                    <qualifier>
+                                        <value code="PAA" codeSystem="1.2.246.537.5.40005.2003" codeSystemName="AR/YDIN - Diagnoosin/toimenpiteen ensisijaisuus 2003" displayName="Päädiagnoosi tai päätoimenpide"/>
+                                    </qualifier>
+                                 </code>
+                                 <effectiveTime>
+                                      <low value="20150605"/>
+                                      <high value="20150705"/>
+                                 </effectiveTime>
+                                 <value xsi:type="CD" code="S90.8" codeSystem="1.2.246.537.6.1.1999" codeSystemName="THL - tautiluokitus ICD-10" displayName="Muu nilkan tai jalkaterän pinnallinen vamma">
+                                    <originalText>Nilkan nyrjähdys</originalText>
+                                 </value>
+                                 <author>
+                                    <functionCode code="DAL" displayName="Diagnoosin tehnyt henkilö" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto – tekninen CDA R2 henkilötarkennin"/>
+                                    <time value="20150605"/>
+                                    <assignedAuthor>
+                                       <id extension="121256-5678" root="1.2.246.21"/>
+                                       <assignedPerson>
+                                          <name>
+                                             <given>Matti</given>
+                                             <family>Muje</family>
+                                             <suffix qualifier="AC">LL</suffix>
+                                          </name>
+                                       </assignedPerson>
+                                       <representedOrganization>
+                                          <id root="1.2.246.10.99999984.10.4"/>
+                                          <name>Testi tk vuodeosasto 2</name>
+                                       </representedOrganization>
+                                    </assignedAuthor>
+                                 </author>
+                                 <author>
+                                    <functionCode code="DPL" displayName="Diagnoosin poistanut henkilö" codeSystem="1.2.246.537.5.40006.2003" codeSystemName="eArkisto – tekninen CDA R2 henkilötarkennin"/>
+                                    <time value="20150705"/>
+                                    <assignedAuthor>
+                                       <id extension="121256-5678" root="1.2.246.21"/>
+                                       <assignedPerson>
+                                          <name>
+                                             <given>Matti</given>
+                                             <family>Muje</family>
+                                             <suffix qualifier="AC">LL</suffix>
+                                          </name>
+                                       </assignedPerson>
+                                       <representedOrganization>
+                                          <id root="1.2.246.10.99999984.10.4"/>
+                                          <name>Testi tk vuodeosasto 2</name>
+                                       </representedOrganization>
+                                    </assignedAuthor>
+                                 </author>
+                                 <entryRelationship typeCode="MFST">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="2.10" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Käyntisyy"/>
+                                       <value xsi:type="BL" value="false"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="MFST">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="2.5" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin ulkoinen syy"/>
+                                       <value xsi:type="CV" code="V19" codeSystem="1.2.246.537.6.1.1999" codeSystemName="THL - tautiluokitus ICD-10" displayName="Polkupyöräilijän muu tai määrittämätön liikennetapaturma"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="MFST">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="2.2" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn varmuusaste"/>
+                                       <value xsi:type="CV" code="TOD" codeSystem="1.2.246.537.5.40004.2003" codeSystemName="AR/YDIN - Varmuusaste 2003" displayName="Todennäköinen tai varma"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="MFST">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="2.1" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn pysyvyys"/>
+                                       <value xsi:type="CV" code="KER" codeSystem="1.2.246.537.5.40003.2003" codeSystemName="AR/YDIN - Pysyvyys 2003" displayName="Määräaikainen"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="MFST">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="2.4" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin päättymisen syy"/>
+                                       <value xsi:type="CV" code="PAR" codeSystem="1.2.246.537.6.602.2013" codeSystemName="AR/YDIN- Terveystiedon päättymisen syy" displayName="Parantunut">
+                                          <originalText>yllättävän nopea parantuminen</originalText>
+                                       </value>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="MFST">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <code code="2.14" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Diagnoosin tai käyntisyyn episoditunnus"/>
+                                       <value xsi:type="II" root="1.2.246.9999.2015.199"/>
+                                    </observation>
+                                 </entryRelationship>
+                                 <entryRelationship typeCode="MFST">
+                                     <observation classCode="OBS" moodCode="EVN">
+                                        <code code="2.15" codeSystem="1.2.246.537.6.12.999.2003" codeSystemName="KanTa-palvelut - Tekninen CDA R2 rakennekoodisto 2003" displayName="Episodin nimi"/>
+                                        <value xsi:type="ST">nimi tähän</value>
+                                    </observation>
+                                 </entryRelationship>
+                              </observation>
+                           </entry>
+                        </section>
+                    </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</ClinicalDocument>

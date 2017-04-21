@@ -1,9 +1,6 @@
 {
 	"resourceType": "Person",
 	"id": "PERSON2",
-	"text": {
-		"status": "generated"
-	},
 	"identifier": [{
 		"system": "urn:oid:1.2.246.21",
 		"value": "081181-9984"
