@@ -2,9 +2,11 @@
 
 BaseUrl: [base]/fhir/Questionnaire
 
-Questionnaire profile: http://hl7.org/fhir/2017Jan/questionnaire.html
+Questionnaire profile: http://hl7.org/fhir/questionnaire.html
 
 ### Read questionnaire
+
+http://hl7.org/fhir/http.html#read
 
 - request type: GET
 - url syntax: [BaseUrl]/[id]
@@ -17,11 +19,11 @@ Questionnaire profile: http://hl7.org/fhir/2017Jan/questionnaire.html
 curl --request GET \
   --url [BaseUrl]/245 \
   --header 'authorization: Bearer [Authorization token]' \
-  --header 'cache-control: no-cache' \
-  --header 'content-type: application/json'
 ```
   
 ### Create questionnaire
+
+http://hl7.org/fhir/http.html#create
 
 - request type: POST
 - url syntax: [BaseUrl]
@@ -39,12 +41,13 @@ Location: [BaseUrl]/247/_history/1
 curl --request POST \
   --url [BaseUrl] \
   --header 'authorization: Bearer [Authorization token]' \
-  --header 'cache-control: no-cache' \
   --header 'content-type: application/json'
   --data '[Questionnaire]'
 ```
 
 ### Update questionnaire
+
+http://hl7.org/fhir/http.html#update
 
 - request type: PUT
 - url syntax: [BaseUrl]/[id]
@@ -61,12 +64,13 @@ Location: [BaseUrl]/247/_history/2
 curl --request PUT \
   --url [BaseUrl]/247 \
   --header 'authorization: Bearer [Authorization token]' \
-  --header 'cache-control: no-cache' \
   --header 'content-type: application/json'
   --data '[Questionnaire]' 
 ```
   
 ### Delete questionnaire
+
+http://hl7.org/fhir/http.html#delete
 
 - request type: DELETE
 - url syntax: [BaseUrl]/[id]
@@ -79,8 +83,6 @@ curl --request PUT \
 curl --request DELETE \
   --url [BaseUrl]/247 \
   --header 'authorization: Bearer [Authorization token]' \
-  --header 'cache-control: no-cache' \
-  --header 'content-type: application/json'
 ```
 
 ### Search questionnaires by publisher
