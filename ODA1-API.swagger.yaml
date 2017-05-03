@@ -626,199 +626,245 @@ definitions:
               resource:
                 $ref: '#/definitions/questionnaireResponse'
 
-  #questionnaire:
-  #  type: object
-  #  description: Questionnaire resource (FHIR) with Duodecim extensions
-  #  properties:
-  #    concept:
-  #      type: array
-  #      description: TODO
-  #      items:
-  #        type: object
-  #        properties:
-  #          code:
-  #            type: string
-  #            description: TODO
-  #    date:
-  #      type: string
-  #      format: date-time
-  #      description: TODO
-  #    extension:
-  #      type: array
-  #      minItems: 1
-  #      maxItems: 1
-  #      items:
-  #        type: object
-  #        description: 'selfCareInstructions extension'
-  #        properties:
-  #          url:
-  #            type: string
-  #            format: url
-  #            enum:
-  #            - 'https://www.ebmeds.org/form#selfCareInstructions'
-  #          extension:
-  #            type: array
-  #            items:
-  #              type: object
-  #              properties:
-  #                url:
-  #                  type: string
-  #                valueString:
-  #                  description: TODO
-  #                  type: string
-  #                  format: url
-  #    id:
-  #      type: string
-  #      example: "QUESTIONNAIRE1"
-  #    identifier:
-  #      type: array
-  #      minItems: 1
-  #      maxItems: 1
-  #      items:
-  #        type: object
-  #        properties:
-  #          system:
-  #            type: string
-  #            format: url
-  #            example: "https://www.ebmeds.org/form/api/FHIR/forms/export/701"
-  #          value:
-  #            type: string
-  #            example: "701"
-  #    item:
-  #      $ref: '#/definitions/questionnaire-item'
-  #    language:
-  #      type: string
-  #      description: "A two-letter language code, ISO 639-1."
-  #      example: "fi"
-  #    meta:
-  #      type: object
-  #      properties:
-  #        lastUpdated:
-  #          type: string
-  #          format: dateTime
-  #        versionId:
-  #          type: string
-  #    publisher:
-  #      type: string
-  #    copyright:
-  #      type: string
-  #    resourceType:
-  #      description: 'Always "Questionnaire"'
-  #      type: string
-  #      enum:
-  #      - "Questionnaire"
-  #    status:
-  #      type: string
-  #      enum:
-  #      - draft
-  #      - published
-  #      - retired
-  #    text:
-  #      type: object
-  #      properties:
-  #        div:
-  #          type: string
-  #          format: xml
-  #        status:
-  #          type: string
-  #          enum:
-  #            - generated
-  #            - extensions
-  #            - additional
-  #            - empty
-  #          example: "generated"
-  #    title:
-  #      type: string
-  #      description: TODO
-  #    url:
-  #      type: string
-  #      description: TODO
-  #      format: url
-  #    useContext:
-  #      type: array
-  #      minItems: 1
-  #      maxItems: 1
-  #      items:
-  #        type: object
-  #        properties:
-  #          coding:
-  #            type: array
-  #            minItems: 1
-  #            maxItems: 1
-  #            items:
-  #              type: object
-  #              properties:
-  #                code:
-  #                  type: string
-  #                  example: 123
-  #                system:
-  #                  type: string
-  #                  format: url
-  #                  description: TODO
-  #                  example: 'http://questionnaire/types'
+  questionnaire:
+   type: object
+   description: Questionnaire resource (FHIR) with Duodecim extensions
+   properties:
+     date:
+       type: string
+       format: date-time
+       description: The date the questionnaire was published/updated.
+     extension:
+       type: array
+       minItems: 1
+       maxItems: 1
+       items:
+         type: object
+         description: 'selfCareInstructions extension'
+         properties:
+           url:
+             type: string
+             format: url
+             enum:
+             - 'https://www.ebmeds.org/form#selfCareInstructions'
+           extension:
+             type: array
+             minItems: 2
+             maxItems: 2
+             items:
+               type: object
+               properties:
+                 url:
+                   type: string
+                   description: instruction_text and/or instruction_url
+                 valueString:
+                   description: >
+                    The instruction text (in markdown) and/or a direct URL to the
+                    self care instructions.
+                   type: string
+                   format: markdown
+     identifier:
+       type: array
+       items:
+         type: object
+         properties:
+           system:
+             type: string
+             format: url
+             enum:
+              - http://duodecim.fi/fhir/sid/vkt-questionnaire-id
+           value:
+             type: string
+             example: "107"
+     item:
+       $ref: '#/definitions/questionnaire-item'
+     language:
+       type: string
+       description: "A two-letter language code (ISO 639-1)."
+       example: "fi"
+     meta:
+       type: object
+       properties:
+         lastUpdated:
+           type: string
+           format: dateTime
+         versionId:
+           type: string
+     publisher:
+       example: Kustannusosakeyhtiö Duodecim
+       type: string
+     copyright:
+       example: Kustannusosakeyhtiö Duodecim 2017
+       type: string
+     resourceType:
+       description: 'Always "Questionnaire"'
+       type: string
+       enum:
+       - "Questionnaire"
+     status:
+       type: string
+       enum:
+       - draft
+       - published
+       - retired
+     text:
+       type: object
+       properties:
+         div:
+           type: string
+           format: xml
+         status:
+           type: string
+           enum:
+             - generated
+             - extensions
+             - additional
+             - empty
+           example: "generated"
+     title:
+       type: string
+       example: "Hengitystulehdusoireiden itsearvio"
+     url:
+       type: string
+       description: The original Duodecim URL of the Questionnaire, i.e. not the one pointing to a FHIR server.
+       example: "https://www.ebmeds.org/form/api/FHIR/forms/export/107"
+       format: url
+     useContext:
+       type: array
+       minItems: 1
+       maxItems: 1
+       items:
+         type: object
+         properties:
+           coding:
+             type: array
+             minItems: 1
+             maxItems: 1
+             items:
+               type: object
+               properties:
+                 code:
+                   type: string
+                   example: 123
+                 system:
+                   type: string
+                   format: url
+                   description: TODO
+                   example: 'http://questionnaire/types'
 
-  #questionnaire-item:
+  questionnaire-item:
     # This might have to be split up into different definitions depending on the question type. Not all props are present in all types etc.
-  #  description: "A Questionnaire item. Can be nested, Swagger has trouble showing that."
-  #  type: array
-  #  items:
-  #    type: object
-  #    properties:
-  #      item:
-  #        type: object
-  #        description: items can contain other items
-          #$ref: '#/definitions/questionnaire-item' # doesn't seem to show properly
-  #      concept:
-  #        type: array
-  #        minItems: 1
-  #        items:
-  #          type: object
-  #          properties:
-  #            code:
-  #              type: string
-  #            display:
-  #              type: string
-  #              example: 'ICD-10'
-  #            system:
-  #              type: string
-  #              example: 'urn:1.2.246.537.6.1'
-  #      enableWhen:
-  #        type: array
-  #        items:
-  #          type: object
-  #          description: 'Condition for when to show this item'
-  #          properties:
-  #            answerString:
-  #              type: string
-  #            question:
-  #              type: string
-  #              description: 'ID of another question'
-  #      linkId:
-  #        type: string
-  #      text:
-  #        type: string
-  #      type:
-  #        type: string
-  #      option:
-  #        type: array
-  #        items:
-  #          type: object
-  #          properties:
-  #            valueCoding:
-  #              type: object
-  #              properties:
-  #                code:
-  #                  type: string
-  #                  description: TODO
-  #                display:
-  #                  type: string
-  #                  description: TODO
-  #                id:
-  #                  type: string
-  #                  description: TODO
-  #      repeats:
-  #        description: TODO
-  #        type: boolean
+    description: "A Questionnaire item. Can be nested, Swagger has trouble showing that."
+    type: array
+    items:
+     type: object
+     properties:
+       item:
+         type: object
+         description: items can contain other items
+         $ref: '#/definitions/questionnaire-item' # doesn't seem to show properly
+       concept:
+         type: array
+         items:
+           type: object
+           properties:
+             code:
+               description: A code describing the concept being asked in the questionnaire item, if applicable.
+               type: string
+             display:
+               type: string
+               description: >
+                A human-readable version of the system field. NOTE that this will change to be the
+                human-readable version of the code field, as per the rest of FHIR.
+               example: 'finLOINC' # FIXME
+             system:
+               type: string
+               format: uri
+               description: The code system used. Uses primarily URL-formatted strings, as per FHIR specs.
+               example: "urn:1.2.246.537.6.96" # FIXME: should be e.g. 'http://loinc.org'
+       enableWhen:
+         type: array
+         description: Array of conditions for when to show this item. Items are per default linked with an OR operator.
+         items:
+           type: object
+           description: 'One condition for when to show this item. Contains one of the listed answer* properties.' # FIXME: swagger 2
+           properties:
+             answerString:
+               type: string
+             answerBoolean:
+               type: boolean
+             answerQuantity:
+               type: object
+               properties:
+                extension:
+                  description: >
+                    Optional extension to signify that another boolean operator than OR should be
+                    used when reading enableWhen logic
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      url:
+                        type: string
+                        format: url
+                        enum:
+                          - https://www.ebmeds.org/form#enableWhenOperator
+                      valueString:
+                        type: string
+                        description: Usually used to signify an AND instead of OR, but can be extended in the future.
+                        enum:
+                          - AND
+             question:
+               type: string
+               description: 'ID referencing a linkId for a question in the questionnaire.'
+             extension:
+               type: object
+       linkId:
+         description: An ID identifying one specific questionnaire item, i.e. question.
+         type: string
+         example: "599"
+       text:
+         description: The question text. In markdown. May contain links and images.
+         type: string
+         format: markdown
+         example: "Onko sinulla lääkärin diagnosoima astma? Tietoa astmasta [Terveyskirjastossa](https://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00009)"
+       type:
+         type: string
+         description: The type. Multiple choice questions are of type choice, and the repeats field is also used.
+         enum:
+          - group
+          - display
+          - boolean
+          - decimal
+          - integer
+          - date
+          - dateTime
+          - choice
+       option:
+         type: array
+         description: >
+          List of options for multiple choice questions. They all have a valueCoding field, nothing else.
+         items:
+           type: object
+           properties:
+             valueCoding:
+               type: object
+               properties:
+                 code:
+                   type: string
+                   description: Mainly used to separate check box answers from each other
+                 display:
+                   type: string
+                   description: TODO
+                 id:
+                   type: string
+                   description: TODO
+       repeats:
+         description: >
+          Used with multiple choice questions. If true, the user may select multiple answers (checkbox)
+          and if false, only one (radio button).
+         type: boolean
+         example: false
 
   questionnaireResponse:
     type: object
@@ -958,6 +1004,11 @@ definitions:
         description: Always 'ActivityDefinition'
         enum:
           - ActivityDefinition
+      status:
+        type: string
+        description: Publication status, should always be 'active'
+        enum:
+          - active # may also be draft / retired / unknown in FHIR
       identifier:
         type: array
         minItems: 1
@@ -965,13 +1016,16 @@ definitions:
         items:
           type: object
           properties:
-            rule:
+            value:
               type: string
-            reminder:
-              type: string
+              example: scr01887/16
+              description: >
+                ID for this particular suggestion, comprised of the rule number (scrXXXXX) and the
+                numeric ID of the suggestion (YY). So the format is scrXXXXX/YY.
       description:
         type: string
-        description: Human-readable message given to the user/practitioner.
+        format: markdown
+        description: Human-readable Markdown message given to the user/practitioner.
       code:
         type: object
         properties:
@@ -983,6 +1037,15 @@ definitions:
                 system:
                   type: string
                   description: E.g. DMPReminderLevel or some other official code system
+                  enum:
+                    - http://loinc.org
+                    - http://91.202.112.142/codeserver/pages/classification-view-page.xhtml?classificationKey=273&versionKey=350 # FinLOINC
+                    - http://91.202.112.142/codeserver/pages/classification-view-page.xhtml?classificationKey=88&versionKey=120 # KL
+                    - http://91.202.112.142/codeserver/pages/classification-view-page.xhtml?classificationKey=2023&versionKey=2283 # THL palvelunimikkeistö
+                    - http://hl7.org/fhir/sid/icd-10-fi
+                    - http://duodecim.fi/fhir/sid/custom-actions
+                    - http://duodecim.fi/fhir/sid/dmp-reminder-level
+                    - http://duodecim.fi/fhir/sid/suggestion-urgency
                 display:
                   type: string
                   description: Short description of the activity suggested, for e.g. a button to click.
@@ -1023,9 +1086,11 @@ definitions:
         type: string
       kind:
         type: string
+        description: >
+          What kind of FHIR resource this Acitivity will ultimately produce. At the moment
+          only Observation is returned.
         enum:
-          - Observation
-          - TODO # TODO
+          - Observation # TODO: do we need more?
       copyright:
         type: string
         enum:
