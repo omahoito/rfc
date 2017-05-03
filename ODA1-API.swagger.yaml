@@ -828,6 +828,10 @@ definitions:
          type: string
          format: markdown
          example: "Onko sinulla lääkärin diagnosoima astma? Tietoa astmasta [Terveyskirjastossa](https://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00009)"
+       required:
+         type: boolean
+         description: Is this question required? Usually yes.
+         example: true
        type:
          type: string
          description: The type. Multiple choice questions are of type choice, and the repeats field is also used.
