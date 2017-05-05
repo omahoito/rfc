@@ -1,10 +1,13 @@
 # ODA2 Questionnaire API
 
 BaseUrl: [base]/fhir/Questionnaire
+
 FHIR version: 3.0.1 
+
 FHIR index page: http://hl7.org/fhir/STU3/
 
 Questionnaire profile: http://hl7.org/fhir/STU3/questionnaire.html
+
 Changes in profile: http://hl7.org/fhir/STU3/questionnaire.diff.json
 
 ### Read questionnaire
