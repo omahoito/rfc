@@ -1,0 +1,19 @@
+@startuml
+header
+Sequence diagram - ODA2 acts as a client. ODA1 publishes Questionnaire check symptoms API.
+endheader
+
+participant ODA2
+participant ODA1
+
+box "Proposed ODA1 FHIR check symptoms REST API" #LightBlue
+	participant ODA2
+	participant ODA1
+end box
+
+group Do symptom check based on QuestionnaireResponse
+ODA2 -> ODA1: POST https://[oda1_base]/Questionnaire/[id]/$check-symptoms [filled QuestionnaireResponse]
+ODA2 <-- ODA1: HTTP 200 OK [Bundle - collection of ActivityDefinitions]
+end
+
+@enduml

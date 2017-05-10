@@ -1,0 +1,76 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"/>
+	<soap:Body>
+		<RCMR_IN100029FI01 xmlns="urn:hl7-org:v3" xmlns:ns2="urn:hl7finland" ITSVersion="XML_1.0">
+			<id root="1.2.246.10.1008258.18.11010.2017.4522"/>
+			<creationTime value="20170413105256"/>
+			<versionCode code="V3-2006"/>
+			<interactionId extension="RCMR_IN100029FI01" root="2.16.840.1.113883.1.6"/>
+			<profileId root="1.2.246.777.11.2008.10"/>
+			<profileId root="1.2.246.777.11.2008.30"/>
+			<profileId root="1.2.246.777.11.2014.4"/>
+			<profileId root="1.2.246.777.11.2012.6"/>
+			<processingCode code="D"/>
+			<processingModeCode code="T"/>
+			<acceptAckCode code="ER"/>
+			<receiver typeCode="RCV">
+				<device>
+					<id root="1.2.246.556.18007.2"/>
+				</device>
+			</receiver>
+			<sender typeCode="SND">
+				<device>
+					<id root="1.2.246.10.1008258"/>
+				</device>
+			</sender>
+			<controlActProcess classCode="CACT" moodCode="RQO">
+				<code code="RCMR_TE000901UV01" codeSystem="2.16.840.1.113883.1.18"/>
+				<priorityCode code="R"/>
+				<reasonCode code="PP2" codeSystem="1.2.246.537.5.40157.2008" codeSystemName="eArkisto - Arkistosanomien palvelupyynnöt" displayName="Palvelunantajan omien tietojen haku Potilastiedon arkistosta"/>
+				<reasonCode code="2" codeSystem="1.2.246.537.5.40159.2008" codeSystemName="eArkisto - Palvelupyynnön kohdistus metatietotasolle" displayName="Metatietoja käsitellään asiakirjatasolla"/>
+				<reasonCode code="1" codeSystem="1.2.246.537.5.40160.2008" displayName="Palautetaan ajantasaiset versiot kuvailutiedoista"/>
+				<overseer typeCode="RESP">
+					<assignedPerson>
+						<representedOrganization>
+							<id root="1.2.246.10.1008258.19.0"/>
+							<code code="2" codeSystem="1.2.246.537.5.40150.2009"/>
+						</representedOrganization>
+					</assignedPerson>
+				</overseer>
+				<authorOrPerformer typeCode="PRF">
+					<assignedPerson>
+						<id extension="10098700023" root="1.2.246.537.26"/>
+						<assignedPerson>
+							<name>
+								<given>MAUNO</given>
+								<family>MANAGER</family>
+							</name>
+							<asLicensedEntity>
+								<code code="1" codeSystem="1.2.246.537.5.40128.2006" displayName="Terveydenhuollon ammattihenkilön varmenne"/>
+							</asLicensedEntity>
+						</assignedPerson>
+						<representedOrganization>
+							<id root="1.2.246.10.1008258"/>
+						</representedOrganization>
+					</assignedPerson>
+				</authorOrPerformer>
+				<reasonOf>
+					<detectedIssueEvent>
+						<code code="3" codeSystem="1.2.246.537.5.40120.2006"/>
+						<mitigatedBy>
+							<detectedIssueManagement moodCode="EVN">
+								<code code="11" codeSystem="1.2.246.537.6.240.2012"/>
+								<text>Asiakirja- ja arkistohallinnolliset tehtävät</text>
+							</detectedIssueManagement>
+						</mitigatedBy>
+					</detectedIssueEvent>
+				</reasonOf>
+				<queryByParameter>
+					<patient.id>
+						<value extension="030303-0303" root="1.2.246.21"/>
+					</patient.id>
+				</queryByParameter>
+			</controlActProcess>
+		</RCMR_IN100029FI01>
+	</soap:Body>
+</soap:Envelope>

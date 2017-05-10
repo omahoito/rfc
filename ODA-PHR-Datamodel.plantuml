@@ -2,41 +2,6 @@
 
 set namespaceSeparator ::
 
-note as N1
-* <b>Person</b> Person is created when first time logged in ODA. 
-Person contains personal information such as name, social 
-security number etc.
-* <b>Patient</b> is created when person permits the first application
-  to his/her PHR data. In MVP-release this is created when person 
-  logs in first time. Does not contain any personal information.
-* <b>Consent</b> Patient's consent to share PHR data with his/her careteam.
-* <b>Observation</b> references to <i>Patient</i>. When generated from
-the questionnaire answer, references also to corresponding <i>QuestionnaireResponse</i> 
-resource. Authorized to care-team by linking <i>CarePlan</i> to the <i>Observation</i> instance.
-* <b>CarePlan</b> Self-careplan created by patient. The actions suggested by symptom 
-check decision support are mapped as careplan activities. Supporting information 
-(medications, immunizations, allergies etc.) is authorized to care-team by patient. 
-Supporting information is referenced by <i>CarePlan.support</i> element.
-* <b>ActivityDefinition</b> Definition of the suggested action. Suggested careplan 
-activities are based on these definitions. 
-* <b>Questionnaire</b> Created by main user and saved to PHR as questionnaire 
-templates.
-* <b>QuestionnaireResponse</b> Created when patient answers to a questionnaire 
-and saves the answers.
-* <b>CareTeam</b> Created when first professional patricipates to care.
-* <b>Practitioner</b> Created when professional participates to care first time.
-* <b>Communication</b> Patient's and professional's comments about the <i>CarePlan</i>.
-* <b>MedicationStatement</b> Medication information added by patient. Authorized 
-to care-team by linking <i>CarePlan</i> to the <i>MedicationStatement</i> instance.
-* <b>Immunization</b> Added by patient and authorized to care-team via careplan.
-* <b>AllergyIntolerance</b> Added by patient and authorized to care-team via careplan.
-* <b>Flag</b> Risk-information added by patient and authorized to care-team via careplan.
-  end note
-
-class MVP::Consent {
-Reference<Patient> patient
-}
-
 class MVP::Person {
 Reference<Patient | Practitioner> link.target
 }
@@ -48,6 +13,7 @@ Reference<QuestionnaireResponse> related
 class MVP::CarePlan {
 Reference<Patient> subject
 Reference<CareTeam> careteam
+Reference<EpisodeOfCare> context
 Reference<Any> support
 }
 class MVP::Questionnaire
@@ -56,8 +22,8 @@ Reference<Patient> source
 Reference<Questionnaire> questionnaire
 }
 class MVP::CareTeam {
-'Reference<Patient> subject
 Reference<Practitioner> participant
+Reference<Organization> managingOrganization
 }
 class MVP::Practitioner {
 	
@@ -88,14 +54,37 @@ class MVP::ActivityDefinition {
 
 class Medication
 
+class MVP::EpisodeOfCare {
+    status
+    Reference<Practitioner> careManager
+    Reference<CareTeam> team     
+    } 
+
+class MVP::Goal {
+    description
+}
+
+class MVP::Organization {
+}
+
+
 hide methods
 hide circle
+
+MVP::CarePlan "0..*" -- "0..*" MVP::CareTeam : Authorization
+MVP::CareTeam "0..*" -- "0..*" MVP::EpisodeOfCare : Team participating to care
+MVP::CareTeam "0..*" -- "0..*" MVP::Organization
+
+MVP::EpisodeOfCare "0..*" -- "1" MVP::Practitioner : careManager 
+MVP::EpisodeOfCare -- MVP::CarePlan : < context 
+MVP::EpisodeOfCare "*" -- "1" MVP::Patient : patient >
+
+MVP::CarePlan "1" -- "0..*" MVP::Goal
 
 MVP::Person "1"--"0..1" MVP::Patient
 MVP::Person "1"--"0..1" MVP::Practitioner
 
 MVP::CarePlan "0..*"--"1" MVP::Patient
-MVP::CarePlan "1"--"0..1" MVP::CareTeam
 MVP::CarePlan "0..*"--"0..*" MVP::QuestionnaireResponse
 MVP::CarePlan "0..*"--"0..*" AllergyIntolerance
 MVP::CarePlan "0..*"--"0..*" MVP::MedicationStatement
@@ -104,7 +93,6 @@ MVP::CarePlan "0..*"--"0..*" Flag
 MVP::CarePlan "0..*"--"0..*" MVP::ActivityDefinition
 
 MVP::CareTeam "0..*"--"0..*" MVP::Practitioner 
-'MVP::CareTeam "0..*"--"1" MVP::Patient
 
 MVP::Observation "0..*"--"0..*" MVP::CarePlan
 MVP::Observation "0..*"--"1" MVP::Patient
@@ -120,7 +108,6 @@ MVP::Patient "1"--"0..*" MVP::MedicationStatement
 MVP::Patient "1"--"0..*" Immunization
 MVP::Patient "1"--"0..*" Flag
 
-MVP::Consent "0..*"-up-"1" MVP::Patient
 
 MVP::MedicationStatement "0..*" -- "1" Medication
 

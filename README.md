@@ -11,10 +11,10 @@ Please see https://github.com/omahoito/rfc/projects/1 for the progress of reques
 
 Current schemas are in https://simplifier.net/FinnishPHR
 
-## Profiling guidelines
+## <a name="profiling_guide"></a>Profiling guidelines
 
 * Profiles define the structures of the resources, data types, extensions and constraints used in ODA FHIR API. Profile implementers are expected to be familiar with the HL7 guidelines: http://hl7.org/fhir/2017Jan/profiling.html
-* Profile names start with project identifier "ODA" and the profile name must contain the resource and the special domain of the particular resource (if any). For example a care plan for customer's self care is named as "ODA self-CarePlan profile". 
+* Profile names start with project identifier "ODA" and the profile name must contain the resource and the special domain of the particular resource (if any). For example a care plan for customer's self care is named as "ODA self-CarePlan profile".
 * Profiles must be in XML format and their filenames must contain the profile name, for example ODA-self-CarePlan.profile.xml
 * Profile name should be in PascalCase, not camelCase, i.e. "ODA CarePlan" as well as filenames ie. ODA-CarePlan.profile.xml
 * For each profile there must be also an example resource in JSON format. Example resource demonstrates how the data elements are used and its name must match to the profile name, for example: ODA-self-careplan.example.json.
@@ -30,7 +30,7 @@ Current schemas are in https://simplifier.net/FinnishPHR
     * definition: "Identifies what kind of plan this is to support differentiation between multiple co-existing plans; e.g. "Self-care", "Diabetes" etc."
 	* comments: "Only allowed value is 'Self-care'"
 	* requirements: "This allows filtering different kinds of care-plans"
-  
+
 
 
 ## Data model
@@ -72,7 +72,7 @@ Data models of the following profiles:
 * Consent, information about the patient's policy choices
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-consent-example.json)
   * Profile documentation [STU3](http://hl7.org/fhir/2017Jan/consent.html)
-  
+
 * Device, used to fill in the symptome questionnaire
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-device.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-device.example.json)
@@ -109,27 +109,92 @@ Data models of the following profiles:
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-questionnaireresponse.example.json)
   * Documentation [STU3](http://hl7.org/fhir/2017Jan/questionnaireresponse.html)
 
+## Data model explained
+
+* <b>CarePlan</b> is the central element in ODA data model as it gathers the care related information for the patient. 
+The CarePlan contains actions suggested by symptom check service. Patient may also attach his/her personal
+health or activity data from Kela PHR and healthcare data from Kela Kanta to CarePlan. This supporting information 
+is referenced by <i>CarePlan.support</i> element
+* <b>ActivityDefinition</b> Definition of the suggested action. These definitions are referenced by careplan activities. 
+* <b>CareTeam</b> models two objects:
+  * The service request list containing professionals authorized to the list.
+  * The care team participating to patient's ODA-care
+* <b>Practitioner</b> models the professional and contains the professional data shown in ODA.
+* <b>Patient</b> Patient models a patient without any personal information. Conforms to Finnish PHR FinnishPatient 
+profile
+* <b>Person</b> Person contains personal information of a user.
+* <b>Observation</b> references to <i>Patient</i>. When generated from the questionnaire answer, references also to 
+corresponding <i>QuestionnaireResponse</i> resource. For vital signs conforms to Finnish PHR Vital Signs profile and
+the profiles derived from it.
+* <b>EpisodeOfCare</b> is created when care-relationship starts between professional and patient. CareManager relates 
+to the responsible professional and the team contains other professionals participating to care.
+* <b>Questionnaire</b> Created by main user and saved to PHR as questionnaire templates.
+* <b>QuestionnaireResponse</b> Created when patient answers to a questionnaire and saves the answers.
+* <b>Communication</b> Patient's and professional's comments about the <i>CarePlan</i> or any other resource.
+* <b>MedicationStatement</b> Medication information added by patient. Authorized to care-team by linking <i>CarePlan</i> 
+to the <i>MedicationStatement</i> instance.
+* <b>Immunization</b> Added by patient and authorized to care-team via careplan.
+* <b>AllergyIntolerance</b> Added by patient and authorized to care-team via careplan.
+* <b>Flag</b> Risk-information added by patient and authorized to care-team via careplan.
+* <b>Organization</b> Managing organization of the CareTeam representing the service request list.
+* <b>Goal</b> The "master" goal of the patient.
+
 
 
 ## Data model visualised
 
-![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-PHR-Datamodel.plantuml?6) 
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-PHR-Datamodel.plantuml?9)
 <!--- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
 
-<!--
-
-![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/datamodel.md?2)
---->
-
-<!--- This generates a picture based on datamodel.md. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 
-
-*Initial version from an old architecture document, to be updated*
-
---->
 
 
-<!---
+## <a name="profiling_tools"></a>Tools for editing profiles
 
-![Data model](http://g.gravizo.com/source?https%3A%2F%2Fraw.githubusercontent.com%2Fomahoito%2Frfc%2FPLANTUML_Diagrams%2Fmaster%2Fmodel.dot%3F2)
---->
-<!-- Increment the last number (after %3F) to invalidate gravizo and browser cache -->
+[Notepad++](https://notepad-plus-plus.org/) has a plugin for FHIR.
+http://www.healthintersections.com.au/?p=2386
+
+Install files here:
+http://www.healthintersections.com.au/FhirServer/fhirnpp.htm
+
+-------------------------------------------
+
+Forge is a FHIR profile editor for Windows.
+http://fhir.furore.com/forge
+https://simplifier.net/ui/Info/Forge
+
+Connects to [Simplifier](https://www.simplifier.net/), a registry for FHIR profiles.
+
+-------------------------------------------
+
+Simple FHIR editor online at
+http://docs.smarthealthit.org/fred/
+source: https://github.com/smart-on-fhir/fred
+
+FHIR Resource Editor (FRED) usage is simple and intuitive. The choice of elements is limited. No custom elements. If attempt with custom elements, they will be displayed as red. Null and undefined values give message about profile containing errors.
+
+A separate instance of FRED can be set up and run on a server.
+
+-------------------------------------------
+
+There are currently no known FHIR editing tools for Linux or Mac.
+
+## Commenting the data schemas
+
+The profile data schemas are written in XML. [Forge](https://fhir.furore.com/forge/) is a tool with to create and comment FHIR profiles. It also shows the structure of the data schema.
+
+Forge makes it possible to focus on the functional side of modelling without having to get involved in the complexity of XML files. Forge also automatically validates the profiles.
+
+Forge can be downloaded [here](https://fhir.furore.com/forge/). The software only works in Windows. It is only possible to do profiles in XML format.
+
+In Forge the profile elements and attributes can be commented in the "Comments" or "Reason for inclusion and constrainment" sections. The comments section can include explanatory comments and application information, and information on the correct way of using the element. The reason section can include information about why an element or attribute has been created, and also include references to support these decisions.
+
+
+## Contributing
+
+If you are interested in contributing new profiles, please feel free to do so. The profiles have been made with [Forge](https://fhir.furore.com/forge/), and the same tool can be used for further development or modification of existing profiles or creation of new ones. Please see the [Profiling section](#profiling_guide) for further information.
+
+Contributions are done through pull requests. Profile files are checked with [xmllint](http://xmlsoft.org/xmllint.html) and [Travis](https://travis-ci.org/). Please add a validation test for the profile to the [validation script](https://github.com/omahoito/rfc/blob/master/xmlvalidation.sh) together with the schema file that the profile is based on. Passing the validation test is a precondition for new profiles to be accepted.
+
+Schema validation files for DSTU2 profiles are located [here](https://github.com/omahoito/rfc/tree/master/xsd/STU2/fhir-all-xsd) and files for STU3 can be found [here](https://github.com/omahoito/rfc/tree/master/xsd/STU3/fhir-all-xsd). The schema files end with a xsd suffix.
+
+Example resources have been written by hand. Like the profiles, the resources are also automatically validated. The validation is done with [JSON Spec](https://json-spec.readthedocs.io/) and the validation routine automatically run on [Travis](https://travis-ci.org/). If you want to contribute an example, please do so through a pull request.

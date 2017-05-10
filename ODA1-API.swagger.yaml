@@ -752,7 +752,7 @@ definitions:
                    description: TODO
                    example: 'http://questionnaire/types'
 
-  questionnaire-item:
+  #questionnaire-item:
     # This might have to be split up into different definitions depending on the question type. Not all props are present in all types etc.
     description: "A Questionnaire item. Can be nested, Swagger has trouble showing that."
     type: array
