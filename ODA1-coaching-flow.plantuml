@@ -24,4 +24,9 @@ user <- ODA2: SEND weekly message N (still v1.0)
 ...coaching program ends, EpisodeOfCare = inactive...
 ...user chooses if he wants to continue with weight followup...
 
+newpage Sähköinen terveystarkastus (ST)
+ODA2 -> user: SEND form [Questionnaire]
+user -> ODA2: SEND filled out form [QuestionnaireResponse]
+ODA2 -> ODA1: SEND filled out form [QuestionnaireResponse]
+ODA1 -> ODA2: SEND reply [array of CDS Hooks info cards]
 @enduml
