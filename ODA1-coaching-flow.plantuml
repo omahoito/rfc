@@ -29,5 +29,6 @@ ODA2 -> user: SEND form [Questionnaire]
 user -> ODA2: SEND filled out form [QuestionnaireResponse]
 ODA2 -> ODA1: SEND filled out form [QuestionnaireResponse]
 ODA1 -> ODA2: SEND reply [array of CDS Hooks info cards, markdown]
+note left: a "normal" questionnaire handling \nprocess, albeit with a very large\nfeedback mass
 ODA2 -> user: appropriate UI changes
 @enduml
