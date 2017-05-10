@@ -1,0 +1,27 @@
+@startuml
+
+title Usage of coaching programs and followups (seurannat) in ODA
+ODA1 -> ODA2: PUSH coaching program X version 1.0\n[Bundle of CommunicationRequests]
+note left: The Bundle may also\ncontain ActivityDefinitions,\nwhich the CommunicationRequests\nmay refer to by id.
+user -> ODA2: START program X
+user <- ODA2: SEND weekly message 1
+note right: The CommunicationRequests contain a\nmarkdown message and a time delta.\nThe message is sent to the user at\nprogramStartTime + delta.
+user <- ODA2: SEND weekly message 2
+ODA1 -> ODA2: PUSH coaching program X version 1.1\n[Bundle of CommunicationRequests]
+user <- ODA2: SEND weekly message 3 (still v1.0)
+user -> ODA2: START followup of weight
+note right: Followup of patient vitals and lifestyle\nshould be represented by some FHIR\nresource in ODA2. Perhaps\nEpisodeOfCare, which is used below.
+user -> ODA2: SAVE weight: 95 kg
+ODA2 -> ODA1: SEND weight data (95kg)\n[Observation, reference to EpisodeOfCare]
+ODA1 -> ODA2: SEND feedback [CommunicationRequest]
+note left: Feedback not yet\nimplemented in ODA1
+...next day...
+user -> ODA2: SAVE weight: 90 kg
+ODA2 -> ODA1: SEND weight data (95kg, 90kg)\n[Observation, reference to EpisodeOfCare]
+ODA1 -> ODA2: SEND feedback [CommunicationRequest]
+...weeks later...
+user <- ODA2: SEND weekly message N (still v1.0)
+...coaching program ends, EpisodeOfCare = inactive...
+...user chooses if he wants to continue with weight followup...
+
+@enduml
