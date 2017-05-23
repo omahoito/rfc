@@ -1,0 +1,30 @@
+{
+  "resourceType": "Goal",
+  "id": "GOAL1",
+  "identifier": [
+    {
+      "value": "123"
+    }
+  ],
+  "status": "achieved",
+  "description": {
+    "text": "Stop smoking"
+  },
+  "subject": {
+    "reference": "Patient/PATIENT1",
+    "display": "Anna Demo"
+  },
+  "startDate": "2015-04-05",
+  "outcomeCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "8517006",
+          "display": "Ex-smoker (finding)"
+        }
+      ],
+      "text": "Former smoker"
+    }
+  ]
+}

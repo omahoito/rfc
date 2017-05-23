@@ -39,13 +39,13 @@ Current schemas are in https://simplifier.net/FinnishPHR
 Data models of the following profiles:
 
 * ActivityDefinition
-  * Profile documentation [STU3](http://hl7.org/fhir/2017Jan/activitydefinition.html)
+  * Profile documentation [STU3](http://hl7.org/fhir/activitydefinition.html)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-activitydefinition.example.json)
 
 * Appointment
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-appointment.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-appointment.example.json)
-  * Profile documentation ([STU2](https://www.hl7.org/fhir/appointment.html), [STU3](http://hl7.org/fhir/2017Jan/appointment.html))
+  * Profile documentation ([STU3](https://www.hl7.org/fhir/appointment.html))
   * Relevant STU2 -> STU3 changes: type renamed to appointmentType
   * [Discussion](https://github.com/omahoito/rfc/issues/3)
 
@@ -58,7 +58,7 @@ Data models of the following profiles:
 
 * CareTeam
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/CareTeam.json)
-  * Profile documentation [STU3](http://hl7.org/fhir/2017Jan/careteam.html)
+  * Profile documentation [STU3](http://hl7.org/fhir/careteam.html)
   * Introduced in STU3
   * [Discussion](https://github.com/omahoito/rfc/issues/11)
 
@@ -69,25 +69,26 @@ Data models of the following profiles:
   * Relevant STU2 -> STU3 changes: topic added in STU3
   * [Discussion](https://github.com/omahoito/rfc/issues/7)
 
-* Consent, information about the patient's policy choices
-  * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-consent-example.json)
-  * Profile documentation [STU3](http://hl7.org/fhir/2017Jan/consent.html)
-
-* Device, used to fill in the symptome questionnaire
-  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-device.profile.xml)
-  * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-device.example.json)
-  * Profile documentation ([STU2](https://www.hl7.org/fhir/device.html), [STU3](http://hl7.org/fhir/2017Jan/device.html))
-  * Relevant STU2 -> STU3 changes: device minimum cardinality changed from 1 to 0 in STU3
-  * [Discussion](https://github.com/omahoito/rfc/issues/1)
-
+* EpisodeOfCare, contains information about the association of a patient with a healthcare provider (e.g. practitioner)
+  * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-episodeofcare.example.json)
+  * Documentation: [STU3](https://www.hl7.org/fhir/episodeofcare.html)
+  
+* Goal, setting a goal for the patient's recovery
+  * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-goal.example.json)
+  * Documentation: [STU3](https://www.hl7.org/fhir/communication.html)
+  
 * MedicationStatement, information about medication the patient is using
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-medicationstatement.example.json)
-  * Documentation [STU3](http://hl7.org/fhir/2017Jan/medicationstatement.html)
+  * Documentation [STU3](http://hl7.org/fhir/medicationstatement.html)
 
 * Observation about body temperature, contains patient's temperature measurements
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-temperature-observation.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-temperature-observation.example.json)
-  * Profile documentation ([STU3](http://hl7.org/fhir/2017Jan/observation.html))
+  * Profile documentation ([STU3](http://hl7.org/fhir/observation.html))
+
+* Organization, an entity managing health resources
+  * Example resource as  [json](https://github.com/omahoito/rfc/blob/master/ODA-organization.example.json)
+  * Documentation ([STU3](http://hl7.org/fhir/organization.html))
 
 * Person - FinnishPatient. Person and patient information. Person-profile is based on the FHIR-standard's STU3-version, FinnishPatient on Kela's profile
   * Person: http://hl7.org/fhir/2017Jan/person.html
@@ -99,16 +100,18 @@ Data models of the following profiles:
 
 * Practitioner, professional who takes care of patient
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-practitioner.example.json)
-  * Documentation [STU3](http://hl7.org/fhir/2017Jan/practitioner.html)
+  * Documentation [STU3](http://hl7.org/fhir/practitioner.html)
 
 * Questionnaire
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-questionnaire.example.json)
-  * Documentation [STU3](http://hl7.org/fhir/2017Jan/questionnaire.html)
+  * Documentation [STU3](http://hl7.org/fhir/questionnaire.html)
 
 * QuestionnaireResponse
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-questionnaireresponse.example.json)
-  * Documentation [STU3](http://hl7.org/fhir/2017Jan/questionnaireresponse.html)
+  * Documentation [STU3](http://hl7.org/fhir/questionnaireresponse.html)
 
+  
+  
 
 
 ## Data model visualised
