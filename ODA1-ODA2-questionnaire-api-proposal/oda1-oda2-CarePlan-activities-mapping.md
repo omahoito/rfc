@@ -1,4 +1,4 @@
-## ODA1 ActivityDefinition - CarePlan.activity mapping
+### ODA1 ActivityDefinition - ODA2 CarePlan.activity mapping
 
 | AcivityDefinition   | CarePlan.activity       | Cardinality   |  description                                               |
 |---------------------|:------------------------|:------------- |:-----------------------------------------------------------|
