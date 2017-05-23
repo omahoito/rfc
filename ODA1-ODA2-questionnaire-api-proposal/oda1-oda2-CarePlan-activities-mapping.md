@@ -1,8 +1,8 @@
 ### ODA1 ActivityDefinition - ODA2 CarePlan.activity mapping
 
-| AcivityDefinition   | CarePlan.activity       | Cardinality   |  description                                               |
-|---------------------|:------------------------|:------------- |:-----------------------------------------------------------|
-|      .description   |  .detail.description     |   0..1       | Extra info describing activity to perform                  |
-|      .code          |  .detail.code            |   1..1       | Detail type of activity                                    |
-|      .topic         |  .detail.reasonCode      |   0..*       | Why activity should be done or why activity was prohibited |
-|      .*             |  .detail.definition      |   1..1       | Activity definition                                        |
+| Cardinality | AcivityDefinition   | CarePlan.activity     |  Description                                               |
+|-------------|:--------------------|:----------------------|:-----------------------------------------------------------|
+|  0..1       |   .description      |  .detail.description  | Extra info describing activity to perform                  |
+|  1..1       |   .code             |  .detail.code         | Detail type of activity                                    |
+|  0..*       |   .topic            |  .detail.reasonCode   | Why activity should be done or why activity was prohibited |
+|  1..1       |   .*                |  .detail.definition   | Activity definition                                        |
