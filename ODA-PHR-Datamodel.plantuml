@@ -2,46 +2,6 @@
 
 set namespaceSeparator ::
 
-note as N1
-* <b>Person</b> Person is created when first time logged in ODA. 
-Person contains personal information such as name, social 
-security number etc.
-* <b>Patient</b> is created when person permits the first application
-  to his/her PHR data. In MVP-release this is created when person 
-  logs in first time. Does not contain any personal information.
-* <b>Observation</b> references to <i>Patient</i>. When generated from
-the questionnaire answer, references also to corresponding <i>QuestionnaireResponse</i> 
-resource. Authorized to care-team by linking <i>CarePlan</i> to the <i>Observation</i> instance.
-* <b>CarePlan</b> Self-careplan created by patient. The actions suggested by symptom 
-check decision support are mapped as careplan activities. Supporting information 
-(medications, immunizations, allergies etc.) is authorized to care-team by patient. 
-Supporting information is referenced by <i>CarePlan.support</i> element.
-* <b>EpisodeOfCare</b> is created when care-relationship starts between professional and 
-patient. CareManager relates to the responsible professional and the team contains 
-other professionals participating to care.
-* <b>ActivityDefinition</b> Definition of the suggested action. Suggested careplan 
-activities are based on these definitions. 
-* <b>Questionnaire</b> Created by main user and saved to PHR as questionnaire 
-templates.
-* <b>QuestionnaireResponse</b> Created when patient answers to a questionnaire 
-and saves the answers.
-* <b>CareTeam</b> CareTeam referenced by <i>EpisodeOfCare</i> represents the team participating
-to patient's care. CareTeam is also used to authorize practitioners to a service request list.
-* <b>Practitioner</b> In MVP, Practitioner is created when organizations' service request lists 
-with participating professionals are saved to ODA PHR.
-* <b>Communication</b> Patient's and professional's comments about the <i>CarePlan</i> or any
-other resource.
-* <b>MedicationStatement</b> Medication information added by patient. Authorized 
-to care-team by linking <i>CarePlan</i> to the <i>MedicationStatement</i> instance.
-* <b>Immunization</b> Added by patient and authorized to care-team via careplan.
-* <b>AllergyIntolerance</b> Added by patient and authorized to care-team via careplan.
-* <b>Flag</b> Risk-information added by patient and authorized to care-team via careplan.
-* <b>Organization</b> Managing organization of the CareTeam representing the service 
-request list.
-* <b>Goal</b> The "master" goal of the patient.
-  end note
-
-
 class MVP::Person {
 Reference<Patient | Practitioner> link.target
 }
