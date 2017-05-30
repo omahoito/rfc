@@ -32,13 +32,26 @@ XSD3_PATH="$BASE_PATH""xsd/STU3/fhir-all-xsd/"
 
 declare -A xmap
 
-xmap["$RFC_PATH""ODA-appointment.profile.xml"]="$XSD_PATH""appointment.xsd"
-xmap["$RFC_PATH""ODA-careplan.profile.xml"]="$XSD_PATH""careplan.xsd"
-xmap["$RFC_PATH""ODA-communication.profile.xml"]="$XSD_PATH""communication.xsd"
-xmap["$RFC_PATH""ODA-device.profile.xml"]="$XSD_PATH""device.xsd"
-xmap["$RFC_PATH""ODA-finnishpatient-patient.profile.xml"]="$XSD_PATH""patient.xsd"
-xmap["$RFC_PATH""ODA-person.profile.xml"]="$XSD_PATH""person.xsd"
-xmap["$RFC_PATH""ODA-temperature-observation.profile.xml"]="$XSD3_PATH""observation.xsd"
+
+xmap["$RFC_PATH""ODA-ActivityDefinition.profile.xml"]="$XSD3_PATH""activitydefinition.xsd"
+xmap["$RFC_PATH""ODA-CareTeam.profile.xml"]="$XSD3_PATH""careteam.xsd"
+xmap["$RFC_PATH""ODA-MedicationStatement.profile.xml"]="$XSD3_PATH""medicationstatement.xsd"
+xmap["$RFC_PATH""ODA-Observation.profile.xml"]="$XSD3_PATH""observation.xsd"
+xmap["$RFC_PATH""ODA-Practitioner.profile.xml"]="$XSD3_PATH""practitioner.xsd"
+xmap["$RFC_PATH""ODA-Questionnaire.profile.xml"]="$XSD3_PATH""questionnaire.xsd"
+xmap["$RFC_PATH""ODA-QuestionnaireResponse.profile.xml"]="$XSD3_PATH""questionnaireresponse.xsd"
+xmap["$RFC_PATH""ODA-careplan.profile.xml"]="$XSD3_PATH""careplan.xsd"
+xmap["$RFC_PATH""ODA-communication.profile.xml"]="$XSD3_PATH""communication.xsd"
+xmap["$RFC_PATH""ODA-person.profile.xml"]="$XSD3_PATH""person.xsd"
+
+
+#xmap["$RFC_PATH""ODA-appointment.profile.xml"]="$XSD_PATH""appointment.xsd"
+#xmap["$RFC_PATH""ODA-careplan.profile.xml"]="$XSD3_PATH""careplan.xsd"
+#xmap["$RFC_PATH""ODA-communication.profile.xml"]="$XSD3_PATH""communication.xsd"
+#xmap["$RFC_PATH""ODA-device.profile.xml"]="$XSD_PATH""device.xsd"
+#xmap["$RFC_PATH""ODA-finnishpatient-patient.profile.xml"]="$XSD3_PATH""patient.xsd"
+#xmap["$RFC_PATH""ODA-person.profile.xml"]="$XSD3_PATH""person.xsd"
+#xmap["$RFC_PATH""ODA-temperature-observation.profile.xml"]="$XSD3_PATH""observation.xsd"
 
 
 xmap["$APPOINTMENT_PATH""ODAAppointment.xml"]="$XSD_PATH""appointment.xsd"
