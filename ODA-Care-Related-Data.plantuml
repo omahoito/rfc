@@ -1,0 +1,75 @@
+@startuml
+
+header
+Datamodel diagram generated with plantuml.com to github.com/omahoito/rfc. \
+CC-BY-4.0 City of Espoo 2017. \
+To change the picture, make a pull request with changes to ODA-Care-Related-Data.plantuml and README.md.
+endheader
+
+skinparam rectangle {
+    BackgroundColor Wheat
+}
+
+skinparam rectangle {
+	BackgroundColor<<Temporary>> LightGreen
+}
+
+database ODA {
+
+rectangle PlanDefinition as odaplandefinition
+rectangle AuthCareTeam as odaauthteam
+rectangle CareTeam <<Temporary>> as odacareteam
+rectangle CarePlan <<Temporary>> as odacareplan
+rectangle EpisodeOfCare <<Temporary>> as odaeoc
+rectangle Practitioner
+rectangle Observation <<Temporary>> as odaobs
+rectangle MedicationStatement <<Temporary>> as odamed
+rectangle Organization as odaorg
+rectangle Communication <<Temporary>> as odacomment
+}
+
+odacareplan --> odaeoc
+odaeoc --> odacareteam
+odacareteam --> Practitioner
+odacareteam --> odaorg
+odacareplan --> odaauthteam
+odaauthteam --> Practitioner
+odacareplan --> odaobs
+odacareplan --> odamed
+odacareplan --> odaplandefinition
+odaauthteam --> odaorg
+odacomment -right-> odacareplan
+
+database Kanta {
+
+'rectangle Palvelutapahtuma
+rectangle "Terveys- ja hoitosuunnitelma" as ths
+} 
+
+database Kansa {
+rectangle Asiakassuunnitelma
+}
+
+
+database Omatietovaranto {
+
+rectangle SelfCarePlan as kelacareplan
+rectangle Questionnaire as q
+rectangle QuestionnaireResponse as qr
+rectangle ActivityDefinition as ac
+rectangle SymptomObservation as so
+rectangle Goal
+rectangle Communication as kelacomment
+}
+
+'kelacareplan --> Palvelutapahtuma
+kelacareplan --> ac
+kelacareplan --> Goal
+kelacareplan --> ths : isPartOf
+kelacareplan --> Asiakassuunnitelma : isPartOf
+kelacomment --> kelacareplan
+qr --> so
+
+qr -down-> q
+
+@enduml
