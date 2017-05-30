@@ -1,0 +1,30 @@
+{
+  "resourceType": "Organization",
+  "id": "hl7",
+  "name": "Kansanelakelaitos",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "(+358) 20 692 204"
+    },
+    {
+      "system": "fax",
+      "value": "(+358) 020 634 1599"
+    },
+    {
+      "system": "email",
+      "value": "kela@kela.fi"
+    }
+  ],
+  "address": [
+    {
+		"line": [
+        "Nordenskiöldinatu 12"
+      ],
+      "city": "Helsinki",
+      "state": "Etelä-Suomi",
+      "postalCode": "00250",
+      "country": "Suomi"
+    }
+  ]
+}
