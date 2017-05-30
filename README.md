@@ -148,6 +148,10 @@ to the <i>MedicationStatement</i> instance.
 <!--- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
 
 
+## Data modelling in national databases
+
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-Care-Related-Data.plantuml?1)
+
 
 ## <a name="profiling_tools"></a>Tools for editing profiles
 
