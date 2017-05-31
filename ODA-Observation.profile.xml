@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-05-26T11:29:28.361+03:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="oo" />
+  </extension>
+  <url value="StructureDefinition/MyObservation" />
+  <name value="ODA-Observation" />
+  <status value="draft" />
+  <date value="2017-05-26T11:22:55.2488827+03:00" />
+  <description value="Base StructureDefinition for ODA Temperature Observation Resource" />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Observation.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element>
+      <path value="Observation.context" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Observation.effectiveDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element>
+      <path value="Observation.valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+    <element>
+      <path value="Observation.dataAbsentReason" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Observation.specimen" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Observation.related" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Observation.related.target" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+      </type>
+    </element>
+    <element>
+      <path value="Observation.component" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
