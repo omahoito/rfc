@@ -1,6 +1,6 @@
 @startuml
 
-!include Styles.iuml
+!includeurl https://raw.githubusercontent.com/Jurin/rfc/master/Styles.iuml
 
 set namespaceSeparator ::
 
