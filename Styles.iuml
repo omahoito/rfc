@@ -1,0 +1,43 @@
+@startuml
+
+skinparam defaultFontName Open Sans
+skinparam shadowing false
+
+skinparam backgroundColor #212121
+skinparam arrowColor #999999
+skinparam activityBorderColor #f5f5f5
+skinparam actorBorderColor #f5f5f5
+skinparam usecaseBorderColor #f5f5f5
+skinparam objectBorderColor #f5f5f5
+skinparam packageBorderColor #383838
+skinparam componentBorderColor #f5f5f5
+skinparam componentInterfaceBorderColor #f5f5f5
+skinparam noteBorderColor #f5f5f5
+skinparam stateBorderColor #f5f5f5
+skinparam sequenceLifeLineBorderColor #f5f5f5
+skinparam sequenceParticipantBorderColor #f5f5f5
+skinparam sequenceBoxLineColor #f5f5f5
+
+skinparam activityBackgroundColor #4e4e4e
+skinparam actorBackgroundColor white
+skinparam usecaseBackgroundColor white
+
+skinparam objectBackgroundColor white
+skinparam packageBackgroundColor #383838
+skinparam componentBackgroundColor white
+skinparam componentInterfaceBackgroundColor white
+skinparam stateBackgroundColor white
+skinparam sequenceParticipantBackgroundColor white
+
+skinparam activityDiamondFontColor white
+skinparam activityFontColor white
+skinparam arrowFontColor white
+
+skinparam packageFontColor white
+
+skinparam class {
+    BorderColor #d4d4d4
+    BackgroundColor #f2f2f2
+}
+
+@enduml

@@ -1,5 +1,7 @@
 @startuml
 
+!include Styles.iuml
+
 set namespaceSeparator ::
 
 class MVP::Person {
