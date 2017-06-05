@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-06-05T12:18:36.054+03:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pa" />
+  </extension>
+  <url value="StructureDefinition/MyPractitioner" />
+  <name value="ODA-Practitioner" />
+  <status value="draft" />
+  <date value="2017-06-05T12:09:22.4239087+03:00" />
+  <description value="Base StructureDefinition for ODA Practitioner Resource" />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Practitioner" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Practitioner.identifier.use" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.identifier.type" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.identifier.system" />
+      <definition value="Terhikki: rekisteröintinumero&#xD;&#xA;&#xD;&#xA;Establishes the namespace for the value - that is, a URL that describes a set values that are unique." />
+    </element>
+    <element>
+      <path value="Practitioner.identifier.value" />
+      <definition value="Terhikki rekisteröintinumero&#xD;&#xA;&#xD;&#xA;The portion of the identifier typically relevant to the user and which is unique within the context of the system." />
+      <requirements value="terhikkitunnus" />
+    </element>
+    <element>
+      <path value="Practitioner.identifier.period" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.active" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.name" />
+      <comment value="Ammilaisen nimi&#xD;&#xA;&#xD;&#xA;The selection of the use property should ensure that there is a single usual name specified, and others use the nickname (alias), old, or other values as appropriate.&#xD;&#xD;In general select the value to be used in the ResourceReference.display based on this:&#xD;&#xD;1. There is more than 1 name&#xD;2. Use = usual&#xD;3. Period is current to the date of the usage&#xD;4. Use = official&#xD;5. Other order as decided by internal business rules." />
+    </element>
+    <element>
+      <path value="Practitioner.name.use" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.name.text" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.name.family" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.name.given" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.name.prefix" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.name.suffix" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.name.period" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.telecom" />
+      <comment value="Puhelinnumero tai sähköposti&#xD;&#xA;&#xD;&#xA;Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification&#xD;&#xD;These typically will have home numbers, or mobile numbers that are not role specific." />
+    </element>
+    <element>
+      <path value="Practitioner.telecom.system" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.telecom.value" />
+      <comment value="Esimerkiksi puhelinnumero&#xD;&#xA;&#xD;&#xA;Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value." />
+    </element>
+    <element>
+      <path value="Practitioner.telecom.use" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.telecom.rank" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.telecom.period" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.address" />
+      <comment value="Esimerkiksi millä terveysasemalla tarjottu aika, osoite -&gt; Organization resurssi&#xD;&#xA;&#xD;&#xA;The PractitionerRole does not have an address value on it, as it is expected that the location property be used for this purpose (which has an address)." />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.birthDate" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.qualification" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Practitioner.communication" />
+      <comment value="Ammattilaisen kielet&#xD;&#xA;The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type." />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-06-05T11:43:39.512+03:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pa" />
+  </extension>
+  <url value="StructureDefinition/MyAppointment" />
+  <name value="ODA-Appointment" />
+  <status value="draft" />
+  <date value="2017-06-05T09:58:08.2054311+03:00" />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Appointment" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Appointment" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Appointment.identifier" />
+      <comment value="ODA luo tunnisteen sessiod-id:lle, ajatuksena että saman potilaan ajanvaraukseen liittyen tämä tunniste siirtyy ja pysyy samana asynkronisissakin sanomissa. Ajan allokoiva järjestelmä luo vastaussanomalla myös oman id:n appointmentille eli identifier on toistuva." />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Appointment.identifier.use" />
+      <max value="0" />
+      <fixedCode value="official" />
+    </element>
+    <element>
+      <path value="Appointment.identifier.type" />
+      <min value="1" />
+    </element>
+    <element>
+      <path value="Appointment.identifier.type.coding.system" />
+      <comment value="Palveluluokitus tähän (THL - Sosiaali- ja terveysalan palvelunimikkeistö&quot; versiosta &quot;1.2.246.537.6.49.201501&quot;)&#xD;&#xA;The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously." />
+    </element>
+    <element>
+      <path value="Appointment.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Appointment.identifier.value" />
+      <requirements value="Yksilöivä tunnus string" />
+    </element>
+    <element>
+      <path value="Appointment.identifier.period" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Appointment.identifier.assigner" />
+      <comment value="Tekstinä id:n luoneen organisaation nimi&#xD;&#xA;&#xD;&#xA;The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization." />
+      <requirements value="Tekstinä id:n luoneen organisaation nimi" />
+    </element>
+    <element>
+      <path value="Appointment.status" />
+      <comment value="proposed ODA käyttää kun kysyy PTJ:ltä aikaa proposed PTJ käyttää kun vastaa aikaehdotuksella, pending kun ODA vahvistaa ajan - jos ehdotetut ajat ei sovi potilaalle, palataan ensimmäiseen transaktioon ja ODA allokoima identifier pysyy samana -&gt; PTJ pitää huolen ettei tarjoa uudestaan samoja aikoja booked kun PTJ vahvistaa varatun ajan tai cancelled jos vahvistus ei onnistu&#xD;&#xA;If the Appointment's status is &quot;cancelled&quot; then all participants are expected to have their calendars released for the appointment period, and as such any Slots that were marked as BUSY can be re-set to FREE.&#xA;&#xA;This element is labeled as a modifier because the status contains the code entered-in-error that mark the Appointment as not currently valid." />
+    </element>
+    <element>
+      <path value="Appointment.appointmentType" />
+      <comment value="Palveluluokitus tähän&#xD;&#xA;Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
+    </element>
+    <element>
+      <path value="Appointment.reason" />
+      <comment value="Kliininen syy käynnille, ICD-10 vai joku muu?&#xD;&#xA;&#xD;&#xA;Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
+    </element>
+    <element>
+      <path value="Appointment.priority" />
+      <comment value="Tarvitaanko priorisointia?&#xD;&#xA;&#xD;&#xA;Seeking implementer feedback on this property and how interoperable it is.&#xD;&#xD;Using an extension to record a codeableconcept for named values may be tested at a future connectathon." />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Appointment.description" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Appointment.start" />
+      <comment value="Ensimmäisessä ODA:n luomassa kyselytransaktiossa ei anneta, PTJ tarjoaa aikoja Tarjotulla ajalla start ja end pakollinen&#xD;&#xA;&#xD;&#xA;Note: This is intended for precisely observed times, typically system logs etc., and not human-reported times - for them, see date and dateTime below. Time zone is always required" />
+    </element>
+    <element>
+      <path value="Appointment.end" />
+      <comment value="Tarjotulla ajalla start ja end pakollinen&#xD;&#xA;&#xD;&#xA;Note: This is intended for precisely observed times, typically system logs etc., and not human-reported times - for them, see date and dateTime below. Time zone is always required" />
+    </element>
+    <element>
+      <path value="Appointment.minutesDuration" />
+      <comment value="Vapaaehtoinen lisätieto&#xD;&#xA;&#xD;&#xA;32 bit number; for values larger than this, use decimal" />
+    </element>
+    <element>
+      <path value="Appointment.slot" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Appointment.comment" />
+      <comment value="Esimerkiksi ohjetta potilaalle, miten valmistautua käyntiin&#xD;&#xA;&#xD;&#xA;Additional text to aid in facilitating the appointment. For instance, a comment might be, &quot;patient should proceed immediately to infusion room upon arrival&quot;&#xD;&#xD;Where this is a planned appointment and the start/end dates are not set then this field can be used to provide additional guidance on the details of the appointment request, including any restrictions on when to book it." />
+      <maxLength value="140" />
+    </element>
+    <element>
+      <path value="Appointment.participant.actor" />
+      <comment value="Patient, Practitioner, HealthcareService&#xD;&#xA;&#xD;&#xA;References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+      </type>
+    </element>
+    <element>
+      <path value="Appointment.participant.status" />
+      <definition value="needs-action ensimmäinen transaktio tentative toinen transaktio accepted kolmas accepted neljäs&#xD;&#xA;&#xD;&#xA;Participation status of the actor." />
+      <comment value="Hyödynnetään vain Appointment tason statusta&#xD;&#xA;Note that FHIR strings may not exceed 1MB in size" />
+      <fixedCode value="accepted" />
+    </element>
+  </differential>
+</StructureDefinition>

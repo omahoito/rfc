@@ -48,11 +48,11 @@ xmap["$RFC_PATH""ODA-Questionnaire.profile.xml"]="$XSD3_PATH""questionnaire.xsd"
 xmap["$RFC_PATH""ODA-QuestionnaireResponse.profile.xml"]="$XSD3_PATH""questionnaireresponse.xsd"
 
 
-xmap["$APPOINTMENT_PATH""ODAAppointment.xml"]="$XSD_PATH""appointment.xsd"
-xmap["$APPOINTMENT_PATH""ODAHealthcareService.xml"]="$XSD_PATH""healthcareservice.xsd"
-xmap["$APPOINTMENT_PATH""ODAOrganization.xml"]="$XSD_PATH""organization.xsd"
-xmap["$APPOINTMENT_PATH""ODAPatient.xml"]="$XSD_PATH""patient.xsd"
-xmap["$APPOINTMENT_PATH""ODAPractitioner.xml"]="$XSD_PATH""practitioner.xsd"
+xmap["$APPOINTMENT_PATH""ODA-Appointment.profile.xml"]="$XSD3_PATH""appointment.xsd"
+xmap["$APPOINTMENT_PATH""ODA-HealthcareService.profile.xml"]="$XSD3_PATH""healthcareservice.xsd"
+xmap["$APPOINTMENT_PATH""ODA-Organization.profile.xml"]="$XSD3_PATH""organization.xsd"
+xmap["$APPOINTMENT_PATH""ODA-Patient.profile.xml"]="$XSD3_PATH""patient.xsd"
+xmap["$APPOINTMENT_PATH""ODA-Practitioner.profile.xml"]="$XSD3_PATH""practitioner.xsd"
 
 RETVAL=0
 for key in ${!xmap[@]}
