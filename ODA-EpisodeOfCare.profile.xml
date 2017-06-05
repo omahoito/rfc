@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-06-05T09:12:27.289+03:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pa" />
+  </extension>
+  <url value="StructureDefinition/MyEpisodeOfCare" />
+  <name value="ODA-EpisodeOfCare" />
+  <status value="draft" />
+  <date value="2017-06-05T08:51:41.7193529+03:00" />
+  <description value="Base StructureDefinition for ODA EpisodeOfCare Resource" />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="EpisodeOfCare" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="EpisodeOfCare.managingOrganization" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="EpisodeOfCare.account" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

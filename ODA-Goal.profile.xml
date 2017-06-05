@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-06-05T09:15:07.415+03:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc" />
+  </extension>
+  <url value="StructureDefinition/MyGoal" />
+  <name value="ODA-Goal" />
+  <status value="draft" />
+  <date value="2017-06-05T08:57:32.7236403+03:00" />
+  <description value="Base StructureDefinition for ODA Goal Resource" />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Goal" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Goal" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Goal.category" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Goal.priority" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Goal.startDate" />
+      <min value="1" />
+      <type>
+        <code value="date" />
+      </type>
+    </element>
+    <element>
+      <path value="Goal.target" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Goal.statusDate" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Goal.statusReason" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Goal.expressedBy" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Goal.addresses" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Goal.note" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Goal.outcomeReference" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

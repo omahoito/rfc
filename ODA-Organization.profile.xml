@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-06-05T09:17:45.643+03:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pa" />
+  </extension>
+  <url value="StructureDefinition/MyOrganization" />
+  <name value="ODA-Organization" />
+  <status value="draft" />
+  <date value="2017-06-05T09:06:24.6768167+03:00" />
+  <description value="Base StructureDefinition for ODA Organization Resource" />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Organization.active" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.type" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.alias" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.partOf" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.contact" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.endpoint" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
