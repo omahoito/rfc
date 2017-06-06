@@ -13,15 +13,15 @@ Current schemas are in https://simplifier.net/FinnishPHR
 
 ## <a name="profiling_guide"></a>Profiling guidelines
 
-* Profiles define the structures of the resources, data types, extensions and constraints used in ODA FHIR API. Profile implementers are expected to be familiar with the HL7 guidelines: http://hl7.org/fhir/2017Jan/profiling.html
+* Profiles define the structures of the resources, data types, extensions and constraints used in ODA FHIR API. Profile implementers are expected to be familiar with the HL7 guidelines: http://hl7.org/fhir/profiling.html
 * Profile names start with project identifier "ODA" and the profile name must contain the resource and the special domain of the particular resource (if any). For example a care plan for customer's self care is named as "ODA self-CarePlan profile".
 * Profiles must be in XML format and their filenames must contain the profile name, for example ODA-self-CarePlan.profile.xml
 * Profile name should be in PascalCase, not camelCase, i.e. "ODA CarePlan" as well as filenames ie. ODA-CarePlan.profile.xml
 * For each profile there must be also an example resource in JSON format. Example resource demonstrates how the data elements are used and its name must match to the profile name, for example: ODA-self-careplan.example.json.
 * Profiles must be compatible with HL7 FHIR STU3 standard.
-* A constraining profile can only allow what the base profile allows. Limitations are described more detailed in HL7 FHIR standard: http://hl7.org/fhir/2017Jan/profiling.html#5.1.0.7
+* A constraining profile can only allow what the base profile allows. Limitations are described more detailed in HL7 FHIR standard: http://hl7.org/fhir/profiling.html#5.1.0.7
 * Each profile must contain both the snapshot and differential components. The snapshot component shows all resource elements in one description and the differential component describes the differencies compared to the base profile.
-* Documenting the profile elements: Profile element definitions (http://hl7.org/fhir/2017Jan/elementdefinition.html) contain elements describing what the element is, why it exists and how it should or could be used. These include:
+* Documenting the profile elements: Profile element definitions (http://hl7.org/fhir/elementdefinition.html) contain elements describing what the element is, why it exists and how it should or could be used. These include:
   * definition: A narrative text containing full formal definition of the element. This is required for all modified extensions or profile elements.
   * comments: Comments and other relevant information about the use of this element. This is optional.
   * requirements: Description why this element exists. This is optional.
@@ -40,58 +40,61 @@ Data models of the following profiles:
 
 * ActivityDefinition
   * Profile documentation [STU3](http://hl7.org/fhir/activitydefinition.html)
+  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-ActivityDefinition.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-activitydefinition.example.json)
 
 * Appointment
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-appointment.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-appointment.example.json)
   * Profile documentation ([STU3](https://www.hl7.org/fhir/appointment.html))
-  * Relevant STU2 -> STU3 changes: type renamed to appointmentType
   * [Discussion](https://github.com/omahoito/rfc/issues/3)
 
 * CarePlan
-  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-careplan.profile.xml)
+  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-CarePlan.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-careplan.example.json)
-  * Profile documentation ([STU2](https://www.hl7.org/fhir/careplan.html), [STU3](http://hl7.org/fhir/2017Jan/careplan.html))
-  * Relevant STU2 -> STU3 changes: participant deleted in STU2, careteam added in STU3
+  * Profile documentation [STU3](http://hl7.org/fhir/careplan.html)
   * [Discussion](https://github.com/omahoito/rfc/issues/10)
 
 * CareTeam
+  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-CareTeam.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/CareTeam.json)
   * Profile documentation [STU3](http://hl7.org/fhir/careteam.html)
   * Introduced in STU3
   * [Discussion](https://github.com/omahoito/rfc/issues/11)
 
 * Communication, used in communication between patient and practitioner
-  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-communication.profile.xml)
+  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-Communication.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-communication.example.json)
-  * Profile documentation ([STU2](https://www.hl7.org/fhir/communication.html), [STU3](http://hl7.org/fhir/2017Jan/communication.html))
-  * Relevant STU2 -> STU3 changes: topic added in STU3
+  * Profile documentation [STU3](http://hl7.org/fhir/communication.html))
   * [Discussion](https://github.com/omahoito/rfc/issues/7)
 
 * EpisodeOfCare, contains information about the association of a patient with a healthcare provider (e.g. practitioner)
+  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-EpisodeOfCare.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-episodeofcare.example.json)
   * Documentation: [STU3](https://www.hl7.org/fhir/episodeofcare.html)
   
 * Goal, setting a goal for the patient's recovery
+  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-Goal.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-goal.example.json)
   * Documentation: [STU3](https://www.hl7.org/fhir/communication.html)
   
 * MedicationStatement, information about medication the patient is using
+  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-MedicationStatement.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-medicationstatement.example.json)
   * Documentation [STU3](http://hl7.org/fhir/medicationstatement.html)
 
 * Observation about body temperature, contains patient's temperature measurements
-  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-temperature-observation.profile.xml)
+  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-Observation.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-temperature-observation.example.json)
   * Profile documentation ([STU3](http://hl7.org/fhir/observation.html))
 
 * Organization, an entity managing health resources
+  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-Organization.profile.xml)
   * Example resource as  [json](https://github.com/omahoito/rfc/blob/master/ODA-organization.example.json)
   * Documentation ([STU3](http://hl7.org/fhir/organization.html))
 
 * Person - FinnishPatient. Person and patient information. Person-profile is based on the FHIR-standard's STU3-version, FinnishPatient on Kela's profile
-  * Person: http://hl7.org/fhir/2017Jan/person.html
+  * Person: http://hl7.org/fhir/person.html
   * Kela's FinnishPatient-profile: https://simplifier.net/FinnishPHR/FinnishPatient/
   * Resources as json:
     * [Person](https://github.com/omahoito/rfc/blob/master/ODA-person.example.json)
@@ -99,14 +102,17 @@ Data models of the following profiles:
   * [Discussion](https://github.com/omahoito/rfc/issues/6)
 
 * Practitioner, professional who takes care of patient
+  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-Practitioner.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-practitioner.example.json)
   * Documentation [STU3](http://hl7.org/fhir/practitioner.html)
 
 * Questionnaire
+  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/Questionnaire.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-questionnaire.example.json)
   * Documentation [STU3](http://hl7.org/fhir/questionnaire.html)
 
 * QuestionnaireResponse
+  * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-QuestionnaireResponse.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-questionnaireresponse.example.json)
   * Documentation [STU3](http://hl7.org/fhir/questionnaireresponse.html)
 
@@ -201,5 +207,7 @@ If you are interested in contributing new profiles, please feel free to do so. T
 Contributions are done through pull requests. Profile files are checked with [xmllint](http://xmlsoft.org/xmllint.html) and [Travis](https://travis-ci.org/). Please add a validation test for the profile to the [validation script](https://github.com/omahoito/rfc/blob/master/xmlvalidation.sh) together with the schema file that the profile is based on. Passing the validation test is a precondition for new profiles to be accepted.
 
 Schema validation files for DSTU2 profiles are located [here](https://github.com/omahoito/rfc/tree/master/xsd/STU2/fhir-all-xsd) and files for STU3 can be found [here](https://github.com/omahoito/rfc/tree/master/xsd/STU3/fhir-all-xsd). The schema files end with a xsd suffix.
+
+Since May 2017, only STU3 based profiles are used in the profiling.
 
 Example resources have been written by hand. Like the profiles, the resources are also automatically validated. The validation is done with [JSON Spec](https://json-spec.readthedocs.io/) and the validation routine automatically run on [Travis](https://travis-ci.org/). If you want to contribute an example, please do so through a pull request.

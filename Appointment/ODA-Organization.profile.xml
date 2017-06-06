@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-06-05T12:02:43.913+03:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pa" />
+  </extension>
+  <url value="StructureDefinition/MyOrganization" />
+  <name value="ODA-Organization" />
+  <status value="draft" />
+  <date value="2017-06-05T12:00:31.9678684+03:00" />
+  <description value="Base StructureDefinition for ODA Organization Resource" />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Organization.identifier.use" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.identifier.type" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.identifier.system" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.identifier.value" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.identifier.period" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.active" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.type" />
+      <comment value="Organisaation tyyppi&#xD;&#xA;&#xD;&#xA;Organizations can be corporations, wards, sections, clinical teams, government departments, etc. Note that code is generally a classifier of the type of organization; in many applications, codes are used to identity a particular organization (say, ward) as opposed to another of the same type - these are identifiers, not codes&#xA;&#xA;When considering if multiple types are appropriate, you should evaluate if child organizations would be a more appropriate use of the concept, as different types likely are in different sub-areas of the organization. This is most likely to be used where type values have orthogonal values, such as a religious, academic and medical center.&#xA;&#xA;We expect that some jurisdictions will profile this optionality to be a single cardinality." />
+    </element>
+    <element>
+      <path value="Organization.telecom.value" />
+      <comment value="Puhelinnumero tai sähköposti&#xD;&#xA;&#xD;&#xA;Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value." />
+    </element>
+    <element>
+      <path value="Organization.partOf" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="Organization.contact" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

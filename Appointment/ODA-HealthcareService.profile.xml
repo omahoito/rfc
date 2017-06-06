@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-06-05T12:00:12.317+03:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pa" />
+  </extension>
+  <url value="StructureDefinition/MyHealthcareService" />
+  <name value="ODA-HealthcareService" />
+  <status value="draft" />
+  <date value="2017-06-05T11:44:25.9012714+03:00" />
+  <description value="Base StructureDefinition for ODA HealthcareService Resource" />
+  <fhirVersion value="3.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="HealthcareService" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="HealthcareService.identifier" />
+      <comment value="Tekninen tunniste kokonaisuudelle&#xD;&#xA;" />
+    </element>
+    <element>
+      <path value="HealthcareService.identifier.use" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.identifier.type" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.identifier.system" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.identifier.value" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.identifier.period" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.providedBy" />
+      <comment value="Organisaation tiedot&#xD;&#xA;&#xD;&#xA;This property is recommended to be the same as the Location's managingOrganization, and if not provided should be interpreted as such. If the Location does not have a managing Organization, then this property should be populated." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://simplifier.net/ODAajanvaraus/ODAOrganization" />
+      </type>
+    </element>
+    <element>
+      <path value="HealthcareService.category" />
+      <comment value="Palveluluokat, kerrotaan appointmentin alla jo&#xD;&#xA;Selecting a Service Category then determines the list of relevant service types that can be selected in the primary service type." />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.type" />
+      <comment value="Palvelun tyypit, appointmentin alla annetaan jo&#xD;&#xA;&#xD;&#xA;Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination." />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.location" />
+      <comment value="Sijainti&#xD;&#xA;&#xD;&#xA;References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
+    </element>
+    <element>
+      <path value="HealthcareService.name" />
+      <comment value="Potilaalle näytettävä nimi palvelusta&#xD;&#xA;&#xD;&#xA;Note that FHIR strings may not exceed 1MB in size" />
+    </element>
+    <element>
+      <path value="HealthcareService.comment" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.extraDetails" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.photo" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.coverageArea" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.serviceProvisionCode" />
+      <definition value="Kela tuki??!&#xD;&#xA;&#xD;&#xA;The code(s) that detail the conditions under which the healthcare service is available/offered." />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.eligibility" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.eligibilityNote" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.programName" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.characteristic" />
+      <comment value="Pääseekö pyörätuolilla vastaanotolle&#xD;&#xA;&#xD;&#xA;These could be such things as is wheelchair accessible." />
+    </element>
+    <element>
+      <path value="HealthcareService.referralMethod" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.appointmentRequired" />
+      <comment value="Palveluun vain erillisellä ajanvaraukselle, ei liene merkitystä tässä. poistetaanko?!" />
+    </element>
+    <element>
+      <path value="HealthcareService.availableTime" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.notAvailable" />
+      <max value="0" />
+    </element>
+    <element>
+      <path value="HealthcareService.availabilityExceptions" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
