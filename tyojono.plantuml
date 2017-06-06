@@ -1,0 +1,57 @@
+@startuml
+
+actor Ihminen
+actor Ammattilainen
+
+database Kanta{
+database omakanta as "omaKanta"
+
+database kanta as "kanta"
+}
+rectangle PTJ as "potilastietojärjestelmä"
+
+folder oda{
+rectangle {
+rectangle OATS as "oirearvion työsuunnitelma"
+rectangle PHR as "PHR"
+}
+rectangle "työjono"{
+rectangle OA as "oirearvio"
+}
+
+
+}
+PTJ ..> kanta
+
+Ammattilainen  -down-> PTJ
+Ihminen -down-> OATS
+
+OATS  -down-> PHR
+OATS -right-> OA
+OA ..> PTJ
+OATS ..> PTJ
+PHR -down-> omakanta
+OA -down..> kanta
+
+set namespaceseparator ::
+
+note as N1
+*Ammattilainen käyttää aina ODA-työjonoa, joko suoraan tai
+   esim. Effican viestipiikin kautta tai ajanvarauskirjalla
+*Ammattilainen näkee oirearvion tiedot ODA-työjonon kautta,
+   ei katsele suoraan omaKantaa
+*Oirearvion tiedot tallentuu Kantaan
+   -> joko suoraan jonka jälkeen potilaan pitää tehdä
+      järjestelmään  kertomusteksti. Jos tekee näin, niin
+      ei näy PTJ:ssa ja joutuu hakemaan erikseen tekstin
+      jonka voi hakea luettavaksi
+       -> pitää vielä tehdä erikseen tilastot potilastieto-
+          järjestelmään. mm. käynnistyksen syyt, diagnoosi,
+          laskutustiedot
+   -> oirearviotiedot tallennetaan kertomuksiksi potilastieto-
+      järjestelmän kautta
+
+end note
+/'
+'/
+@enduml
