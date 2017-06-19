@@ -29,7 +29,7 @@ class MVP::Practitioner {
 	
 }
 class MVP::Communication {
-Reference<Any> topic
+Reference<Any> basedOn
 }
 
 class AllergyIntolerance {
