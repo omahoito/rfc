@@ -1,43 +1,32 @@
 @startuml
-object ODAAppointment{
+
+hide methods
+
+object Appointment {
   identifier
   status
   appointmentType
   reason
+  ' added description field for a human readable description
+  description
   start
   end
   minutesDuration
   comment
-  participant (ODAHealthcareService | ODAPatient | ODAPractitioner )
 }
 
-ODAAppointment -- "1..*" ODAHealthcareService
-ODAAppointment -- "1..*" ODAPatient
-ODAAppointment -- "1..*" ODAPractitioner
-
-object ODAHealthcareService{
+object Patient {
+  ' added some missing fields that are used in a patient resource
   identifier
-  providedBy (ODAOrganization)
-  serviceName
-  telecom
-  characteristic
-  appointmentRequired
-}
-
-ODAHealthcareService -- "1..*" ODAOrganization
-
-object ODAOrganization{
-  identifier
-  type
   name
-}
-
-object ODAPatient{
-  identifier
+  telecom
+  gender
+  birthDate
+  address
   communication
 }
 
-object ODAPractitioner{
+object Practitioner {
   identifier
   name
   telecom
@@ -45,11 +34,53 @@ object ODAPractitioner{
   gender
   birthDate  
   photo
-  role.organization (ODAOrganization)
-  role.healthcareService (ODAHealthcareService)
   communication
+  ' role.organization (ODAOrganization) ... role does not exist in DSTU3 any nmore
+  ' role.healthcareService (ODAHealthcareService) ... role does not exist in DSTU3 any nmore
 }
 
-ODAPractitioner -- "..*" ODAOrganization
-ODAPractitioner -- "..*" ODAHealthcareService
+object HealthcareService {
+  identifier
+  type
+  location 
+  name
+  telecom
+  ' characteristic -- dropped this field out at this stage; used eg. to indicate wheel chair access
+  appointmentRequired
+}
+note bottom : "palvelutunnus" will be\ncoded in the type field
+
+object Organization {
+  ' added some missing fields that are used in a patient resource
+  identifier
+  active
+  type
+  name
+  telecom
+  address
+}
+note bottom : "oid" will be coded\nin the identifier field
+
+object Location {
+  identifier
+  status
+  telecom
+  address
+  position
+}
+note bottom : "cname" will be coded\nin the identifier field
+
+object CareTeam {
+}
+
+Appointment "1" -left-> "0..*" Practitioner :  participant
+Appointment "1" -down-> "1" HealthcareService :  participant
+Appointment "1" -right-> "1" Patient :  participant
+
+HealthcareService "0..*" -left-> "1" Organization : providedBy
+HealthcareService "0..*  " -right-> "1" Location : location
+
+Practitioner "0..*" -down- "0..*" CareTeam
+Organization "0..*" -up- "0..*" CareTeam
+
 @enduml
