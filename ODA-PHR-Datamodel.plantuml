@@ -23,7 +23,7 @@ Reference<Questionnaire> questionnaire
 }
 class MVP::CareTeam {
 Reference<Practitioner> participant
-Reference<Organization> managingOrganization
+Reference<Organization> participant
 }
 class MVP::Practitioner {
 	
