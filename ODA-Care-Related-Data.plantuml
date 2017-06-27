@@ -27,7 +27,7 @@ rectangle Observation <<Temporary>> as odaobs
 rectangle MedicationStatement <<Temporary>> as odamed
 rectangle Organization as odaorg
 rectangle Communication <<Temporary>> as odacomment
-rectangle Patient <<Temporary>> as odapatient
+
 }
 
 odacareplan --> odaeoc
