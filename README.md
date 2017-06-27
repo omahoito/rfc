@@ -156,7 +156,11 @@ to the <i>MedicationStatement</i> instance.
 
 ## Data modelling in national databases
 
-![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-Care-Related-Data.plantuml?1)
+The following picture explains the data relations between ODA and national archives (KELA PHR and Kanta/Kansa). Archiving care related data such as
+EpisodeOfCare and CareTeams are still under specification and not yet modelled in the picture. The green objects (marked as <<Temporary>>) are
+deleted from the ODA when care is completed.
+
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-Care-Related-Data.plantuml?2)
 
 
 ## <a name="profiling_tools"></a>Tools for editing profiles
