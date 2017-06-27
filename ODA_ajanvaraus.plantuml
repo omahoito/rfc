@@ -26,6 +26,14 @@ object Patient {
   communication
 }
 
+object Slot {
+  identifier
+  schedule
+  status
+  start
+  end
+}
+
 object Practitioner {
   identifier
   name
@@ -73,14 +81,15 @@ note bottom : "cname" will be coded\nin the identifier field
 object CareTeam {
 }
 
-Appointment "1" -left-> "0..*" Practitioner :  participant
-Appointment "1" -down-> "1" HealthcareService :  participant
-Appointment "1" -right-> "1" Patient :  participant
+Appointment "0..*" -left-> "0..*" Practitioner :  participant.actor
+Appointment "0..*" -down-> "1" HealthcareService :  participant.actor
+Appointment "0..*" -right-> "1" Patient :  participant.actor
+Appointment "1" -down-> "0..*" Slot :  slot
 
 HealthcareService "0..*" -left-> "1" Organization : providedBy
 HealthcareService "0..*  " -right-> "1" Location : location
 
-Practitioner "0..*" -down- "0..*" CareTeam
-Organization "0..*" -up- "0..*" CareTeam
+CareTeam "0..*" -right-> "0..*" Practitioner : participant.member
+CareTeam "0..*" -down-> "0..*" Organization : managingOrganization
 
 @enduml
