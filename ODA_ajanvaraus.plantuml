@@ -2,31 +2,28 @@
 
 hide methods
 
-package get {
-  package write {
-    object Appointment {
-      identifier
-      status
-      appointmentType
-      reason
-      ' added description field for a human readable description
-      description
-      start
-      end
-      minutesDuration
-      comment
-    }
+object Appointment <<**GetAndWrite**>> {
+  identifier
+  status
+  appointmentType
+  reason
+  ' added description field for a human readable description
+  description
+  start
+  end
+  minutesDuration
+  comment
+}
 
-    object Slot {
-      identifier
-      schedule
-      status
-      start
-      end
-    }
-  }
+object Slot <<**GetAndWrite**>> {
+  identifier
+  schedule
+  status
+  start
+  end
+}
 
-object Practitioner {
+object Practitioner <<**Get**>> {
   identifier
   name
   telecom
@@ -39,20 +36,17 @@ object Practitioner {
   ' role.healthcareService (ODAHealthcareService) ... role does not exist in DSTU3 any nmore
 }
 
-
-  object Location {
-    identifier
-    status
-    name
-    telecom
-    address
-    position
-  }
-  note right : "cname" will be coded\nin the identifier field
+object Location <<**Get**>> {
+  identifier
+  status
+  name
+  telecom
+  address
+  position
 }
+note right : "cname" will be coded\nin the identifier field
 
-package "write " {
-object Patient {
+object Patient <<**Write**>> {
   ' added some missing fields that are used in a patient resource
   identifier
   name
@@ -63,20 +57,15 @@ object Patient {
   communication
 }
 
+object HealthcareService <<**Search**>> {
+  identifier
+  type
+  name
+  telecom
+  ' characteristic -- dropped this field out at this stage; used eg. to indicate wheel chair access
+  appointmentRequired
 }
-
-package search {
-  object HealthcareService {
-    identifier
-    type
-    location 
-    name
-    telecom
-    ' characteristic -- dropped this field out at this stage; used eg. to indicate wheel chair access
-    appointmentRequired
-  }
-  note bottom : "palvelutunnus" will be\ncoded in the type field
-}
+note bottom : "palvelutunnus" will be\ncoded in the type field
 
 object Organization {
   ' added some missing fields that are used in a patient resource
@@ -98,7 +87,7 @@ Appointment "0..*" -down-> "1" HealthcareService :  participant.actor
 Appointment "0..*" -up-> "1" Patient :  participant.actor
 Appointment "1" -right-> "0..*" Slot :  slot
 
-HealthcareService "0..*" -right-> "1" Organization : providedBy
+HealthcareService "0..*" -left-> "1" Organization : "providedBy "
 HealthcareService "0..*  " -right-> "1" Location : location
 
 CareTeam "0..*" -right-> "0..*" Practitioner : participant.member
