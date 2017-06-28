@@ -1,5 +1,7 @@
 @startuml
 
+!includeurl https://raw.githubusercontent.com/omahoito/rfc/master/Styles.iuml
+
 set namespaceSeparator ::
 
 class MVP::Person {
