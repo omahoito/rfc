@@ -6,6 +6,7 @@ CC-BY-4.0 City of Espoo 2017. \
 To change the picture, make a pull request with changes to ODA-Care-Related-Data.plantuml and README.md.
 endheader
 
+
 skinparam rectangle {
     BackgroundColor Wheat
 }
@@ -26,6 +27,7 @@ rectangle Observation <<Temporary>> as odaobs
 rectangle MedicationStatement <<Temporary>> as odamed
 rectangle Organization as odaorg
 rectangle Communication <<Temporary>> as odacomment
+
 }
 
 odacareplan --> odaeoc
@@ -59,17 +61,25 @@ rectangle QuestionnaireResponse as qr
 rectangle ActivityDefinition as ac
 rectangle SymptomObservation as so
 rectangle Goal
+rectangle Observation as kelaobs
+rectangle MedicationStatement as kelamed
 rectangle Communication as kelacomment
 }
+
+kelacareplan --> kelaobs
+kelacareplan --> kelamed
+kelacareplan --> qr
+kelacomment --> kelacareplan
+odacareplan --> kelacareplan : archived
 
 'kelacareplan --> Palvelutapahtuma
 kelacareplan --> ac
 kelacareplan --> Goal
 kelacareplan --> ths : isPartOf
 kelacareplan --> Asiakassuunnitelma : isPartOf
-kelacomment --> kelacareplan
 qr --> so
 
 qr -down-> q
+
 
 @enduml
