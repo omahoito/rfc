@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-05-26T09:11:35.17+03:00" />
+    <lastUpdated value="2017-06-29T15:34:40.127+03:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa" />
   </extension>
-  <url value="StructureDefinition/MyPractitioner" />
+  <url value="http://oda.fi/StructureDefinition/ODA-Practitioner" />
   <name value="ODA-Practitioner" />
   <status value="draft" />
   <date value="2017-05-18T10:42:39.2309171+03:00" />
@@ -99,7 +99,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -127,7 +127,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -160,7 +160,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isModifier value="true" />
@@ -190,7 +190,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <binding>
@@ -241,7 +241,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -314,7 +314,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -363,7 +363,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -403,7 +403,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -461,7 +461,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -499,7 +499,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -539,7 +539,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isModifier value="true" />
@@ -588,7 +588,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -651,7 +651,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -689,7 +689,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -729,7 +729,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -783,7 +783,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -821,7 +821,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -861,7 +861,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -902,7 +902,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -944,7 +944,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -989,7 +989,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1031,7 +1031,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1076,7 +1076,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1122,7 +1122,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1167,7 +1167,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1208,7 +1208,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -1265,7 +1265,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -1303,7 +1303,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -1343,7 +1343,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1382,7 +1382,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1420,7 +1420,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -1473,7 +1473,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -1511,7 +1511,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -1551,7 +1551,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1584,7 +1584,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1632,7 +1632,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1667,7 +1667,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1705,7 +1705,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1759,7 +1759,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -1797,7 +1797,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -1837,7 +1837,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isModifier value="true" />
@@ -1890,7 +1890,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1928,7 +1928,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -1972,7 +1972,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -2014,7 +2014,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -2056,7 +2056,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -2094,7 +2094,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -2151,7 +2151,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -2189,7 +2189,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -2229,7 +2229,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -2268,7 +2268,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -2306,7 +2306,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -2367,7 +2367,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -2405,7 +2405,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -2445,7 +2445,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -2497,7 +2497,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -2539,7 +2539,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isModifier value="true" />
@@ -2591,7 +2591,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -2624,7 +2624,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -2681,7 +2681,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -2719,7 +2719,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -2759,7 +2759,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -2798,7 +2798,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -2836,7 +2836,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -2890,7 +2890,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -2928,7 +2928,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -2972,7 +2972,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isModifier value="true" />
@@ -3028,7 +3028,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3084,7 +3084,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3131,7 +3131,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3181,7 +3181,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3231,7 +3231,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3270,7 +3270,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3320,7 +3320,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3365,7 +3365,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3418,7 +3418,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -3475,7 +3475,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -3513,7 +3513,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -3553,7 +3553,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3592,7 +3592,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3630,7 +3630,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3684,7 +3684,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3726,7 +3726,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -3778,7 +3778,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -3816,7 +3816,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -3860,7 +3860,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3913,7 +3913,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -3965,7 +3965,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -4006,7 +4006,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -4044,7 +4044,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -4078,7 +4078,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -4119,7 +4119,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -4152,7 +4152,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -4170,7 +4170,7 @@
       <short value="Qualifications obtained by training and certification" />
       <definition value="Qualifications obtained by training and certification." />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="Practitioner.qualification" />
         <min value="0" />
@@ -4184,7 +4184,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -4225,7 +4225,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -4263,7 +4263,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -4305,7 +4305,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -4346,7 +4346,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -4391,7 +4391,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -4429,7 +4429,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -4469,7 +4469,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isModifier value="true" />
@@ -4518,7 +4518,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -4581,7 +4581,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -4619,7 +4619,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -4659,7 +4659,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -4713,7 +4713,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -4751,7 +4751,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -4791,7 +4791,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -4832,7 +4832,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -4874,7 +4874,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -4919,7 +4919,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -4961,7 +4961,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5006,7 +5006,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5052,7 +5052,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5097,7 +5097,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5138,7 +5138,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -5195,7 +5195,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -5233,7 +5233,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -5273,7 +5273,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5312,7 +5312,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5350,7 +5350,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -5403,7 +5403,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -5441,7 +5441,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -5481,7 +5481,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5514,7 +5514,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5562,7 +5562,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5595,7 +5595,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <binding>
@@ -5654,7 +5654,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -5692,7 +5692,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -5732,7 +5732,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5786,7 +5786,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -5824,7 +5824,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -5859,12 +5859,13 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="urn:oid:1.2.246.537.6.140" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5905,7 +5906,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5947,7 +5948,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -5992,7 +5993,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -6034,7 +6035,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -6079,7 +6080,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -6121,7 +6122,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -6173,7 +6174,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -6211,7 +6212,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -6251,7 +6252,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -6290,7 +6291,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -6328,7 +6329,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -6372,7 +6373,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -6410,7 +6411,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -6450,7 +6451,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -6483,7 +6484,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -6531,7 +6532,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -6565,7 +6566,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <binding>
@@ -6636,7 +6637,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -6674,7 +6675,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -6714,7 +6715,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -6768,7 +6769,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <mapping>
@@ -6806,7 +6807,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <constraint>
@@ -6846,7 +6847,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -6887,7 +6888,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -6929,7 +6930,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -6974,7 +6975,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -7016,7 +7017,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -7061,7 +7062,7 @@
         <key value="ele-1" />
         <severity value="error" />
         <human value="All FHIR elements must have a @value or children" />
-        <expression value="children().count() &gt; id.count()" />
+        <expression value="hasValue() | (children().count() &gt; id.count())" />
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
@@ -7084,126 +7085,126 @@
     </element>
   </snapshot>
   <differential>
-    <element>
+    <element id="Practitioner.identifier">
       <path value="Practitioner.identifier" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.active">
       <path value="Practitioner.active" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Practitioner.name">
       <path value="Practitioner.name" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.name.use">
       <path value="Practitioner.name.use" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.name.text">
       <path value="Practitioner.name.text" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Practitioner.name.family">
       <path value="Practitioner.name.family" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.name.given">
       <path value="Practitioner.name.given" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.name.prefix">
       <path value="Practitioner.name.prefix" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Practitioner.name.suffix">
       <path value="Practitioner.name.suffix" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.name.period">
       <path value="Practitioner.name.period" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Practitioner.telecom">
       <path value="Practitioner.telecom" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.telecom.system">
       <path value="Practitioner.telecom.system" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.telecom.value">
       <path value="Practitioner.telecom.value" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.telecom.use">
       <path value="Practitioner.telecom.use" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.telecom.rank">
       <path value="Practitioner.telecom.rank" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Practitioner.telecom.period">
       <path value="Practitioner.telecom.period" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Practitioner.address">
       <path value="Practitioner.address" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.gender">
       <path value="Practitioner.gender" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.birthDate">
       <path value="Practitioner.birthDate" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.photo">
       <path value="Practitioner.photo" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.photo.contentType">
       <path value="Practitioner.photo.contentType" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.photo.language">
       <path value="Practitioner.photo.language" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Practitioner.photo.data">
       <path value="Practitioner.photo.data" />
       <min value="1" />
     </element>
-    <element>
+    <element id="Practitioner.photo.url">
       <path value="Practitioner.photo.url" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Practitioner.photo.size">
       <path value="Practitioner.photo.size" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Practitioner.photo.hash">
       <path value="Practitioner.photo.hash" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Practitioner.photo.title">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Practitioner.photo.title" />
       <max value="0" />
     </element>
-    <element>
+    <element id="Practitioner.photo.creation">
       <path value="Practitioner.photo.creation" />
       <max value="0" />
     </element>
-    <element>
-      <path value="Practitioner.qualification" />
-      <max value="0" />
+    <element id="Practitioner.qualification.code.coding.system">
+      <path value="Practitioner.qualification.code.coding.system" />
+      <fixedUri value="urn:oid:1.2.246.537.6.140" />
     </element>
-    <element>
+    <element id="Practitioner.communication">
       <path value="Practitioner.communication" />
       <max value="0" />
     </element>
