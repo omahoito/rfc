@@ -2,7 +2,7 @@
 
 hide methods
 
-object Appointment {
+object Appointment <<**GetAndWrite**>> {
   identifier
   status
   appointmentType
@@ -15,18 +15,7 @@ object Appointment {
   comment
 }
 
-object Patient {
-  ' added some missing fields that are used in a patient resource
-  identifier
-  name
-  telecom
-  gender
-  birthDate
-  address
-  communication
-}
-
-object Slot {
+object Slot <<**GetAndWrite**>> {
   identifier
   schedule
   status
@@ -34,7 +23,7 @@ object Slot {
   end
 }
 
-object Practitioner {
+object Practitioner <<**Get**>> {
   identifier
   name
   telecom
@@ -47,10 +36,30 @@ object Practitioner {
   ' role.healthcareService (ODAHealthcareService) ... role does not exist in DSTU3 any nmore
 }
 
-object HealthcareService {
+object Location <<**Get**>> {
+  identifier
+  status
+  name
+  telecom
+  address
+  position
+}
+note right : "cname" will be coded\nin the identifier field
+
+object Patient <<**Write**>> {
+  ' added some missing fields that are used in a patient resource
+  identifier
+  name
+  telecom
+  gender
+  birthDate
+  address
+  communication
+}
+
+object HealthcareService <<**Search**>> {
   identifier
   type
-  location 
   name
   telecom
   ' characteristic -- dropped this field out at this stage; used eg. to indicate wheel chair access
@@ -69,24 +78,16 @@ object Organization {
 }
 note bottom : "oid" will be coded\nin the identifier field
 
-object Location {
-  identifier
-  status
-  telecom
-  address
-  position
-}
-note bottom : "cname" will be coded\nin the identifier field
 
 object CareTeam {
 }
 
 Appointment "0..*" -left-> "0..*" Practitioner :  participant.actor
 Appointment "0..*" -down-> "1" HealthcareService :  participant.actor
-Appointment "0..*" -right-> "1" Patient :  participant.actor
-Appointment "1" -down-> "0..*" Slot :  slot
+Appointment "0..*" -up-> "1" Patient :  participant.actor
+Appointment "1" -right-> "0..*" Slot :  slot
 
-HealthcareService "0..*" -left-> "1" Organization : providedBy
+HealthcareService "0..*" -left-> "1" Organization : "providedBy "
 HealthcareService "0..*  " -right-> "1" Location : location
 
 CareTeam "0..*" -right-> "0..*" Practitioner : participant.member
