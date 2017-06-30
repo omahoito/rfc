@@ -1,0 +1,28 @@
+@startuml
+
+class Organization{
+	
+}
+class Practitioner {
+	
+}
+class PractitionerRole {
+
+	identifier
+	active
+	practitioner
+	organization
+	code
+	specialty
+}
+
+class ODAPractitionerRoles<<ValueSet>> 
+
+hide circle
+hide methods
+
+PractitionerRole --> "0..1" Organization
+PractitionerRole --> "1" Practitioner
+PractitionerRole --> "1..*" ODAPractitionerRoles : code
+
+@enduml
