@@ -160,7 +160,7 @@ The following picture explains the data relations between ODA and national archi
 EpisodeOfCare and CareTeams are still under specification and not yet modelled in the picture. The green objects (marked as `<<Temporary>>`) are
 deleted from the ODA when care is completed.
 
-![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-Care-Related-Data.plantuml?2)
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-Care-Related-Data.plantuml?3)
 
 
 ## <a name="profiling_tools"></a>Tools for editing profiles
