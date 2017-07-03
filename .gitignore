@@ -1,0 +1,5 @@
+# OSX
+.DS_Store
+
+# Generated files
+.*.md.html
