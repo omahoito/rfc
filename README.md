@@ -72,12 +72,12 @@ Data models of the following profiles:
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-EpisodeOfCare.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-episodeofcare.example.json)
   * Documentation: [STU3](https://www.hl7.org/fhir/episodeofcare.html)
-  
+
 * Goal, setting a goal for the patient's recovery
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-Goal.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-goal.example.json)
   * Documentation: [STU3](https://www.hl7.org/fhir/communication.html)
-  
+
 * MedicationStatement, information about medication the patient is using
   * Profile as [xml](https://github.com/omahoito/rfc/blob/master/ODA-MedicationStatement.profile.xml)
   * Example resource as [json](https://github.com/omahoito/rfc/blob/master/ODA-medicationstatement.example.json)
@@ -118,41 +118,49 @@ Data models of the following profiles:
 
 ## Data model explained
 
-* <b>CarePlan</b> is the central element in ODA data model as it gathers the care related information for the patient. 
+* <b>CarePlan</b> <b>Hoitosuunnitelma </b>is the central element in ODA data model as it gathers the care related information for the patient.
 The CarePlan contains actions suggested by symptom check service. Patient may also attach his/her personal
-health or activity data from Kela PHR and healthcare data from Kela Kanta to CarePlan. This supporting information 
+health or activity data from Kela PHR and healthcare data from Kela Kanta to CarePlan. This supporting information
 is referenced by <i>CarePlan.support</i> element
-* <b>ActivityDefinition</b> Definition of the suggested action. These definitions are referenced by careplan activities. 
+* <b>ActivityDefinition</b> <b>Toimintosuositus</b> Definition of the suggested action. These definitions are referenced by careplan activities.
 * <b>CareTeam</b> models two objects:
-  * The service request list containing professionals authorized to the list.
-  * The care team participating to patient's ODA-care
-* <b>Practitioner</b> models the professional and contains the professional data shown in ODA.
-* <b>Patient</b> Patient models a patient without any personal information. Conforms to Finnish PHR FinnishPatient 
+  * <b>The service request list</b> <b>Työjono</b> containing professionals authorized to the list.
+  * <b>The care team</b> <b>Hoitotiimi</b> participating to patient's ODA-care
+* <b>Practitioner</b> <b>Ammattilainen</b> models the professional and contains the professional data shown in ODA.
+* <b>Patient</b> <b>Potilas</b> Patient models a patient without any personal information. Conforms to Finnish PHR FinnishPatient
 profile
-* <b>Person</b> Person contains personal information of a user.
-* <b>Observation</b> references to <i>Patient</i>. When generated from the questionnaire answer, references also to 
+* <b>Person</b> <b>Henkilö</b> Person contains personal information of a user.
+* <b>Observation</b> <b>Havainto</b> references to <i>Patient</i>. When generated from the questionnaire answer, references also to
 corresponding <i>QuestionnaireResponse</i> resource. For vital signs conforms to Finnish PHR Vital Signs profile and
 the profiles derived from it.
-* <b>EpisodeOfCare</b> is created when care-relationship starts between professional and patient. CareManager relates 
+* <b>EpisodeOfCare</b> <b>Hoitotapahtuma</b> is created when care-relationship starts between professional and patient. CareManager relates
 to the responsible professional and the team contains other professionals participating to care.
-* <b>Questionnaire</b> Created by main user and saved to PHR as questionnaire templates.
-* <b>QuestionnaireResponse</b> Created when patient answers to a questionnaire and saves the answers.
-* <b>Communication</b> Patient's and professional's comments about the <i>CarePlan</i> or any other resource.
-* <b>MedicationStatement</b> Medication information added by patient. Authorized to care-team by linking <i>CarePlan</i> 
+* <b>Questionnaire</b> <b>Kyselylomake</b> Created by main user and saved to PHR as questionnaire templates.
+* <b>QuestionnaireResponse</b> <b>Kyselyvastaus</b> Created when patient answers to a questionnaire and saves the answers.
+* <b>Communication</b> <b>Kommentti</b> Patient's and professional's comments about the <i>CarePlan</i> or any other resource.
+* <b>MedicationStatement</b> <b>Itsehoitolääkitys</b> Medication information added by patient. Authorized to care-team by linking <i>CarePlan</i>
 to the <i>MedicationStatement</i> instance.
-* <b>Immunization</b> Added by patient and authorized to care-team via careplan.
-* <b>AllergyIntolerance</b> Added by patient and authorized to care-team via careplan.
-* <b>Flag</b> Risk-information added by patient and authorized to care-team via careplan.
-* <b>Organization</b> Managing organization of the CareTeam representing the service request list.
-* <b>Goal</b> The "master" goal of the patient.
+* <b>Immunization</b> <b>Rokotus</b> Added by patient and authorized to care-team via careplan.
+* <b>AllergyIntolerance</b> <b>Allergia</b> Added by patient and authorized to care-team via careplan.
+* <b>Flag</b> <b>Riskitieto</b> Risk-information added by patient and authorized to care-team via careplan.
+* <b>Organization</b> <b>Organisaatio </b> Managing organization of the CareTeam representing the service request list.
+* <b>Goal</b> <b>Tavoite</b> The "master" goal of the patient.
 
 
 
 ## Data model visualised
 
-![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-PHR-Datamodel.plantuml?9)
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-PHR-Datamodel.plantuml?11)
 <!--- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 --->
 
+
+## Data modelling in national databases
+
+The following picture explains the data relations between ODA and national archives (KELA PHR and Kanta/Kansa). Archiving care related data such as
+EpisodeOfCare and CareTeams are still under specification and not yet modelled in the picture. The green objects (marked as <<Temporary>>) are
+deleted from the ODA when care is completed.
+
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-Care-Related-Data.plantuml?2)
 
 
 ## <a name="profiling_tools"></a>Tools for editing profiles

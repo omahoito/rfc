@@ -1,0 +1,50 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <url value="http://oda.fi/ValueSet/oda-vs-practitionerroles"/>
+    <version value="0.1" />
+    <name value="ODA Practitioner Roles" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2017-06-28T00:00:00+03:00" />    
+    <description value="ODA Practitioner Roles" />
+    <compose>
+        <include>
+            <system value="http://oda.fi/CodeSystem/practitionerroles" />
+			<concept>
+                <code value="admin" />
+                <display value="Administrator" />
+                <designation>
+                    <language value="fi-FI" />
+					<value value="Järjestelmän ylläpitäjä" />
+                </designation>
+				<designation>
+                    <language value="en-EN" />
+					<value value="Administrator" />
+                </designation>
+            </concept>
+            <concept>
+                <code value="siteresp" />
+                <display value="Site Responsible" />
+                <designation>
+                    <language value="fi-FI" />
+					<value value="Toimipisteen pääkäyttäjä" />
+                </designation>
+				<designation>
+                    <language value="en-EN" />
+					<value value="Site Responsible" />
+                </designation>
+            </concept>
+            <concept>
+                <code value="prof" />
+                <display value="Professional" />
+                <designation>
+                    <language value="fi-FI" />
+					<value value="Ammattilainen" />
+                </designation>
+				<designation>
+                    <language value="en-EN" />
+					<value value="Professional" />
+                </designation>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

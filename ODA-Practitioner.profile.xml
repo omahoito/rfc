@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-04T13:23:12.373+03:00" />
+    <lastUpdated value="2017-06-29T15:34:40.127+03:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pa" />
   </extension>
-  <url value="StructureDefinition/MyPractitioner" />
+  <url value="http://oda.fi/StructureDefinition/ODA-Practitioner" />
   <name value="ODA-Practitioner" />
   <status value="draft" />
   <date value="2017-05-18T10:42:39.2309171+03:00" />
@@ -4170,7 +4170,7 @@
       <short value="Qualifications obtained by training and certification" />
       <definition value="Qualifications obtained by training and certification." />
       <min value="0" />
-      <max value="0" />
+      <max value="*" />
       <base>
         <path value="Practitioner.qualification" />
         <min value="0" />
@@ -5859,6 +5859,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="urn:oid:1.2.246.537.6.140" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -7199,9 +7200,9 @@
       <path value="Practitioner.photo.creation" />
       <max value="0" />
     </element>
-    <element id="Practitioner.qualification">
-      <path value="Practitioner.qualification" />
-      <max value="0" />
+    <element id="Practitioner.qualification.code.coding.system">
+      <path value="Practitioner.qualification.code.coding.system" />
+      <fixedUri value="urn:oid:1.2.246.537.6.140" />
     </element>
     <element id="Practitioner.communication">
       <path value="Practitioner.communication" />

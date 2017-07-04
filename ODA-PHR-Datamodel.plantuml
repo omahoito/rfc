@@ -1,5 +1,7 @@
 @startuml
 
+!includeurl https://raw.githubusercontent.com/omahoito/rfc/master/Styles.iuml
+
 set namespaceSeparator ::
 
 class MVP::Person {
@@ -23,13 +25,13 @@ Reference<Questionnaire> questionnaire
 }
 class MVP::CareTeam {
 Reference<Practitioner> participant
-Reference<Organization> managingOrganization
+Reference<Organization> participant
 }
 class MVP::Practitioner {
 	
 }
 class MVP::Communication {
-Reference<Any> topic
+Reference<Any> basedOn
 }
 
 class AllergyIntolerance {
