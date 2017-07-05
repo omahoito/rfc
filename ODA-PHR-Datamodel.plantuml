@@ -1,6 +1,6 @@
 @startuml
 
-!includeurl https://raw.githubusercontent.com/omahoito/rfc/master/Styles.iuml
+'!includeurl https://raw.githubusercontent.com/omahoito/rfc/master/Styles.iuml
 
 set namespaceSeparator ::
 
@@ -28,7 +28,7 @@ Reference<Practitioner> participant
 Reference<Organization> participant
 }
 class MVP::Practitioner {
-	
+
 }
 class MVP::Communication {
 Reference<Any> basedOn
@@ -59,8 +59,8 @@ class Medication
 class MVP::EpisodeOfCare {
     status
     Reference<Practitioner> careManager
-    Reference<CareTeam> team     
-    } 
+    Reference<CareTeam> team
+    }
 
 class MVP::Goal {
     description
@@ -77,8 +77,8 @@ MVP::CarePlan "0..*" -- "0..*" MVP::CareTeam : Authorization
 MVP::CareTeam "0..*" -- "0..*" MVP::EpisodeOfCare : Team participating to care
 MVP::CareTeam "0..*" -- "0..*" MVP::Organization
 
-MVP::EpisodeOfCare "0..*" -- "1" MVP::Practitioner : careManager 
-MVP::EpisodeOfCare -- MVP::CarePlan : < context 
+MVP::EpisodeOfCare "0..*" -- "1" MVP::Practitioner : careManager
+MVP::EpisodeOfCare -- MVP::CarePlan : < context
 MVP::EpisodeOfCare "*" -- "1" MVP::Patient : patient >
 
 MVP::CarePlan "1" -- "0..*" MVP::Goal
@@ -94,7 +94,7 @@ MVP::CarePlan "0..*"--"0..*" Immunization
 MVP::CarePlan "0..*"--"0..*" Flag
 MVP::CarePlan "0..*"--"0..*" MVP::ActivityDefinition
 
-MVP::CareTeam "0..*"--"0..*" MVP::Practitioner 
+MVP::CareTeam "0..*"--"0..*" MVP::Practitioner
 
 MVP::Observation "0..*"--"0..*" MVP::CarePlan
 MVP::Observation "0..*"--"1" MVP::Patient

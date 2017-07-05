@@ -1,5 +1,7 @@
 @startuml
 
+scale max 2000 width
+
 header
 Datamodel diagram generated with plantuml.com to github.com/omahoito/rfc. \
 CC-BY-4.0 City of Espoo 2017. \
@@ -12,7 +14,7 @@ skinparam rectangle {
 }
 
 skinparam rectangle {
-	BackgroundColor<<Temporary>> LightGreen
+    BackgroundColor<<Temporary>> LightGreen
 }
 
 database ODA {
@@ -46,7 +48,7 @@ database Kanta {
 
 'rectangle Palvelutapahtuma
 rectangle "Terveys- ja hoitosuunnitelma" as ths
-} 
+}
 
 database Kansa {
 rectangle Asiakassuunnitelma
