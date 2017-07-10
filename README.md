@@ -151,7 +151,7 @@ to the _MedicationStatement_ instance.
 ## Data model visualised
 
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-PHR-Datamodel.plantuml?12)
-<!-- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?14 -->
+<!-- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?15 -->
 
 
 ## Data modelling in national databases
