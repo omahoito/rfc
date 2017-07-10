@@ -153,6 +153,9 @@ to the _MedicationStatement_ instance.
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-PHR-Datamodel.plantuml?12)
 <!-- This generates a picture based on Resource.pantuml. To change the counter in the url above, i.e. deployment.md?13 -> deployment.md?15 -->
 
+## Data models for practitioner roles
+
+![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA-Roles.plantuml?1)
 
 ## Data modelling in national databases
 
