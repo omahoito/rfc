@@ -27,10 +27,13 @@ jmap["ODA-temperature-observation.example.json"]=$FHIR_SCHEMA_FILE
 jmap["ODA-temperature-quantity.example.json"]=$FHIR_SCHEMA_FILE
 
 jmap["$APPOINTMENT_PATH""ODAAppointment-example.json"]=$FHIR_SCHEMA_FILE
+jmap["$APPOINTMENT_PATH""ODACareTeam-example.json"]=$FHIR_SCHEMA_FILE
 jmap["$APPOINTMENT_PATH""ODAHealthcareService-example.json"]=$FHIR_SCHEMA_FILE
+jmap["$APPOINTMENT_PATH""ODALocation-example.json"]=$FHIR_SCHEMA_FILE
 jmap["$APPOINTMENT_PATH""ODAOrganization-example.json"]=$FHIR_SCHEMA_FILE
 jmap["$APPOINTMENT_PATH""ODAPatient-example.json"]=$FHIR_SCHEMA_FILE
 jmap["$APPOINTMENT_PATH""ODAPractitioner-example.json"]=$FHIR_SCHEMA_FILE
+jmap["$APPOINTMENT_PATH""ODASlot-example.json"]=$FHIR_SCHEMA_FILE
 
 RETVAL=0
 for key in ${!jmap[@]}
