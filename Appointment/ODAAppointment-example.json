@@ -32,7 +32,10 @@
   "minutesDuration": 15,
   "slot": [
     {
-      "reference": "Slot/SLOT1-APPOINTMENT"
+      "identifier": {
+        "system": "http://oda.fi/patientsystem",
+        "value": "1100"
+      }
     }
   ],
   "comment": "Potilaan tarkistus.",

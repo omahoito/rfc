@@ -7,7 +7,7 @@
       "value": "123132"
     }
   ],
-  "schedule": {
+  "schedule": {    
     "reference": "Schedule/SCHEDULE1-APPOINTMENT"
   },
   "status": "busy",
