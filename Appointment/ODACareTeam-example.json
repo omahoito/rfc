@@ -21,8 +21,8 @@
 	}],
 	"managingOrganization": [
 		{
-    "reference": "Location/LOCATION1-APPOINTMENT",
-		"display" : "Malminkartano"
+    "reference": "Organization/ORGANIZATION1-APPOINTMENT",
+		"display" : "HUS"
    	}
  	]
 }

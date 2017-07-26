@@ -16,9 +16,16 @@
       }
     ]
   },
-  "reason": {
-    "text": "Clinical Review"
-  },
+  "reason": [
+    {
+      "coding":[
+        {
+          "system": "http://snomed.info/sct",
+          "code": "413095006"
+        }
+      ]
+    }
+  ],
   "description": "Tarkistetaan potilaan tila.",
   "start": "2013-12-10T09:00:00Z",
   "end": "2013-12-10T09:15:00Z",
