@@ -22,7 +22,7 @@
 		"use": "work"
 	}, {
 		"system": "email",
-		"value": "pekka.pakarinen@laakarit.fi",
+		"value": "pekka.pakarinen@example.com",
 		"use": "work"
 	}, {
 		"system": "fax",
