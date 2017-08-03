@@ -1,6 +1,6 @@
 {
   "resourceType": "Patient",
-  "id": "PATIENT2",
+  "id": "PATIENT2-APPOINTMENT",
   "identifier": [
     {
       "system": "urn:oid:1.2.36.146.595.217.0.1",

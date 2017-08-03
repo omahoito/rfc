@@ -1,0 +1,28 @@
+{
+	"resourceType": "CareTeam",
+	"id": "CARETEAM1-PATIENT2",
+	"identifier": [{
+		"use": "usual",
+		"value": "3141592"
+	}],
+	"name": "Hoitotiimi",
+	"period": {
+		"start": "2013-12-10T09:00:00Z",
+		"end": "2013-12-10T11:00:00Z"
+	},
+	"participant": [{
+		"role": {
+			"text": "Hoitava lääkäri"
+		},
+		"member": {
+			"reference": "Practitioner/PRACTITIONER1-APPOINTMENT",
+			"display": "Pekka Pakarinen"
+		}
+	}],
+	"managingOrganization": [
+		{
+    "reference": "Organization/ORGANIZATION1-APPOINTMENT",
+		"display" : "HUS"
+   	}
+ 	]
+}

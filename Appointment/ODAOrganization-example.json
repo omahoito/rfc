@@ -1,25 +1,43 @@
 {
   "resourceType": "Organization",
-  "id" : "ORGANIZATION1",
+  "id" : "ORGANIZATION1-APPOINTMENT",
   "identifier": [
     {
       "system": "urn:oid:2.16.840.1.113883.3.19.2.3",
       "value": "1122"
     }
   ],
-  "type": {
-    "coding": [
-      {
-        "system": "urn:oid:2.16.840.1.113883.2.4.15.1060",
-        "code": "V6",
-        "display": "University Medical Hospital"
-      },
-      {
-        "system": "http://hl7.org/fhir/organization-type",
-        "code": "prov",
-        "display": "Healthcare Provider"
-      }
-    ]
-  },
-  "name": "Kela"
+  "active": true,
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "urn:oid:2.16.840.1.113883.2.4.15.1060",
+          "code": "V6",
+          "display": "University Medical Hospital"
+        },
+        {
+          "system": "http://hl7.org/fhir/organization-type",
+          "code": "prov",
+          "display": "Healthcare Provider"
+        }
+      ]
+    }
+  ],
+  "name": "Helsingin ja Uudenmaan sairaanhoitopiiri",
+  "telecom": [{
+		"system": "phone",
+		"value": "0555",
+		"use": "home"
+	}],
+  "address":[
+    {
+     "line": [
+       "Stenbäckinkatu 9"
+     ],
+     "city": "Helsinki",
+     "postalCode": "00290",
+     "country": "Finland"
+   }
+  ]
 }

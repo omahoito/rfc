@@ -1,0 +1,18 @@
+{
+  "resourceType": "Schedule",
+  "id": "SCHEDULE1-APPOINTMENT",
+  "identifier": [
+    {
+      "system": "http://oda.fi/identifiers/schedules",
+      "value": "123132"
+    }
+  ],
+  "actor": [
+    {
+      "reference": "Practitioner/PRACTITIONER1-APPOINTMENT"
+    },
+    {
+      "reference": "Location/LOCATION1-APPOINTMENT"
+    }
+  ]
+}

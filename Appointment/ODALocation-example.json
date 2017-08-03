@@ -1,0 +1,29 @@
+{
+  "resourceType": "Location",
+  "id": "LOCATION1-APPOINTMENT",
+  "identifier": [
+    {
+      "system": "http://oda.fi/identifiers/slots",
+      "value": "123132"
+    }
+  ],
+  "status": "active",
+  "name": "Työhuone 1",
+  "telecom": [{
+		"system": "phone",
+		"value": "0555",
+		"use": "home"
+	}],
+  "address": {
+     "line": [
+       "Luutnantintie 12-14"
+     ],
+     "city": "Helsinki",
+     "postalCode": "00410",
+     "country": "Finland"
+   },
+   "position": {
+     "longitude": 60.247186,
+     "latitude": 24.864393
+   }
+}

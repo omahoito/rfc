@@ -1,6 +1,6 @@
 {
   "resourceType": "Appointment",
-  "id" : "APPOINTMENT1",
+  "id" : "APPOINTMENT1-APPOINTMENT",
   "identifier": [
     {
       "system": "urn:oid:2.16.840.1.113883.3.19.2.3",
@@ -16,17 +16,33 @@
       }
     ]
   },
-  "reason": {
-    "text": "Clinical Review"
-  },
+  "reason": [
+    {
+      "coding":[
+        {
+          "system": "http://snomed.info/sct",
+          "code": "413095006"
+        }
+      ]
+    }
+  ],
+  "description": "Tarkistetaan potilaan tila.",
   "start": "2013-12-10T09:00:00Z",
   "end": "2013-12-10T09:15:00Z",
   "minutesDuration": 15,
-  "comment": "Further expand on the results of the MRI and determine the next actions that may be appropriate.",
+  "slot": [
+    {
+      "identifier": {
+        "system": "http://oda.fi/patientsystem",
+        "value": "1100"
+      }
+    }
+  ],
+  "comment": "Potilaan tarkistus.",
   "participant": [
     {
       "actor": {
-        "reference": "Patient/PATIENT2",
+        "reference": "Patient/PATIENT2-APPOINTMENT",
         "display": "Anna Demo"
       },
       "required": "required",
@@ -44,7 +60,7 @@
         }
       ],
       "actor": {
-        "reference": "Practitioner/PRACTITIONER1",
+        "reference": "Practitioner/PRACTITIONER1-APPOINTMENT",
         "display": "Tri Pekka Pakarinen"
       },
       "required": "required",
@@ -52,7 +68,7 @@
     },
     {
       "actor": {
-        "reference": "HealthcareService/HEALTHCARESERVICE1",
+        "reference": "HealthcareService/HEALTHCARESERVICE1-APPOINTMENT",
         "display": "Malminkartano"
       },
       "required": "required",
