@@ -1,10 +1,11 @@
 {
   "resourceType": "Organization",
-  "id" : "ORGANIZATION1-APPOINTMENT",
+  "id": "ORGANIZATION1-APPOINTMENT",
   "identifier": [
     {
-      "system": "urn:oid:2.16.840.1.113883.3.19.2.3",
-      "value": "1122"
+      "use": "temp",
+      "system": "urn:oid:1.2.246.537.6.202.2008",
+      "value": "1.2.246.10.0.10.0"
     }
   ],
   "active": true,
@@ -12,32 +13,34 @@
     {
       "coding": [
         {
-          "system": "urn:oid:2.16.840.1.113883.2.4.15.1060",
-          "code": "V6",
-          "display": "University Medical Hospital"
+          "system": "http://snomed.info/sct",
+          "code": "405608006",
+          "display": "Academic Medical Center"
         },
         {
           "system": "http://hl7.org/fhir/organization-type",
-          "code": "prov",
-          "display": "Healthcare Provider"
+          "code": "prov"
         }
       ]
     }
   ],
-  "name": "Helsingin ja Uudenmaan sairaanhoitopiiri",
-  "telecom": [{
-		"system": "phone",
-		"value": "0555",
-		"use": "home"
-	}],
-  "address":[
+  "name": "Meilahti Tower Hospital",
+  "telecom": [
     {
-     "line": [
-       "Stenbäckinkatu 9"
-     ],
-     "city": "Helsinki",
-     "postalCode": "00290",
-     "country": "Finland"
-   }
+      "system": "phone",
+      "value": "+3581234567",
+      "use": "work"
+    }
+  ],
+  "address": [
+    {
+      "use": "work",
+      "line": [
+        "Haartmaninkatu 4"
+      ],
+      "city": "Helsinki",
+      "postalCode": "00290",
+      "country": "FI"
+    }
   ]
 }
