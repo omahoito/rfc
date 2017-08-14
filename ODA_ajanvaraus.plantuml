@@ -17,7 +17,6 @@ object Appointment <<**GetAndWrite**>> {
 
 object Slot <<**GetAndWrite**>> {
   identifier
-  schedule
   status
   start
   end
@@ -78,8 +77,17 @@ object Organization {
 }
 note bottom : "oid" will be coded\nin the identifier field
 
-
 object CareTeam {
+}
+
+object Schedule <<**GetAndWrite**>>{
+  identifier
+}
+
+object Endpoint <<**Search**>> {
+  identifier
+  name
+  address
 }
 
 Appointment "0..*" -left-> "0..*" Practitioner :  participant.actor
@@ -87,8 +95,11 @@ Appointment "0..*" -down-> "1" HealthcareService :  participant.actor
 Appointment "0..*" -up-> "1" Patient :  participant.actor
 Appointment "1" -right-> "0..*" Slot :  slot
 
+Slot "1" -up-> "0..*" Schedule : schedule
+
 HealthcareService "0..*" -left-> "1" Organization : "providedBy "
 HealthcareService "0..*  " -right-> "1" Location : location
+HealthcareService "0..*" -down-> "1  " Endpoint : endpoint
 
 CareTeam "0..*" -right-> "0..*" Practitioner : participant.member
 CareTeam "0..*" -down-> "0..*" Organization : managingOrganization

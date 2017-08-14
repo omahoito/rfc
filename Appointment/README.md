@@ -17,6 +17,8 @@ https://simplifier.net/ODAajanvaraus
 
 Ajanvaraukseen osallistuu potilas ja ammatinharjoittaja, ja tapahtuma sijoittuu terveysasemalle. Terveysasema on osa organisaatiota, ja terveysasemalla työskentelee ammatinharjoittajia. Ammatinharjoittajat voivat kuulua useampaa organisaatioon, ja myös työskennellä useammalla terveysasemalla.
 
+Huom! MVP:ssä ODA-instanssin domain-nimen (cname) perusteella saadaan rajattua Location-resursseja hauissa. Palvelutunnuksella tarkoitetaan ODA1:n palauttamaa koodia. Näinollen domain-nimen ja palvelutunnuksen avulla saadaan MVP:ssä määritettyä yksikäsitteisesti HealthcareService-resurssi.
+
 Visualisointi resurssien välisistä suhteista:
 
 ![](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/omahoito/rfc/master/ODA_ajanvaraus.plantuml?7)
