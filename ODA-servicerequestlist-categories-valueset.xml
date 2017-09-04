@@ -1,0 +1,26 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <url value="http://oda.fi/ValueSet/oda-vs-servicerequestlist-categories"/>
+    <version value="0.1" />
+    <name value="ODA service request list categories" />
+    <status value="draft" />
+    <experimental value="true" />
+    <date value="2017-06-28T00:00:00+03:00" />    
+    <description value="ODA service request list categories" />
+    <compose>
+        <include>
+            <system value="http://oda.fi/CodeSystem/servicerequestlistcategories" />			
+            <concept>
+                <code value="default-service-request-list" />
+                <display value="Organization's default service request list" />
+                <designation>
+                    <language value="fi-FI" />
+					<value value="Organisaation oletustyöjono" />
+                </designation>
+				<designation>
+                    <language value="en-EN" />
+					<value value="Organization's default service request list" />
+                </designation>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>
