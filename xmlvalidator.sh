@@ -28,7 +28,7 @@ XSD_PATH="$BASE_PATH""xsd/STU2/fhir-all-xsd/"
 
 # for STU3 profiles
 #XSD3_PATH="$BASE_PATH""xsd/STU3/fhir-all-xsd/"
-XSD3_PATH=="$RFC_PATH""xsd/STU3/fhir-all-xsd/"
+XSD3_PATH="$RFC_PATH""xsd/STU3/fhir-all-xsd/"
 
 # declare an associative array with mappings from xml to corresponding xsd file
 
