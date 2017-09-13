@@ -63,7 +63,7 @@ do
   OP=$?
   if [ $OP -ne 0 ] # did not pass validation
   then
-    echo "${xmap[$key]}"" did not pass validation"
+    echo "$key"" ""${xmap[$key]}"" did not pass validation"
     RETVAL=1
   fi
 done
