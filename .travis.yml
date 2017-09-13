@@ -4,6 +4,7 @@ language: python
 
 before_script:
   - chmod +x *.sh
+  - pip install json-spec
 
 script:
   - ./xmlvalidator.sh
