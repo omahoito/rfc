@@ -20,7 +20,9 @@ fi
 # TRAVIS_BUILD_DIR has no trailing slash, so adding a /
 BASE_PATH="$TRAVIS_BUILD_DIR""/"
 
-RFC_PATH="$BASE_PATH"
+#RFC_PATH="$BASE_PATH"
+RFC_PATH="./"
+
 APPOINTMENT_PATH="$BASE_PATH""Appointment/"
 XSD_PATH="$BASE_PATH""xsd/STU2/fhir-all-xsd/"
 
