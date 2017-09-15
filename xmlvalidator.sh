@@ -54,12 +54,15 @@ xmap["$APPOINTMENT_PATH""ODA-Appointment.profile.xml"]="$XSD3_PATH""appointment.
 xmap["$APPOINTMENT_PATH""ODA-HealthcareService.profile.xml"]="$XSD3_PATH""healthcareservice.xsd"
 xmap["$APPOINTMENT_PATH""ODA-Organization.profile.xml"]="$XSD3_PATH""organization.xsd"
 xmap["$APPOINTMENT_PATH""ODA-Patient.profile.xml"]="$XSD3_PATH""patient.xsd"
+#xmap["$APPOINTMENT_PATH""ODA-Practitioner.profile.xml"]="$XSD3_PATH""practitioner.xsd"
 xmap["$APPOINTMENT_PATH""ODA-Practitioner.profile.xml"]="$XSD3_PATH""practitioner.xsd"
 
 RETVAL=0
 for key in ${!xmap[@]}
 do
-  xmllint --noout --schema "${xmap[$key]}" "$key" > /dev/null 2>&1 # STDIN to STDOUT
+    xmllint --schema "${xmap[$key]}" "$key" > /dev/null 2>&1 # STDIN to STDOUT
+#    echo "${xmap[$key]}"
+#    echo "$key"
   OP=$?
   if [ $OP -ne 0 ] # did not pass validation
   then
