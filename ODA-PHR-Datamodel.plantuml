@@ -1,6 +1,6 @@
 @startuml
 
-'!includeurl https://raw.githubusercontent.com/omahoito/rfc/master/Styles.iuml
+!includeurl https://raw.githubusercontent.com/omahoito/rfc/master/Styles.iuml
 
 set namespaceSeparator ::
 
