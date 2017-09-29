@@ -3,37 +3,33 @@
 skinparam defaultFontName Open Sans
 skinparam shadowing false
 
-skinparam backgroundColor #212121
-skinparam arrowColor #999999
-skinparam activityBorderColor #f5f5f5
-skinparam actorBorderColor #f5f5f5
-skinparam usecaseBorderColor #f5f5f5
-skinparam objectBorderColor #f5f5f5
-skinparam packageBorderColor #383838
-skinparam componentBorderColor #f5f5f5
-skinparam componentInterfaceBorderColor #f5f5f5
-skinparam noteBorderColor #f5f5f5
-skinparam stateBorderColor #f5f5f5
-skinparam sequenceLifeLineBorderColor #f5f5f5
-skinparam sequenceParticipantBorderColor #f5f5f5
-skinparam sequenceBoxLineColor #f5f5f5
-
 skinparam activityBackgroundColor #4e4e4e
-skinparam actorBackgroundColor white
-skinparam usecaseBackgroundColor white
-
-skinparam objectBackgroundColor white
-skinparam packageBackgroundColor #383838
-skinparam componentBackgroundColor white
-skinparam componentInterfaceBackgroundColor white
-skinparam stateBackgroundColor white
-skinparam sequenceParticipantBackgroundColor white
-
+skinparam activityBorderColor #f5f5f5
 skinparam activityDiamondFontColor white
 skinparam activityFontColor white
+skinparam actorBackgroundColor white
+skinparam actorBorderColor #f5f5f5
+skinparam arrowColor #999999
 skinparam arrowFontColor white
-
+skinparam backgroundColor #212121
+skinparam componentBackgroundColor white
+skinparam componentBorderColor #f5f5f5
+skinparam componentInterfaceBackgroundColor white
+skinparam componentInterfaceBorderColor #f5f5f5
+skinparam noteBorderColor #f5f5f5
+skinparam objectBackgroundColor white
+skinparam objectBorderColor #f5f5f5
+skinparam packageBackgroundColor #383838
+skinparam packageBorderColor #383838
 skinparam packageFontColor white
+skinparam sequenceBoxLineColor #f5f5f5
+skinparam sequenceLifeLineBorderColor #f5f5f5
+skinparam sequenceParticipantBackgroundColor white
+skinparam sequenceParticipantBorderColor #f5f5f5
+skinparam stateBackgroundColor white
+skinparam stateBorderColor #f5f5f5
+skinparam usecaseBackgroundColor white
+skinparam usecaseBorderColor #f5f5f5
 
 skinparam class {
     BorderColor #d4d4d4
