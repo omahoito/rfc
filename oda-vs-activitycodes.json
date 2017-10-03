@@ -1,0 +1,229 @@
+{
+    "resourceType":"ValueSet",
+    "url":"http://oda.fi/ValueSet/oda-vs-activitycodes",
+    "version":"0.1",
+    "name":"ODA activity codes",
+    "status":"draft",
+    "experimental":true,
+    "date":"6/27/2017 9:00:00 PM",
+    "description":"ODA careplan activity codes",
+    "compose":{
+        "include": [
+            {
+                "system":"http://oda.fi/CodeSystem/oda-cs-activitycodes",
+                "concept": [
+                    {
+                        "code":"AA-P0",
+                        "display":"Hätäkeskuspalvelu - Hoidetaan välittömästi - yhteys hätäkeskukseen",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Hätäkeskuspalvelu - Hoidetaan välittömästi - yhteys hätäkeskukseen"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"ADA001-P1",
+                        "display":"Yleislääkärin päivystyspalvelu - Hoidetaan päivystyksenä",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Yleislääkärin päivystyspalvelu - Hoidetaan päivystyksenä"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"ADA001-P2",
+                        "display":"Yleislääkärin päivystyspalvelu - Hoidetaan päivystyksenä, mutta ei yöllä",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Yleislääkärin päivystyspalvelu - Hoidetaan päivystyksenä, mutta ei yöllä"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"ADA001-P3",
+                        "display":"Yleislääkärin päivystyspalvelu - Voidaan siirtää virka-ajan lääkärille (1 vrk)",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Yleislääkärin päivystyspalvelu - Voidaan siirtää virka-ajan lääkärille (1 vrk)"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"ADA001-P4",
+                        "display":"Yleislääkärin päivystyksen palvelut - Voidaan siirtää virka-ajan lääkärille (2-3 vrk)",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Yleislääkärin päivystyksen palvelut - Voidaan siirtää virka-ajan lääkärille (2-3 vrk)"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"BAB-L2",
+                        "display":"Sairauden hoitoon liittyvä neuvonta- ja ohjauspalvelu - 4-7 päivää",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Sairauden hoitoon liittyvä neuvonta- ja ohjauspalvelu - 4-7 päivää"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"BAB-P2",
+                        "display":"Sairauden hoitoon liittyvä neuvonta- ja ohjauspalvelu - Hoidetaan päivystyksenä, mutta ei yöllä",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Sairauden hoitoon liittyvä neuvonta- ja ohjauspalvelu - Hoidetaan päivystyksenä, mutta ei yöllä"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"BAB-P3",
+                        "display":"Sairauden hoitoon liittyvä neuvonta- ja ohjauspalvelu - Voidaan siirtää virka-aikaan (1 vrk)",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Sairauden hoitoon liittyvä neuvonta- ja ohjauspalvelu - Voidaan siirtää virka-aikaan (1 vrk)"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"BAB-P4",
+                        "display":"Sairauden hoitoon liittyvä neuvonta- ja ohjauspalvelu - Voidaan siirtää virka-aikaan (2 - 3 vrk)",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Sairauden hoitoon liittyvä neuvonta- ja ohjauspalvelu - Voidaan siirtää virka-aikaan (2 - 3 vrk)"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"EDA-P2",
+                        "display":"Sairaanhoitajan yhteydenotto - Hoidetaan päivystyksenä, mutta ei yöllä",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Sairaanhoitajan yhteydenotto - Hoidetaan päivystyksenä, mutta ei yöllä"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"EDA-P3",
+                        "display":"Sairaanhoitajan vastaanotto - Voidaan siirtää virka-aikaan (1 vrk)",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Sairaanhoitajan vastaanotto - Voidaan siirtää virka-aikaan (1 vrk)"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"EDA-P4",
+                        "display":"Sairaanhoitajan vastaanotto - Voidaan siirtää virka-aikaan (2 - 3 vrk)",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Sairaanhoitajan vastaanotto - Voidaan siirtää virka-aikaan (2 - 3 vrk)"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"EEA-L2",
+                        "display":"Yleislääkärin peruspalvelu - 4 - 7 päivää",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Yleislääkärin peruspalvelu - 4 - 7 päivää"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"EEA-P4",
+                        "display":"Yleislääkärin peruspalvelu - Voidaan siirtää virka-ajan lääkärille (2 - 3 vrk)",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Yleislääkärin peruspalvelu - Voidaan siirtää virka-ajan lääkärille (2 - 3 vrk)"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"HBA-L2",
+                        "display":"Fysioterapian palvelut - 4-7 päivää",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Fysioterapian palvelut - 4-7 päivää"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"1155-P2",
+                        "display":"Virtsan bakteeriviljely (http://www.terveysportti.fi/dtk/ltk/avaa?p_artikkeli=lab30391) - Hoidetaan päivystyksenä, mutta ei yöllä",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Virtsan bakteeriviljely (http://www.terveysportti.fi/dtk/ltk/avaa?p_artikkeli=lab30391) - Hoidetaan päivystyksenä, mutta ei yöllä"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"1881-P2",
+                        "display":"Virtsan kemiallinen seulonta (http://www.terveysportti.fi/dtk/ltk/avaa?p_artikkeli=lab31886) - Hoidetaan päivystyksenä, mutta ei yöllä",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Virtsan kemiallinen seulonta (http://www.terveysportti.fi/dtk/ltk/avaa?p_artikkeli=lab31886) - Hoidetaan päivystyksenä, mutta ei yöllä"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"3635",
+                        "display":"Streptokokkipikatesti nielusta (www.terveysportti.fi/dtk/ltk/avaa?p_artikkeli=lab33681)",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Streptokokkipikatesti nielusta (www.terveysportti.fi/dtk/ltk/avaa?p_artikkeli=lab33681)"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"3635-P3",
+                        "display":"Streptokokkipikatesti nielusta (www.terveysportti.fi/dtk/ltk/avaa?p_artikkeli=lab33681) - Voidaan siirtää virka-aikaan (1 vrk)",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Streptokokkipikatesti nielusta (www.terveysportti.fi/dtk/ltk/avaa?p_artikkeli=lab33681) - Voidaan siirtää virka-aikaan (1 vrk)"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"4594-P2",
+                        "display":"P-CRP - Hoidetaan päivystyksenä, mutta ei yöllä",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"P-CRP - Hoidetaan päivystyksenä, mutta ei yöllä"
+                            }
+                        ]
+                    },
+                    {
+                        "code":"LAD-P4",
+                        "display":"Ultraäänitutkimus - Voidaan siirtää virka-aikaan (2 - 3 vrk)",
+                        "designation": [
+                            {
+                                "language":"fi",
+                                "value":"Ultraäänitutkimus - Voidaan siirtää virka-aikaan (2 - 3 vrk)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
