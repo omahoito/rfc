@@ -1,0 +1,40 @@
+{
+    "resourceType":"CodeSystem",
+    "id":"oda-cs-additional-symptomcodes",
+	"meta":{
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+        ]
+    },
+    "url":"http://oda.fi/CodeSystem/oda-cs-additional-symptomcodes",
+    "version":"0.1",
+    "name":"Oda additional symptom codes",
+    "status":"draft",
+    "experimental":true,
+    "date":"10/23/2017 9:44:43 PM",
+    "publisher":"Oda",
+    "description":"Additional symptom codes for observations in ODA",
+    "caseSensitive":true,
+    "content":"complete",
+    "concept": [
+		{
+            "code":"1",
+            "display":"Example code",
+			"definition":"Example symptom which is not a physiological measurement, but needs an own code system.",
+            "designation": [
+                {
+                    "language":"fi",
+                    "value":"Esimerkkikoodi"
+                },
+                {
+                    "language":"sv",
+                    "value":"Exempelkod"
+                },
+                {
+                    "language":"en",
+                    "value":"Example code"
+                }
+            ]
+        }
+	]
+}
