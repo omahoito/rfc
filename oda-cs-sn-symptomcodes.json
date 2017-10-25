@@ -1,0 +1,40 @@
+{
+    "resourceType":"CodeSystem",
+    "id":"oda-cs-sn-symptomcodes",
+	"meta":{
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+        ]
+    },
+    "url":"http://oda.fi/CodeSystem/oda-cs-sn-symptomcodes",
+    "version":"0.1",
+    "name":"Oda symptom codes",
+    "status":"draft",
+    "experimental":true,
+    "date":"10/23/2017 9:44:43 PM",
+    "publisher":"Oda",
+    "description":"Symptom codes for observations in ODA",
+    "caseSensitive":true,
+    "content":"complete",
+    "concept": [
+		{
+            "code":"9991008",
+            "display":"Abdominaali vatsakipu",
+			"definition":"Abdominaali vatsakipu",
+            "designation": [
+                {
+                    "language":"fi",
+                    "value":"Abdominaali vatsakipu"
+                },
+                {
+                    "language":"sv",
+                    "value":"Abdominaali vatsakipu"
+                },
+                {
+                    "language":"en",
+                    "value":"Abdominal colic"
+                }
+            ]
+        }
+	]
+}
