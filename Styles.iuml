@@ -45,7 +45,7 @@ skinparam nodeBorderColor #383838
 skinparam objectBackgroundColor white
 skinparam objectBorderColor #f5f5f5
 skinparam packageBackgroundColor #383838
-skinparam packageBorderColor #383838
+skinparam packageBorderColor white
 skinparam packageFontColor white
 skinparam sequenceArrowColor  #999999
 skinparam sequenceArrowFontColor white
