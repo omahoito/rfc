@@ -1,0 +1,62 @@
+{
+    "resourceType":"CodeSystem",
+    "id":"oda-cs-practitionerroles",
+    "meta":{
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+        ]
+    },
+    "url":"http://oda.fi/CodeSystem/oda-cs-practitionerroles",
+    "version":"0.1",
+    "name":"Oda practitioner roles",
+    "status":"draft",
+    "experimental":true,
+    "publisher":"Oda",
+    "description":"Roles for practitioner",
+    "caseSensitive":true,
+    "content":"complete",
+    "concept": [
+        {
+            "code":"admin",
+            "display":"Administrator",
+            "designation": [
+                {
+                    "language":"fi",
+                    "value":"Järjestelmän ylläpitäjä"
+                },
+				{
+                    "language":"en",
+                    "value":"Administrator"
+                }
+            ]
+        },
+        {
+            "code":"siteresp",
+            "display":"Site responsible",
+            "designation": [
+                {
+                    "language":"fi",
+                    "value":"Toimipisteen pääkäyttäjä"
+                },
+				{
+                    "language":"en",
+                    "value":"Site responsible"
+                }
+            ]
+        },
+        {
+            "code":"prof",
+            "display":"Professional",
+            "designation": [
+                {
+                    "language":"fi",
+                    "value":"Ammattilainen"
+                },
+				{
+                    "language":"en",
+                    "value":"Professional"
+                }
+            ]
+        }
+    ]
+}
