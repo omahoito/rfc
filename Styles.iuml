@@ -3,41 +3,71 @@
 skinparam defaultFontName Open Sans
 skinparam shadowing false
 
-skinparam backgroundColor #212121
-skinparam arrowColor #999999
-skinparam activityBorderColor #f5f5f5
-skinparam actorBorderColor #f5f5f5
-skinparam usecaseBorderColor #f5f5f5
-skinparam objectBorderColor #f5f5f5
-skinparam packageBorderColor #383838
-skinparam componentBorderColor #f5f5f5
-skinparam componentInterfaceBorderColor #f5f5f5
-skinparam noteBorderColor #f5f5f5
-skinparam stateBorderColor #f5f5f5
-skinparam sequenceLifeLineBorderColor #f5f5f5
-skinparam sequenceParticipantBorderColor #f5f5f5
-skinparam sequenceBoxLineColor #f5f5f5
-
 skinparam activityBackgroundColor #4e4e4e
-skinparam actorBackgroundColor white
-skinparam usecaseBackgroundColor white
-
-skinparam objectBackgroundColor white
-skinparam packageBackgroundColor #383838
-skinparam componentBackgroundColor white
-skinparam componentInterfaceBackgroundColor white
-skinparam stateBackgroundColor white
-skinparam sequenceParticipantBackgroundColor white
-
+skinparam activityBarColor white
+skinparam activityBorderColor #f5f5f5
+skinparam activityDiamondBackgroundColor white
+skinparam activityDiamondBorderColor #A80036
 skinparam activityDiamondFontColor white
+skinparam activityEndColor black
 skinparam activityFontColor white
+skinparam activityStartColor black
+skinparam actorBackgroundColor white
+skinparam actorBorderColor #f5f5f5
+skinparam actorFontColor white
+skinparam agentBackgroundColor white
+skinparam agentBorderColor #f5f5f5
+skinparam arrowColor #999999
 skinparam arrowFontColor white
-
+skinparam artifactBackgroundColor white
+skinparam artifactBorderColor #383838
+skinparam backgroundColor #212121
+skinparam classBackgroundColor white
+skinparam classBorderColor #383838
+skinparam cloudBackgroundColor white
+skinparam cloudBorderColor #f5f5f5
+skinparam componentArrowColor #999999
+skinparam componentArrowFontColor white
+skinparam componentBackgroundColor #f2f2f2
+skinparam componentBorderColor #d4d4d4
+skinparam componentInterfaceBackgroundColor white
+skinparam componentInterfaceBorderColor #f5f5f5
+skinparam databaseBackgroundColor white
+skinparam databaseBorderColor #d4d4d4
+skinparam folderBorderColor white
+skinparam interfaceBackgroundColor white
+skinparam interfaceBorderColor #f5f5f5
+skinparam interfaceFontColor white
+skinparam noteBackgroundColor #FBFB77
+skinparam noteBorderColor #f5f5f5
+skinparam nodeBackgroundColor white
+skinparam nodeBorderColor #383838
+skinparam objectBackgroundColor white
+skinparam objectBorderColor #f5f5f5
+skinparam packageBackgroundColor #383838
+skinparam packageBorderColor white
 skinparam packageFontColor white
-
-skinparam class {
-    BorderColor #d4d4d4
-    BackgroundColor #f2f2f2
-}
+skinparam sequenceArrowColor  #999999
+skinparam sequenceArrowFontColor white
+skinparam sequenceBoxBackgroundColor #DDDDDD
+skinparam sequenceBoxBorderColor #f5f5f5
+skinparam sequenceBoxLineColor #f5f5f5
+skinparam sequenceDividerBackgroundColor #EEEEEE
+skinparam sequenceGroupBackgroundColor #EEEEEE
+skinparam sequenceGroupBorderColor #EEEEEE
+skinparam sequenceLifeLineBackgroundColor white
+skinparam sequenceLifeLineBorderColor #f5f5f5
+skinparam sequenceParticipantBackgroundColor white
+skinparam sequenceParticipantBorderColor #f5f5f5
+skinparam stateBackgroundColor white
+skinparam stateBorderColor #f5f5f5
+skinparam stateEndColor black
+skinparam stateStartColor black
+skinparam stereotypeABackgroundColor #A9DCDF
+skinparam stereotypeCBackgroundColor #ADD1B2
+skinparam stereotypeEBackgroundColor #EB937F
+skinparam stereotypeIBackgroundColor #B4A7E5
+skinparam usecaseBackgroundColor white
+skinparam usecaseBorderColor #f5f5f5
 
 @enduml

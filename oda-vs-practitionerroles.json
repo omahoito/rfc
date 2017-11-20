@@ -1,0 +1,16 @@
+{
+    "resourceType":"ValueSet",
+    "url":"http://oda.fi/ValueSet/oda-vs-practitionerroles",
+    "version":"0.1",
+    "name":"ODA Practitioner Roles",
+    "status":"draft",
+    "experimental":true,
+    "description":"ODA Practitioner Roles",
+    "compose":{
+        "include": [
+            {
+                "system":"http://oda.fi/CodeSystem/oda-cs-practitionerroles"
+            }
+        ]
+    }
+}

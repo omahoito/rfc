@@ -1,0 +1,23 @@
+{
+    "resourceType":"ValueSet",
+    "url":"http://oda.fi/ValueSet/oda-vs-symptomcodes",
+    "version":"0.1",
+    "name":"ODA symptom codes",
+    "status":"draft",
+    "experimental":true,
+    "date":"10/23/2017 9:00:00 PM",
+    "description":"ODA symptom codes",
+    "compose":{
+        "include": [
+			{
+                "system":"http://loinc.org"
+            },
+			{
+                "system":"http://oda.fi/CodeSystem/oda-cs-sn-symptomcodes"
+            },
+            {
+                "system":"http://oda.fi/CodeSystem/oda-cs-additional-symptomcodes"
+            }
+        ]
+    }
+}

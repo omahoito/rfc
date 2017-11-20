@@ -1,0 +1,70 @@
+@startuml
+
+title ODA2 & ODA1 questionnaire preview & publish process
+
+participant ODA1_VKT
+
+participant ODA2_oda1.test.oda.fi
+participant ODA2_demo.oda.fi
+
+participant ODA1_test.ebmedscloud.org
+participant ODA1_oda.ebmedscloud.org
+participant ODA1_staging.ebmedscloud.org
+
+participant ODA2_oda.fi
+participant ODA2_dev.oda.fi
+
+group Preview process
+ODA1_VKT -> ODA1_VKT: generate questionnaire
+ODA1_VKT -> ODA2_oda1.test.oda.fi: conditional update [update or create in db]
+ODA1_VKT <-- ODA2_oda1.test.oda.fi: method outcome [updated 200 OK or created 201 OK + questionnaire id]
+ODA1_VKT -> ODA1_VKT: genarate preview url [questionnaire id]
+ODA1_VKT -> ODA2_oda1.test.oda.fi: preview [open questionnaire url in browser]
+ODA1_VKT <-- ODA2_oda1.test.oda.fi: show questionnaire
+ODA1_VKT -> ODA2_oda1.test.oda.fi: fill questionnaire and send request
+ODA2_oda1.test.oda.fi -> ODA1_test.ebmedscloud.org: send dss request
+ODA2_oda1.test.oda.fi <-- ODA1_test.ebmedscloud.org: dss response
+ODA1_VKT <-- ODA2_oda1.test.oda.fi: show response
+end
+
+group Publish process
+ODA1_VKT -> ODA2_demo.oda.fi: conditional update [update or create in db]
+ODA1_VKT <-- ODA2_demo.oda.fi: method outcome [updated 200 OK or created 201 OK + questionnaire id]
+alt preview
+ODA1_VKT -> ODA1_VKT: genarate preview url [questionnaire id]
+ODA1_VKT -> ODA2_demo.oda.fi: preview [open questionnaire url in browser]
+ODA1_VKT <-- ODA2_demo.oda.fi: show questionnaire
+ODA1_VKT -> ODA2_demo.oda.fi: fill questionnaire and send request
+ODA2_demo.oda.fi -> ODA1_staging.ebmedscloud.org: send dss request
+ODA2_demo.oda.fi <-- ODA1_staging.ebmedscloud.org: dss response
+ODA1_VKT <-- ODA2_demo.oda.fi: show response
+end
+end
+
+group Production process
+ODA1_VKT -> ODA2_oda.fi: conditional update [update or create in db]
+ODA1_VKT <-- ODA2_oda.fi: method outcome [updated 200 OK or created 201 OK + questionnaire id]
+alt preview
+ODA1_VKT -> ODA1_VKT: genarate preview url [questionnaire id]
+ODA1_VKT -> ODA2_oda.fi: preview [open questionnaire url in browser]
+ODA1_VKT <-- ODA2_oda.fi: show questionnaire
+ODA1_VKT -> ODA2_oda.fi: fill questionnaire and send request
+ODA2_oda.fi -> ODA1_oda.ebmedscloud.org: send dss request
+ODA2_oda.fi <-- ODA1_oda.ebmedscloud.org: dss response
+ODA1_VKT <-- ODA2_oda.fi: show response
+end
+end
+
+group Development process
+ODA1_VKT -> ODA2_dev.oda.fi: update/create questionnaire in dataset
+ODA2_dev.oda.fi -> ODA2_dev.oda.fi: build/deploy/run tests
+alt preview
+ODA2_dev.oda.fi -> ODA2_dev.oda.fi: preview [open questionnaire url in browser]
+ODA2_dev.oda.fi <-- ODA2_dev.oda.fi: show questionnaire
+ODA2_dev.oda.fi -> ODA2_dev.oda.fi: fill questionnaire and send request
+ODA2_dev.oda.fi -> ODA1_staging.ebmedscloud.org: send dss request
+ODA2_dev.oda.fi <-- ODA1_staging.ebmedscloud.org: dss response
+ODA2_dev.oda.fi <-- ODA2_dev.oda.fi: show response
+end
+end
+@enduml
