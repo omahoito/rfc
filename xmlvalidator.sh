@@ -20,7 +20,6 @@ fi
 # TRAVIS_BUILD_DIR has no trailing slash, so adding a /
 BASE_PATH="$TRAVIS_BUILD_DIR""/"
 
-#RFC_PATH="$BASE_PATH"
 RFC_PATH="./"
 
 APPOINTMENT_PATH="$BASE_PATH""Appointment/"
@@ -33,7 +32,6 @@ XSD3_PATH="$BASE_PATH""xsd/STU3/fhir-all-xsd/"
 # declare an associative array with mappings from xml to corresponding xsd file
 
 declare -A xmap
-
 
 xmap["$RFC_PATH""ODA-ActivityDefinition.profile.xml"]="$XSD3_PATH""activitydefinition.xsd"
 xmap["$RFC_PATH""ODA-CarePlan.profile.xml"]="$XSD3_PATH""careplan.xsd"
@@ -60,15 +58,18 @@ xmap["$APPOINTMENT_PATH""ODA-Practitioner.profile.xml"]="$XSD3_PATH""practitione
 RETVAL=0
 for key in ${!xmap[@]}
 do
-    xmllint --schema "${xmap[$key]}" "$key" > /dev/null 2>&1 # STDIN to STDOUT
+    xmllint --schema "${xmap[$key]}" "$key" > /tmp/xmllint.log 2>&1
 #    echo "${xmap[$key]}"
 #    echo "$key"
   OP=$?
   if [ $OP -ne 0 ] # did not pass validation
   then
     echo "$key"" ""${xmap[$key]}"" did not pass validation"
+    cat /tmp/xmllint.log
     RETVAL=1
   fi
 done
+
+test -f /tmp/xmllint.log && rm -f /tmp/xmllint.log
 
 exit $RETVAL
