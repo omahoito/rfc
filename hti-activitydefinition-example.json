@@ -1,0 +1,31 @@
+{
+    "resourceType": "ActivityDefinition",
+    "language": "fi",
+    "topic": [{
+            "coding": [{
+                    "system": "http://oda.fi/CodeSystem/oda-cs-care-plan-activity-category",
+                    "code": "fill-symptom-check"
+                }
+            ]
+        }
+    ],
+    "version": "1.0",
+    "name": "hti",
+    "title": "Hengitystieinfektio-oirearvion täyttö",
+    "status": "active",
+    "date": "2018-01-03",
+    "publisher": "Oda",
+    "description": "Täytä tämä oirearvio saadaksesi automaattisen arvion oireidesi laadusta ja tarvittavista toimenpiteistä.",
+    "kind": "Questionnaire",
+    "code": {
+        "coding": [{
+                "system": "https://duodecim.fi/fhir/sid/vkt-questionnaire-id",
+                "code": "107"
+            }
+        ]
+    },
+    "participant": [{
+            "type": "patient"
+        }
+    ]
+}

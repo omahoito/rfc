@@ -1,0 +1,19 @@
+{ 
+    "detail" : {
+		"category": {
+			"coding": [{
+				"system" : "http://oda.fi/CodeSystem/oda-cs-care-plan-activity-category",
+				"code" : "fill-symptom-check"
+		}]},
+		"code" : {
+			"coding": [{
+				"system" : "https://duodecim.fi/fhir/sid/vkt-questionnaire-id",
+				"code" : "107"
+		}]},
+		"status" : "in-progress", 
+		"performer" : [{
+			"reference" : "http://oda.fi/Patient/123456"
+		}],
+		"description" : "Täytä tämä oirearvio saadaksesi automaattisen arvion oireidesi laadusta ja tarvittavista toimenpiteistä."
+    }
+ }
