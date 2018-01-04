@@ -8,12 +8,12 @@
 		"code" : {
 			"coding": [{
 				"system" : "https://duodecim.fi/fhir/sid/vkt-questionnaire-id",
-				"code" : "107",
+				"code" : "107"
 		}]},
-		"status" : "in-progress", //not-started | scheduled | in-progress | on-hold | completed | cancelled | unknown
+		"status" : "in-progress", 
 		"performer" : [{
 			"reference" : "http://oda.fi/Patient/123456"
-		}]
+		}],
 		"description" : "Täytä tämä oirearvio saadaksesi automaattisen arvion oireidesi laadusta ja tarvittavista toimenpiteistä."
     }
  }

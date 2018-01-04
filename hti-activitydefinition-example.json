@@ -1,25 +1,31 @@
 {
-	"resourceType" : "ActivityDefinition",
-	"language" : "fi",
-	"profile" : "https://oda.fi/StructureDefinition/stu3/profileversion_1.0/FormAction",
-	"topic" : [{ 
-		"system" : "http://oda.fi/CodeSystem/oda-cs-care-plan-activity-category",
-		"value" : "fill-symptom-check" }],
-	"version" : "1.0", // Business version of the activity definition
-	"name" : "hti", // Name for this activity definition (computer friendly)
-	"title" : "Hengitystieinfektio-oirearvion täyttö", // Name for this activity definition (human friendly)
-	"status" : "active", // draft | active | retired | unknown
-	"date" : "2018-01-03", // Date this was last changed
-	"publisher" : "Oda", // Name of the publisher (organization or individual)
-	"description" : "Täytä tämä oirearvio saadaksesi automaattisen arvion oireidesi laadusta ja tarvittavista toimenpiteistä.", // Kuvaus asiakkaalle
-	"kind" : "Questionnaire", // Kind of resource
-	"code" : { 
-		"coding": [{
-			"system" : "https://duodecim.fi/fhir/sid/vkt-questionnaire-id", // Identity of the terminology system
-			"code" : "107",
-		}]
-	},
-	"participant" : [{ // Who should participate in the action
-		"type" : "patient", //  patient | practitioner | related-person
-	}],
+    "resourceType": "ActivityDefinition",
+    "language": "fi",
+    "topic": [{
+            "coding": [{
+                    "system": "http://oda.fi/CodeSystem/oda-cs-care-plan-activity-category",
+                    "code": "fill-symptom-check"
+                }
+            ]
+        }
+    ],
+    "version": "1.0",
+    "name": "hti",
+    "title": "Hengitystieinfektio-oirearvion täyttö",
+    "status": "active",
+    "date": "2018-01-03",
+    "publisher": "Oda",
+    "description": "Täytä tämä oirearvio saadaksesi automaattisen arvion oireidesi laadusta ja tarvittavista toimenpiteistä.",
+    "kind": "Questionnaire",
+    "code": {
+        "coding": [{
+                "system": "https://duodecim.fi/fhir/sid/vkt-questionnaire-id",
+                "code": "107"
+            }
+        ]
+    },
+    "participant": [{
+            "type": "patient"
+        }
+    ]
 }
