@@ -25,8 +25,11 @@ Following codes are used to categorize different types of ODA-Questionnaires
 | Code          | Meaning     |
 | ------------- |-------------|
 | symptom      | Symptom-check questionnaire |
-| social | Social questionnaire |
+| social-service-request | Social questionnaire |
 | anamnesis | Preliminary information of the patient |
+| service-request | Freeform service-request |
+| feedback | Feedback questionnaire|
+
 
 
 ### Example
