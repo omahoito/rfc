@@ -1,0 +1,87 @@
+{
+  "resourceType":"CodeSystem",
+  "id":"oda-questionnaire-category-codes",
+  "meta":{
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url":"http://oda.fi/CodeSystem/oda-questionnaire-category-codes",
+  "version":"0.1",
+  "name":"Oda questionnaire category codes",
+  "status":"draft",
+  "experimental":true,
+  "date":"04/04/2018 9:44:43 PM",
+  "publisher":"Oda",
+  "description":"Category codes for questionnaires in ODA",
+  "caseSensitive":true,
+  "content":"complete",
+  "concept": [
+    {
+      "code":"symptom",
+      "display":"Symptom questionnaires",
+      "definition":"Symptom questionnaires",
+      "designation": [
+        {
+          "language":"fi",
+          "value":"Duodecimin oirearvio"
+        }
+      ]
+    },
+    {
+      "code":"social-service",
+      "display":"Social service questionnaires",
+      "definition":"Social service questionnaires",
+      "designation": [
+        {
+          "language":"fi",
+          "value":"Sosiaalihuollon lomake"
+        }
+      ]
+    },
+    {
+      "code":"preliminary",
+      "display":"Preliminary information questionnaires",
+      "definition":"Preliminary information questionnaires",
+      "designation": [
+        {
+          "language":"fi",
+          "value":"Esitietolomake"
+        }
+      ]
+    },
+    {
+      "code":"quality",
+      "display":"Quality of life questionnaire",
+      "definition":"Quality of life questionnaire",
+      "designation": [
+        {
+          "language":"fi",
+          "value":"Elämänlaatumittari"
+        }
+      ]
+    },
+    {
+      "code":"service-qualification",
+      "display":"Service qualification questionnaire",
+      "definition":"Service qualification questionnaire",
+      "designation": [
+        {
+          "language":"fi",
+          "value":"Sosiaalihuollon palveluarvio"
+        }
+      ]
+    },
+    {
+      "code":"inquiry",
+      "display":"Inquiry questionnaire",
+      "definition":"Inquiry questionnaire",
+      "designation": [
+        {
+          "language":"fi",
+          "value":"Paljon palveluja tarvitsevien lomakkeet"
+        }
+      ]
+    }
+  ]
+}
