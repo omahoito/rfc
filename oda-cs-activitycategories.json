@@ -1,6 +1,5 @@
 {
     "resourceType":"CodeSystem",
-    "id":"oda-cs-activitycategories",
 	  "meta":{
         "profile": [
             "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
@@ -94,6 +93,16 @@
 				{
 					"language":"fi",
 					"value":"Suositus itsehoidon aloittamiseen"
+				}
+			]
+		},
+	       {
+			"code":"external-link",
+			"display":"Suositus, jossa linkki ulkoiseen sisältöön",
+			"designation": [
+				{
+					"language":"fi",
+					"value":"Suositus, jossa linkki ulkoiseen sisältöön"
 				}
 			]
 		}
