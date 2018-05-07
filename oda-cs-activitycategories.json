@@ -1,0 +1,110 @@
+{
+    "resourceType":"CodeSystem",
+	  "meta":{
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+        ]
+    },
+    "url":"http://oda.fi/fhir/CodeSystem/care-plan-activity-category",
+    "version":"0.1",
+    "name":"Activity categories",
+    "status":"draft",
+    "experimental":true,
+    "date":"2018-01-02",
+    "publisher":"Oda",
+    "description":"Care plan activity categories",
+    "caseSensitive":true,
+    "content":"complete",
+    "concept": [
+		{
+			"code":"fill-symptom-check",
+			"display":"Suositus oirearvioon",
+			"designation": [
+				{
+					"language":"fi",
+					"value":"Suositus oirearvioon"
+				}
+			]
+		},
+		{
+			"code":"coaching",
+			"display":"Suositus valmennukseen",
+			"designation": [
+				{
+					"language":"fi",
+					"value":"Suositus valmennukseen"
+				}
+			]
+		},
+		{
+			"code":"select-service",
+			"display":"Suositus terveysaseman valintaan alueellista ohjausta varten",
+			"designation": [
+				{
+					"language":"fi",
+					"value":"Suositus terveysaseman valintaan alueellista ohjausta varten"
+				}
+			]
+		},
+		{
+			"code":"free-text",
+			"display":"Vapaamuotoinen suositusteksti",
+			"designation": [
+				{
+					"language":"fi",
+					"value":"Vapaamuotoinen suositusteksti"
+				}
+			]
+		},
+		{
+			"code":"free-text-urgent",
+			"display":"Vapaamuotoinen suositusteksti sisältäen kiireellisen hoito-ohjeen",
+			"designation": [
+				{
+					"language":"fi",
+					"value":"Vapaamuotoinen suositusteksti sisältäen kiireellisen hoito-ohjeen"
+				}
+			]
+		},
+		{
+			"code":"appointment",
+			"display":"Suositus ajanvaraukseen",
+			"designation": [
+				{
+					"language":"fi",
+					"value":"Suositus ajanvaraukseen"
+				}
+			]
+		},
+		{
+			"code":"send-service-request",
+			"display":"Suositus hoitosuunnitelman lähettämiseen ammattilaiselle",
+			"designation": [
+				{
+					"language":"fi",
+					"value":"Suositus hoitosuunnitelman lähettämiseen ammattilaiselle"
+				}
+			]
+		},
+		{
+			"code":"create-self-care-plan",
+			"display":"Suositus itsehoidon aloittamiseen",
+			"designation": [
+				{
+					"language":"fi",
+					"value":"Suositus itsehoidon aloittamiseen"
+				}
+			]
+		},
+	       {
+			"code":"external-link",
+			"display":"Suositus, jossa linkki ulkoiseen sisältöön",
+			"designation": [
+				{
+					"language":"fi",
+					"value":"Suositus, jossa linkki ulkoiseen sisältöön"
+				}
+			]
+		}
+	]
+}
